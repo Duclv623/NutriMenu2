@@ -225,7 +225,7 @@ export function ProfilePage() {
             <div className="form-section-title">
               <HeartPulse size={20} />
               <div>
-                <h2>Sở thích & dị ứng</h2>
+                <h2>Dị ứng & thực phẩm không ăn</h2>
                 <p>Thông tin này được dùng khi lọc món cho thực đơn.</p>
               </div>
             </div>
@@ -289,20 +289,6 @@ export function ProfilePage() {
                   liệu.
                 </small>
               </label>
-              <label>
-                Sở thích ăn uống
-                <textarea
-                  value={draft.preferences}
-                  onChange={(e) => field("preferences", e.target.value)}
-                  maxLength={1000}
-                  rows={3}
-                  placeholder="Ví dụ: thích món miền Bắc, ưu tiên món dễ chuẩn bị…"
-                />
-                <small>
-                  Ghi chú gửi cho backend khi tích hợp; bản demo chỉ lọc theo dị
-                  ứng và thực phẩm không ăn.
-                </small>
-              </label>
             </div>
           </section>
           <section className="panel form-panel">
@@ -317,19 +303,6 @@ export function ProfilePage() {
               </div>
             </div>
             <div className="stack">
-              <Checkbox
-                checked={draft.pregnant}
-                onChange={(v) => field("pregnant", v)}
-              >
-                Đang mang thai hoặc cho con bú
-              </Checkbox>
-              <Checkbox
-                checked={draft.specialDiet}
-                onChange={(v) => field("specialDiet", v)}
-              >
-                Có biến chứng cấp, lọc máu hoặc cần chế độ dinh dưỡng chuyên
-                biệt
-              </Checkbox>
               {(draft.age < 18 || draft.pregnant || draft.specialDiet) && (
                 <Alert error>
                   Hồ sơ này nằm ngoài phạm vi tạo thực đơn. Vui lòng tham khảo
