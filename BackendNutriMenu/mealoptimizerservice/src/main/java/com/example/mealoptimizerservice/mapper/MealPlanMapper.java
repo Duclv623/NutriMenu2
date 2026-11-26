@@ -20,6 +20,7 @@ public class MealPlanMapper {
     public PersonalMealPlanResponseDTO toResponse(MealAccount account, MealPlanResponse raw) {
         if (raw.getUserId() != account.serviceUserId()) throw new IllegalStateException("Meal plan owner mismatch");
         List<Item> items = new ArrayList<>();
+        List<Item> skipped = new ArrayList<>();
         raw.getMealsBySlot().forEach((slot, rows) -> {
             String meal = switch (slot) {
                 case BREAKFAST -> "breakfast";
@@ -28,10 +29,10 @@ public class MealPlanMapper {
                 case MORNING_SNACK, AFTERNOON_SNACK -> "snack";
             };
             for (var row : rows) {
-                if (row.getStatus() == MealItemStatus.SKIPPED) continue;
+                var destination = row.getStatus() == MealItemStatus.SKIPPED ? skipped : items;
                 var nutrition = new Nutrition(row.getCaloriesKcal(), row.getNetCarbG(), row.getProteinG(),
                         row.getFatG(), row.getFiberG(), row.getSodiumMg());
-                items.add(new Item(row.getItemId().toString(), row.getDishId().toString(), meal,
+                destination.add(new Item(row.getDishNameVi(), row.getItemId().toString(), row.getDishId().toString(), meal,
                         row.getServingMultiplier(), Boolean.TRUE.equals(row.getIsLocked()),
                         row.getStatus() == MealItemStatus.COMPLETED, nutrition));
             }
@@ -44,7 +45,7 @@ public class MealPlanMapper {
                 : raw.getCreatedAt().atZone(ZoneId.systemDefault()).toInstant().toString();
         return new PersonalMealPlanResponseDTO(id, raw.getPlanDate().toString(), profileVersion, raw.getVersion() + 1,
                 items, raw.getSolverStatus().name(), "api", raw.getTargetCaloriesKcal(), raw.getMedicalWarnings(),
-                created, raw.isValidationPassed(), Objects.toString(raw.getChangeSignature(), ""));
+                skipped, raw.getUserRating(), raw.getUserFeedback(), created, raw.isValidationPassed(), Objects.toString(raw.getChangeSignature(), ""));
     }
 
     private ObjectNode object(Object... values) {

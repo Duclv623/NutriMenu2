@@ -39,6 +39,7 @@ function toFood(dish: Dish): Food {
 export const foodService = {
   list: async () => (await request<Dish[]>("/foods")).map(toFood),
   get: async (id: string) => toFood(await request<Dish>('/foods/' + encodeURIComponent(id))),
+  preferences: () => request<{ favorites: string[]; disliked: string[] }>("/foods/preferences"),
   favorites: () => request<string[]>("/me/favorites"),
   favorite: (id: string, selected: boolean) =>
     request<void>(`/me/favorites/${encodeURIComponent(id)}`, {

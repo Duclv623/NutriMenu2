@@ -1,4 +1,4 @@
-import { json, request } from "../../../lib/api";
+import { json, request } from "./api";
 
 export type Service = "catalog" | "optimizer";
 export type Method = "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
@@ -629,7 +629,7 @@ export const serviceAccess = async () =>
   (await request<{ data: { role: string } }>("/users/me")).data;
 export const findRecipeIngredients = (keyword: string) =>
   request<{ content: { id: number; nameVi: string }[] }>(
-    "/admin/catalog/admin/ingredients?" + new URLSearchParams({ keyword }),
+    "/foods/tools/ingredients?" + new URLSearchParams({ keyword }),
   );
 export function serviceAction(service: Service, method: Method, path: string) {
   const action = serviceActions.find(
@@ -642,26 +642,26 @@ export function serviceAction(service: Service, method: Method, path: string) {
   return action;
 }
 
-export const runServiceAction = <T = unknown>(
+export function runServiceAction<T = unknown>(
   action: Action,
   path: string,
   query: URLSearchParams,
   body: unknown,
   signal?: AbortSignal,
-) =>
-  request<T>(
-    "/admin/" +
-      action.service +
-      "/" +
-      path +
-      (query.size ? "?" + query : ""),
-    {
-      method: action.method,
-      body: body === undefined ? undefined : json(body),
-      signal,
-    },
-
-  );
+) {
+  let base = `/admin/${action.service}/`;
+  if (action.service === "catalog" && !path.startsWith("admin/") && !path.startsWith("internal/")) {
+    base = "/foods/tools/";
+  }
+  if (action.service === "optimizer" && (path.startsWith(MEAL_PLANS) || path === "internal/optimizer/feasibility-check")) {
+    base = "/meal-plans/tools/";
+  }
+  return request<T>(base + path + (query.size ? "?" + query : ""), {
+    method: action.method,
+    body: body === undefined ? undefined : json(body),
+    signal,
+  });
+}
 
 export function callService<T>(
   service: Service,

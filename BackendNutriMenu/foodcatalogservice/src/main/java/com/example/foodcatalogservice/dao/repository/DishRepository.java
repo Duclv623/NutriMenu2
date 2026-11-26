@@ -63,12 +63,12 @@ public interface DishRepository extends JpaRepository<Dish, Long> {
     );
 
     @Query("""
-        SELECT DISTINCT d FROM Dish d
-        JOIN d.mealSlots ms
+        SELECT d FROM Dish d
         WHERE d.isActive = true
+          AND d.createdByUserId IS NULL
           AND d.id <> :currentDishId
           AND d.dishRole = :role
-          AND (:slot IS NULL OR ms = :slot)
+          AND (:slot IS NULL OR :slot MEMBER OF d.mealSlots)
           AND d.giLevel IN ('NONE', 'LOW', 'MEDIUM')
           AND d.netCarbG BETWEEN :minCarb AND :maxCarb
           AND d.caloriesKcal BETWEEN :minCal AND :maxCal

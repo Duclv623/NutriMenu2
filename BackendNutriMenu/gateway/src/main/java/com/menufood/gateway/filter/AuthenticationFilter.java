@@ -95,7 +95,7 @@ public class AuthenticationFilter implements GlobalFilter {
             response.getHeaders().set(HttpHeaders.WWW_AUTHENTICATE, "Bearer");
             message = "Vui lòng đăng nhập lại. JWT bị thiếu, không hợp lệ hoặc đã hết hạn.";
         }
-        if (status == HttpStatus.FORBIDDEN) message = "C?n quy?n qu?n tr?.";
+        if (status == HttpStatus.FORBIDDEN) message = "Cần quyền quản trị.";
         byte[] body = json.writeValueAsBytes(Map.of("timestamp", Instant.now(), "status", status.value(),
                 "message", message, "path", exchange.getRequest().getURI().getRawPath(), "errors", Map.of()));
         return response.writeWith(Mono.just(response.bufferFactory().wrap(body)));

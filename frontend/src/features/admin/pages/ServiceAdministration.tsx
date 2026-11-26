@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Database, FlaskConical, UtensilsCrossed } from "lucide-react";
 import { Navigate } from "react-router-dom";
-import { ActionForm } from "../components/ServiceAction";
+import { ActionForm } from "../../../components/common/ServiceAction";
 import { Alert, Button, Loading, PageTitle } from "../../../components/common/ui";
 import { API_MODE } from "../../../lib/config";
 import {
@@ -9,7 +9,7 @@ import {
   isAdminAction,
   serviceAccess,
   serviceActions,
-} from "../services/adminActions";
+} from "../../../lib/serviceActions";
 import { useApp } from "../../../store/UserDataProvider";
 
 const groups = [

@@ -16,7 +16,7 @@ export async function request<T>(
   const controller = new AbortController();
   const timer = setTimeout(
     () => controller.abort(),
-    path.includes("chat") ? 90000 : 30000,
+    /chat|meal-plans\/tools|^\/admin\//.test(path) ? 90000 : 30000,
   );
   const token = sessionStorage.getItem("nutriguide.token");
   const cancel = () => controller.abort();

@@ -41,7 +41,7 @@ public class PersonalMealPlanService {
 
 
     // Serializes concurrent public plan writes, including creation before a plan row exists.
-    private MealAccount accountForUpdate(String token) {
+    MealAccount accountForUpdate(String token) {
         var account = accounts.account(token);
         jdbc.query("select pg_advisory_xact_lock(?)", rs -> {}, account.serviceUserId());
         return account;
@@ -138,7 +138,7 @@ public class PersonalMealPlanService {
         throw new OptimizerBusinessException(BAD_REQUEST, "Mã tài nguyên không hợp lệ");
     }
 
-    private void eligible(Profile profile, long version) {
+    void eligible(Profile profile, long version) {
         if (profile.version() != version) throw new OptimizerBusinessException(CONFLICT, "Hồ sơ đã thay đổi; hãy tải lại");
         if (!profile.confirmed() || profile.age() < 18 || profile.pregnant() || profile.specialDiet())
             throw new OptimizerBusinessException(UNPROCESSABLE_CONTENT, "Cần hồ sơ đã xác nhận và thuộc phạm vi hỗ trợ");
@@ -148,7 +148,7 @@ public class PersonalMealPlanService {
         if (plan.version() != expected) throw new OptimizerBusinessException(CONFLICT, "Thực đơn đã thay đổi; hãy tải lại");
     }
 
-    private Set<MedicalTag> allergyTags(Profile profile) {
+    Set<MedicalTag> allergyTags(Profile profile) {
         Set<MedicalTag> tags = new HashSet<>();
         for (String allergy : profile.allergies()) {
             String tag = ALLERGIES.getOrDefault(allergy, allergy);
@@ -158,7 +158,7 @@ public class PersonalMealPlanService {
         return tags;
     }
 
-    private Set<Long> exclusions(String token, Profile profile) {
+    Set<Long> exclusions(String token, Profile profile) {
         Set<Long> result = new LinkedHashSet<>();
         if (profile.excludedFoods().isEmpty()) return result;
         var dishes = catalog.foods(token);

@@ -10,7 +10,7 @@ import java.util.*;
 // --- FILE MỚI: PatientProfileMealRequest.java (Nhận Hồ sơ Bệnh nhân -> Tính Target -> Gợi ý) ---
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor(onConstructor_ = @com.fasterxml.jackson.annotation.JsonCreator(mode = com.fasterxml.jackson.annotation.JsonCreator.Mode.DISABLED))
 @Builder
 public class PatientProfileMealRequest {
 

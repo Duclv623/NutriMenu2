@@ -63,7 +63,7 @@ authenticated account from the User Service JWT. Existing numeric account IDs, s
 check-in data remain in the V3 table. New plans store the source profile version in Optimizer.
 Plans created on the earlier integration branch can still read their historical metadata from User Service.
 
-Generation currently supports four meals, no cooking-time filter or regenerate-overwrite.
+Meal Planner supports daily, profile-based and seven-day generation, feasibility checks, item status, manual or solver-assisted swaps, and rebalancing. The supported plan template has four meals. Existing plan dates are protected from overwrite. Catalog includes custom recipes and dish comparison. Shopping and history read per-account optimizer reports. The gateway restricts administration routes to JWTs with the ADMIN role.
 Swap preview/apply uses Optimizer validation and signatures. Chat edits open the frontend
 meal editor; direct autonomous chat swaps are not enabled without full policy evidence.
 Knowledge answers require configured provider keys and an indexed corpus.

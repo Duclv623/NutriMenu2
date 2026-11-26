@@ -10,7 +10,7 @@ import java.util.*;
 // --- DTO Yêu cầu Tạo Thực đơn (User & Dry-Run) ---
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
+@AllArgsConstructor(onConstructor_ = @com.fasterxml.jackson.annotation.JsonCreator(mode = com.fasterxml.jackson.annotation.JsonCreator.Mode.DISABLED))
 @Builder
 public class GenerateDailyMealRequest {
     @NotNull

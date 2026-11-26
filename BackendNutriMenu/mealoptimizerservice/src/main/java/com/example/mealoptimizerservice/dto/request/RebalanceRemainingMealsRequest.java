@@ -1,9 +1,13 @@
 package com.example.mealoptimizerservice.dto.request;
 
+import com.example.mealoptimizerservice.entity.MealPlan;
+import com.example.mealoptimizerservice.entity.MealPlanItem;
 import com.example.mealoptimizerservice.entity.enums.*;
+import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import lombok.*;
 import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.*;
 
 @Data
@@ -21,4 +25,6 @@ public class RebalanceRemainingMealsRequest {
     private BigDecimal consumedProteinG;
     @NotNull @DecimalMin("0.0")
     private BigDecimal consumedFatG;
+    @Valid
+    private MealEditPolicy policy;
 }

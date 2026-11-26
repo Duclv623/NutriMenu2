@@ -10,9 +10,9 @@ export async function loadPageData(path: string): Promise<UserData> {
   const meals = needsDashboard || ["/thuc-don", "/tro-ly", "/mua-sam", "/lich-su"].includes(path);
   const catalog = meals || path === "/mon-an" || path === "/yeu-thich" || path === "/quan-tri";
   const progress = needsDashboard || path === "/theo-doi";
-  const [plans, foods, favorites, checkIns, checkedShopping, capabilities] = await Promise.all([
+  const [plans, foods, preferences, checkIns, checkedShopping, capabilities] = await Promise.all([
     meals ? mealPlanService.list() : [], catalog ? foodService.list() : [],
-    catalog ? foodService.favorites() : [], progress ? activityService.getCheckIns() : [],
+    catalog ? foodService.preferences() : { favorites: [], disliked: [] }, progress ? activityService.getCheckIns() : [],
     path === "/mua-sam" ? activityService.getShopping() : [],
     meals ? mealPlanService.capabilities() : undefined,
   ]);
@@ -21,6 +21,6 @@ export async function loadPageData(path: string): Promise<UserData> {
   const missing = new Set(plans.flatMap(plan => plan.items.map(item => item.foodId)).filter(id => !available.has(id)));
   const historical = await Promise.all(Array.from(missing, id => foodService.get(id)));
   const completedMeals = plans.flatMap(plan => plan.items.filter(i => i.completed).map(i => plan.id + ":" + i.id));
-  return { profile, plans, foods: [...foods, ...historical], favorites, checkIns, checkedShopping,
+  return { profile, plans, foods: [...foods, ...historical.map(food => ({ ...food, listed: false }))], ...preferences, checkIns, checkedShopping,
     completedMeals, capabilities, conversations: [] };
 }

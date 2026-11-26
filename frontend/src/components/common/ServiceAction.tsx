@@ -1,6 +1,6 @@
 import { useEffect, useState, type FormEvent, type ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { Alert, Button, Modal } from "../../../components/common/ui";
+import { Alert, Button, Modal } from "./ui";
 import {
   actionKey,
   findRecipeIngredients,
@@ -8,10 +8,10 @@ import {
   runServiceAction,
   type Action,
   type Field,
-} from "../services/adminActions";
-import { useApp } from "../../../store/UserDataProvider";
-import type { UserData } from "../../../types";
-import { localDate } from "../../../utils";
+} from "../../lib/serviceActions";
+import { useApp } from "../../store/UserDataProvider";
+import type { UserData } from "../../types";
+import { localDate } from "../../utils";
 
 type RecipeRow = {
   ingredientId: string;
@@ -871,15 +871,15 @@ export function ActionForm({
         query.get("dish1") === query.get("dish2")
       )
         throw new Error("Chọn hai món khác nhau để so sánh.");
-      if (isGeneration(path) || isPlanEdit(path))
-        body.profileVersion = workspace.profile.version;
+      if (isGeneration(path) || isPlanEdit(path) || path.endsWith("/feasibility-check"))
+        query.set("profileVersion", String(workspace.profile.version));
       if (isPlanEdit(path)) {
         const selected = workspace.plans.find(
           (plan) => plan.id === submitted["{id}"],
         );
         if (!selected)
           throw new Error("Chọn thực đơn trong tài khoản của bạn.");
-        body.baseVersion = selected.version;
+        query.set("baseVersion", String(selected.version));
       }
       const response = await runServiceAction(
         action,
@@ -892,7 +892,7 @@ export function ActionForm({
       setConfirmed(false);
       if (changesUserData(action)) {
         try {
-          await reload();
+          await reload(true);
         } catch {
           setSyncError(
             "Đã lưu thay đổi. Chưa tải lại được dữ liệu trên trang.",

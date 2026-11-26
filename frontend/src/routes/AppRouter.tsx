@@ -147,7 +147,7 @@ function Shell() {
         </nav>
         <div className="sidebar-bottom">
           <nav>
-            {user.role === "ADMIN" && <NavLink to="/quan-tri">Qu?n tr?</NavLink>}
+            {user.role === "ADMIN" && <NavLink to="/quan-tri">Quản trị</NavLink>}
             <NavLink to="/cai-dat">
               <Settings size={19} />
               Cài đặt & kết nối

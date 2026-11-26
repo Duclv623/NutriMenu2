@@ -50,6 +50,7 @@ export type Profile = {
   version: number;
 };
 export type PlanItem = {
+  name?: string;
   id: string;
   foodId: string;
   meal: MealType;
@@ -67,6 +68,9 @@ export type SolverStatus =
   | "MODEL_INVALID"
   | "NOT_RUN";
 export type Plan = {
+  skippedItems?: PlanItem[];
+  rating?: number | null;
+  feedback?: string | null;
   id: string;
   date: string;
   profileVersion: number;
@@ -129,6 +133,7 @@ export type UserData = {
   foods: Food[];
   plans: Plan[];
   favorites: string[];
+  disliked?: string[];
   checkedShopping: string[];
   checkIns: CheckIn[];
   conversations: Conversation[];
