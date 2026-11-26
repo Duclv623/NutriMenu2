@@ -1,0 +1,58 @@
+import { json, request } from "../../../lib/api";
+import type { GenerateInput, Plan, UserData } from "../../../types";
+
+export const mealPlanService = {
+  list: () => request<Plan[]>("/meal-plans"),
+  capabilities: () => request<NonNullable<UserData["capabilities"]>>("/meal-plans/capabilities"),
+  generate: (input: GenerateInput, profileVersion: number) =>
+    request<Plan>("/meal-plans/generate", {
+      method: "POST",
+      body: json({ ...input, profileVersion }),
+    }),
+  previewSwap: (plan: Plan, itemId: string, foodId: string, servings: number) =>
+    request<Plan>(`/meal-plans/${encodeURIComponent(plan.id)}/swap-preview`, {
+      method: "POST",
+      body: json({
+        baseVersion: plan.version,
+        profileVersion: plan.profileVersion,
+        itemId,
+        foodId,
+        servings,
+      }),
+    }),
+  swap: (
+    plan: Plan,
+    itemId: string,
+    foodId: string,
+    servings: number,
+    previewSignature?: string,
+  ) =>
+    request<Plan>(`/meal-plans/${encodeURIComponent(plan.id)}/swap`, {
+      method: "POST",
+      body: json({
+        baseVersion: plan.version,
+        itemId,
+        foodId,
+        servings,
+        previewSignature,
+        profileVersion: plan.profileVersion,
+      }),
+    }),
+  lock: (plan: Plan, itemId: string, locked: boolean) =>
+    request<Plan>(
+      `/meal-plans/${encodeURIComponent(plan.id)}/items/${encodeURIComponent(itemId)}/lock`,
+      {
+        method: "PATCH",
+        body: json({ baseVersion: plan.version, locked }),
+      },
+    ),
+  deletePlan: (id: string) =>
+    request<void>(`/meal-plans/${encodeURIComponent(id)}`, {
+      method: "DELETE",
+    }),
+  completeMeal: (key: string, completed: boolean) =>
+    request<void>("/me/meal-logs", {
+      method: "PUT",
+      body: json({ key, completed }),
+    }),
+};

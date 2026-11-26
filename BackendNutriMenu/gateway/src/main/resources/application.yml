@@ -1,0 +1,58 @@
+server:
+  port: ${PORT:8080}
+  address: ${GATEWAY_HOST:127.0.0.1}
+
+app:
+  jwt:
+    issuer: ${JWT_ISSUER:http://localhost:8083}
+    audience: ${JWT_AUDIENCE:menufood}
+    jwk-set-uri: ${USER_SERVICE_URL:http://127.0.0.1:8083}/api/auth/jwks
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      server:
+        webflux:
+          httpclient:
+            connect-timeout: 5000
+            response-timeout: 95s
+          routes:
+            - id: admin-catalog
+              uri: ${FOOD_CATALOG_URL:http://127.0.0.1:8081}
+              predicates:
+                - Path=/api/admin/catalog/admin/**,/api/admin/catalog/internal/dishes/**
+              filters:
+                - RewritePath=/api/admin/catalog/(?<segment>.*), /api/v1/$\{segment}
+            - id: admin-optimizer
+              uri: ${MEAL_OPTIMIZER_URL:http://127.0.0.1:8082}
+              predicates:
+                - Path=/api/admin/optimizer/admin/optimizer/**,/api/admin/optimizer/internal/optimizer/capabilities
+              filters:
+                - RewritePath=/api/admin/optimizer/(?<segment>.*), /api/v1/$\{segment}
+            - id: user-service
+              uri: ${USER_SERVICE_URL:http://127.0.0.1:8083}
+              predicates:
+                - Path=/api/auth/**,/api/users/me,/api/users/me/profile,/api/me/profile,/api/me/shopping-list,/api/me/check-ins/**,/api/internal/identity
+            - id: food-catalog
+              uri: ${FOOD_CATALOG_URL:http://127.0.0.1:8081}
+              predicates:
+                - Path=/api/foods/**,/api/me/favorites/**
+            - id: meal-optimizer
+              uri: ${MEAL_OPTIMIZER_URL:http://127.0.0.1:8082}
+              predicates:
+                - Path=/api/meal-plans/**,/api/me/meal-logs,/api/internal/me/meal-context
+            - id: chatbot-static
+              uri: ${CHATBOT_URL:http://127.0.0.1:8000}
+              predicates:
+                - Path=/api/chatbot/static/**
+              filters:
+                - RewritePath=/api/chatbot/(?<segment>.*), /$\{segment}
+            - id: chatbot
+              uri: ${CHATBOT_URL:http://127.0.0.1:8000}
+              predicates:
+                - Path=/api/chatbot/**
+              filters:
+                - RewritePath=/api/chatbot/?(?<segment>.*), /api/$\{segment}
+                - RemoveRequestHeader=Origin

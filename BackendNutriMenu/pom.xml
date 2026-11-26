@@ -1,0 +1,13 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.menufood</groupId>
+    <artifactId>nutrimenu-backend</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>gateway</module>
+        <module>Userservice</module>
+        <module>foodcatalogservice</module>
+        <module>mealoptimizerservice</module>
+    </modules>
+</project>
