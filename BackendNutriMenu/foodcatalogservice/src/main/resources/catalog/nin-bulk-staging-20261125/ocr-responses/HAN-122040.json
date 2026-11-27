@@ -1,0 +1,19 @@
+{
+  "code": "HAN-122040",
+  "imageSha256": "b9319171ea88e03e8a6d1564317b56b40f48becbf63dfa75de8cc3cd7e519f66",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh nếp",
+      "amountSourceText": "116.0",
+      "numericQuantity": 116.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "282.9 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

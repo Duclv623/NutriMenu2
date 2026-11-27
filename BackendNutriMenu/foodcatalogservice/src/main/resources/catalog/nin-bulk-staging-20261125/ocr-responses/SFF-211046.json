@@ -1,0 +1,75 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "443.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi/Rice noodle",
+      "amountSourceText": "184.0",
+      "numericQuantity": 184.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt gà ta đùi luộc/Boiled chicken drumsticks",
+      "amountSourceText": "66.0",
+      "numericQuantity": 66.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc/Boiled",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành, thì là, mùi/Welsh onion, dill, Coriander",
+      "amountSourceText": "9.0",
+      "numericQuantity": 9.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau kinh giới, xà lách, hoa chuối/Oregano",
+      "amountSourceText": "14.0",
+      "numericQuantity": 14.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Quất/Kimquat",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/Bone broth",
+      "amountSourceText": "289.0",
+      "numericQuantity": 289.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành tây/Onion",
+      "amountSourceText": "18.0",
+      "numericQuantity": 18.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tiết lợn luộc/Boiled pork blood",
+      "amountSourceText": "33.0",
+      "numericQuantity": 33.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc/Boiled",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-211046",
+  "imageSha256": "5e8e1d0c485beb74dc51416f4c9b103bcac4fd8fea804f44e572cbc4d64ee15e",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

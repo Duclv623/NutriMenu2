@@ -1,0 +1,61 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "339.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cháo sườn/Spinach rice congee with pork-rib",
+      "amountSourceText": "408.0",
+      "numericQuantity": 408.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ruốc thịt lợn/Salted dried shredded pork",
+      "amountSourceText": "7.0",
+      "numericQuantity": 7.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau răm/Laksa leaves",
+      "amountSourceText": "6.0",
+      "numericQuantity": 6.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bánh quẩy/Crispy bagel twists",
+      "amountSourceText": "24.0",
+      "numericQuantity": 24.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành phi/Fried shallot",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "phi/Fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hạt tiêu/Pepper",
+      "amountSourceText": "0.5",
+      "numericQuantity": 0.5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table lists 'Cháo sườn/Spinach rice congee with pork-rib' whereas dish metadata nameVi is 'Cháo trai sườn'. 'Hành phi/Fried shallot' (1.0 g, 3.2 Kcal) appears in the ingredient table but is not labeled on the diagram."
+  ],
+  "code": "SFF-211053",
+  "imageSha256": "66926427afa462ff1a9ffd0c8e31aa7727c16fda0b2c1a6f270a85a9b7bd4b91",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

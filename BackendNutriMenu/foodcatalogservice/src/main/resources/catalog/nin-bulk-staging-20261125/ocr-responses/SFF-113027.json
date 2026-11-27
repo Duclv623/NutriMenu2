@@ -1,0 +1,99 @@
+{
+  "code": "SFF-113027",
+  "imageSha256": "ecd60bc40460261716a8deb2836f09dc0ed6a21a1d872d96eb59a20211db420d",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "662.1 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh mỳ/Banh my",
+      "amountSourceText": "63.0",
+      "numericQuantity": 63.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Pate gan/Liver Pate",
+      "amountSourceText": "32.0",
+      "numericQuantity": 32.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bơ thực vật/Butter-margarine blend, stick, unsalted",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dăm bông lợn/ham pork",
+      "amountSourceText": "34.0",
+      "numericQuantity": 34.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả lợn/Pork, mince fat meat grilled",
+      "amountSourceText": "25.0",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "grilled",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt ba chỉ rán/fried pork belly",
+      "amountSourceText": "19.0",
+      "numericQuantity": 19.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột/cucumber",
+      "amountSourceText": "6.0",
+      "numericQuantity": 6.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Su hào/Kohlrabi",
+      "amountSourceText": "8.0",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "hành phi/Fried shallot",
+      "amountSourceText": "2.0",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "phi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ruốc thịt lợn/pork dried flour with fish sauce",
+      "amountSourceText": "2.0",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước sốt/Sauces",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -64,6 +64,7 @@ function Shell() {
     user,
     userData,
     loading,
+    hasData,
     loadError,
     storageError,
     reload,
@@ -210,9 +211,10 @@ function Shell() {
         </header>
         <main id="main-content" className={`content ${isChat ? "chat-page-container" : ""}`}>
           {storageError && <Alert error>{storageError}</Alert>}
+            {loadError && hasData && <Alert error>Chưa cập nhật được dữ liệu: {loadError} <Button onClick={() => void reload()}>Thử lại</Button></Alert>}
           {loading ? (
             <Loading />
-          ) : loadError ? (
+            ) : loadError && !hasData ? (
             <div className="stack">
               <Alert error>{loadError}</Alert>
               <Button onClick={() => void reload()}>Thử kết nối lại</Button>

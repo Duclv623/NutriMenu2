@@ -1,0 +1,91 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "800.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi",
+      "amountSourceText": "285.0",
+      "numericQuantity": 285.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt lườn ngan luộc",
+      "amountSourceText": "69.0",
+      "numericQuantity": 69.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành tây",
+      "amountSourceText": "29.0",
+      "numericQuantity": 29.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Măng khô chần",
+      "amountSourceText": "33.0",
+      "numericQuantity": 33.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "khô chần",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chanh",
+      "amountSourceText": "4.0",
+      "numericQuantity": 4.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt đỏ",
+      "amountSourceText": "3.0",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành, răm",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau xà lách",
+      "amountSourceText": "28.0",
+      "numericQuantity": 28.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Magi",
+      "amountSourceText": "66.0",
+      "numericQuantity": 66.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng",
+      "amountSourceText": "320.0",
+      "numericQuantity": 320.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAP-211106",
+  "imageSha256": "fd92fc3185b13f850ad5a49b9295dccce80243596bd30eefc9cd8b569d81695f",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

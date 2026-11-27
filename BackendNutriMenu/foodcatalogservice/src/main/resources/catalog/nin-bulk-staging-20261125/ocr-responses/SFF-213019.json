@@ -1,0 +1,107 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "471.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi/Rice vermicelli",
+      "amountSourceText": "200.0",
+      "numericQuantity": 200.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tôm biển luộc/Boiled shrimp",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc/Boiled",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả cá basa/Basa fishball",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả viên cá basa/Basa fish ball",
+      "amountSourceText": "22.0",
+      "numericQuantity": 22.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt lợn xá xíu/Char siu",
+      "amountSourceText": "27.0",
+      "numericQuantity": 27.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mực tươi hấp/steamed squid",
+      "amountSourceText": "22.0",
+      "numericQuantity": 22.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi hấp/steamed",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hẹ lá/Chive",
+      "amountSourceText": "3.0",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau đắng/Common knotgrass",
+      "amountSourceText": "7.0",
+      "numericQuantity": 7.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau xà lách/Lettuce",
+      "amountSourceText": "14.0",
+      "numericQuantity": 14.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tỏi phi/Fried garlic",
+      "amountSourceText": "4.0",
+      "numericQuantity": 4.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "phi/Fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà tím/Eggplant",
+      "amountSourceText": "33.0",
+      "numericQuantity": 33.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/Bone broth",
+      "amountSourceText": "338.0",
+      "numericQuantity": 338.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-213019",
+  "imageSha256": "0550d1ade3a83d837e565d32d48a69e4eb4a0f1a8c9b49a395143e71b8537204",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

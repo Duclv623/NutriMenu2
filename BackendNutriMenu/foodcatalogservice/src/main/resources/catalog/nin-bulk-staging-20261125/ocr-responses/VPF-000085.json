@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "74kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Rau giền",
+      "amountSourceText": "180g",
+      "numericQuantity": 180,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000085",
+  "imageSha256": "cd0877676a7b992f571c2b87f7e4297822338d60f905bbd9917b66089a276dd9",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

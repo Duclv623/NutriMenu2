@@ -1,0 +1,51 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "563.5 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi/Rice vermicelli",
+      "amountSourceText": "255.0",
+      "numericQuantity": 255.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ốc nhồi luộc/Boiled Snail large edible",
+      "amountSourceText": "70.0",
+      "numericQuantity": 70.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước ốc/Snail broth",
+      "amountSourceText": "155.0",
+      "numericQuantity": 155.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giấm bỗng/Vinegar",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt chưng/Chili oil",
+      "amountSourceText": "4.0",
+      "numericQuantity": 4.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chưng",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-112057",
+  "imageSha256": "d9501eabe8fd89e06310a5f737c8b492808f9332e88a7c431b53f4e9cab6351e",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

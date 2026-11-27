@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000383",
+  "imageSha256": "d4a02e3387389574a2d0380358f9cb5e77ed9be3fc9e622e3435acd6671617bc",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/cốc",
+  "imageEnergyText": "138.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa tươi thanh trùng không đường TH True Milk",
+      "amountSourceText": "220ml",
+      "numericQuantity": 220.0,
+      "unitSourceText": "ml",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

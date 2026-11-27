@@ -1,0 +1,67 @@
+{
+  "code": "SFF-113093",
+  "imageSha256": "8dcd67cda9f8f89eb7062823498b7bfc727715add31b9d8b2c9e32358f7a45ef",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "479.1 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh đa đỏ/Red thick rice noodle",
+      "amountSourceText": "63.0",
+      "numericQuantity": 63.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cần ta/Water dropwort",
+      "amountSourceText": "23.0",
+      "numericQuantity": 23.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giá đậu xanh/Mungbean sprout",
+      "amountSourceText": "25.0",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giò tai lợn/steamed pork ear roll",
+      "amountSourceText": "28.0",
+      "numericQuantity": 28.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "steamed",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả cá/Fish ball",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành phi/Fried shallot",
+      "amountSourceText": "12.0",
+      "numericQuantity": 12.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "phi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước riêu cua/fresh water crab paste soup",
+      "amountSourceText": "300.0",
+      "numericQuantity": 300.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

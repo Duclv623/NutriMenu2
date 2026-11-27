@@ -1,0 +1,93 @@
+{
+  "code": "HAN-121061",
+  "imageSha256": "161dfcd676fde81852be9e7b2ec96ce680fe584ee8855eed6cc9e698294c2c4a",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh cuốn nóng nhân thịt",
+      "amountSourceText": "216.0",
+      "numericQuantity": 216.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nóng nhân thịt",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bánh cuốn trứng gà",
+      "amountSourceText": "105.0",
+      "numericQuantity": 105.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "trứng gà",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả quế",
+      "amountSourceText": "25.0",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau thơm",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau kinh giới",
+      "amountSourceText": "2.0",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau thơm",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Quất chín",
+      "amountSourceText": "24.0",
+      "numericQuantity": 24.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chín",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "ớt đỏ to",
+      "amountSourceText": "2.0",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành khô",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước chấm pha",
+      "amountSourceText": "75.0",
+      "numericQuantity": 75.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "pha",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "572.3 Kcal",
+  "uncertainties": [
+    "Table in source image lists 'Rau thơm' twice with identical amount 1.0g / 0.3 Kcal."
+  ],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

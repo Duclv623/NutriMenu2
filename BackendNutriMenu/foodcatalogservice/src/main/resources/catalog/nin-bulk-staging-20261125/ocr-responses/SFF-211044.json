@@ -1,0 +1,75 @@
+{
+  "code": "SFF-211044",
+  "imageSha256": "a51337d6e8c78a26e0e3c5429db7aa1c2fa9fed595f6bd5f13820335a97e54dd",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "713.6 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh mỳ/Banh my",
+      "amountSourceText": "39.0",
+      "numericQuantity": 39.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trứng gà rán/Egg",
+      "amountSourceText": "52.0",
+      "numericQuantity": 52.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Pate/Pate",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lạp xưởng/Chinese Sausage",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột/Cucumber",
+      "amountSourceText": "39.0",
+      "numericQuantity": 39.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Xúc xích/Sausage",
+      "amountSourceText": "26.0",
+      "numericQuantity": 26.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Khoai tây rán/French fries",
+      "amountSourceText": "14.0",
+      "numericQuantity": 14.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước sốt/Sauce",
+      "amountSourceText": "193.0",
+      "numericQuantity": 193.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

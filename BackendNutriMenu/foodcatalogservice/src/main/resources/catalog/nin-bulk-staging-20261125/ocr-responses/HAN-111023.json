@@ -1,0 +1,93 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "502.6 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi",
+      "amountSourceText": "148.0",
+      "numericQuantity": 148.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "ốc vặn luộc",
+      "amountSourceText": "36.0",
+      "numericQuantity": 36.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "ốc mít luộc",
+      "amountSourceText": "36.0",
+      "numericQuantity": 36.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu phụ rán",
+      "amountSourceText": "25.0",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "nước dùng",
+      "amountSourceText": "463.0",
+      "numericQuantity": 463.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tía tô",
+      "amountSourceText": "6.0",
+      "numericQuantity": 6.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà chua",
+      "amountSourceText": "61.0",
+      "numericQuantity": 61.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành phi",
+      "amountSourceText": "3.0",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "phi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giá đậu xanh",
+      "amountSourceText": "7.0",
+      "numericQuantity": 7.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "rau sống",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Image energy '502.6 Kcal' differs from apiEnergy 501 by 1.6 Kcal; both kept untouched."
+  ],
+  "code": "HAN-111023",
+  "imageSha256": "ba5afa5097e256b355d004544c6ce22dcc7cd336d5e9cbe220f64a8e5a2f8a53",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

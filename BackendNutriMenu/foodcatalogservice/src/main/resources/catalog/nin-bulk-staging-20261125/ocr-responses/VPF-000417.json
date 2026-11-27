@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "26kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Ổi",
+      "amountSourceText": "80g",
+      "numericQuantity": 80.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000417",
+  "imageSha256": "e8747084287406fea85e0133a9d0c7b1621d76ae8dce5ee67a7828c79ca326a5",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

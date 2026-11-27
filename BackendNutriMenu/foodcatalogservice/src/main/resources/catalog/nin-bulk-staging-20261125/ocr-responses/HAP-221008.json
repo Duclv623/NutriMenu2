@@ -1,0 +1,27 @@
+{
+  "code": "HAP-221008",
+  "imageSha256": "6b76197a1ef99a493d2e2bc1d22445d1bba2d14e516714100e3665a2f18a0520",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Chè bạc cốt",
+      "amountSourceText": "255.0",
+      "numericQuantity": 255.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Xôi vò",
+      "amountSourceText": "123.0",
+      "numericQuantity": 123.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "604.5 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

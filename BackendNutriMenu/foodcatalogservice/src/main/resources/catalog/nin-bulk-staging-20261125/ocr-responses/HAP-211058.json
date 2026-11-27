@@ -1,0 +1,35 @@
+{
+  "code": "HAP-211058",
+  "imageSha256": "f5146ba819b8f2deb6f5f66e3189f3d0e876269c9851e71ca00e5232d37eaccb",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh mỳ",
+      "amountSourceText": "55.0",
+      "numericQuantity": 55.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Pate",
+      "amountSourceText": "30.0",
+      "numericQuantity": 30.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương ớt",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "241.4 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

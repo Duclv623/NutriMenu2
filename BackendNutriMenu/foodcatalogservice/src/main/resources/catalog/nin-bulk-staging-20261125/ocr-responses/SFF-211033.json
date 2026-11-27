@@ -1,0 +1,67 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "1071.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ/Rice",
+      "amountSourceText": "292.0",
+      "numericQuantity": 292.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tôm đồng rang/Stir-fried freshwater shrimp",
+      "amountSourceText": "41.0",
+      "numericQuantity": 41.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang/Stir-fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt lợn nạc kho/Braised lean pork",
+      "amountSourceText": "72.0",
+      "numericQuantity": 72.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "kho/Braised",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt lợn băm xào/Stir-fried minced pork",
+      "amountSourceText": "50.0",
+      "numericQuantity": 50.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào/Stir-fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Khoai tây xào/Stir-fried potato",
+      "amountSourceText": "130.0",
+      "numericQuantity": 130.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào/Stir-fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải xanh trong canh/Cooked mustard greens",
+      "amountSourceText": "25.0",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "Cooked",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước canh rau/Soup",
+      "amountSourceText": "171.0",
+      "numericQuantity": 171.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-211033",
+  "imageSha256": "3834a863f590c04de705494a2bd55aa22033b2831f5f2d586c7af9145e49935f",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

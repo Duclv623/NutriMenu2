@@ -1,0 +1,35 @@
+{
+  "code": "HAN-121037",
+  "imageSha256": "2284b23ee0b23fa2d6aadbe13c141b7e7ebf25eb5b2b0e28491a94790d63ca68",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Xôi trắng (đồ)",
+      "amountSourceText": "223.0",
+      "numericQuantity": 223.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "đồ",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lạc hạt",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Muối vừng lạc",
+      "amountSourceText": "12.0",
+      "numericQuantity": 12.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "692.8 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

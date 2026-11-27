@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "305kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Tôm (thịt tôm)",
+      "amountSourceText": "30g",
+      "numericQuantity": 30,
+      "unitSourceText": "g",
+      "preparationSourceText": "thịt tôm",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột chiên",
+      "amountSourceText": "50g",
+      "numericQuantity": 50,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "15g",
+      "numericQuantity": 15,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000143",
+  "imageSha256": "149e89bd9cb61a2ffb03b6e6bc4b4cef20d069640fb32fa9a78fff82b5bddae3",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

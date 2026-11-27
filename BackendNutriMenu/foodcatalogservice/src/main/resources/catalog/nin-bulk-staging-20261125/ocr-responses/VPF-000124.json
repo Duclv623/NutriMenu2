@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "139kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Đậu phụ",
+      "amountSourceText": "80g",
+      "numericQuantity": 80,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "7g",
+      "numericQuantity": 7,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000124",
+  "imageSha256": "d32535f6ef3b12abb98e6dc369b4d91f1438b803103824d2aedbdac8b517b569",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

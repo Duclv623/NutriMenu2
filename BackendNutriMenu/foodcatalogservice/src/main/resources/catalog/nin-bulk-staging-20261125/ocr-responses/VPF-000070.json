@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000070",
+  "imageSha256": "e3cb047d64693b3b3a7cb5636865722700c4fd1d06485c8e8bbb3268803d1067",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "243kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Đậu đũa",
+      "amountSourceText": "400g",
+      "numericQuantity": 400.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

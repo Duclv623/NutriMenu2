@@ -1,0 +1,37 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "350.6 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cháo tim",
+      "amountSourceText": "350.0",
+      "numericQuantity": 350.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành, mùi tàu",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ruốc thịt lợn",
+      "amountSourceText": "6.0",
+      "numericQuantity": 6.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Sum of printed row energies (350.5 Kcal) differs from printed dish energy (350.6 Kcal) by 0.1 Kcal due to rounding."
+  ],
+  "code": "HAP-221033",
+  "imageSha256": "41ae6d15e318764061c67731ca419e9da41b6c17baf722ee46893627bae1cf83",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

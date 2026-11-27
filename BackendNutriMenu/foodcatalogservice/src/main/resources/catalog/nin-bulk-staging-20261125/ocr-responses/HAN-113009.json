@@ -1,0 +1,51 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "476.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh cuốn nóng nhân thịt",
+      "amountSourceText": "224.0",
+      "numericQuantity": 224.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nóng",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả quế lợn",
+      "amountSourceText": "40.0",
+      "numericQuantity": 40.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành củ tươi",
+      "amountSourceText": "12.0",
+      "numericQuantity": 12.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau húng",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau kinh giới",
+      "amountSourceText": "6.0",
+      "numericQuantity": 6.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-113009",
+  "imageSha256": "258f74f59af51e7a2a03bf9f18ae0df6211fc5c943be8c4437f61cfb525b50d2",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

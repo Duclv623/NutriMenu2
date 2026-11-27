@@ -1,0 +1,19 @@
+{
+  "code": "HAN-121054",
+  "imageSha256": "c26830eac335a9687a340f34eb680101cdaf958b2d57ad5cbb8dafbdeb950566",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh rán mật",
+      "amountSourceText": "105.0",
+      "numericQuantity": 105.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "297.6 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

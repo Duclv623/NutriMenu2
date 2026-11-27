@@ -1,0 +1,35 @@
+{
+  "code": "HAP-221006",
+  "imageSha256": "d5d0d9ec6d5e4283de9bb10c638a25b8524a8ec3ad331c72b8b1ad196c1baeed",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Chè đỗ xanh",
+      "amountSourceText": "380.0",
+      "numericQuantity": 380.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước cốt dừa",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cùi dừa già",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "325.6 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

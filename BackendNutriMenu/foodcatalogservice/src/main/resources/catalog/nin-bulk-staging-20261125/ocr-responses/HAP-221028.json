@@ -1,0 +1,19 @@
+{
+  "code": "HAP-221028",
+  "imageSha256": "0d1ccca184ae5d04b2ba03c5ab36a2e7672e4836cf91555bab2879d17c67fe2a",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Ngô nếp nướng",
+      "amountSourceText": "96.8",
+      "numericQuantity": 96.8,
+      "unitSourceText": "g",
+      "preparationSourceText": "nướng",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "265.6 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

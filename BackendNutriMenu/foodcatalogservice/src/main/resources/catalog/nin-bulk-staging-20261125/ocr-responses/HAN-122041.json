@@ -1,0 +1,27 @@
+{
+  "code": "HAN-122041",
+  "imageSha256": "ba324ad2d25ca12073f4175bf806be98b5ba178c4f872925bbea573543acce95",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh chay",
+      "amountSourceText": "60.0",
+      "numericQuantity": 60.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước đường",
+      "amountSourceText": "128.0",
+      "numericQuantity": 128.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "200.5 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "69kcal/đĩa",
+  "ingredients": [
+    {
+      "nameSourceText": "Mít dai (cả hạt)",
+      "amountSourceText": "200g",
+      "numericQuantity": 200.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "cả hạt",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000412",
+  "imageSha256": "2c6ae7e4774685965862237a360a65cc408d15cf1ba2c98b696b30310df993cf",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

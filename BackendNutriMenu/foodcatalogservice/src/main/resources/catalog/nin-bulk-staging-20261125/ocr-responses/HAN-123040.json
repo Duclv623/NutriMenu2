@@ -1,0 +1,51 @@
+{
+  "code": "HAN-123040",
+  "imageSha256": "65525e042be58d30bfea5475a8dfb4ee1a404ec19b688eb1d8b04a2edc372a96",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh chưng",
+      "amountSourceText": "162.0",
+      "numericQuantity": 162.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau mùi",
+      "amountSourceText": "2.0",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột muối",
+      "amountSourceText": "19.0",
+      "numericQuantity": 19.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "muối",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Magi",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt tươi",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "374.5 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

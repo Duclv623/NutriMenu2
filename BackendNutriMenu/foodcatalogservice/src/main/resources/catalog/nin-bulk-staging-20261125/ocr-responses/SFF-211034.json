@@ -1,0 +1,67 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "922.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ/Rice",
+      "amountSourceText": "292.0",
+      "numericQuantity": 292.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tôm biển rang/Stir-fried sea shrimp",
+      "amountSourceText": "30.0",
+      "numericQuantity": 30.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang/Stir-fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sườn lợn xào chua ngọt/Sweet and sour pork ribs",
+      "amountSourceText": "77.0",
+      "numericQuantity": 77.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào chua ngọt/Sweet and sour",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cá thu kho/Braised mackerel fish",
+      "amountSourceText": "69.0",
+      "numericQuantity": 69.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "kho/Braised",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải xanh luộc/Boiled mustard greens",
+      "amountSourceText": "116.0",
+      "numericQuantity": 116.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc/Boiled",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải xanh trong canh/Cooked mustard greens",
+      "amountSourceText": "25.0",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "Cooked",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước canh rau/Soup",
+      "amountSourceText": "171.0",
+      "numericQuantity": 171.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-211034",
+  "imageSha256": "cba35761ed80730d442a2c1e0cc131e612127304e66cfc2b9d10ddb84ea5f26f",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

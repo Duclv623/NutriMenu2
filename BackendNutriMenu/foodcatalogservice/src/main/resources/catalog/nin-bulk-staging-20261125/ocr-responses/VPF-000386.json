@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000386",
+  "imageSha256": "41f9a5f56de585d17f448a5d26076e6c7a22f5635e4c252b039dbed5eab17a42",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "103kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa chua có đường Ba Vì",
+      "amountSourceText": "100g",
+      "numericQuantity": 100.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

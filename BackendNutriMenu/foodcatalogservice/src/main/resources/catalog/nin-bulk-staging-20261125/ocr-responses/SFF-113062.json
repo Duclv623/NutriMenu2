@@ -1,0 +1,51 @@
+{
+  "code": "SFF-113062",
+  "imageSha256": "88ee78c9a9babb534a34d69fb392def2094fe5e471d8f11408ffc589b0aaf331",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "332.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Mì ăn liền/Instant noodles",
+      "amountSourceText": "73.0",
+      "numericQuantity": 73.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tim lợn luộc/Boiled pig's heart",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bầu dục lợn luộc/Boiled pig's Kidney",
+      "amountSourceText": "27.0",
+      "numericQuantity": 27.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải ngọt luộc/Boiled mustard greens",
+      "amountSourceText": "53.0",
+      "numericQuantity": 53.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/Bone broth",
+      "amountSourceText": null,
+      "numericQuantity": null,
+      "unitSourceText": null,
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "137.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Kem sầu riêng",
+      "amountSourceText": "69.0",
+      "numericQuantity": 69.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-113080",
+  "imageSha256": "68e7cbf88888683e5886b7d604d8edd82c881610ebb3f7d09d800ac0992a1472",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000391",
+  "imageSha256": "e646ef48b2be6498c5e84dd29a10f3fcfc2de21b93d8de4e22b32418a2ff2708",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/hộp",
+  "imageEnergyText": "134kcal/hộp",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa đặc",
+      "amountSourceText": "40g",
+      "numericQuantity": 40.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

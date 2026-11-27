@@ -1,0 +1,75 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "517.5 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Mỳ tôm",
+      "amountSourceText": "79.0",
+      "numericQuantity": 79.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tim lợn",
+      "amountSourceText": "24.0",
+      "numericQuantity": 24.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bầu dục lợn",
+      "amountSourceText": "35.0",
+      "numericQuantity": 35.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò loại I",
+      "amountSourceText": "26.0",
+      "numericQuantity": 26.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Gan lợn luộc",
+      "amountSourceText": "40.0",
+      "numericQuantity": 40.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải ngọt",
+      "amountSourceText": "52.0",
+      "numericQuantity": 52.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chanh",
+      "amountSourceText": "9.0",
+      "numericQuantity": 9.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng",
+      "amountSourceText": "510.0",
+      "numericQuantity": 510.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-113092",
+  "imageSha256": "ca25769648b104499c34a9158d495d156e5894a1e88d47c924c008366b122e6e",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

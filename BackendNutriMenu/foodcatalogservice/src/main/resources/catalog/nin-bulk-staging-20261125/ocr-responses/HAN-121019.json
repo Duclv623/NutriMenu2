@@ -1,0 +1,110 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "980.6 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi",
+      "amountSourceText": "308.0",
+      "numericQuantity": 308.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu phụ rán",
+      "amountSourceText": "162.0",
+      "numericQuantity": 162.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả cốm",
+      "amountSourceText": "30.0",
+      "numericQuantity": 30.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt chân giò luộc",
+      "amountSourceText": "28.0",
+      "numericQuantity": 28.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dồi lợn luộc",
+      "amountSourceText": "23.0",
+      "numericQuantity": 23.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột",
+      "amountSourceText": "29.0",
+      "numericQuantity": 29.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau kinh giới",
+      "amountSourceText": "16.0",
+      "numericQuantity": 16.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tía tô",
+      "amountSourceText": "3.0",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Quất",
+      "amountSourceText": "93.7",
+      "numericQuantity": 93.7,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt tươi",
+      "amountSourceText": "23.0",
+      "numericQuantity": 23.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu hỗn hợp",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mắm tôm +đường",
+      "amountSourceText": "38.0",
+      "numericQuantity": 38.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Sum of printed row energies (980.7 Kcal) differs from printed total (980.6 Kcal) by 0.1 Kcal.",
+    "Table row prints 'Thịt chân giò luộc' whereas the ingredient diagram labels 'Thịt chân giò lợn luộc'."
+  ],
+  "code": "HAN-121019",
+  "imageSha256": "51a017e0b732166e0b3b1d20be233baa54776066119cab531a7e418cfe0619b3",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

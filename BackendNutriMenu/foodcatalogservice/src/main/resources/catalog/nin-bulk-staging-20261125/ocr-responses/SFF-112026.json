@@ -1,0 +1,59 @@
+{
+  "code": "SFF-112026",
+  "imageSha256": "0b0366dac2023f854807975595762917dfa36656ce16495b02d60cefd0694ac0",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "694.4 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Nước mắm cô đặc/Fish sauces",
+      "amountSourceText": "6.2",
+      "numericQuantity": 6.2,
+      "unitSourceText": "g",
+      "preparationSourceText": "cô đặc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cánh gà chiên/Fried chicken wing",
+      "amountSourceText": "78.7",
+      "numericQuantity": 78.7,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đùi gà chiên/Fried chicken drumsticks",
+      "amountSourceText": "107.8",
+      "numericQuantity": 107.8,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột/Cucumber",
+      "amountSourceText": "285.0",
+      "numericQuantity": 285.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt tươi/Chili",
+      "amountSourceText": "2.0",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước sốt/Sauces",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

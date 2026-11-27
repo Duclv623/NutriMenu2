@@ -1,0 +1,27 @@
+{
+  "code": "HAN-122024",
+  "imageSha256": "e6d0155903843b812ae6340a25e01fbc0913a125026ef2922011d63e2a8f9526",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "176.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cam (không vỏ)",
+      "amountSourceText": "379.0",
+      "numericQuantity": 379.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước đường",
+      "amountSourceText": "40.0",
+      "numericQuantity": 40.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

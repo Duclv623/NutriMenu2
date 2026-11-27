@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "48kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Chuối tây",
+      "amountSourceText": "90g",
+      "numericQuantity": 90,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000400",
+  "imageSha256": "b1a1c99e7081323b68a985c3d7766fbe3deb1edd8d0cede3f1e1d73c97172f6b",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

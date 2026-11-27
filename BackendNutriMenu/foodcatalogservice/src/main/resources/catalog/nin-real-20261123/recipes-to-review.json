@@ -1,0 +1,141 @@
+[
+  {
+    "code": "VPF-000039",
+    "name_vi": "Cá bống kho",
+    "source_url": "https://viendinhduong.vn/vi/cong-cu-va-tien-ich/gia-tri-dinh-duong-mon-an",
+    "source_record_id": "693a47a248209a2a9a014fe6",
+    "image": {
+      "code": "VPF-000039",
+      "sourceRecordId": "693a47a248209a2a9a014fe6",
+      "nameVi": "Cá bống kho",
+      "sourceUrl": "https://viendinhduong.vn/vi/cong-cu-va-tien-ich/gia-tri-dinh-duong-mon-an",
+      "imageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_153.webp",
+      "sourceUpdatedAt": "2025-12-11 11:25:06",
+      "status": "existing",
+      "localPath": "images/VPF-000039.webp",
+      "bytes": 22238,
+      "sha256": "6cde5ca309b7e7a7f5a9bf30d64e5493b9899173bf75066b27f9fcf65cd8d5a4",
+      "checkedAt": "2026-11-23T14:37:51.621591+00:00"
+    },
+    "source_nutritional_components": [
+      {
+        "name": "Năng lượng",
+        "nameEn": "Energy",
+        "amount": 110,
+        "unit_id": "67dbf3a34ef829137c091af2",
+        "unit_name": "Kcal",
+        "key": "nang-luong"
+      },
+      {
+        "name": "Chất đạm",
+        "nameEn": "Protein",
+        "amount": 5.6,
+        "unit_id": "67dbf4134ef829137c091af3",
+        "unit_name": "g",
+        "key": "chat-dam"
+      },
+      {
+        "name": "Chất béo",
+        "nameEn": "Lipid",
+        "amount": 5.3,
+        "unit_id": "67dbf4134ef829137c091af3",
+        "unit_name": "g",
+        "key": "chat-beo"
+      },
+      {
+        "name": "Chất bột đường",
+        "nameEn": "Glucid",
+        "amount": 10,
+        "unit_id": "67dbf4134ef829137c091af3",
+        "unit_name": "g",
+        "key": "chat-bot-duong"
+      },
+      {
+        "name": "Beta-caroten",
+        "nameEn": "Beta-caroten",
+        "amount": 1.98,
+        "unit_id": "67e39c035b85385ce4045d93",
+        "unit_name": "μg",
+        "key": "beta-caroten"
+      },
+      {
+        "name": "Vitamin C",
+        "nameEn": "Vitamin C",
+        "amount": 2.5,
+        "unit_id": "67e39c093a265c60790a8f63",
+        "unit_name": "mg",
+        "key": "vitamin-c"
+      },
+      {
+        "name": "Xơ",
+        "nameEn": "Fiber",
+        "amount": 0.3,
+        "unit_id": "67dbf4134ef829137c091af3",
+        "unit_name": "g",
+        "key": "xo"
+      },
+      {
+        "name": "Canxi",
+        "nameEn": "Calcium",
+        "amount": 20.7,
+        "unit_id": "67e39c093a265c60790a8f63",
+        "unit_name": "mg",
+        "key": "canxi"
+      },
+      {
+        "name": "Sắt",
+        "nameEn": "Iron",
+        "amount": 0.51,
+        "unit_id": "67e39c093a265c60790a8f63",
+        "unit_name": "mg",
+        "key": "sat"
+      },
+      {
+        "name": "Kẽm",
+        "nameEn": "Zinc",
+        "amount": 4,
+        "unit_id": "67e39c093a265c60790a8f63",
+        "unit_name": "mg",
+        "key": "kem"
+      },
+      {
+        "name": "Natri",
+        "nameEn": "Sodium",
+        "amount": 534.1,
+        "unit_id": "67e39c093a265c60790a8f63",
+        "unit_name": "mg",
+        "equivalenceComponents": [
+          {
+            "name": "Tương đương Muối",
+            "nameEn": "Salt",
+            "amount": 1.33525,
+            "unit_name": "g",
+            "key": "tuong-duong-muoi"
+          }
+        ],
+        "key": "natri"
+      },
+      {
+        "name": "Kali",
+        "nameEn": "Kali",
+        "amount": 103.5,
+        "unit_id": "67e39c093a265c60790a8f63",
+        "unit_name": "mg",
+        "key": "kali"
+      }
+    ],
+    "source_total_energy": 110,
+    "serving_basis": {
+      "description": null,
+      "quantity_g": null,
+      "certainty": "unreviewed"
+    },
+    "ingredients": [],
+    "evidence": {
+      "image_verified": false,
+      "unresolved": [
+        "Read serving heading and every ingredient/gram value from the original image; compare image energy to API energy; do not assume 100g."
+      ]
+    }
+  }
+]

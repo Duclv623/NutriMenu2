@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "174.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Tào phớ/Tofu",
+      "amountSourceText": "201.0",
+      "numericQuantity": 201.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Caramen/Caramel",
+      "amountSourceText": "56.0",
+      "numericQuantity": 56.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước đường đỏ/Sugar syrup",
+      "amountSourceText": "104.0",
+      "numericQuantity": 104.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-213059",
+  "imageSha256": "b9aaf5190d63d179d606845d369640fc683d7519612d86cb72059db3ba70e602",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

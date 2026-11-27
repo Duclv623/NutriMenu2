@@ -1,0 +1,3187 @@
+{
+  "instructions": "Attach each task's exact local image; no execution/model availability implied. Save responses separately under ocr-responses/; never overwrite reviewed source recipes.",
+  "tasks": [
+    {
+      "taskId": "nin-image-HAN-123026",
+      "code": "HAN-123026",
+      "sourceRecordId": "690c5d0c32f162f88e0198c4",
+      "nameVi": "Khoai lang chiên",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAN-123026.webp",
+      "imageSha256": "a94de1b99adbd6667b48730504b2f981cae5a1bbb438d49ed350fac84283cded",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/11/06/screenshot_73.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 376.8,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 376.8,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 2.2,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 23.4,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 39.4,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 11.3,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 135.5,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 20.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 59.9,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 1.2,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 0.5,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 31,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 0.0775,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 204,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAN-123027",
+      "code": "HAN-123027",
+      "sourceRecordId": "690c5e09689e42e62e0a1f93",
+      "nameVi": "Khoai tây chiên",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAN-123027.webp",
+      "imageSha256": "bed3918a253aa139d60231d84190cb7dce1fece9ff33cfebffe7f1d16bc40d57",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/11/06/screenshot_76.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 296,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 296,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 3.8,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 12.9,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 41.3,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 0.8,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 9.4,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 18.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 18.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 2.3,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 0.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 13.1,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 0.03275,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 60,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAN-123038",
+      "code": "HAN-123038",
+      "sourceRecordId": "690c5e420a19862c030fd0a3",
+      "nameVi": "Nem chua rán 5 cái",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAN-123038.webp",
+      "imageSha256": "2fca6eb54c88b3ae892cc1819444ec6616476fa60f4b50afac733183693768a3",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/11/06/screenshot_77.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 157.9,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 157.9,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 25,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 4.3,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 4.9,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 27.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 547.4,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 1.3685,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Transfat",
+          "nameEn": "Transfat",
+          "amount": 98.9,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "transfat"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAN-123040",
+      "code": "HAN-123040",
+      "sourceRecordId": "690c4add1bfe50fe530c1da8",
+      "nameVi": "Bánh chưng rán",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAN-123040.webp",
+      "imageSha256": "65525e042be58d30bfea5475a8dfb4ee1a404ec19b688eb1d8b04a2edc372a96",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/11/06/screenshot_32.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 374.5,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 374.5,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 14.3,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 4.8,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 68.4,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 9.3,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 107.1,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": " Vitamin C",
+          "nameEn": " Vitamin C",
+          "amount": 7.3,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 54.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 2.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 1.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 900.2,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 2.2505,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Cholesterol",
+          "nameEn": "Cholesterol",
+          "amount": 6.5,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "cholesterol"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 99,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAN-123041",
+      "code": "HAN-123041",
+      "sourceRecordId": "690c58d6caa004c2330ad510",
+      "nameVi": "Bánh tiêu",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAN-123041.webp",
+      "imageSha256": "0e50bebaa916e8d9528f367bda8a7ed64f551225572537b0398916c5a6a19a07",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/11/06/screenshot_59.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 199.6,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 199.6,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 2.9,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 11.9,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 20.4,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 0.3,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 0.4,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 30.9,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 0.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 0.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 36.4,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 0.091,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 46.3,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAN-123042",
+      "code": "HAN-123042",
+      "sourceRecordId": "690c579b6bac436e34099df4",
+      "nameVi": "Bánh rán ngọt",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAN-123042.webp",
+      "imageSha256": "0f97400208276731542431aebdf7a92664471c8966fcd6d369a42794fa3ad1fc",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/11/06/screenshot_55.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 250.9,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 250.9,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 3.6,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 0.4,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 58.4,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 0.3,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 9.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 0.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 0.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 1.3,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 0.00325,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 54.9,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAN-123045",
+      "code": "HAN-123045",
+      "sourceRecordId": "690c48bc0ec1a7e8e10041b7",
+      "nameVi": "Bánh bột lọc",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAN-123045.webp",
+      "imageSha256": "18148406af94b51ca3228267bcd950f91528205ff4e3a9dd12ead6ca7c787b64",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/11/06/screenshot_27.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 366.6,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 366.6,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 8.6,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 18.4,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 41.7,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 58.8,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 622.4,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 9.9,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 47.2,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 1.2,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 0.2,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 110.5,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 0.27625,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Cholesterol",
+          "nameEn": "Cholesterol",
+          "amount": 13.5,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "cholesterol"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 22.2,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211002",
+      "code": "HAP-211002",
+      "sourceRecordId": "6916c7604ebefc46d1078425",
+      "nameVi": "Bánh đúc tàu",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211002.webp",
+      "imageSha256": "ca478eba3e2d9545deb9e79a4cbcb82fd66d96d0431f242ee0dffda4c8e72f7c",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/11/14/banh_duc_tau.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 175.6,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 175.6,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 9.6,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 2.2,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 29.3,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 8.5,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Potassium",
+          "nameEn": "Potassium",
+          "amount": 11.4,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "potassium"
+        },
+        {
+          "name": "MUFA+PUFA",
+          "nameEn": "MUFA+PUFA",
+          "amount": 22.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "mufa-pufa"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 168.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 2,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 0.5,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 671.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 1.679,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Cholesterol",
+          "nameEn": "Cholesterol",
+          "amount": 57.2,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "cholesterol"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 62.4,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211003",
+      "code": "HAP-211003",
+      "sourceRecordId": "69363d5063a581f3c80c82e3",
+      "nameVi": "Chè thập cẩm",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211003.webp",
+      "imageSha256": "d3433b024e212f6579a77088dbae82c7e434fffac4499d8363f8f1e7c37e2cb4",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/08/screenshot_3.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 629.1,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 629.1,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 11.3,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 10.2,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 123,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 7.6,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 90.1,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 5.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 233.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 10.4,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 1.9,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 111.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 0.2795,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 97.9,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211004",
+      "code": "HAP-211004",
+      "sourceRecordId": "6916a1124ebefc46d1078423",
+      "nameVi": "Bánh cuốn chay chả",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211004.webp",
+      "imageSha256": "b556c87d3413bd37c5724cfd613833c7e942a2d76bd1495c44bab8aea93737aa",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/11/14/banh_cuon_chay_cha_hp.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 673.4,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 673.4,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 13,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 36.2,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 73.9,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 3.9,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 40.9,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 9.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 57.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 3,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 3.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 1049,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 2.6225,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Cholesterol",
+          "nameEn": "Cholesterol",
+          "amount": 28.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "cholesterol"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 172,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211009",
+      "code": "HAP-211009",
+      "sourceRecordId": "6916ac394b783596c50f85d3",
+      "nameVi": "Bánh cuốn thịt",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211009.webp",
+      "imageSha256": "4cda1e6a1e326a06b3f136ad297849371df37743a14a14d12dd041d184081d08",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/11/14/banh_cuon_thit.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 493.1,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 493.1,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 13.8,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 19.8,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 65,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 31.4,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 362.7,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 28.2,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 83.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 2.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 2.1,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 1580.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 3.95175,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Cholesterol",
+          "nameEn": "Cholesterol",
+          "amount": 16.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "cholesterol"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 124.9,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211014",
+      "code": "HAP-211014",
+      "sourceRecordId": "693647f89ad194e22e060a34",
+      "nameVi": "Ốc đĩa luộc mắm",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211014.webp",
+      "imageSha256": "b2fe724bac4e266f8617c266a0fe969138858f293427e59631ce3815f6cd6ca6",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/08/screenshot_23.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 185.1,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 185.1,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 29.9,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 1.1,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 13.9,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 15.9,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 181.7,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 15,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 4389.3,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 0.3,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 0.1,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 11.3,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 0.02825,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 5.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211016",
+      "code": "HAP-211016",
+      "sourceRecordId": "693643c563a581f3c80c82e5",
+      "nameVi": "Hàu nướng mọi (10 con)",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211016.webp",
+      "imageSha256": "9b54f72c2116b3582351022fb3e040ba96993cd2bde2cda1e9ff365ccefa749d",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/08/screenshot_19.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 152.1,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 152.1,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 17.7,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 5.3,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 8.4,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 21.6,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 97.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 97.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 65.2,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 140.9,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 0.35225,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Cholesterol",
+          "nameEn": "Cholesterol",
+          "amount": 29.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "cholesterol"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211017",
+      "code": "HAP-211017",
+      "sourceRecordId": "69366d893809a487da0107f2",
+      "nameVi": "Nem chua rán",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211017.webp",
+      "imageSha256": "8e476ba71bee2008966bea15519ee9dac860c6fdcf9415fcdef4523d11f33af0",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/08/screenshot_33.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 273,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 273,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 40.8,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 7.1,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 11.4,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 9.2,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 102.8,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 12,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 48.5,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 0.2,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 0.1,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 900.1,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 2.25025,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 165.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211020",
+      "code": "HAP-211020",
+      "sourceRecordId": "6937de5088cc248efa0a9e0d",
+      "nameVi": "Bánh mỳ cay",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211020.webp",
+      "imageSha256": "303651d7902fa5a3183f882bd1d5ed8590fcedfe5f5da38bd619037aa54a6ef2",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/09/screenshot_114.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 751.9,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 751.9,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 24.1,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 35.6,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 83.9,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 1590.7,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 128.5,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 15,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 71.3,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 8.3,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 0.1,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 145.5,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 0.36375,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Cholesterol",
+          "nameEn": "Cholesterol",
+          "amount": 210,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "cholesterol"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 146,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211040",
+      "code": "HAP-211040",
+      "sourceRecordId": "6937e10488cc248efa0a9e0f",
+      "nameVi": "Bánh rán vừng (5 chiếc)",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211040.webp",
+      "imageSha256": "254346aaa40d02e590dc772c80f78d832b12ea46bfc91fa9ea03cb7641f7b122",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/09/screenshot_118.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 159,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 159,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 4.2,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 7.2,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 19.4,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 10.7,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 2.8,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 1.1,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 11.5,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 0.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 0.2,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 10.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 0.027,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Cholesterol",
+          "nameEn": "Cholesterol",
+          "amount": 29.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "cholesterol"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 26.1,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211045",
+      "code": "HAP-211045",
+      "sourceRecordId": "6878686985e246e2010deeba",
+      "nameVi": "Bánh đa cua",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211045.png",
+      "imageSha256": "6e94f236fee3f1f13f9f238546f92bc5a97d4ad52252ff5aa2f4f13dbdc61274",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/07/17/screenshot_22.png",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 420.5,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 420.5,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 19.7,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 11.9,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 58.7,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 1634.8,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 31.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Calcium",
+          "nameEn": "Calcium",
+          "amount": 337.4,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "calcium"
+        },
+        {
+          "name": "Iron",
+          "nameEn": "Iron",
+          "amount": 6.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "iron"
+        },
+        {
+          "name": "Zinc",
+          "nameEn": "Zinc",
+          "amount": 1.4,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "zinc"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 723.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 1.809,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Cholesterol",
+          "nameEn": "Cholesterol",
+          "amount": 44.4,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "cholesterol"
+        },
+        {
+          "name": "Magnesium",
+          "nameEn": "Magnesium",
+          "amount": 56.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magnesium"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211050",
+      "code": "HAP-211050",
+      "sourceRecordId": "68f9aefbae76cca0b10d27b4",
+      "nameVi": "Mỳ vằn thắn",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211050.png",
+      "imageSha256": "e88792593e4af9616525d238fdd92537b00cd5867e11e143ff7b3c9527548792",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/10/23/my_van_than_hp.png",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 435.3,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 435.3,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 23.4,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 24.2,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 31,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 433.4,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 919.2,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 50.7,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 162.1,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 4.1,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 2.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 1769.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 4.424,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Cholesterol",
+          "nameEn": "Cholesterol",
+          "amount": 83.9,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "cholesterol"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 58,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211054",
+      "code": "HAP-211054",
+      "sourceRecordId": "6911b07c668d1a5d170be115",
+      "nameVi": "Bánh bèo",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211054.webp",
+      "imageSha256": "5c92772ec9caf71d8c75c39c66041b11968f74ff7e850e6053b3ded55eaf54e4",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/11/10/banh_beo_hp.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 451.1,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 451.1,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 19,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 17.2,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 55.1,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 5.4,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 57.1,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 14.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 170.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 5.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 1.3,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 926.3,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 2.31575,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Cholesterol",
+          "nameEn": "Cholesterol",
+          "amount": 0,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "cholesterol"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 22.4,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211058",
+      "code": "HAP-211058",
+      "sourceRecordId": "6937dead88cc248efa0a9e0e",
+      "nameVi": "Bánh mỳ cay 5 cái",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211058.webp",
+      "imageSha256": "f5146ba819b8f2deb6f5f66e3189f3d0e876269c9851e71ca00e5232d37eaccb",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/09/screenshot_115.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 241.4,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 241.4,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 7.7,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 7.9,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 34.9,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 341.8,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 38.6,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 4.5,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 24.5,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 2.4,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 32.3,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 0.08075,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Cholesterol",
+          "nameEn": "Cholesterol",
+          "amount": 45,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "cholesterol"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 31.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211062",
+      "code": "HAP-211062",
+      "sourceRecordId": "6936707e75a5b73eb102ffa2",
+      "nameVi": "Nộm bò khô",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211062.webp",
+      "imageSha256": "4d3119ac3ce181030e198e9b7f2aeb0f4d6cb0dd1d6bd96116c9207e8d1b78bd",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/08/screenshot_40.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 494.5,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 494.5,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 28.8,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 17.6,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 55.2,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 34.1,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 408.3,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 61.3,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 162.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 5.1,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 0.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 139.1,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 0.34775,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Cholesterol",
+          "nameEn": "Cholesterol",
+          "amount": 0.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "cholesterol"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 156.9,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211063",
+      "code": "HAP-211063",
+      "sourceRecordId": "69364a937e040380420583d3",
+      "nameVi": "Chim quay",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211063.webp",
+      "imageSha256": "dc366e24e6239dda11bf5a644e94f02ccd4ee46a775077cde1b32c89da394ba8",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/08/screenshot_26.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 434.9,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 434.9,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 71.5,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 71.5,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 3.4,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 64.9,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 102.8,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 35.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 46.2,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 15,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 8.9,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 177.1,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 0.44275,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Cholesterol",
+          "nameEn": "Cholesterol",
+          "amount": 229.3,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "cholesterol"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 86.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211065",
+      "code": "HAP-211065",
+      "sourceRecordId": "6911b64e2334af97bf0b9105",
+      "nameVi": "Bánh bột lọc (5 cái)",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211065.webp",
+      "imageSha256": "8f7b905bd47841f859078fe85bf444cf51042458fc489820d40b1d3ff576e882",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/11/10/banh_bot_loc_5_cai_hp.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 199.9,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 199.9,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 4.3,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 8.7,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 26.1,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 8.9,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 84.8,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 10.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 26.2,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 0.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 0.1,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 743.5,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 1.85875,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Cholesterol",
+          "nameEn": "Cholesterol",
+          "amount": 14.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "cholesterol"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 19.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211082",
+      "code": "HAP-211082",
+      "sourceRecordId": "6911992c7cba214d4206a9f2",
+      "nameVi": "Xôi thịt thập cẩm",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211082.webp",
+      "imageSha256": "8380835d0a537caeaf8fad64857799c0465dc63a00db9fa3b508371fbc64d760",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/11/10/xoi_thit_thap_cam_hp.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 856.4,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 856.4,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 36.8,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 20.9,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 130.2,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 178,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 67.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C",
+          "nameEn": "Vitamin C",
+          "amount": 5.1,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 76.9,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 4.5,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 5,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 889.3,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 2.22325,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Cholesterol",
+          "nameEn": "Cholesterol",
+          "amount": 62.1,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "cholesterol"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 75,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    },
+    {
+      "taskId": "nin-image-HAP-211086",
+      "code": "HAP-211086",
+      "sourceRecordId": "69366e5733d7a9f441076388",
+      "nameVi": "Nem Lụi",
+      "imagePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\images\\HAP-211086.webp",
+      "imageSha256": "8fe9a5ae095bafccdd7a3ef0b2e83332c434e1c9fc9fd3cf39fbecec96c11977",
+      "sourceImageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/08/screenshot_35.webp",
+      "priority": 6,
+      "tentativeRole": "REVIEW_REQUIRED",
+      "userPreferredWorkerLabel": "GPT6Luna",
+      "apiModelIdentifier": null,
+      "executionStatus": "NOT_EXECUTED",
+      "instruction": "Read only the attached original source image. Copy every heading, serving label, ingredient name, quantity and unit exactly. Do not invent recipes or infer missing grams from photographs/nutrition. Do not convert ml, pieces, bone-in or shell-on amounts to edible grams. Distinguish no ingredient list from illegible text. Record every uncertain token with its source text. Source API nutrition basis is unverified: do not assume 100g or source serving. Compare image energy to API energy without changing either. Return JSON matching the supplied schema. This is extraction pending independent review, not permission to activate a clinical dish.",
+      "responseSchema": "response-schema.json",
+      "rawSourceTotalEnergy": 707,
+      "rawSourceNutritionalComponents": [
+        {
+          "name": "Năng lượng",
+          "nameEn": "Energy",
+          "amount": 707,
+          "unit_id": "67dbf3a34ef829137c091af2",
+          "unit_name": "Kcal",
+          "key": "nang-luong"
+        },
+        {
+          "name": "Chất đạm",
+          "nameEn": "Protein",
+          "amount": 48.7,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-dam"
+        },
+        {
+          "name": "Chất béo",
+          "nameEn": "Fat",
+          "amount": 17.4,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-beo"
+        },
+        {
+          "name": "Chất bột đường",
+          "nameEn": "Carbohydrate",
+          "amount": 88.9,
+          "unit_id": "67dbf4134ef829137c091af3",
+          "unit_name": "g",
+          "key": "chat-bot-duong"
+        },
+        {
+          "name": "Vitamin A",
+          "nameEn": "Vitamin A",
+          "amount": 427,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "vitamin-a"
+        },
+        {
+          "name": "Beta-caroten",
+          "nameEn": "Beta-caroten",
+          "amount": 4305.6,
+          "unit_id": "67e39c035b85385ce4045d93",
+          "unit_name": "μg",
+          "key": "beta-caroten"
+        },
+        {
+          "name": "Vitamin C ",
+          "nameEn": "Vitamin C ",
+          "amount": 45.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "vitamin-c"
+        },
+        {
+          "name": "Canxi",
+          "nameEn": "Calcium",
+          "amount": 386.7,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "canxi"
+        },
+        {
+          "name": "Sắt",
+          "nameEn": "Iron",
+          "amount": 6.3,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "sat"
+        },
+        {
+          "name": "Kẽm",
+          "nameEn": "Zinc",
+          "amount": 6.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "kem"
+        },
+        {
+          "name": "Natri",
+          "nameEn": "Sodium",
+          "amount": 1619.6,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "equivalenceComponents": [
+            {
+              "name": "Tương đương Muối",
+              "nameEn": "Salt",
+              "amount": 4.049,
+              "unit_name": "g",
+              "key": "tuong-duong-muoi"
+            }
+          ],
+          "key": "natri"
+        },
+        {
+          "name": "Cholesterol",
+          "nameEn": "Cholesterol",
+          "amount": 39.8,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "cholesterol"
+        },
+        {
+          "name": "Magie",
+          "nameEn": "Magnesium",
+          "amount": 133.2,
+          "unit_id": "67e39c093a265c60790a8f63",
+          "unit_name": "mg",
+          "key": "magie"
+        }
+      ],
+      "priorExtraction": null,
+      "priorNoRecipeList": false
+    }
+  ]
+}

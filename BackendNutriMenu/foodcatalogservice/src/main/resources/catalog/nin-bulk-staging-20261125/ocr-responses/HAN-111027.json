@@ -1,0 +1,67 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "449.3 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh bột lọc",
+      "amountSourceText": "203.0",
+      "numericQuantity": 203.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành phi",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "phi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau xà lách",
+      "amountSourceText": "47.0",
+      "numericQuantity": 47.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "rau thơm",
+      "amountSourceText": "11.0",
+      "numericQuantity": 11.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước chấm pha",
+      "amountSourceText": "70.5",
+      "numericQuantity": 70.5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà rốt",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đu đủ",
+      "amountSourceText": "25.0",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-111027",
+  "imageSha256": "c457dc00e43ce5bee36c2f002f3d8c2a4ce2101e0d022a2753b7cef5642b8b3a",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

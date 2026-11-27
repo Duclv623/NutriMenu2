@@ -1,0 +1,59 @@
+{
+  "code": "SFF-113097",
+  "imageSha256": "d45fba9dabfb04680ef2c9c929c2a90dba073baa7f05ea9dfc91d89781402d72",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "287.1 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Chè hạt sen/Sweet gruel with lotus seed",
+      "amountSourceText": "27.0",
+      "numericQuantity": 27.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chè đỗ xanh/Sweet gruel with mung bean",
+      "amountSourceText": "64.0",
+      "numericQuantity": 64.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chè đỗ đen/sweet black bean soup",
+      "amountSourceText": "48.0",
+      "numericQuantity": 48.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thạch sương sáo/Grass jelly",
+      "amountSourceText": "45.0",
+      "numericQuantity": 45.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trân châu + củ mã thầy/\nTapioca pearls + Water chestnut",
+      "amountSourceText": "42.0",
+      "numericQuantity": 42.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước đường/Syrup",
+      "amountSourceText": "38.0",
+      "numericQuantity": 38.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

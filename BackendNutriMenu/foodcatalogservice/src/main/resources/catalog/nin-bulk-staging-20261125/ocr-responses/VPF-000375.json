@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "67kcal/đĩa",
+  "ingredients": [
+    {
+      "nameSourceText": "Trứng gà",
+      "amountSourceText": "47g",
+      "numericQuantity": 47,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000375",
+  "imageSha256": "88cb254ca10a6e605a035aef2c975a98ea344ff8e7625db6e15b148e912f4566",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

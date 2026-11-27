@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "84kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Rau nhút",
+      "amountSourceText": "100g",
+      "numericQuantity": 100,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò thăn",
+      "amountSourceText": "30g",
+      "numericQuantity": 30,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột canh",
+      "amountSourceText": "1g",
+      "numericQuantity": 1,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000034",
+  "imageSha256": "3bdc33e2e3256311eb501cbd83519e53ad7ddedfee006b769327cd0a236846cb",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

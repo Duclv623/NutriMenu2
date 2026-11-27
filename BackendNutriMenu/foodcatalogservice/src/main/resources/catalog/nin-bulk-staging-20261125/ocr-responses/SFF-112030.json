@@ -1,0 +1,46 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "731.1 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cánh gà nước (217g)/BBQ Chicken wing",
+      "amountSourceText": "104.0",
+      "numericQuantity": 104.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột/Cucumber",
+      "amountSourceText": "161.0",
+      "numericQuantity": 161.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đùi gà nướng (213g)/BBQ Chicken drumsticks",
+      "amountSourceText": "149.0",
+      "numericQuantity": 149.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nướng",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước chấm pha/Sauces",
+      "amountSourceText": "36.0",
+      "numericQuantity": 36.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table prints 'Cánh gà nước (217g)' (likely typo for 'nướng'; English says 'BBQ Chicken wing').",
+    "Photo callouts show 'Cánh gà (217g)' and 'Đùi gà (213g)' while table Weight (g) lists 104.0 and 149.0."
+  ],
+  "code": "SFF-112030",
+  "imageSha256": "98a2b89426fffb64832da66f3764154467d220f498767f32f37c522d06d572a2",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

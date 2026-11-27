@@ -1,0 +1,59 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "448.5 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh phở",
+      "amountSourceText": "157.0",
+      "numericQuantity": 157.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò loại I luộc",
+      "amountSourceText": "87.0",
+      "numericQuantity": 87.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau mùi",
+      "amountSourceText": "11.0",
+      "numericQuantity": 11.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng",
+      "amountSourceText": "490.0",
+      "numericQuantity": 490.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chanh",
+      "amountSourceText": "12.7",
+      "numericQuantity": 12.7,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành tây",
+      "amountSourceText": "17.0",
+      "numericQuantity": 17.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-113089",
+  "imageSha256": "28b685a70af58c8d285596d888a8c59157ef2f7d0fdfe6db02dfce7b249c613c",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,19 @@
+{
+  "code": "HAN-121038",
+  "imageSha256": "d1aed1f3892517b3719e2ce5a8efcc459f9323b27279ff1a6c3e9bdda940c1d1",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Xôi đỗ xanh",
+      "amountSourceText": "209.0",
+      "numericQuantity": 209.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "603.4 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

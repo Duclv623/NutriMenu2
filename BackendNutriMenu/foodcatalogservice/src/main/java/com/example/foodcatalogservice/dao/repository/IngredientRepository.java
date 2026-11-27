@@ -10,6 +10,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
+import java.util.Set;
 
 @Repository
 public interface IngredientRepository extends JpaRepository<Ingredient, Long> {
@@ -17,12 +18,14 @@ public interface IngredientRepository extends JpaRepository<Ingredient, Long> {
 
     @Query("""
         SELECT i FROM Ingredient i
-        WHERE (:group IS NULL OR i.ingredientGroup = :group)
+        WHERE i.vfcCode IN :sourceCodes
+          AND (:group IS NULL OR i.ingredientGroup = :group)
           AND (:giLevel IS NULL OR i.giLevel = :giLevel)
           AND (:kw IS NULL OR :kw = '' OR i.nameNormalized LIKE CONCAT('%', :kw, '%') OR LOWER(i.vfcCode) LIKE CONCAT('%', :kw, '%'))
         ORDER BY i.nameVi ASC
     """)
     Page<Ingredient> searchIngredients(
+            @Param("sourceCodes") Set<String> sourceCodes,
             @Param("group") IngredientGroup group,
             @Param("giLevel") GiLevel giLevel,
             @Param("kw") String normalizedKeyword,

@@ -1,0 +1,19 @@
+{
+  "code": "HAN-122042",
+  "imageSha256": "0ab8ea7bc33bb17023c56c1a47d596e1c62a02bd73c94c9434ce735446976721",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh chưng",
+      "amountSourceText": "185.0",
+      "numericQuantity": 185.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "416.0 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

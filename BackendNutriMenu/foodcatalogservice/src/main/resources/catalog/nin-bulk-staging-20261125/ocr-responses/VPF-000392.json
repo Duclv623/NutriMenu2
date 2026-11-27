@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000392",
+  "imageSha256": "2af5ac5ef7aa60090fde849b1a1e098e0c2b5946cf4d6cc6f4dc55afcb543135",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "110kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa milo",
+      "amountSourceText": "180ml",
+      "numericQuantity": 180.0,
+      "unitSourceText": "ml",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

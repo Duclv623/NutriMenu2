@@ -1,0 +1,83 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "718.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ",
+      "amountSourceText": "231.0",
+      "numericQuantity": 231.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải thảo luộc",
+      "amountSourceText": "159.0",
+      "numericQuantity": 159.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sườn lợn xào chua ngọt",
+      "amountSourceText": "17.5",
+      "numericQuantity": 17.5,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào chua ngọt",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả lá lốt",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lườn gà luộc",
+      "amountSourceText": "36.8",
+      "numericQuantity": 36.8,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng",
+      "amountSourceText": "145.0",
+      "numericQuantity": 145.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bí đao luộc",
+      "amountSourceText": "14.0",
+      "numericQuantity": 14.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu phụ rán",
+      "amountSourceText": "45.0",
+      "numericQuantity": 45.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt lợn nhồi",
+      "amountSourceText": "9.0",
+      "numericQuantity": 9.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nhồi",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-121062",
+  "imageSha256": "e524a7771335769c64acb381df9bb9587208ef585c7e8ea40e8afe8f9e6eb090",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

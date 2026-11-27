@@ -1,0 +1,27 @@
+{
+  "code": "SFF-123029",
+  "imageSha256": "c39d69785d45600bdee39b4239de4bc90ae422e40816745017834fa9282cb6b0",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Chanh leo tươi/Passion fruit",
+      "amountSourceText": "24.0",
+      "numericQuantity": 24.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường kính/Sugar",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,83 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "496kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Gà ta",
+      "amountSourceText": "250g",
+      "numericQuantity": 250,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành tây",
+      "amountSourceText": "80g",
+      "numericQuantity": 80,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột",
+      "amountSourceText": "130g",
+      "numericQuantity": 130,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giá đỗ",
+      "amountSourceText": "50g",
+      "numericQuantity": 50,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường",
+      "amountSourceText": "30g",
+      "numericQuantity": 30,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước cốt chanh",
+      "amountSourceText": "20g",
+      "numericQuantity": 20,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau thơm",
+      "amountSourceText": "5g",
+      "numericQuantity": 5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lá chanh",
+      "amountSourceText": "2g",
+      "numericQuantity": 2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột canh",
+      "amountSourceText": "2g",
+      "numericQuantity": 2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000075",
+  "imageSha256": "9613095c6f3b7151143cb2eb5c4a01e9698471f9546ca7332acde64a82ab9eb8",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,107 @@
+{
+  "code": "VPF-000131",
+  "imageSha256": "9a69e475bff702864727c0633a169387d1559d07d51e67f2d6dae6b5af4f3025",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "601kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Mực ống",
+      "amountSourceText": "250g",
+      "numericQuantity": 250.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt nạc vai",
+      "amountSourceText": "80g",
+      "numericQuantity": 80.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nấm hương",
+      "amountSourceText": "4g",
+      "numericQuantity": 4.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột chiên giòn",
+      "amountSourceText": "20g",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bơ",
+      "amountSourceText": "20g",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mộc nhĩ",
+      "amountSourceText": "6g",
+      "numericQuantity": 6.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Gừng",
+      "amountSourceText": "5g",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành củ",
+      "amountSourceText": "10g",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thì là",
+      "amountSourceText": "15g",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tỏi",
+      "amountSourceText": "8g",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "10g",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột canh",
+      "amountSourceText": "1g",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

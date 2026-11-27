@@ -16,7 +16,7 @@ export async function request<T>(
   const controller = new AbortController();
   const timer = setTimeout(
     () => controller.abort(),
-    /chat|meal-plans\/tools|^\/admin\//.test(path) ? 90000 : 30000,
+    /chat|generate-weekly|meal-plans\/tools|^\/admin\//.test(path) ? 90000 : 30000,
   );
   const token = sessionStorage.getItem("nutriguide.token");
   const cancel = () => controller.abort();
@@ -36,7 +36,7 @@ export async function request<T>(
     });
     if (!response.ok) {
       const body = await response.json().catch(() => ({}));
-      if (response.status === 401)
+      if (response.status === 401 && token === sessionStorage.getItem("nutriguide.token"))
         window.dispatchEvent(new Event("nutriguide:unauthorized"));
       throw new ApiError(
         typeof body.detail === "string"

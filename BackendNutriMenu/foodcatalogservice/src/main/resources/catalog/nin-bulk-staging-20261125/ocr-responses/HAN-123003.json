@@ -1,0 +1,53 @@
+{
+  "code": "HAN-123003",
+  "imageSha256": "95fd8c8ff4fde35d13bf2fee6bec102c66c5c03211a5601408acd4c104079638",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh cuốn nóng nhân thịt",
+      "amountSourceText": "258.0",
+      "numericQuantity": 258.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nóng nhân thịt",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả quế",
+      "amountSourceText": "28.0",
+      "numericQuantity": 28.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành khô",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước chấm pha",
+      "amountSourceText": "75.0",
+      "numericQuantity": 75.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "pha",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau thơm",
+      "amountSourceText": null,
+      "numericQuantity": null,
+      "unitSourceText": null,
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "492.3 Kcal",
+  "uncertainties": [
+    "Source image table lists 'Rau thơm' with blank weight and blank energy values."
+  ],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,27 @@
+{
+  "code": "HAN-122066",
+  "imageSha256": "a6ee43a9e88f7e7161a529fe54067c3871f85a7dd41ffd0be6e09204a8e82752",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Xôi trắng (đồ)",
+      "amountSourceText": "95.0",
+      "numericQuantity": 95.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "đồ",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giò lụa",
+      "amountSourceText": "53.0",
+      "numericQuantity": 53.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "290.3 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

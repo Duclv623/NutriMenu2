@@ -1,0 +1,27 @@
+{
+  "code": "HAN-122038",
+  "imageSha256": "8e0f40c75da4189029465459eba8ad48047e771f773ab7a60434f5c4ec9b37b5",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Xôi trắng (đồ)",
+      "amountSourceText": "80.0",
+      "numericQuantity": 80.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "đồ",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu xanh đồ",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "đồ",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "222.7 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

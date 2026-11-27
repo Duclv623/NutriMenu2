@@ -1,0 +1,115 @@
+{
+  "code": "SFF-211071",
+  "imageSha256": "3b93ddf9d5e650f8f5174df9dadd31673f9ad142a51448e0cb68a9e8868a4d8b",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "994.4 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt bò gân luộc/Boiled beef tendon",
+      "amountSourceText": "148.0",
+      "numericQuantity": 148.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò nạm luộc/Boiled beef brisket",
+      "amountSourceText": "98.0",
+      "numericQuantity": 98.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bánh đa/Rice paper",
+      "amountSourceText": "52.0",
+      "numericQuantity": 52.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thính/Roasted rice",
+      "amountSourceText": "34.0",
+      "numericQuantity": 34.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chuối xanh/Green banana",
+      "amountSourceText": "134.0",
+      "numericQuantity": 134.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Khế/Star fruit",
+      "amountSourceText": "23.0",
+      "numericQuantity": 23.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đu đủ xanh/Green papaya",
+      "amountSourceText": "16.0",
+      "numericQuantity": 16.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà rốt/Carrot",
+      "amountSourceText": "9.0",
+      "numericQuantity": 9.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giá đậu xanh/Mungbean sprout",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chanh, ớt/Lime, chili",
+      "amountSourceText": "18.0",
+      "numericQuantity": 18.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau thơm/Herb",
+      "amountSourceText": "29.0",
+      "numericQuantity": 29.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương nếp/Sticky rice paste",
+      "amountSourceText": "42.0",
+      "numericQuantity": 42.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mắm tôm loãng/Diluted shrimp paste",
+      "amountSourceText": "37.0",
+      "numericQuantity": 37.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

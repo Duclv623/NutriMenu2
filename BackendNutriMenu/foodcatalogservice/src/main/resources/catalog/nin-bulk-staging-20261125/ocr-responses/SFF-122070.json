@@ -1,0 +1,19 @@
+{
+  "code": "SFF-122070",
+  "imageSha256": "588743ddd89701f2e01267aa306455a80b6813b11438c0469c3a379443e3c8e5",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "99.3 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Đường kính",
+      "amountSourceText": "Đường kính/Sugar",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

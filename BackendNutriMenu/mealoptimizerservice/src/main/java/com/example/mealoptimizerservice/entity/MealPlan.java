@@ -27,7 +27,7 @@ public class MealPlan {
     @Column(name="change_policy_recorded", nullable=false, columnDefinition="boolean default false")
     private Boolean changePolicyRecorded = false;
     @Builder.Default
-    @Column(name="template_code", columnDefinition="varchar(50) default 'STANDARD_4_MEALS'")
+    @Column(name="template_code", length=50)
     private String templateCode = "STANDARD_4_MEALS";
 
     @Id
@@ -39,7 +39,6 @@ public class MealPlan {
 
     @Column(name = "source_profile_version")
     private Long sourceProfileVersion;
-
     @Column(name = "plan_date", nullable = false)
     private LocalDate planDate;
 
@@ -65,7 +64,7 @@ public class MealPlan {
     private BigDecimal actualNetCarbG = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "actual_fiber_g", nullable = false, precision = 6, scale = 2)
+    @Column(name = "actual_fiber_g", nullable = true, precision = 6, scale = 2)
     private BigDecimal actualFiberG = BigDecimal.ZERO;
 
     @Builder.Default
@@ -77,7 +76,7 @@ public class MealPlan {
     private BigDecimal actualFatG = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "actual_total_gl", nullable = false, precision = 6, scale = 2)
+    @Column(name = "actual_total_gl", nullable = true, precision = 6, scale = 2)
     private BigDecimal actualTotalGl = BigDecimal.ZERO;
 
     @Builder.Default
@@ -85,7 +84,7 @@ public class MealPlan {
     private BigDecimal actualSodiumMg = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "actual_cholesterol_mg", nullable = false, precision = 7, scale = 2)
+    @Column(name = "actual_cholesterol_mg", nullable = true, precision = 7, scale = 2)
     private BigDecimal actualCholesterolMg = BigDecimal.ZERO;
 
     @Enumerated(EnumType.STRING)
@@ -108,6 +107,16 @@ public class MealPlan {
     @Builder.Default
     @Column(name = "created_at")
     private LocalDateTime createdAt = LocalDateTime.now();
+
+    @Builder.Default
+    @Enumerated(EnumType.STRING)
+    @Column(name = "planning_mode", nullable = false, length = 30, columnDefinition = "varchar(30) default 'MEDICAL'")
+    private PlanningMode planningMode = PlanningMode.MEDICAL;
+
+    @Builder.Default @Column(name="evaluate_fiber",nullable=false,columnDefinition="boolean default true")
+    private boolean evaluateFiber = true;
+    @Builder.Default @Column(name="evaluate_cholesterol",nullable=false,columnDefinition="boolean default true")
+    private boolean evaluateCholesterol = true;
 
     @Version
     @Column(nullable = false, columnDefinition = "bigint default 0")
@@ -133,6 +142,7 @@ public class MealPlan {
     @Column(name = "min_daily_fiber_g", columnDefinition = "numeric default 20")
     private BigDecimal minDailyFiberG = new BigDecimal("20");
 
+    private static BigDecimal addKnown(BigDecimal a,BigDecimal b) { return a==null || b==null ? null : a.add(b); }
     @Builder.Default
     @ElementCollection
     @CollectionTable(name = "meal_plan_excluded_dishes", joinColumns = @JoinColumn(name = "plan_id"))
@@ -160,12 +170,12 @@ public class MealPlan {
             if (item.getStatus() != MealItemStatus.SKIPPED) {
                 cal = cal.add(item.getSnapshotCaloriesKcal());
                 carb = carb.add(item.getSnapshotNetCarbG());
-                fiber = fiber.add(item.getSnapshotFiberG());
+                fiber = addKnown(fiber,item.getSnapshotFiberG());
                 prot = prot.add(item.getSnapshotProteinG());
                 fat = fat.add(item.getSnapshotFatG());
-                gl = gl.add(item.getSnapshotGl());
+                gl = addKnown(gl,item.getSnapshotGl());
                 sodium = sodium.add(item.getSnapshotSodiumMg() != null ? item.getSnapshotSodiumMg() : BigDecimal.ZERO);
-                chol = chol.add(item.getSnapshotCholesterolMg() != null ? item.getSnapshotCholesterolMg() : BigDecimal.ZERO);
+                chol = addKnown(chol,item.getSnapshotCholesterolMg());
             }
         }
         this.actualCaloriesKcal = cal;

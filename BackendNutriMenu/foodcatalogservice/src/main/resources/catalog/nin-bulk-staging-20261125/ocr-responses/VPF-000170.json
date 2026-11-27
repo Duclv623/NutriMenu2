@@ -1,0 +1,35 @@
+{
+  "code": "VPF-000170",
+  "imageSha256": "f416d5e9c9e42f2b14b38864da4392cafced9a15f0677cc2759ad0c5b053b7cb",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "63kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Ngọn su su",
+      "amountSourceText": "80g",
+      "numericQuantity": 80.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "5g",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hạt nêm",
+      "amountSourceText": "2g",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

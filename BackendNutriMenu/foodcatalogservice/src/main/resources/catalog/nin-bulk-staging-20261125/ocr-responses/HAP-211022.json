@@ -1,0 +1,99 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "515.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi",
+      "amountSourceText": "185.0",
+      "numericQuantity": 185.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cá thu rán",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả cá thác lác rán",
+      "amountSourceText": "11.0",
+      "numericQuantity": 11.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "dạ dày cá xào",
+      "amountSourceText": "25.0",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bóng cá chiên",
+      "amountSourceText": "11.0",
+      "numericQuantity": 11.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cá rô phi đồng rán",
+      "amountSourceText": "42.0",
+      "numericQuantity": 42.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dồi Cá thu chiên",
+      "amountSourceText": "27.0",
+      "numericQuantity": 27.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Da cá quả chiên",
+      "amountSourceText": "12.0",
+      "numericQuantity": 12.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt đỏ",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng",
+      "amountSourceText": "490.0",
+      "numericQuantity": 490.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau ăn kèm",
+      "amountSourceText": "65.0",
+      "numericQuantity": 65.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAP-211022",
+  "imageSha256": "4a8f26504934d85b9fbe69ed97d37bbf12837fff26b498b1d14cd258f98fd0af",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

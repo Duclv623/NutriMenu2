@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000073",
+  "imageSha256": "56e668b97a004f51e512483fc713dce238a98d1cdb01ab8fa81eb6268f68ce42",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "374.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Đuôi lợn",
+      "amountSourceText": "80g",
+      "numericQuantity": 80.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "205kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cánh gà (cả xương)",
+      "amountSourceText": "79g",
+      "numericQuantity": 79,
+      "unitSourceText": "g",
+      "preparationSourceText": "cả xương",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột chiên Aji quick",
+      "amountSourceText": "16g",
+      "numericQuantity": 16,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "10g",
+      "numericQuantity": 10,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000120",
+  "imageSha256": "c6dc4a8e1b88629d04ffbeb055e271c762c833cf7c325473955451193aa2d1cd",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

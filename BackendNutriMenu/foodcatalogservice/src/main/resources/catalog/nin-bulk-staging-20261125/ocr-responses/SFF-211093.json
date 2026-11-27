@@ -1,0 +1,107 @@
+{
+  "code": "SFF-211093",
+  "imageSha256": "0bf198f551e9effbf067b7c2e1e2a7a7908a4ad6251b585f87090b77f1abf0b5",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "305.9 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh mỳ/Banh my",
+      "amountSourceText": "75.0",
+      "numericQuantity": 75.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau răm/Laska leaves",
+      "amountSourceText": "17.0",
+      "numericQuantity": 17.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lòng bò luộc/Boiled beef intestines",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Khăn lông bò luộc/Boiled beef tripe",
+      "amountSourceText": "16.0",
+      "numericQuantity": 16.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dạ dày bò luộc/Boiled beef stomach",
+      "amountSourceText": "9.0",
+      "numericQuantity": 9.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cổ hũ bò luộc/Cổ hũ bò luộc",
+      "amountSourceText": "13.0",
+      "numericQuantity": 13.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lá lách bò luộc/Boiled beef spleen",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tổ ong bò luộc/Boiled beef tripe",
+      "amountSourceText": "2.0",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sách bò luộc/Boiled beef tripe",
+      "amountSourceText": "2.0",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước mắm cá/Fish sauce",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt đỏ/Chili",
+      "amountSourceText": "2.0",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/Bone Broth",
+      "amountSourceText": "119.0",
+      "numericQuantity": 119.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

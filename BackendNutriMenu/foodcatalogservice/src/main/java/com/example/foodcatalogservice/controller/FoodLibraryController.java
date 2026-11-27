@@ -45,6 +45,12 @@ public class FoodLibraryController {
         catalog.setUserDishPreference(accounts.identity(token).serviceUserId(), id, PreferenceType.DISLIKE);
     }
 
+    @DeleteMapping("/foods/tools/users/me/dishes/{id}/dislike")
+    @ResponseStatus(NO_CONTENT)
+    public void removeDislike(@RequestHeader("Authorization") String token, @PathVariable long id) {
+        catalog.removeDislike(accounts.identity(token).serviceUserId(), id);
+    }
+
     @PostMapping("/foods/tools/users/me/custom-dishes")
     public DishDetailResponse custom(@RequestHeader("Authorization") String token, @Valid @RequestBody CreateDishRequest request) {
         return catalog.createDish(request, accounts.identity(token).serviceUserId());

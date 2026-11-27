@@ -1,0 +1,19 @@
+{
+  "purpose": "Isolated existing FDC/ingredient-GI reference estimates; contains no legacy QA dish recipes. These are disclosed estimates, not measured NIN GI.",
+  "ingredients": [
+    {
+      "vfcCode": "FDC_171688",
+      "nameVi": "Táo tươi ăn cả vỏ",
+      "fatG": 0.17,
+      "cholesterolMg": 0.0,
+      "giValue": 36
+    },
+    {
+      "vfcCode": "FDC_169097",
+      "nameVi": "Cam tươi tách múi",
+      "fatG": 0.12,
+      "cholesterolMg": 0.0,
+      "giValue": 43
+    }
+  ]
+}

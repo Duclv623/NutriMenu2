@@ -1,0 +1,75 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "308.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Miến dong/Vermicelli from Bermuda tuber",
+      "amountSourceText": "57.0",
+      "numericQuantity": 57.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lươn chiên giòn/Fried Eel, silver - pike",
+      "amountSourceText": "18.0",
+      "numericQuantity": 18.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên giòn",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà rốt/Carrot",
+      "amountSourceText": "3.0",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột/Cucumber",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giá đậu xanh/Mungbean sprout",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành phi/Fried shallot",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "phi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau kinh giới/Sweet marjoram",
+      "amountSourceText": "4.0",
+      "numericQuantity": 4.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lạc rang/Roasted peanut",
+      "amountSourceText": "9.0",
+      "numericQuantity": 9.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-113011",
+  "imageSha256": "93c5954fbeb12aa972c85962f09c6aef57637ce3c6346d1259515cc6b243cfcc",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

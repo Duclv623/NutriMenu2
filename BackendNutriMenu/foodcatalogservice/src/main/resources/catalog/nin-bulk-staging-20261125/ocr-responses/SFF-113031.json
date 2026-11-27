@@ -1,0 +1,59 @@
+{
+  "code": "SFF-113031",
+  "imageSha256": "62e9b21d1249328162c76ce752b026601c5d9d380492b49a16a878f637eefc2d",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "395.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa chua/Yogurt",
+      "amountSourceText": "100.0",
+      "numericQuantity": 100.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Xoài chín/Ripe mango",
+      "amountSourceText": "33.0",
+      "numericQuantity": 33.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chín",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thạch lá nếp/Jelly",
+      "amountSourceText": "120.0",
+      "numericQuantity": 120.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trân châu/Tapioca pearls",
+      "amountSourceText": "44.0",
+      "numericQuantity": 44.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước cốt dừa/Coconut milk",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sữa đặc/Condensed milk",
+      "amountSourceText": "30.0",
+      "numericQuantity": 30.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

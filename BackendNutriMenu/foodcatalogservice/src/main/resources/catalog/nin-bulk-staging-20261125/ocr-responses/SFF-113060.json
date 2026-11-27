@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "228.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Lòng đỏ trứng gà/Egg yolk",
+      "amountSourceText": "55.0",
+      "numericQuantity": 55.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà phê đen/Black coffee",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sữa đặc/Condensed milk",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-113060",
+  "imageSha256": "a3091c35566dd963ebe9f92dce58522a350752a12b469481105d8920eb88d097",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

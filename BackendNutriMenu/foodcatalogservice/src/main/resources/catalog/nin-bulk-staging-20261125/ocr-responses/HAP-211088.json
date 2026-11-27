@@ -1,0 +1,85 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "694.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi",
+      "amountSourceText": "255.0",
+      "numericQuantity": 255.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt ngan luộc",
+      "amountSourceText": "77.0",
+      "numericQuantity": 77.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành tây",
+      "amountSourceText": "34.0",
+      "numericQuantity": 34.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau mùi",
+      "amountSourceText": "17.0",
+      "numericQuantity": 17.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau xà lách",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt xanh",
+      "amountSourceText": "3.0",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Quất",
+      "amountSourceText": "14.0",
+      "numericQuantity": 14.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Magi",
+      "amountSourceText": "60.0",
+      "numericQuantity": 60.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "nước dùng",
+      "amountSourceText": "266.0",
+      "numericQuantity": 266.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table ingredient kcal sum is 694.9 vs imageEnergyText 694.7 Kcal (0.2 kcal rounding difference)"
+  ],
+  "code": "HAP-211088",
+  "imageSha256": "bc4f3758c850685efcf78ab2a565b39bef3a23adcbb0dfc1f8f2de8a818bc0da",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

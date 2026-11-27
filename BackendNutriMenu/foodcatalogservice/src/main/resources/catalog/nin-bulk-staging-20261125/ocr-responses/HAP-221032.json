@@ -1,0 +1,110 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "321.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi",
+      "amountSourceText": "175.0",
+      "numericQuantity": 175.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cần tây",
+      "amountSourceText": "4.0",
+      "numericQuantity": 4.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giá đậu xanh",
+      "amountSourceText": "12.0",
+      "numericQuantity": 12.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bề bề luộc",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tôm biển luộc",
+      "amountSourceText": "9.0",
+      "numericQuantity": 9.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả lá lốt",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt xanh to",
+      "amountSourceText": "0.5",
+      "numericQuantity": 0.5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Quất chín (cả vỏ)",
+      "amountSourceText": "6.0",
+      "numericQuantity": 6.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chín, cả vỏ",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành củ tươi",
+      "amountSourceText": "6.0",
+      "numericQuantity": 6.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau mùi",
+      "amountSourceText": "6.0",
+      "numericQuantity": 6.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau xà lách",
+      "amountSourceText": "48.0",
+      "numericQuantity": 48.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng",
+      "amountSourceText": "380.0",
+      "numericQuantity": 380.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Sum of printed row energies (300.7 Kcal) is 20.3 Kcal lower than printed dish energy (321.0 Kcal); all printed rows kept verbatim.",
+    "Table includes Hành củ tươi (6.0 g, 1.6 Kcal) which is not labeled on the diagram."
+  ],
+  "code": "HAP-221032",
+  "imageSha256": "867432bcecd44f5edfa0c6ae387700895902a741a4f4fc53979f800ade68a053",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

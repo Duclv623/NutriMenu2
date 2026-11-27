@@ -1,0 +1,115 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "952.5 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ",
+      "amountSourceText": "233.0",
+      "numericQuantity": 233.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trứng đúc thịt rán",
+      "amountSourceText": "50.0",
+      "numericQuantity": 50.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt gà đùi rang",
+      "amountSourceText": "55.0",
+      "numericQuantity": 55.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa cải bắp, cần, cà rốt muối",
+      "amountSourceText": "33.0",
+      "numericQuantity": 33.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "muối",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả cá sốt",
+      "amountSourceText": "41.0",
+      "numericQuantity": 41.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "sốt",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trứng cút luộc",
+      "amountSourceText": "26.0",
+      "numericQuantity": 26.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giò",
+      "amountSourceText": "26.0",
+      "numericQuantity": 26.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giá đậu xanh xào",
+      "amountSourceText": "52.0",
+      "numericQuantity": 52.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải ngọt xào",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sườn lợn rán",
+      "amountSourceText": "36.0",
+      "numericQuantity": 36.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải xanh trong canh",
+      "amountSourceText": "56.0",
+      "numericQuantity": 56.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước canh rau",
+      "amountSourceText": "450.0",
+      "numericQuantity": 450.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước mắm cá",
+      "amountSourceText": "14.0",
+      "numericQuantity": 14.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAP-213038",
+  "imageSha256": "43fe7ef9848f38fdf0ba62869d07fc17f88ed3e9c3e57a084a60d8f7d5bf9a48",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

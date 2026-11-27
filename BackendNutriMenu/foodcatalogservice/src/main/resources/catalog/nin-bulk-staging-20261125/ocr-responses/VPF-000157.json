@@ -1,0 +1,35 @@
+{
+  "code": "VPF-000157",
+  "imageSha256": "671c80dd7a7986a02b139a3cd480e3d9d5276d5335adf3cd2c0275112e545b13",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "38kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Củ cải trắng",
+      "amountSourceText": "90g",
+      "numericQuantity": 90.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "2g",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hạt nêm",
+      "amountSourceText": "2g",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,27 @@
+{
+  "code": "SFF-213071",
+  "imageSha256": "c56b6626ff279a5c51d104ecb04f8cada403bce35d25a3374fc918300bfea6b2",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "226.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Ngao biển trắng hấp/Steamed clams white",
+      "amountSourceText": "125.0",
+      "numericQuantity": 125.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "hấp",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước chấm pha/Dipping sauce (Fish sauce)",
+      "amountSourceText": "50.0",
+      "numericQuantity": 50.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

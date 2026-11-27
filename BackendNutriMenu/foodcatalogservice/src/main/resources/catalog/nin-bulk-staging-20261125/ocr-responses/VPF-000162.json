@@ -1,0 +1,51 @@
+{
+  "code": "VPF-000162",
+  "imageSha256": "3bcfd388fa15bbb43a818a33c6fa4d4d9e7c74268df7a71e6b8ce694ee97161f",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "246kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Khoai tây",
+      "amountSourceText": "180g",
+      "numericQuantity": 180.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tỏi",
+      "amountSourceText": "5g",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "8g",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hạt nêm",
+      "amountSourceText": "2g",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mì chính",
+      "amountSourceText": "3g",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

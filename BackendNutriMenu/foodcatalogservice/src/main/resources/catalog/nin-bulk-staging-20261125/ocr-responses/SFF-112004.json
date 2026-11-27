@@ -1,0 +1,83 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "1088.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm rang/Fried Rice",
+      "amountSourceText": "444.0",
+      "numericQuantity": 444.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột muối/Pickled cucumber",
+      "amountSourceText": "90.0",
+      "numericQuantity": 90.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà rốt/Carrot",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ngô ngọt/maize seeds",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu cô ve/Green bean",
+      "amountSourceText": "48.0",
+      "numericQuantity": 48.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lạp xưởng/Chinese sausage",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả lợn/Pork, mince fat meat grilled",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/Broth/bone broth",
+      "amountSourceText": "140.0",
+      "numericQuantity": 140.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá/Welsh onion",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-112004",
+  "imageSha256": "d1d0db553263f755d9698d3d27cf12cab74bb55f55d666e5f0d3517289c6d681",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

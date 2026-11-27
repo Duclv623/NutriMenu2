@@ -1,0 +1,59 @@
+{
+  "code": "SFF-112008",
+  "imageSha256": "34697a7608cf15d6fcff3287344c11b306a261e60259327b57e7a6399bf7389d",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "305.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh mỳ/Burger buns",
+      "amountSourceText": "64.0",
+      "numericQuantity": 64.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cá tẩm bột chiên/Crispy fried fish",
+      "amountSourceText": "72.0",
+      "numericQuantity": 72.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sốt mayonnaise/Mayonnaise",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau xà lách/Lettuce",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương ớt/Chili sauce",
+      "amountSourceText": "8.0",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương cà chua/Ketchup",
+      "amountSourceText": "9.0",
+      "numericQuantity": 9.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

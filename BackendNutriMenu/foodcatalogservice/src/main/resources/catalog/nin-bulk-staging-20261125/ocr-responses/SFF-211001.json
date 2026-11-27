@@ -1,0 +1,107 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "803.3 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi/Rice vermicelli",
+      "amountSourceText": "250.0",
+      "numericQuantity": 250.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò nạc hầm/Stewed lean back beef",
+      "amountSourceText": "31.0",
+      "numericQuantity": 31.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "hầm/Stewed",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò có gân hầm/Stewed beef tendon",
+      "amountSourceText": "45.0",
+      "numericQuantity": 45.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "hầm/Stewed",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò nạm hầm/Stewed beef brisket",
+      "amountSourceText": "46.0",
+      "numericQuantity": 46.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "hầm/Stewed",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò nạc chần/blanched lean beef",
+      "amountSourceText": "19.0",
+      "numericQuantity": 19.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chần/blanched",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bánh quẩy/Crispy bagel twists",
+      "amountSourceText": "51.0",
+      "numericQuantity": 51.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau xà lách/Lettuce",
+      "amountSourceText": "54.0",
+      "numericQuantity": 54.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành tây/Onion",
+      "amountSourceText": "13.0",
+      "numericQuantity": 13.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chanh/Lime",
+      "amountSourceText": "7.0",
+      "numericQuantity": 7.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt/Chili",
+      "amountSourceText": "2.0",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành, mùi/Welsh onion, coriander",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/Bone broth",
+      "amountSourceText": "455.0",
+      "numericQuantity": 455.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-211001",
+  "imageSha256": "d9ccb257d0b57ff19b3366ae613e4e213a4f560ad2a14f41ceda4877e8146872",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

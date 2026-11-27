@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "137kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Tào phớ",
+      "amountSourceText": "210g",
+      "numericQuantity": 210,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường",
+      "amountSourceText": "15g",
+      "numericQuantity": 15,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000373",
+  "imageSha256": "cd851023a7acd12ce0cc21e030b7a2c1cc9b09c608f4c07d9719ef073e4c9b5a",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,69 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "355.3 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh trôi tàu",
+      "amountSourceText": "139.0",
+      "numericQuantity": 139.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cùi dừa già",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Vừng",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước cốt dừa",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước chè",
+      "amountSourceText": "100.0",
+      "numericQuantity": 100.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Gừng tươi",
+      "amountSourceText": "2.0",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lạc rang",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table energy sum (355.1 Kcal) differs slightly from imageEnergyText (355.3 Kcal)."
+  ],
+  "code": "HAN-113026",
+  "imageSha256": "d091b345f1c7679cff70116baac20024779c91f25cfe0193e5b9683cf7fed0ca",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

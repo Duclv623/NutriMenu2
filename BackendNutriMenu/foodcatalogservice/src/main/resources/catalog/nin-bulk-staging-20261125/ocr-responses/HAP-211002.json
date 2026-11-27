@@ -1,0 +1,51 @@
+{
+  "code": "HAP-211002",
+  "imageSha256": "ca478eba3e2d9545deb9e79a4cbcb82fd66d96d0431f242ee0dffda4c8e72f7c",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh đúc",
+      "amountSourceText": "188.0",
+      "numericQuantity": 188.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tôm biển luộc",
+      "amountSourceText": "36.0",
+      "numericQuantity": 36.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt lợn mỡ luộc",
+      "amountSourceText": "4.0",
+      "numericQuantity": 4.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đu đủ xào",
+      "amountSourceText": "51.0",
+      "numericQuantity": 51.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước chấm pha",
+      "amountSourceText": "45.0",
+      "numericQuantity": 45.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "pha",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "175.6 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

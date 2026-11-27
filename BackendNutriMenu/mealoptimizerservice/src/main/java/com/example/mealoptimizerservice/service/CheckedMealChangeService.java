@@ -96,6 +96,7 @@ public class CheckedMealChangeService {
     private record Validated(MealPlanResponse response, DishSolverDto dish, String signature) {}
 
     private Validated validate(MealPlan plan, CheckedMealChangeRequest request) {
+        NewSourceCatalogPolicy.requireNewSourcePlan(plan);
         if (!Boolean.TRUE.equals(plan.getChangePolicyRecorded()))
             throw error(HttpStatus.CONFLICT,"Thực đơn cũ chưa lưu đủ quy tắc kiểm tra. Hãy tạo thực đơn mới trước khi đổi món.");
         if (!Objects.equals(plan.getVersion(), request.getExpectedVersion()))
@@ -109,7 +110,7 @@ public class CheckedMealChangeService {
         if (target.getDishId().equals(request.getNewDishId()) && target.getServingScaledX2().equals(request.getNewServingScaledX2()))
             throw error(HttpStatus.UNPROCESSABLE_ENTITY,"Hãy chọn món hoặc khẩu phần khác.");
         Set<MealSlot> slots = plan.getItems().stream().map(MealPlanItem::getMealSlot).collect(Collectors.toSet());
-        List<MealSlotTemplate> active = templates.findByTemplateCodeOrderByIdAsc(plan.getTemplateCode()).stream()
+        List<MealSlotTemplate> active = (GeneralReferencePolicy.isGeneral(plan.getPlanningMode()) ? GeneralReferencePolicy.slots() : templates.findByTemplateCodeOrderByIdAsc(plan.getTemplateCode())).stream()
                 .filter(t -> slots.contains(t.getMealSlot())).toList();
         if (!active.stream().map(MealSlotTemplate::getMealSlot).collect(Collectors.toSet()).equals(slots))
             throw error(HttpStatus.UNPROCESSABLE_ENTITY,"Thiếu cấu trúc bữa để kiểm tra thực đơn.");
@@ -117,7 +118,8 @@ public class CheckedMealChangeService {
                 request.getExpectedVersion(), request.getExcludedDishIds(), request.getContraindications())
                 .withRecordedFilters(plan);
         List<DishSolverDto> eligible = catalog.fetchCandidatesForSolver(plan.getUserId(), plan.getMaxGiAllowed(),
-                policy.contraindications(), policy.excludedDishIds(), slots);
+                policy.contraindications(), policy.excludedDishIds(), slots,plan.getPlanningMode());
+        eligible = NewSourceCatalogPolicy.onlyNewSource(eligible);
         Map<Long,DishSolverDto> byId = eligible.stream().collect(Collectors.toMap(DishSolverDto::getDishId, d -> d, (a,b)->a));
         DishSolverDto replacement = byId.get(request.getNewDishId());
         if (replacement==null || replacement.getRole()!=target.getDishRole())
@@ -125,7 +127,7 @@ public class CheckedMealChangeService {
         Map<MealSlot,Map<Long,Integer>> pins = new EnumMap<>(MealSlot.class);
         List<MealPlanItem> previewItems = new ArrayList<>();
         Set<Long> desiredIds = new HashSet<>();
-        StringBuilder signature = new StringBuilder(plan.getId()+":"+plan.getVersion()+":"+new TreeSet<>(policy.excludedDishIds())+":"+new TreeSet<>(policy.contraindications()));
+        StringBuilder signature = new StringBuilder(plan.getPlanningMode()+":"+plan.isEvaluateFiber()+":"+plan.isEvaluateCholesterol()+":"+plan.getId()+":"+plan.getVersion()+":"+new TreeSet<>(policy.excludedDishIds())+":"+new TreeSet<>(policy.contraindications()));
         for (MealPlanItem item : plan.getItems()) {
             boolean changed = item.getId().equals(target.getId());
             Long dishId = changed ? request.getNewDishId() : item.getDishId();
@@ -159,6 +161,7 @@ public class CheckedMealChangeService {
             forbidden.put(slot,ids);
         }
         CpSatMealOptimizationEngine.SolverInputContext input = CpSatMealOptimizationEngine.SolverInputContext.builder()
+                .planningMode(plan.getPlanningMode()).evaluateFiber(plan.isEvaluateFiber()).evaluateCholesterol(plan.isEvaluateCholesterol())
                 .targetCaloriesKcal(plan.getTargetCaloriesKcal()).targetNetCarbG(plan.getTargetNetCarbG())
                 .targetProteinG(plan.getTargetProteinG()).targetFatG(plan.getTargetFatG())
                 .maxDailyGl(plan.getMaxDailyGl()).maxDailySodiumMg(plan.getMaxDailySodiumMg())
@@ -178,7 +181,7 @@ public class CheckedMealChangeService {
         if (solved.getStatus()!=SolverRunStatus.OPTIMAL && solved.getStatus()!=SolverRunStatus.FEASIBLE)
             throw error(solved.getStatus()==SolverRunStatus.INFEASIBLE ? HttpStatus.UNPROCESSABLE_ENTITY : HttpStatus.SERVICE_UNAVAILABLE,
                     "Phương án chưa đáp ứng các ràng buộc của bộ giải; thực đơn được giữ nguyên.");
-        MealPlan previewPlan = MealPlan.builder().id(plan.getId()).userId(plan.getUserId()).version(plan.getVersion())
+        MealPlan previewPlan = MealPlan.builder().planningMode(plan.getPlanningMode()).evaluateFiber(plan.isEvaluateFiber()).evaluateCholesterol(plan.isEvaluateCholesterol()).id(plan.getId()).userId(plan.getUserId()).version(plan.getVersion())
                 .planDate(plan.getPlanDate()).targetCaloriesKcal(plan.getTargetCaloriesKcal()).targetNetCarbG(plan.getTargetNetCarbG())
                 .targetProteinG(plan.getTargetProteinG()).targetFatG(plan.getTargetFatG()).solverStatus(SolverRunStatus.FEASIBLE)
                 .items(previewItems).build();
@@ -196,15 +199,15 @@ public class CheckedMealChangeService {
             && a.getSnapshotNetCarbG().compareTo(b.getSnapshotNetCarbG())==0
             && a.getSnapshotProteinG().compareTo(b.getSnapshotProteinG())==0
             && a.getSnapshotFatG().compareTo(b.getSnapshotFatG())==0
-            && a.getSnapshotFiberG().compareTo(b.getSnapshotFiberG())==0
-            && a.getSnapshotGl().compareTo(b.getSnapshotGl())==0
+            && sameNumber(a.getSnapshotFiberG(),b.getSnapshotFiberG())
+            && sameNumber(a.getSnapshotGl(),b.getSnapshotGl())
             && sameNumber(a.getSnapshotSodiumMg(),b.getSnapshotSodiumMg())
             && sameNumber(a.getSnapshotCholesterolMg(),b.getSnapshotCholesterolMg());
     }
 
-    private static boolean sameNumber(BigDecimal a, BigDecimal b) { return a!=null && b!=null && a.compareTo(b)==0; }
+    private static boolean sameNumber(BigDecimal a, BigDecimal b) { return a==null ? b==null : b!=null && a.compareTo(b)==0; }
 
-    private static BigDecimal amount(long scaled, int portions) { return BigDecimal.valueOf(scaled).multiply(BigDecimal.valueOf(portions)).divide(new BigDecimal("20.0")); }
+    private static BigDecimal amount(Long scaled, int portions) { if(scaled==null)return null; return BigDecimal.valueOf(scaled).multiply(BigDecimal.valueOf(portions)).divide(new BigDecimal("20.0")); }
 
     static void writeItem(MealPlanItem item, DishSolverDto dish, int portions) {
         item.setDishId(dish.getDishId()); item.setCatalogDish(true); item.setDishCode(dish.getCode()); item.setDishNameVi(dish.getNameVi());

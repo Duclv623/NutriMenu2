@@ -1,0 +1,19 @@
+{
+  "code": "HAN-113083",
+  "imageSha256": "95cd13e9ddf239db88c9ca547855c4a6bb0604055c2f57ddfb69436dcb7079f6",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "161.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Kem cacao",
+      "amountSourceText": "71.0",
+      "numericQuantity": 71.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

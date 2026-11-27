@@ -1,0 +1,77 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "444.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh cuốn",
+      "amountSourceText": "171.0",
+      "numericQuantity": 171.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành phi",
+      "amountSourceText": "7.0",
+      "numericQuantity": 7.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "phi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ruốc tôm",
+      "amountSourceText": "3.0",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả quế lợn",
+      "amountSourceText": "45.0",
+      "numericQuantity": 45.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau mùi, rau húng",
+      "amountSourceText": "2.0",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước chấm pha",
+      "amountSourceText": "50.0",
+      "numericQuantity": 50.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chanh",
+      "amountSourceText": "9.0",
+      "numericQuantity": 9.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table energy sum (444.7 Kcal) differs slightly from imageEnergyText (444.8 Kcal)."
+  ],
+  "code": "HAN-113053",
+  "imageSha256": "705c8d5e99aa1eea57ad21cf284aa92a6d66bea2f3460877ce28b6ef6946bcf0",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

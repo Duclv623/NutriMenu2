@@ -1,0 +1,75 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "925.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ",
+      "amountSourceText": "238.0",
+      "numericQuantity": 238.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt lợn ba chỉ chiên",
+      "amountSourceText": "34.0",
+      "numericQuantity": 34.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Súp lơ trắng xào",
+      "amountSourceText": "41.0",
+      "numericQuantity": 41.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lườn gà luộc",
+      "amountSourceText": "96.8",
+      "numericQuantity": 96.8,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lạc rang",
+      "amountSourceText": "12.0",
+      "numericQuantity": 12.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Khoai tây xào",
+      "amountSourceText": "43.0",
+      "numericQuantity": 43.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước canh bí xanh",
+      "amountSourceText": "198.0",
+      "numericQuantity": 198.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bí xanh nấu canh",
+      "amountSourceText": "35.0",
+      "numericQuantity": 35.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nấu canh",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-121072",
+  "imageSha256": "b27358cff3801df00f77803cc31469e851714cf8c0c452b55bab5916e9139612",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

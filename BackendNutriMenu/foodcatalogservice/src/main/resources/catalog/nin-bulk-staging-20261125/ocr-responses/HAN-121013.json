@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "67.3 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Quả chanh leo (ruột chanh)",
+      "amountSourceText": "30.2",
+      "numericQuantity": 30.2,
+      "unitSourceText": "g",
+      "preparationSourceText": "ruột chanh",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước đường",
+      "amountSourceText": "95.0",
+      "numericQuantity": 95.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-121013",
+  "imageSha256": "29d43cd4715eaa9eabf135af078162097e9ed21149436f7ec325c9c84cb5c498",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

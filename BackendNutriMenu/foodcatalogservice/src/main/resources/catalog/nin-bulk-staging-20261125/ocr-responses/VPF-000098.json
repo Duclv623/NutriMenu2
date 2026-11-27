@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Trọng lượng",
+  "imageEnergyText": "1500kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt vịt cả xương",
+      "amountSourceText": "830g",
+      "numericQuantity": 830,
+      "unitSourceText": "g",
+      "preparationSourceText": "cả xương",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000098",
+  "imageSha256": "c7cbcab6768c6380cdf7db83e7a786912050347e88bcc2893625484626c6c5dd",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

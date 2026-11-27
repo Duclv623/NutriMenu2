@@ -1,0 +1,43 @@
+{
+  "code": "SFF-211035",
+  "imageSha256": "41bb53da40267dc2041334604d2b320294d5e303d99633d4f452597de506fefc",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "284.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa chua có đường/\nSweetened yogurt",
+      "amountSourceText": "200.0",
+      "numericQuantity": 200.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước đường/Sugar syrup",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cơm nếp nấu lá dứa/\nCoconut steamed sticky rice",
+      "amountSourceText": "70.0",
+      "numericQuantity": 70.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nấu",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước đá/Ice water",
+      "amountSourceText": "150.0",
+      "numericQuantity": 150.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

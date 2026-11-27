@@ -16,6 +16,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
@@ -37,10 +38,12 @@ public class MealOptimizerService {
     private final SolverWeightProfileRepository profileRepo;
     private final MealSlotTemplateRepository templateRepo;
     private final MealPlanRepository mealPlanRepo;
+    private final CuratedFallbackPlanRepository fallbackRepo;
     private final SolverAuditLogRepository auditLogRepo;
     private final FoodCatalogIntegrationClient catalogClient;
     private final CpSatMealOptimizationEngine cpSatEngine;
     private final DiabeticClinicalTargetCalculator clinicalCalculator;
+    private final MealPlanArchiveService archiveService;
 
     @Qualifier("cpSatSolverBulkheadExecutor")
     private final ThreadPoolTaskExecutor solverExecutor;
@@ -48,6 +51,63 @@ public class MealOptimizerService {
     // -------------------------------------------------------------------------
     // ADMIN OPERATIONS
     // -------------------------------------------------------------------------
+    @Transactional(readOnly = true)
+    public List<SolverWeightProfile> getAllWeightProfiles() {
+        return profileRepo.findAll();
+    }
+
+    @Transactional
+    public SolverWeightProfile createWeightProfile(SolverWeightProfile req) {
+        return profileRepo.save(req);
+    }
+
+    @Transactional
+    public SolverWeightProfile updateWeightProfile(Long id, SolverWeightProfile req) {
+        SolverWeightProfile existing = profileRepo.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Không tìm thấy cấu hình trọng số ID: " + id));
+        existing.setNameVi(req.getNameVi());
+        existing.setWeightCarbDeviation(req.getWeightCarbDeviation());
+        existing.setWeightGlycemicLoad(req.getWeightGlycemicLoad());
+        existing.setWeightCalorieDeviation(req.getWeightCalorieDeviation());
+        existing.setWeightProteinFatDeviation(req.getWeightProteinFatDeviation());
+        existing.setWeightFiberBonus(req.getWeightFiberBonus());
+        existing.setWeightPreferenceBonus(req.getWeightPreferenceBonus());
+        existing.setMaxTimeSeconds(req.getMaxTimeSeconds());
+        existing.setNumSearchWorkers(req.getNumSearchWorkers());
+        return profileRepo.save(existing);
+    }
+
+    @Transactional
+    public SolverWeightProfile activateDefaultProfile(Long id) {
+        List<SolverWeightProfile> all = profileRepo.findAll();
+        SolverWeightProfile activated = null;
+        for (SolverWeightProfile p : all) {
+            p.setIsDefault(Objects.equals(p.getId(), id));
+            if (p.getIsDefault()) activated = p;
+        }
+        profileRepo.saveAll(all);
+        if (activated == null) {
+            throw new ResourceNotFoundException("Không tìm thấy cấu hình trọng số ID: " + id);
+        }
+        return activated;
+    }
+
+    @Transactional(readOnly = true)
+    public List<MealSlotTemplate> getMealTemplates(String templateCode) {
+        return templateRepo.findByTemplateCodeOrderByIdAsc(templateCode);
+    }
+
+    @Transactional
+    public MealSlotTemplate updateMealTemplate(Long id, MealSlotTemplate req) {
+        MealSlotTemplate tpl = templateRepo.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Không tìm thấy mẫu bữa ăn ID: " + id));
+        tpl.setCalorieRatioPct(req.getCalorieRatioPct());
+        tpl.setMinNetCarbG(req.getMinNetCarbG());
+        tpl.setMaxNetCarbG(req.getMaxNetCarbG());
+        tpl.setMaxGl(req.getMaxGl());
+        return templateRepo.save(tpl);
+    }
+
     @Transactional(readOnly = true)
     public Page<SolverAuditLog> getAuditLogs(int page, int size) {
         return auditLogRepo.findAllByOrderByExecutedAtDesc(PageRequest.of(page, size));
@@ -72,6 +132,16 @@ public class MealOptimizerService {
                 .activeSolverThreads(solverExecutor.getActiveCount())
                 .queuedSolverTasks(solverExecutor.getThreadPoolExecutor().getQueue().size())
                 .build();
+    }
+
+    @Transactional
+    public CuratedFallbackPlan createCuratedFallbackPlan(CuratedFallbackPlan plan) {
+        return fallbackRepo.save(plan);
+    }
+
+    @Transactional(readOnly = true)
+    public List<CuratedFallbackPlan> getAllCuratedFallbackPlans() {
+        return fallbackRepo.findAllByOrderByTargetCalorieLevelAsc();
     }
 
     @Transactional
@@ -117,9 +187,14 @@ public class MealOptimizerService {
 
     @Transactional(readOnly = true)
     public InfeasibilityDiagnosisResponse explainInfeasibility(Long userId, GenerateDailyMealRequest req) {
+        GeneralReferencePolicy.normalize(req);
         List<MealSlotTemplate> slots = getActiveTemplateOrThrow(req.getTemplateCode());
         List<DishSolverDto> candidates = catalogClient.fetchCandidatesForSolver(
-                userId, req.getMaxGiAllowed(), req.getPatientContraindications(), req.getExcludedDishIds(), mealSlotsOf(slots));
+                userId, req.getMaxGiAllowed(), req.getPatientContraindications(), req.getExcludedDishIds(), mealSlotsOf(slots), req.getPlanningMode());
+        candidates = NewSourceCatalogPolicy.onlyNewSource(candidates);
+        NewSourceCatalogPolicy.requireCoverage(slots, candidates);
+        boolean evaluateFiber = !GeneralReferencePolicy.isGeneral(req.getPlanningMode()) || candidates.stream().allMatch(d -> d.getFiberX10()!=null);
+        boolean evaluateCholesterol = !GeneralReferencePolicy.isGeneral(req.getPlanningMode()) || candidates.stream().allMatch(d -> d.getCholesterolX10()!=null);
         SolverWeightProfile wp = getActiveWeightProfile(req.getWeightProfileId());
 
         List<String> conflicts = new ArrayList<>();
@@ -143,6 +218,7 @@ public class MealOptimizerService {
                 .targetNetCarbG(req.getTargetNetCarbG())
                 .targetProteinG(req.getTargetProteinG())
                 .targetFatG(req.getTargetFatG())
+                .planningMode(req.getPlanningMode()).evaluateFiber(evaluateFiber).evaluateCholesterol(evaluateCholesterol)
                 .maxDailyGl(req.getMaxDailyGl())
                 .maxDailySodiumMg(req.getMaxDailySodiumMg())
                 .maxDailyCholesterolMg(req.getMaxDailyCholesterolMg())
@@ -153,7 +229,9 @@ public class MealOptimizerService {
                 .build();
 
         CpSatMealOptimizationEngine.SolverExecutionResult baseRes = cpSatEngine.solveOptimalMealPlan(baseCtx);
-        if (baseRes.getStatus() != SolverRunStatus.INFEASIBLE) {
+        if (baseRes.getStatus()==SolverRunStatus.UNKNOWN || baseRes.getStatus()==SolverRunStatus.MODEL_INVALID)
+            throw new OptimizerBusinessException(HttpStatus.SERVICE_UNAVAILABLE,"Chưa hoàn tất đánh giá tính khả thi; không kết luận có nghiệm hoặc vô nghiệm.");
+        if (baseRes.getStatus() == SolverRunStatus.OPTIMAL || baseRes.getStatus() == SolverRunStatus.FEASIBLE) {
             return InfeasibilityDiagnosisResponse.builder()
                     .isFeasibleUnderStandardRules(true)
                     .detectedConflicts(List.of("Mô hình hoàn toàn khả thi (FEASIBLE/OPTIMAL), không có xung đột ràng buộc cứng."))
@@ -216,6 +294,9 @@ public class MealOptimizerService {
                 .filter(i -> Objects.equals(i.getId(), itemId))
                 .findFirst()
                 .orElseThrow(() -> new ResourceNotFoundException("Không tìm thấy món ăn trong thực đơn ID: " + itemId));
+        if (isLocked && !NewSourceCatalogPolicy.isNewSource(target.getDishCode()))
+            throw new OptimizerBusinessException(HttpStatus.UNPROCESSABLE_ENTITY,
+                    "Không thể giữ món dùng dữ liệu cũ cho thực đơn mới.");
         target.setIsLocked(isLocked);
         plan.setUpdatedAt(java.time.LocalDateTime.now());
         return MealPlanResponse.fromEntity(mealPlanRepo.saveAndFlush(plan), null, null);
@@ -276,6 +357,9 @@ public class MealOptimizerService {
     @Transactional
     public MealPlanResponse manualReplaceMealItem(Long userId, Long planId, Long itemId, ManualReplaceItemRequest req) {
         MealPlan plan = getMealPlanOrThrow(userId, planId);
+        NewSourceCatalogPolicy.requireNewSourcePlan(plan);
+        if (GeneralReferencePolicy.isGeneral(plan.getPlanningMode())) throw new OptimizerBusinessException(HttpStatus.UNPROCESSABLE_ENTITY,
+                "Thực đơn phổ thông cần dùng chức năng đổi món có kiểm tra; không dùng API tái cân bằng bệnh lý.");
         MealPlanItem item = plan.getItems().stream()
                 .filter(i -> Objects.equals(i.getId(), itemId))
                 .findFirst()
@@ -284,6 +368,8 @@ public class MealOptimizerService {
         DishSolverDto newDish = catalogClient.findDishById(req.getNewDishId(), userId, true)
                 .orElseThrow(() -> new ResourceNotFoundException("Không tìm thấy món ăn thay thế ID: " + req.getNewDishId()));
 
+        if (!NewSourceCatalogPolicy.isNewSource(newDish.getCode()))
+            throw new OptimizerBusinessException(HttpStatus.UNPROCESSABLE_ENTITY, "Món thay thế phải thuộc dữ liệu mới.");
         populateItemSnapshotFromSolverDto(item, newDish, req.getNewServingScaledX2());
         item.setStatus(MealItemStatus.MODIFIED);
         plan.recalculateTotalsFromItems();
@@ -317,8 +403,8 @@ public class MealOptimizerService {
         for (MealPlan p : plans) {
             sumCal = sumCal.add(p.getActualCaloriesKcal());
             sumCarb = sumCarb.add(p.getActualNetCarbG());
-            sumFiber = sumFiber.add(p.getActualFiberG());
-            sumGl = sumGl.add(p.getActualTotalGl());
+            sumFiber = sumFiber==null || p.getActualFiberG()==null ? null : sumFiber.add(p.getActualFiberG());
+            sumGl = sumGl==null || p.getActualTotalGl()==null ? null : sumGl.add(p.getActualTotalGl());
             for (MealPlanItem item : p.getItems()) {
                 totalItems++;
                 if (item.getStatus() == MealItemStatus.COMPLETED) completedItems++;
@@ -336,8 +422,8 @@ public class MealOptimizerService {
                 .adherenceRatePct(adherence)
                 .avgDailyCaloriesKcal(sumCal.divide(countBd, 1, RoundingMode.HALF_UP))
                 .avgDailyNetCarbG(sumCarb.divide(countBd, 1, RoundingMode.HALF_UP))
-                .avgDailyFiberG(sumFiber.divide(countBd, 1, RoundingMode.HALF_UP))
-                .avgDailyGl(sumGl.divide(countBd, 1, RoundingMode.HALF_UP))
+                .avgDailyFiberG(sumFiber==null ? null : sumFiber.divide(countBd, 1, RoundingMode.HALF_UP))
+                .avgDailyGl(sumGl==null ? null : sumGl.divide(countBd, 1, RoundingMode.HALF_UP))
                 .build();
     }
 
@@ -367,6 +453,9 @@ public class MealOptimizerService {
         MealEditPolicy policy = req.getPolicy();
         MealPlan plan = getMealPlanForEdit(userId, planId, policy);
         if (policy != null) policy = policy.withRecordedFilters(plan);
+        NewSourceCatalogPolicy.requireNewSourcePlan(plan);
+        if (policy == null && GeneralReferencePolicy.isGeneral(plan.getPlanningMode())) throw new OptimizerBusinessException(HttpStatus.UNPROCESSABLE_ENTITY,
+                "Thực đơn phổ thông cần dùng chức năng đổi món có kiểm tra; không dùng API tái cân bằng bệnh lý.");
         MealPlanItem droppedItem = plan.getItems().stream()
                 .filter(i -> Objects.equals(i.getId(), req.getDroppedMealPlanItemId()))
                 .findFirst()
@@ -404,7 +493,7 @@ public class MealOptimizerService {
         List<DishSolverDto> candidates = catalogClient.fetchCandidatesForSolver(
                 userId, policy == null ? new BigDecimal("50.0") : plan.getMaxGiAllowed(),
                 policy == null ? Set.of() : policy.contraindications(),
-                policy == null ? Set.of() : policy.excludedDishIds(), mealSlotsOf(slots));
+                policy == null ? Set.of() : policy.excludedDishIds(), mealSlotsOf(slots), plan.getPlanningMode());
         for (MealPlanItem item : plan.getItems()) {
             if (Objects.equals(item.getId(), droppedItem.getId())) continue;
             DishSolverDto retained = candidates.stream().filter(dish ->
@@ -431,9 +520,12 @@ public class MealOptimizerService {
                 }
             }
         }
+        candidates = NewSourceCatalogPolicy.onlyNewSource(candidates);
+        NewSourceCatalogPolicy.requireCoverage(slots, candidates);
         SolverWeightProfile wp = getActiveWeightProfile(null);
 
         CpSatMealOptimizationEngine.SolverInputContext ctx = CpSatMealOptimizationEngine.SolverInputContext.builder()
+                .planningMode(plan.getPlanningMode()).evaluateFiber(plan.isEvaluateFiber()).evaluateCholesterol(plan.isEvaluateCholesterol())
                 .targetCaloriesKcal(plan.getTargetCaloriesKcal())
                 .targetNetCarbG(plan.getTargetNetCarbG())
                 .targetProteinG(plan.getTargetProteinG())
@@ -454,7 +546,7 @@ public class MealOptimizerService {
         }
 
         CpSatMealOptimizationEngine.SolverExecutionResult result = executeInsideBulkhead(ctx);
-        if (result.getStatus() == SolverRunStatus.INFEASIBLE) {
+        if (result.getStatus() != SolverRunStatus.OPTIMAL && result.getStatus() != SolverRunStatus.FEASIBLE) {
             throw new OptimizerBusinessException(HttpStatus.UNPROCESSABLE_ENTITY,
                     "Không tìm được món thay thế khả thi thỏa mãn trần đường huyết của bữa " + droppedItem.getMealSlot());
         }
@@ -506,6 +598,9 @@ public class MealOptimizerService {
         MealEditPolicy policy = req.getPolicy();
         MealPlan plan = getMealPlanForEdit(userId, planId, policy);
         if (policy != null) policy = policy.withRecordedFilters(plan);
+        NewSourceCatalogPolicy.requireNewSourcePlan(plan);
+        if (policy == null && GeneralReferencePolicy.isGeneral(plan.getPlanningMode())) throw new OptimizerBusinessException(HttpStatus.UNPROCESSABLE_ENTITY,
+                "Thực đơn phổ thông cần dùng chức năng đổi món có kiểm tra; không dùng API tái cân bằng bệnh lý.");
 
         BigDecimal remainingCal = plan.getTargetCaloriesKcal().subtract(req.getConsumedCaloriesKcal()).max(new BigDecimal("350.0"));
         BigDecimal remainingCarb = plan.getTargetNetCarbG().subtract(req.getConsumedNetCarbG()).max(new BigDecimal("35.0"));
@@ -537,10 +632,23 @@ public class MealOptimizerService {
         }
         List<DishSolverDto> candidates = catalogClient.fetchCandidatesForSolver(
                 userId, policy == null ? new BigDecimal("50.0") : plan.getMaxGiAllowed(),
-                policy == null ? Set.of() : policy.contraindications(), exclusions, mealSlotsOf(remainingSlots));
+                policy == null ? Set.of() : policy.contraindications(), exclusions, mealSlotsOf(remainingSlots), plan.getPlanningMode());
+        if (GeneralReferencePolicy.isGeneral(plan.getPlanningMode())) {
+            BigDecimal ratio = remainingSlots.stream().map(MealSlotTemplate::getCalorieRatioPct).reduce(BigDecimal.ZERO, BigDecimal::add);
+            remainingSlots = remainingSlots.stream().map(slot -> MealSlotTemplate.builder()
+                    .templateCode(slot.getTemplateCode()).mealSlot(slot.getMealSlot())
+                    .calorieRatioPct(slot.getCalorieRatioPct().multiply(new BigDecimal("100")).divide(ratio, 8, RoundingMode.HALF_UP))
+                    .minNetCarbG(slot.getMinNetCarbG()).maxNetCarbG(slot.getMaxNetCarbG()).maxGl(slot.getMaxGl())
+                    .allowCompositeDish(slot.getAllowCompositeDish()).reqMainStarch(slot.getReqMainStarch())
+                    .reqProteinDish(slot.getReqProteinDish()).reqVeggieDish(slot.getReqVeggieDish())
+                    .reqSoup(slot.getReqSoup()).reqSnack(slot.getReqSnack()).build()).toList();
+        }
+        candidates = NewSourceCatalogPolicy.onlyNewSource(candidates);
+        NewSourceCatalogPolicy.requireCoverage(remainingSlots, candidates);
         SolverWeightProfile wp = getActiveWeightProfile(null);
 
         CpSatMealOptimizationEngine.SolverInputContext ctx = CpSatMealOptimizationEngine.SolverInputContext.builder()
+                .planningMode(plan.getPlanningMode()).evaluateFiber(plan.isEvaluateFiber()).evaluateCholesterol(plan.isEvaluateCholesterol())
                 .targetCaloriesKcal(remainingCal)
                 .targetNetCarbG(remainingCarb)
                 .targetProteinG(remainingProt)
@@ -558,7 +666,7 @@ public class MealOptimizerService {
         }
 
         CpSatMealOptimizationEngine.SolverExecutionResult result = executeInsideBulkhead(ctx);
-        if (result.getStatus() == SolverRunStatus.INFEASIBLE) {
+        if (result.getStatus() != SolverRunStatus.OPTIMAL && result.getStatus() != SolverRunStatus.FEASIBLE) {
             throw new OptimizerBusinessException(HttpStatus.UNPROCESSABLE_ENTITY,
                     "Không thể tái cân bằng với ngân sách dinh dưỡng còn lại.");
         }
@@ -572,6 +680,8 @@ public class MealOptimizerService {
             plan.getItems().add(newItem);
         }
 
+        plan.setSolverStatus(result.getStatus());
+        plan.setSolveTimeMs(result.getBreakdown().getSolveTimeMs());
         plan.recalculateTotalsFromItems();
         plan.setUpdatedAt(java.time.LocalDateTime.now());
         recordAuditLog(userId, "REBALANCE_REMAINING", result);
@@ -589,6 +699,8 @@ public class MealOptimizerService {
             LocalDate currentDate = req.getStartDate().plusDays(dayOffset);
 
             GenerateDailyMealRequest dayReq = GenerateDailyMealRequest.builder()
+                    .sourceProfileVersion(req.getDailyTargetTemplate().getSourceProfileVersion())
+                    .planningMode(req.getDailyTargetTemplate().getPlanningMode())
                     .planDate(currentDate)
                     .sourceProfileVersion(req.getDailyTargetTemplate().getSourceProfileVersion())
                     .targetCaloriesKcal(req.getDailyTargetTemplate().getTargetCaloriesKcal())
@@ -648,7 +760,7 @@ public class MealOptimizerService {
 
     private MealPlanResponse runOptimizationPipeline(
             Long userId, GenerateDailyMealRequest req, boolean persistToDb, String operationType) {
-        Set<Long> recentDishes = (userId != null)
+        Set<Long> recentDishes = (userId != null && !GeneralReferencePolicy.isGeneral(req.getPlanningMode()))
                 ? mealPlanRepo.findRecentDishIdsByUserId(userId, req.getPlanDate().minusDays(2), req.getPlanDate())
                 : Collections.emptySet();
         return runOptimizationPipelineWithExtraExclusions(userId, req, recentDishes, persistToDb, operationType);
@@ -657,11 +769,25 @@ public class MealOptimizerService {
     private MealPlanResponse runOptimizationPipelineWithExtraExclusions(
             Long userId, GenerateDailyMealRequest req, Set<Long> excludedDishIds, boolean persistToDb, String operationType) {
 
+        GeneralReferencePolicy.normalize(req);
+        boolean replacing = req.getReplacePlanId() != null;
+        if (replacing && (!persistToDb || req.getExpectedVersion() == null || !req.isReplacementConfirmed()))
+            throw new OptimizerBusinessException(HttpStatus.BAD_REQUEST,"Tạo lại cần xác nhận thay thế và phiên bản thực đơn hiện tại.");
+        if (!replacing && (req.getExpectedVersion() != null || req.isReplacementConfirmed()))
+            throw new OptimizerBusinessException(HttpStatus.BAD_REQUEST,"Thiếu thực đơn cần tạo lại.");
+        if (persistToDb && !replacing && mealPlanRepo.findByUserIdAndPlanDate(userId,req.getPlanDate()).isPresent())
+            throw new OptimizerBusinessException(HttpStatus.CONFLICT,"Đã có thực đơn ngày này. Chọn Tạo lại và xác nhận thay thế để tiếp tục.");
         List<MealSlotTemplate> slots = getActiveTemplateOrThrow(req.getTemplateCode());
-        Set<Long> allExcludedDishIds = new HashSet<>(excludedDishIds);
+        // General reference menus may repeat across days; explicit exclusions remain mandatory.
+        Set<Long> allExcludedDishIds = GeneralReferencePolicy.isGeneral(req.getPlanningMode())
+                ? new HashSet<>() : new HashSet<>(excludedDishIds);
         if (req.getExcludedDishIds() != null) allExcludedDishIds.addAll(req.getExcludedDishIds());
         List<DishSolverDto> candidates = catalogClient.fetchCandidatesForSolver(
-                userId, req.getMaxGiAllowed(), req.getPatientContraindications(), allExcludedDishIds, mealSlotsOf(slots));
+                userId, req.getMaxGiAllowed(), req.getPatientContraindications(), allExcludedDishIds, mealSlotsOf(slots),req.getPlanningMode());
+        candidates = NewSourceCatalogPolicy.onlyNewSource(candidates);
+        NewSourceCatalogPolicy.requireCoverage(slots, candidates);
+        boolean evaluateFiber = !GeneralReferencePolicy.isGeneral(req.getPlanningMode()) || candidates.stream().allMatch(d -> d.getFiberX10()!=null);
+        boolean evaluateCholesterol = !GeneralReferencePolicy.isGeneral(req.getPlanningMode()) || candidates.stream().allMatch(d -> d.getCholesterolX10()!=null);
         SolverWeightProfile wp = getActiveWeightProfile(req.getWeightProfileId());
 
         CpSatMealOptimizationEngine.SolverInputContext ctx = CpSatMealOptimizationEngine.SolverInputContext.builder()
@@ -669,6 +795,7 @@ public class MealOptimizerService {
                 .targetNetCarbG(req.getTargetNetCarbG())
                 .targetProteinG(req.getTargetProteinG())
                 .targetFatG(req.getTargetFatG())
+                .planningMode(req.getPlanningMode()).evaluateFiber(evaluateFiber).evaluateCholesterol(evaluateCholesterol)
                 .maxDailyGl(req.getMaxDailyGl())
                 .maxDailySodiumMg(req.getMaxDailySodiumMg())
                 .maxDailyCholesterolMg(req.getMaxDailyCholesterolMg())
@@ -680,11 +807,16 @@ public class MealOptimizerService {
                 .build();
 
         CpSatMealOptimizationEngine.SolverExecutionResult result = executeInsideBulkhead(ctx);
-        recordAuditLog(userId, operationType, result);
+        if (result.getStatus() != SolverRunStatus.OPTIMAL && result.getStatus() != SolverRunStatus.FEASIBLE)
+            throw new OptimizerBusinessException(result.getStatus() == SolverRunStatus.INFEASIBLE
+                    ? HttpStatus.UNPROCESSABLE_ENTITY : HttpStatus.SERVICE_UNAVAILABLE,
+                    "Dữ liệu mới hiện chưa tạo được thực đơn đáp ứng các giới hạn dinh dưỡng. Không sử dụng thực đơn dự phòng từ dữ liệu cũ.");
 
+        recordAuditLog(userId, operationType, result);
         MealPlan plan = MealPlan.builder()
-                .userId(userId != null ? userId : 0L)
+                .planningMode(req.getPlanningMode()).evaluateFiber(evaluateFiber).evaluateCholesterol(evaluateCholesterol)
                 .sourceProfileVersion(req.getSourceProfileVersion())
+                .userId(userId != null ? userId : 0L)
                 .planDate(req.getPlanDate())
                 .targetCaloriesKcal(req.getTargetCaloriesKcal())
                 .targetNetCarbG(req.getTargetNetCarbG())
@@ -713,12 +845,49 @@ public class MealOptimizerService {
         }
 
         plan.recalculateTotalsFromItems();
-        if (persistToDb && (result.getStatus() == SolverRunStatus.OPTIMAL || result.getStatus() == SolverRunStatus.FEASIBLE)) {
-            mealPlanRepo.findByUserIdAndPlanDate(userId, req.getPlanDate()).ifPresent(mealPlanRepo::delete);
+        if (persistToDb) {
+            if (replacing) {
+                // No existing entity is loaded or changed until the solver has a usable result.
+                MealPlan current=mealPlanRepo.findOwnedForUpdate(req.getReplacePlanId(),userId)
+                        .orElseThrow(() -> new ResourceNotFoundException("Không tìm thấy thực đơn thuộc tài khoản để tạo lại."));
+                if (!Objects.equals(current.getPlanDate(),req.getPlanDate()) || !Objects.equals(current.getVersion(),req.getExpectedVersion()))
+                    throw new OptimizerBusinessException(HttpStatus.CONFLICT,"Thực đơn đã thay đổi hoặc không cùng ngày. Hãy tải lại trước khi tạo lại.");
+                if (current.getItems().stream().anyMatch(i -> Boolean.TRUE.equals(i.getIsLocked()) || i.getStatus()==MealItemStatus.COMPLETED))
+                    throw new OptimizerBusinessException(HttpStatus.CONFLICT,"Thực đơn có món đang giữ hoặc đã ăn. Hãy bỏ giữ hoặc bỏ ghi nhận đã ăn nếu đó là dữ liệu thử trước khi tạo lại.");
+                archiveService.archive(current,req.getPreviousProfileVersion());
+                replacePlanContents(current,plan);
+                plan=current;
+            } else if (mealPlanRepo.findByUserIdAndPlanDate(userId,req.getPlanDate()).isPresent()) {
+                throw new OptimizerBusinessException(HttpStatus.CONFLICT,"Đã có thực đơn ngày này. Hãy tải lại và chọn Tạo lại.");
+            }
             plan = mealPlanRepo.saveAndFlush(plan);
         }
 
         return MealPlanResponse.fromEntity(plan, result.getBreakdown(), evaluateMedicalWarnings(plan));
+    }
+
+    private void replacePlanContents(MealPlan current, MealPlan replacement) {
+        current.setSourceProfileVersion(replacement.getSourceProfileVersion());
+        current.setEvaluateFiber(replacement.isEvaluateFiber()); current.setEvaluateCholesterol(replacement.isEvaluateCholesterol());
+        current.setPlanningMode(replacement.getPlanningMode()); current.setTemplateCode(replacement.getTemplateCode());
+        current.setTargetCaloriesKcal(replacement.getTargetCaloriesKcal()); current.setTargetNetCarbG(replacement.getTargetNetCarbG());
+        current.setTargetProteinG(replacement.getTargetProteinG()); current.setTargetFatG(replacement.getTargetFatG());
+        current.setMaxGiAllowed(replacement.getMaxGiAllowed()); current.setMaxDailyGl(replacement.getMaxDailyGl());
+        current.setMaxDailySodiumMg(replacement.getMaxDailySodiumMg()); current.setMaxDailyCholesterolMg(replacement.getMaxDailyCholesterolMg());
+        current.setExcludedDishIds(new HashSet<>(replacement.getExcludedDishIds()));
+        current.setContraindications(new HashSet<>(replacement.getContraindications()));
+        current.setMinDailyFiberG(replacement.getMinDailyFiberG()); current.setChangePolicyRecorded(true);
+        current.setSolverStatus(replacement.getSolverStatus()); current.setSolveTimeMs(replacement.getSolveTimeMs());
+        current.setUserRating(null); current.setUserFeedback(null); current.setUpdatedAt(java.time.LocalDateTime.now());
+        current.getItems().clear();
+        for (MealPlanItem item : replacement.getItems()) { item.setMealPlan(current); current.getItems().add(item); }
+        current.recalculateTotalsFromItems();
+    }
+
+    @Transactional(readOnly=true)
+    public List<MealPlanRevision> getMealPlanRevisions(Long userId, Long planId) {
+        getMealPlanOrThrow(userId,planId);
+        return archiveService.list(userId,planId);
     }
 
     private CpSatMealOptimizationEngine.SolverExecutionResult executeInsideBulkhead(
@@ -750,12 +919,12 @@ public class MealOptimizerService {
         // Chuyển từ (Nutr_X10 * servingScaledX2) / 20 về giá trị thực Snapshot
         item.setSnapshotCaloriesKcal(unscaleX20(dish.getCaloriesX10() * servingScaledX2));
         item.setSnapshotNetCarbG(unscaleX20(dish.getNetCarbX10() * servingScaledX2));
-        item.setSnapshotFiberG(unscaleX20(dish.getFiberX10() * servingScaledX2));
+        item.setSnapshotFiberG(dish.getFiberX10()==null ? null : unscaleX20(dish.getFiberX10() * servingScaledX2));
         item.setSnapshotProteinG(unscaleX20(dish.getProteinX10() * servingScaledX2));
         item.setSnapshotFatG(unscaleX20(dish.getFatX10() * servingScaledX2));
-        item.setSnapshotGl(unscaleX20(dish.getGlX10() * servingScaledX2));
+        item.setSnapshotGl(dish.getGlX10()==null ? null : unscaleX20(dish.getGlX10() * servingScaledX2));
         item.setSnapshotSodiumMg(unscaleX20(dish.getSodiumX10() * servingScaledX2));
-        item.setSnapshotCholesterolMg(unscaleX20(dish.getCholesterolX10() * servingScaledX2));
+        item.setSnapshotCholesterolMg(dish.getCholesterolX10()==null ? null : unscaleX20(dish.getCholesterolX10() * servingScaledX2));
     }
 
     private static BigDecimal unscaleX20(long valX20) {
@@ -763,6 +932,7 @@ public class MealOptimizerService {
     }
 
     private List<String> evaluateMedicalWarnings(MealPlan plan) {
+        if (GeneralReferencePolicy.isGeneral(plan.getPlanningMode())) return List.of(GeneralReferencePolicy.NOTICE);
         List<String> warnings = new ArrayList<>();
         Map<MealSlot, BigDecimal> glBySlot = new EnumMap<>(MealSlot.class);
         for (MealPlanItem item : plan.getItems()) {
@@ -850,6 +1020,7 @@ public class MealOptimizerService {
     }
 
     private List<MealSlotTemplate> getActiveTemplateOrThrow(String code) {
+        if (GeneralReferencePolicy.TEMPLATE.equals(code)) return GeneralReferencePolicy.slots();
         String safeCode = (code == null || code.isBlank()) ? "STANDARD_4_MEALS" : code;
         List<MealSlotTemplate> list = templateRepo.findByTemplateCodeOrderByIdAsc(safeCode);
         if (list.isEmpty()) {

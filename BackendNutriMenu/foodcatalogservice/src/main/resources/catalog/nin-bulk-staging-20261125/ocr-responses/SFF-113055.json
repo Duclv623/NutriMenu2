@@ -1,0 +1,75 @@
+{
+  "code": "SFF-113055",
+  "imageSha256": "c8bd10980cd776d392ef3a93aedf922b8321b1b2c268ae9f6fb87ced546710aa",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "385.5 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Nước cốt dừa/Coconut milk",
+      "amountSourceText": "60.0",
+      "numericQuantity": 60.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Kem dừa/Coconut ice cream",
+      "amountSourceText": "60.0",
+      "numericQuantity": 60.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trân châu/Tapioca pearls",
+      "amountSourceText": "31.0",
+      "numericQuantity": 31.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thạch dừa/Coconut jelly",
+      "amountSourceText": "30.0",
+      "numericQuantity": 30.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lạc rang/roasted Dried peanut seed",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trân châu trắng/White tapioca pearl",
+      "amountSourceText": "17.0",
+      "numericQuantity": 17.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thạch nha đam/Aloe vera jelly",
+      "amountSourceText": "34.0",
+      "numericQuantity": 34.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cùi dừa nạo/copra coconut",
+      "amountSourceText": "6.0",
+      "numericQuantity": 6.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nạo",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

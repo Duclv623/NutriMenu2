@@ -1,0 +1,18 @@
+{
+  "sourceCache": "C:\\testda\\chatbot\\data\\structured\\nin_dishes_2026-10-06\\dishes_full.json",
+  "records": [
+    {
+      "code": "VPF-000039",
+      "sourceRecordId": "693a47a248209a2a9a014fe6",
+      "nameVi": "Cá bống kho",
+      "sourceUrl": "https://viendinhduong.vn/vi/cong-cu-va-tien-ich/gia-tri-dinh-duong-mon-an",
+      "imageUrl": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_153.webp",
+      "sourceUpdatedAt": "2025-12-11 11:25:06",
+      "status": "existing",
+      "localPath": "images/VPF-000039.webp",
+      "bytes": 22238,
+      "sha256": "6cde5ca309b7e7a7f5a9bf30d64e5493b9899173bf75066b27f9fcf65cd8d5a4",
+      "checkedAt": "2026-11-23T14:37:51.621591+00:00"
+    }
+  ]
+}

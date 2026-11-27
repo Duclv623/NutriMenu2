@@ -1,0 +1,67 @@
+{
+  "code": "SFF-211006",
+  "imageSha256": "8f0d8b0f66f5a9eab1fcd6955ca0cae1110ae21fc3bc45e4f293b95a06cb38d8",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "537.6 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh cuốn/Steamed Rice Rolls",
+      "amountSourceText": "152.0",
+      "numericQuantity": 152.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "Steamed",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trứng gà ta/Hen egg",
+      "amountSourceText": "101.5",
+      "numericQuantity": 101.5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ruốc thịt lợn/Salted dried\nshredded pork",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả lợn/Pork, mince fat meat grilled",
+      "amountSourceText": "28.0",
+      "numericQuantity": 28.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "grilled",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành phi/Fried shallot",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "phi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau mùi/Coriander",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước chấm pha/Dipping sauce\n(Fish sauce)",
+      "amountSourceText": "61.0",
+      "numericQuantity": 61.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,107 @@
+{
+  "code": "SFF-112043",
+  "imageSha256": "b692a94fd75124b99c05eab0ac2b7682c4c45ae5807cd488a296f375696e940b",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "641.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh phở",
+      "amountSourceText": "87.0",
+      "numericQuantity": 87.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bánh đa nem rán",
+      "amountSourceText": "22.0",
+      "numericQuantity": 22.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Xoài xanh",
+      "amountSourceText": "22.0",
+      "numericQuantity": 22.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xanh",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Củ cải",
+      "amountSourceText": "37.0",
+      "numericQuantity": 37.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà rốt",
+      "amountSourceText": "7.0",
+      "numericQuantity": 7.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nem nướng",
+      "amountSourceText": "49.0",
+      "numericQuantity": 49.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nướng",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bánh đa cuốn",
+      "amountSourceText": "31.0",
+      "numericQuantity": 31.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột",
+      "amountSourceText": "53.0",
+      "numericQuantity": 53.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau xà lách",
+      "amountSourceText": "26.0",
+      "numericQuantity": 26.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau húng",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước sốt cà chua",
+      "amountSourceText": "83.0",
+      "numericQuantity": 83.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành phi",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "phi",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

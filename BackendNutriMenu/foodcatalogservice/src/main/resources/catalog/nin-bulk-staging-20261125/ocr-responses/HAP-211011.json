@@ -1,0 +1,85 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "553.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi",
+      "amountSourceText": "195.0",
+      "numericQuantity": 195.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò thăn xào",
+      "amountSourceText": "67.0",
+      "numericQuantity": 67.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tỏi ta",
+      "amountSourceText": "4.0",
+      "numericQuantity": 4.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giá đậu xanh",
+      "amountSourceText": "30.0",
+      "numericQuantity": 30.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành phi",
+      "amountSourceText": "4.9",
+      "numericQuantity": 4.9,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lạc rang",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột",
+      "amountSourceText": "40.0",
+      "numericQuantity": 40.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau xà lách",
+      "amountSourceText": "22.0",
+      "numericQuantity": 22.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước chấm pha",
+      "amountSourceText": "351.0",
+      "numericQuantity": 351.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "pha",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table energy sum (556.6 Kcal) does not match imageEnergyText (553.8 Kcal)"
+  ],
+  "code": "HAP-211011",
+  "imageSha256": "93ca5d57fed68a36e42b738adfe3c5b12a18591ebe0a576f6bdc5fca63c0b15b",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

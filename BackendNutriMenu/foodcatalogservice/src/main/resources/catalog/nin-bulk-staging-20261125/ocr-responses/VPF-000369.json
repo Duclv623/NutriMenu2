@@ -1,0 +1,35 @@
+{
+  "code": "VPF-000369",
+  "imageSha256": "944d5d6b265cc45efd868a2ea6a8b541900474d45bb0e33abc7b47492c0a222f",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "92.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Hạt sen tươi",
+      "amountSourceText": "20g",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường kính",
+      "amountSourceText": "15g",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột đao",
+      "amountSourceText": "5g",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

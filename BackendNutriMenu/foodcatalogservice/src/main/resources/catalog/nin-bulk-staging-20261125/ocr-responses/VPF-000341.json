@@ -1,0 +1,12 @@
+{
+  "code": "VPF-000341",
+  "imageSha256": "5746ebc006753476d1266fffcc904d570ad08577ed26aa63aa6e849b4ea30bf2",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "ABSENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "27kcal/viên",
+  "ingredients": [],
+  "uncertainties": [
+    "No ingredient list present on image; only dish photo and energy badge shown."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/nửa quả",
+  "imageEnergyText": "51kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Na",
+      "amountSourceText": "160g",
+      "numericQuantity": 160.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000414",
+  "imageSha256": "b459edb3aba0130091c8d6eae094de8ae641a827587d76c88909c7cd2b0a4890",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,19 @@
+{
+  "code": "HAN-123027",
+  "imageSha256": "bed3918a253aa139d60231d84190cb7dce1fece9ff33cfebffe7f1d16bc40d57",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Khoai tây chiên",
+      "amountSourceText": "100.0",
+      "numericQuantity": 100.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "296.0 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

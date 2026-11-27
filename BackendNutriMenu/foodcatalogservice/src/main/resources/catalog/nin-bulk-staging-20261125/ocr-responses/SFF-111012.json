@@ -1,0 +1,83 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "677.1 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Đu đủ xanh/Green papaya",
+      "amountSourceText": "11.0",
+      "numericQuantity": 11.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước chấm pha/Dipping sauce (Fish sauce)",
+      "amountSourceText": "77.0",
+      "numericQuantity": 77.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà chua/Tomato",
+      "amountSourceText": "22.0",
+      "numericQuantity": 22.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải ngọt/Mustard greens",
+      "amountSourceText": "160.0",
+      "numericQuantity": 160.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành tây/Onion",
+      "amountSourceText": "75.0",
+      "numericQuantity": 75.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò loại I/Beef meat grade I",
+      "amountSourceText": "72.0",
+      "numericQuantity": 72.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bánh phở/Pho (rice noodle)",
+      "amountSourceText": "144.0",
+      "numericQuantity": 144.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu ăn/Oil",
+      "amountSourceText": "29.6",
+      "numericQuantity": 29.6,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước sốt/Sauces",
+      "amountSourceText": "53.0",
+      "numericQuantity": 53.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-111012",
+  "imageSha256": "8f14ec6599e3215dae6cad2a168192034618cdd5ab001fa520db0312603ca0ae",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -238,6 +238,24 @@ def error_reply(error, *, mock=False, payload=None):
     return MealReply(answers.get(error.code, error.message), payload, status="needs_clarification")
 
 
+def is_nin_glucid(item):
+    definition = item.carbohydrate_definition or ""
+    return definition.startswith("UNSPECIFIED_SOURCE_GLUCID") or (
+        not definition and any(source.startswith("Food Catalog: NIN_") for source in item.source_refs)
+    )
+
+
+def inline_label(label):
+    return label[0].lower() + label[1:]
+
+
+def meal_nutrient(key, items):
+    label, unit, pattern = NUTRIENTS[key]
+    if key == "carbohydrate_g" and any(is_nin_glucid(item) for item in items):
+        label = "Glucid theo nguồn NIN" if all(is_nin_glucid(item) for item in items) else "Carbohydrate (có Glucid theo nguồn NIN)"
+    return label, unit, pattern
+
+
 def mixed_scope_nutrition(message, plan):
     parts = re.split(r"[,;]|\bvà\s+(?=(?:bữa|cả ngày|toàn ngày)\b)", message, flags=re.I)
     if len(parts) < 2:
@@ -263,12 +281,12 @@ def mixed_scope_nutrition(message, plan):
         subject = " và ".join(LABELS[meal] for meal in meals) if meals else "Cả ngày"
         values, unknown = [], []
         for key in fields:
-            label, unit, _ = NUTRIENTS[key]
+            label, unit, _ = meal_nutrient(key, items if meals else plan.items)
             value = getattr(totals, key)
             if value is None:
-                unknown.append(label.lower())
+                unknown.append(inline_label(label))
             else:
-                values.append(f"{number(value)} {unit}" + (f" {label.lower()}" if key != "energy_kcal" else ""))
+                values.append(f"{number(value)} {unit}" + (f" {inline_label(label)}" if key != "energy_kcal" else ""))
         clauses = (["có " + " và ".join(values)] if values else []) + (["chưa có số liệu " + " và ".join(unknown)] if unknown else [])
         lines.append(subject + " " + ", ".join(clauses) + ".")
     return " ".join(lines), list(dict.fromkeys(keys)), list(dict.fromkeys(ids))
@@ -334,8 +352,8 @@ def handle_meal_chat(gateway, owner, message, context=None, action=None, authori
         actual = plan.totals.energy_kcal
         return MealReply(
             (f'Thực đơn đang lưu có {number(actual)} kcal. ' if actual is not None else '')
-            + (f'Mục tiêu backend ghi nhận là {number(target)} kcal. ' if target is not None else '')
-            + 'Backend chưa cung cấp khoảng mục tiêu và kết quả kiểm tra đầy đủ, nên mình chưa thể kết luận thực đơn đã đáp ứng mọi ràng buộc cá nhân.', team_payload)
+            + (f'Mục tiêu năng lượng đang lưu là {number(target)} kcal. ' if target is not None else '')
+            + 'Mình chưa có đủ thông tin về khoảng mục tiêu và nhu cầu cá nhân để kết luận thực đơn đã phù hợp hoàn toàn với bạn.', team_payload)
     if task == "new_exclusion":
         return MealReply("Mình đã hiểu bạn vừa nêu thêm dị ứng, nhưng chưa cập nhật thông tin đó vào hồ sơ. Bạn hãy bổ sung dị ứng trong hồ sơ trước khi đổi món nhé; mình dừng phương án xem trước trong cuộc trò chuyện này và chưa áp dụng thay đổi nào.", status="needs_clarification", cancel_pending=True, profile_recheck_version=profile.profile_version)
     if task == "swap" and blocked_profile_version is not None and profile.profile_version <= blocked_profile_version:
@@ -454,10 +472,14 @@ def handle_meal_chat(gateway, owner, message, context=None, action=None, authori
             return MealReply("Phương án xem trước đã hết hạn. Bạn có thể yêu cầu một phương án mới để xem và áp dụng.", payload)
         return MealReply(f"Thực đơn đang lưu là phiên bản {plan.version}. Hiện cuộc trò chuyện không có phương án chờ áp dụng.", payload)
     if task == "capabilities":
+        if snapshot.data_mode == "http":
+            return MealReply("Mình giúp bạn xem các bữa, tra dinh dưỡng và nguyên liệu, hoặc xem trước phương án đổi món/khẩu phần. Bạn xác nhận khi muốn lưu thay đổi. Để tạo một thực đơn mới, hãy mở trang Thực đơn và chọn Tạo thực đơn.", payload)
         if plan.catalog_version == "named-demo-v1":
             return MealReply("Bạn có thể xem các bữa, hỏi số dinh dưỡng hoặc nguồn của từng món. Bản minh họa hiện chưa lưu thay đổi món hay khẩu phần.", payload)
         return MealReply("Mình giúp bạn xem thực đơn đang lưu, hỏi số liệu và thành phần món ăn, rồi xem trước phương án đổi một món. Bạn kiểm tra và bấm Áp dụng khi muốn lưu. Phần tạo thực đơn mới chưa được kết nối nhé.", payload)
     if task == "profile":
+        if snapshot.data_mode == "http":
+            return MealReply("Mình đang dùng hồ sơ bạn đã lưu để đọc thực đơn. Bạn có thể sửa thông tin cá nhân, dị ứng và sở thích tại trang Hồ sơ; thông tin này chưa được cập nhật chỉ bằng lời nhắn trong chat.", payload)
         return MealReply(f"Mình đang đọc hồ sơ phiên bản {profile.profile_version} gắn với thực đơn này. Hồ sơ và mục tiêu do dịch vụ của nhóm cung cấp; mình chưa tự cập nhật chúng qua lời nhắn trong chat.", payload)
     if task == "missing_value":
         return MealReply("Không nhé. Ô chưa có dữ liệu khác với số 0, nên mình sẽ ghi rõ là chưa biết và chưa kết luận đủ hay thiếu chất đó.", payload)
@@ -614,7 +636,7 @@ def handle_meal_chat(gateway, owner, message, context=None, action=None, authori
         payload["nutrientKeys"] = requested
         if task == "rank":
             key = requested[0]
-            label, unit, _ = NUTRIENTS[key]
+            label, unit, _ = meal_nutrient(key, items or plan.items)
             if re.search(r"\bmon nao\b", text):
                 groups = [(item.name, item.nutrients) for item in items or plan.items]
             else:
@@ -622,42 +644,42 @@ def handle_meal_chat(gateway, owner, message, context=None, action=None, authori
                           for meal in LABELS if any(item.meal_type == meal for item in plan.items)]
             values = [(name, getattr(totals, key)) for name, totals in groups]
             if any(value is None for _, value in values):
-                return MealReply(f"Mình chưa có đủ số liệu {label.lower()} để xếp theo yêu cầu.", payload, status="insufficient_evidence")
+                return MealReply(f"Mình chưa có đủ số liệu {inline_label(label)} để xếp theo yêu cầu.", payload, status="insufficient_evidence")
             least = bool(re.search(r"\b(?:it|thap) nhat\b", text))
             limit = (min if least else max)(value for _, value in values)
             names = " và ".join(name for name, value in values if value == limit)
-            return MealReply(f"{names} {'ít' if least else 'nhiều'} {label.lower()} nhất, với {number(limit)} {unit} theo phần ăn đang lưu.", payload)
+            return MealReply(f"{names} {'ít' if least else 'nhiều'} {inline_label(label)} nhất, với {number(limit)} {unit} theo phần ăn đang lưu.", payload)
         if task == "compare":
             key = requested[0]
-            label, unit, _ = NUTRIENTS[key]
+            label, unit, _ = meal_nutrient(key, [item for item in plan.items if item.meal_type in meals])
             values = [(meal, getattr(sum_nutrients([item for item in plan.items if item.meal_type == meal]), key)) for meal in meals]
             if len(values) == 2 and all(value is not None for _, value in values):
                 (a, av), (b, bv) = values
                 higher, lower = (a, b) if av > bv else (b, a)
-                conclusion = (f"{LABELS[higher]} có {label.lower()} nhiều hơn {LABELS[lower].lower()} {number(abs(av - bv))} {unit}."
-                              if av != bv else f"Hai bữa có lượng {label.lower()} bằng nhau.")
+                conclusion = (f"{LABELS[higher]} có {inline_label(label)} nhiều hơn {LABELS[lower].lower()} {number(abs(av - bv))} {unit}."
+                              if av != bv else f"Hai bữa có lượng {inline_label(label)} bằng nhau.")
                 return MealReply(f"{conclusion} {LABELS[a]} có {number(av)} {unit}, còn {LABELS[b].lower()} có {number(bv)} {unit}.", payload)
             return MealReply("Mình chưa có đủ số liệu cùng một chỉ tiêu của hai bữa để so sánh nhé.", payload, status="insufficient_evidence")
         values = sum_nutrients(items) if items else plan.totals
         if len(requested) == 1 and not unknown:
             key = requested[0]
-            label, unit, _ = NUTRIENTS[key]
+            label, unit, _ = meal_nutrient(key, items or plan.items)
             value = getattr(values, key)
             if meals and len(meals) == 1 and (len(items) > 1 or not named and not specific_item):
                 subject = LABELS[meals[0]]
             else:
                 subject = " và ".join(item.name for item in items) if items else "Cả ngày"
             if value is None:
-                return MealReply(f"Mình chưa có dữ liệu {label.lower()} của {subject.lower()} nên chưa đánh giá được đã đủ hay chưa, hoặc nhiều hay ít.", payload, status="insufficient_evidence")
+                return MealReply(f"Mình chưa có dữ liệu {inline_label(label)} của {subject.lower()} nên chưa đánh giá được đã đủ hay chưa, hoặc nhiều hay ít.", payload, status="insufficient_evidence")
             basis = "theo phần ăn đang lưu" if items else "theo thực đơn đang lưu"
-            nutrient = "" if key == "energy_kcal" else f" {label.lower()}"
+            nutrient = "" if key == "energy_kcal" else f" {inline_label(label)}"
             detail = ""
             if items and re.search(r"\b(?:mon gi|nhung mon|gom gi|gom mon)\b", text):
                 detail = " gồm " + ", ".join(f"{portion(item)} {item.name.lower()}" for item in items) + " và"
             return MealReply(f"{subject}{detail} có {number(value)} {unit}{nutrient} {basis}.", payload)
         lines = [("; ".join(item.name for item in items) if items else "Cả ngày") + ":"]
         for key in requested:
-            label, unit, _ = NUTRIENTS[key]
+            label, unit, _ = meal_nutrient(key, items or plan.items)
             value = getattr(values, key)
             lines.append(f"• {label}: " + ("chưa có dữ liệu để kết luận đã đủ hay chưa, hoặc nhiều hay ít" if value is None else f"{number(value)} {unit}"))
         if unknown:

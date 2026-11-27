@@ -1,0 +1,59 @@
+{
+  "code": "VPF-000078",
+  "imageSha256": "9f00bbbad3145d7667091cb617501fe2aa109b309227d312826a97872c64fa43",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "250kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Dồi lợn",
+      "amountSourceText": "78g",
+      "numericQuantity": 78.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lòng già",
+      "amountSourceText": "15g",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lòng non",
+      "amountSourceText": "26g",
+      "numericQuantity": 26.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Gan lợn",
+      "amountSourceText": "5g",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dạ dày lợn",
+      "amountSourceText": "44g",
+      "numericQuantity": 44.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tim lợn",
+      "amountSourceText": "5g",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

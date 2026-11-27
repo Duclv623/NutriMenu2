@@ -1,0 +1,99 @@
+{
+  "code": "SFF-111004",
+  "imageSha256": "178e8a59202f1de05d3df0d023aedc12936e21648c0b9567f41f754d56922018",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh mỳ/Banh my",
+      "amountSourceText": "108.0",
+      "numericQuantity": 108.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò loại I sống/Raw beef, grade I",
+      "amountSourceText": "100.0",
+      "numericQuantity": 100.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "sống",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Pate/Pate",
+      "amountSourceText": "50.0",
+      "numericQuantity": 50.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trứng gà công nghiệp/hen egg",
+      "amountSourceText": "38.0",
+      "numericQuantity": 38.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá/Welsh onion",
+      "amountSourceText": "0.5",
+      "numericQuantity": 0.5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà chua/Tomato",
+      "amountSourceText": "4.0",
+      "numericQuantity": 4.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước sốt/Sauces",
+      "amountSourceText": "240.0",
+      "numericQuantity": 240.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột muối/Pickled cucumber",
+      "amountSourceText": "194.0",
+      "numericQuantity": 194.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "muối",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Khoai tây rán/French fries",
+      "amountSourceText": "82.0",
+      "numericQuantity": 82.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương ớt/Chili sauce",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Xì dầu/Soybean sauce liquid",
+      "amountSourceText": "7.0",
+      "numericQuantity": 7.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

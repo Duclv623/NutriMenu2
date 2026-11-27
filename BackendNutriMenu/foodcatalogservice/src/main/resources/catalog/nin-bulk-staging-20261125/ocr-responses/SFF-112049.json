@@ -1,0 +1,83 @@
+{
+  "code": "SFF-112049",
+  "imageSha256": "816eb4121378fd528e9e726015acaab31e2c281477ffd8994629ba1f4516c323",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Xôi trắng (đỗ)/Sticky rice",
+      "amountSourceText": "221.0",
+      "numericQuantity": 221.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Pate/Pate",
+      "amountSourceText": "71.0",
+      "numericQuantity": 71.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt xá xíu/Char siu",
+      "amountSourceText": "82.0",
+      "numericQuantity": 82.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trứng gà rán/Fried hen egg",
+      "amountSourceText": "30.0",
+      "numericQuantity": 30.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt gà xào/Stir-fried chicken",
+      "amountSourceText": "55.0",
+      "numericQuantity": 55.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mộc nhĩ/Wood ear",
+      "amountSourceText": "14.0",
+      "numericQuantity": 14.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành phi/Fried shallot",
+      "amountSourceText": "9.0",
+      "numericQuantity": 9.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "phi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đu đủ/Papaya",
+      "amountSourceText": "38.0",
+      "numericQuantity": 38.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà rốt/Carrot",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

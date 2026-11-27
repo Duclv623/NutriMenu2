@@ -1,0 +1,43 @@
+{
+  "code": "VPF-000147",
+  "imageSha256": "0fd3153403daec447b9a4718cb5f503cdb86e4644c478a8271057adcb3d8a3a7",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "207kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cua đồng (ăn cả con)",
+      "amountSourceText": "120g",
+      "numericQuantity": 120.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "ăn cả con",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường",
+      "amountSourceText": "10g",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "7g",
+      "numericQuantity": 7.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Gia vị",
+      "amountSourceText": "2g",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

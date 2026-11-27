@@ -407,7 +407,7 @@ class OpenAIProvider:
 
     def __init__(self, settings: Settings, client=None):
         if not settings.openai_api_key.get_secret_value().strip() and client is None:
-            raise ProviderFailure("Chưa cấu hình OPENAI_API_KEY ở backend")
+            raise ProviderFailure("Trợ lý tạm thời chưa sẵn sàng. Vui lòng thử lại sau.")
         self.settings = settings
         client_kwargs = {
             "api_key": settings.openai_api_key.get_secret_value(),

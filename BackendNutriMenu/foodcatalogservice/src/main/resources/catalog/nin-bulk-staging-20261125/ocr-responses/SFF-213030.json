@@ -1,0 +1,75 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "548.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi/Rice noodle",
+      "amountSourceText": "273.0",
+      "numericQuantity": 273.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cá thu rán/Fried mackerel fish",
+      "amountSourceText": "16.0",
+      "numericQuantity": 16.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả cá thu rán/Fried mackerel fish ball",
+      "amountSourceText": "30.0",
+      "numericQuantity": 30.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cá rô phi rán/Fried Tilapia fish",
+      "amountSourceText": "23.0",
+      "numericQuantity": 23.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lòng cá ba sa rán/Fried basa fish intestine",
+      "amountSourceText": "31.0",
+      "numericQuantity": 31.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dồi lợn rán/Fried blood pork sausage",
+      "amountSourceText": "21.0",
+      "numericQuantity": 21.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thìa là, hành lá/Dill, welsh onion",
+      "amountSourceText": "9.0",
+      "numericQuantity": 9.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/Bone broth",
+      "amountSourceText": "540.0",
+      "numericQuantity": 540.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-213030",
+  "imageSha256": "6aadcca43e3a86441ef87e18b6daf67484fc5c3cd0c173af430df1dc3ba73417",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

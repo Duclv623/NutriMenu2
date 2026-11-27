@@ -1,0 +1,69 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Miến dong/Vermicelli from Bermuda tuber",
+      "amountSourceText": "54.8",
+      "numericQuantity": 54.8,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tiết ngan luộc/Boiled goose blood",
+      "amountSourceText": "26.0",
+      "numericQuantity": 26.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mọc mộc nhĩ/Meatball with wood ear",
+      "amountSourceText": "39.0",
+      "numericQuantity": 39.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt ngan luộc/Boiled goose",
+      "amountSourceText": "65.6",
+      "numericQuantity": 65.6,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá/Welsh onion",
+      "amountSourceText": "22.0",
+      "numericQuantity": 22.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Măng tươi/Boiled fresh bamboo shoots",
+      "amountSourceText": "56.0",
+      "numericQuantity": 56.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi, luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/Bone broth",
+      "amountSourceText": "310.0",
+      "numericQuantity": 310.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "No energy badge is printed on the image (imageEnergyText is null); table energy sum is 569.4 Kcal vs apiEnergy 569.3."
+  ],
+  "code": "SFF-113004",
+  "imageSha256": "0e3574cadb73835b3b98ebd68e48e776a686a19f84e8723f8eff47d523464686",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

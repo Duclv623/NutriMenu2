@@ -1,0 +1,99 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "540.9 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi/Rice vermicelli",
+      "amountSourceText": "202.0",
+      "numericQuantity": 202.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sườn lợn hầm/Stewed Pork ribs bone",
+      "amountSourceText": "40.0",
+      "numericQuantity": 40.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "hầm",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ốc nhồi luộc/Boiled large snail",
+      "amountSourceText": "18.0",
+      "numericQuantity": 18.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ốc vặn luộc/Boiled river snail",
+      "amountSourceText": "22.0",
+      "numericQuantity": 22.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Củ chuối/Banana roots",
+      "amountSourceText": "8.0",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau xà lách/Lettuce",
+      "amountSourceText": "26.0",
+      "numericQuantity": 26.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tía tô/Beefsteak plant",
+      "amountSourceText": "14.0",
+      "numericQuantity": 14.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giá đậu xanh/Mungbean sprout",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà chua/Tomato",
+      "amountSourceText": "50.0",
+      "numericQuantity": 50.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt đỏ/Pepper red",
+      "amountSourceText": "11.0",
+      "numericQuantity": 11.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/Bone broth",
+      "amountSourceText": "465.0",
+      "numericQuantity": 465.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-112015",
+  "imageSha256": "798c88421e78cd723f86086b6d35a30fb502903388fbb492a5840d278ec3ba6f",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

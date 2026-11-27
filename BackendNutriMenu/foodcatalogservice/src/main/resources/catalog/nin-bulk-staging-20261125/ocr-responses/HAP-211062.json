@@ -1,0 +1,77 @@
+{
+  "code": "HAP-211062",
+  "imageSha256": "4d3119ac3ce181030e198e9b7f2aeb0f4d6cb0dd1d6bd96116c9207e8d1b78bd",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh đa rán giòn",
+      "amountSourceText": "39.0",
+      "numericQuantity": 39.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán giòn",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò khô",
+      "amountSourceText": "33.0",
+      "numericQuantity": 33.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lạc rang",
+      "amountSourceText": "24.0",
+      "numericQuantity": 24.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau mùi",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau kinh giới",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau mùi tàu",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đu đủ, xà rốt, kinh giới",
+      "amountSourceText": "139.0",
+      "numericQuantity": 139.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước trộn",
+      "amountSourceText": "137.0",
+      "numericQuantity": 137.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "494.5 Kcal",
+  "uncertainties": [
+    "Table row lists 'Đu đủ, xà rốt, kinh giới' verbatim as printed on image."
+  ],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

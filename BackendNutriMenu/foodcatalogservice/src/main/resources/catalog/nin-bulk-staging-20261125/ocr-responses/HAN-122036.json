@@ -1,0 +1,19 @@
+{
+  "code": "HAN-122036",
+  "imageSha256": "e810867d7591db60f0976d1634ee03a92f4369e551a88b87fc8c5ff94c9b9a6a",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh trôi tàu",
+      "amountSourceText": "221.0",
+      "numericQuantity": 221.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "354.8 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

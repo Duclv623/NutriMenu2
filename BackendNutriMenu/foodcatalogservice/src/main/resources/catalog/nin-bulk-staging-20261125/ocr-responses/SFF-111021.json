@@ -1,0 +1,99 @@
+{
+  "code": "SFF-111021",
+  "imageSha256": "aa146500ffbcc12c49e42cf652bdf58fc7b97dab48160e57a0223953568b6d09",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "416.5 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sụn bò rán/Fried beef cartilage",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dạ dày bò rán/Fried beef stomach",
+      "amountSourceText": "24.0",
+      "numericQuantity": 24.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ngầu pín bò rán/Fried beef testicles",
+      "amountSourceText": "23.0",
+      "numericQuantity": 23.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lách bò rán/Fried beef spleen",
+      "amountSourceText": "24.0",
+      "numericQuantity": 24.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò rán/Fried beef",
+      "amountSourceText": "23.0",
+      "numericQuantity": 23.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đu đủ xanh/Green Papaya",
+      "amountSourceText": "112.0",
+      "numericQuantity": 112.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tỏi ta/Garlic",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lạc rang/Roasted peanut",
+      "amountSourceText": "19.0",
+      "numericQuantity": 19.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước chấm pha/Mixed fish sauce",
+      "amountSourceText": "136.0",
+      "numericQuantity": 136.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "pha",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương ớt/Chili sauce",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau thơm/Herbs",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

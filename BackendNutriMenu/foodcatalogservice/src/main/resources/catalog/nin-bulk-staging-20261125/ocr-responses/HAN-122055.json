@@ -1,0 +1,29 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "227.4 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt lợn vai nướng",
+      "amountSourceText": "93.0",
+      "numericQuantity": 93.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nướng",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương ớt",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Sum of ingredient kcal (223.4 + 4.1 = 227.5) differs from imageEnergyText (227.4 Kcal) by 0.1 Kcal."
+  ],
+  "code": "HAN-122055",
+  "imageSha256": "e4a2a639ec6b3f958b6231c892c9401006249b473759ab6f416b4d69f2c36ec3",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

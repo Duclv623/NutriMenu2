@@ -1,0 +1,43 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "168kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bí đao",
+      "amountSourceText": "250g",
+      "numericQuantity": 250,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sườn lợn bỏ xương",
+      "amountSourceText": "60g",
+      "numericQuantity": 60,
+      "unitSourceText": "g",
+      "preparationSourceText": "bỏ xương",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá",
+      "amountSourceText": "5g",
+      "numericQuantity": 5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Muối",
+      "amountSourceText": "1g",
+      "numericQuantity": 1,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000019",
+  "imageSha256": "209c205e45514fcb0c283dac5a8e837aafc4c6324907b55c5348946f95824086",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

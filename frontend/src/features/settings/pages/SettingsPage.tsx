@@ -1,30 +1,19 @@
-import { API_MODE, RAG_ENABLED } from "../../../lib/config";
-import { rag } from "../../chatbot/services/chatService";
+import { Link } from "react-router-dom";
 import { useState } from "react";
-
-
-import { Check, Download, RefreshCw, ShieldCheck, Trash2 } from "lucide-react";
-
-import { Alert, Badge, Button, Confirm, PageTitle } from "../../../components/common/ui";
-
+import { ArrowRight, Download, RefreshCw, ShieldCheck } from "lucide-react";
+import { Alert, Badge, Button, PageTitle } from "../../../components/common/ui";
 import { useApp } from "../../../store/UserDataProvider";
-
-
-
+import { rag } from "../../chatbot/services/chatService";
 import { downloadFile, localDate } from "../../../utils";
-
-
-import { createDemoData } from "../../../data/seed";
-
 export function SettingsPage() {
-  const { userData: w, update, toast } = useApp();
+  const { userData: w, user } = useApp();
   const [status, setStatus] = useState<Record<string, unknown> | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
-  const [reset, setReset] = useState(false);
   async function check() {
     setBusy(true);
     setError("");
+    setStatus(null);
     try {
       setStatus(await rag.status());
     } catch (e) {
@@ -37,52 +26,58 @@ export function SettingsPage() {
     <div className="stack-lg">
       <PageTitle
         eyebrow="KHÔNG GIAN CỦA BẠN"
-        title="Cài đặt & kết nối"
-        description="Kiểm tra nguồn dữ liệu và chuẩn bị kết nối các dịch vụ của nhóm."
+        title="Cài đặt"
+        description="Quản lý thông tin cá nhân và dữ liệu của bạn."
       />
       <div className="settings-layout">
         <div className="stack">
           <section className="panel form-panel">
-            <div className="section-title">
-              <div>
-                <h2>Nguồn dữ liệu ứng dụng</h2>
-                <p>Chế độ đang chạy được cấu hình khi khởi động frontend.</p>
-              </div>
-              <Badge tone={API_MODE === "demo" ? "amber" : "green"}>
-                {API_MODE === "demo" ? "Dữ liệu demo" : "Backend API"}
-              </Badge>
+            <h2>Tài khoản của bạn</h2>
+            <div className="settings-row">
+              <span>Họ tên</span>
+              <strong>{w.profile.name || user?.name}</strong>
             </div>
             <div className="settings-row">
-              <span>Hồ sơ, món ăn & thực đơn</span>
-              <strong>
-                {API_MODE === "demo" ? "Lưu trên trình duyệt" : "API Gateway"}
-              </strong>
+              <span>Email</span>
+              <strong>{user?.email}</strong>
             </div>
-            <div className="settings-row">
-              <span>Chatbot</span>
-              <strong>
-                {RAG_ENABLED ? "Kết nối RAG thật" : "Xem trước giao diện"}
-              </strong>
-            </div>
-            <div className="settings-row">
-              <span>Bộ tối ưu CP-SAT</span>
-              <strong>
-                {API_MODE === "demo"
-                  ? "Chưa thực thi"
-                  : "Do Recommendation Service xử lý"}
-              </strong>
-            </div>
-            <Alert>
-              {API_MODE === "demo"
-                ? "Bản demo cho phép thử các thao tác giao diện. Các con số là fixture, không phải khẩu phần đã được tối ưu cho cá nhân."
-                : "Khi dịch vụ thật gặp lỗi, ứng dụng hiển thị lỗi và giữ dữ liệu hiện tại. Không tự thay bằng dữ liệu demo."}
-            </Alert>
+            <Link className="text-link" to="/ho-so">
+              Chỉnh sửa hồ sơ dinh dưỡng <ArrowRight size={15} />
+            </Link>
+          </section>
+          <section className="panel form-panel">
+            <h2>Dữ liệu cá nhân</h2>
+            <p>
+              Tải bản sao hồ sơ, thực đơn và nhật ký hiện đang có trong tài
+              khoản. Nội dung hội thoại trong bản sao chỉ gồm các cuộc trò
+              chuyện đã được tải trên thiết bị này.
+            </p>
+            <Button
+              variant="secondary"
+              onClick={() =>
+                downloadFile(
+                  `nutriguide-${localDate()}.json`,
+                  JSON.stringify(
+                    { exportedAt: new Date().toISOString(), ...w },
+                    null,
+                    2,
+                  ),
+                  "application/json",
+                )
+              }
+            >
+              <Download size={16} />
+              Tải bản sao dữ liệu
+            </Button>
+            <p className="fineprint">
+              Bản sao có thể chứa thông tin sức khỏe. Hãy lưu ở nơi riêng tư.
+            </p>
           </section>
           <section className="panel form-panel">
             <div className="section-title">
               <div>
-                <h2>Kết nối chatbot hiện có</h2>
-                <p>Kiểm tra dịch vụ FastAPI của nhóm tại cổng 8000.</p>
+                <h2>Trợ lý dinh dưỡng</h2>
+                <p>Kiểm tra khả năng truy cập tài liệu và trả lời câu hỏi.</p>
               </div>
               <Button
                 variant="secondary"
@@ -94,108 +89,57 @@ export function SettingsPage() {
               </Button>
             </div>
             {error && <Alert error>{error}</Alert>}
+            {!status && !error && (
+              <p className="muted">Chưa kiểm tra trạng thái kết nối.</p>
+            )}
             {status && (
               <div className="stack">
                 <div className="settings-row">
-                  <span>Chỉ mục tài liệu</span>
+                  <span>Tài liệu tham khảo</span>
                   <Badge tone={status.index_ready ? "green" : "amber"}>
-                    {status.index_ready ? "Sẵn sàng" : "Chưa sẵn sàng"}
+                    {status.index_ready ? "Sẵn sàng" : "Tạm thời chưa sẵn sàng"}
                   </Badge>
                 </div>
                 <div className="settings-row">
-                  <span>Nhà cung cấp AI</span>
-                  <strong>
+                  <span>Trả lời câu hỏi</span>
+                  <Badge tone={status.provider_configured ? "green" : "amber"}>
                     {status.provider_configured
-                      ? "Đã cấu hình"
-                      : "Chưa cấu hình"}
-                  </strong>
+                      ? "Đã thiết lập"
+                      : "Tạm thời chưa sẵn sàng"}
+                  </Badge>
                 </div>
-                <div className="settings-row">
-                  <span>Số đoạn tài liệu</span>
-                  <strong>{String(status.chunk_count ?? "—")}</strong>
-                </div>
+                <p className="fineprint">
+                  Trạng thái thiết lập không bảo đảm mọi câu hỏi đều được trả
+                  lời. Nếu gặp lỗi, hãy thử lại sau.
+                </p>
+                <Link className="text-link" to="/tro-ly">
+                  Mở trợ lý <ArrowRight size={15} />
+                </Link>
               </div>
             )}
-            <div className="connection-guide">
-              <h3>Khi tích hợp backend</h3>
-              <p>
-                Hướng dẫn cấu hình địa chỉ API, hợp đồng dữ liệu và cách chạy
-                chatbot nằm trong tài liệu đi kèm mã nguồn.
-              </p>
-              <code>frontend/README.md</code>
-              <p>
-                Không đưa khóa Gemini hoặc các khóa bí mật vào frontend. Các
-                biến bắt đầu bằng VITE_ đều hiển thị trong trình duyệt.
-              </p>
-            </div>
           </section>
-          {API_MODE === "demo" && (
-            <section className="panel form-panel">
-              <h2>Dữ liệu demo trên trình duyệt</h2>
-              <p>
-                Tải bản sao hoặc đưa không gian hiện tại về dữ liệu ban đầu.
-              </p>
-              <div className="actions">
-                <Button
-                  variant="secondary"
-                  onClick={() =>
-                    downloadFile(
-                      `nutriguide-demo-${localDate()}.json`,
-                      JSON.stringify(w, null, 2),
-                      "application/json",
-                    )
-                  }
-                >
-                  <Download size={16} />
-                  Sao lưu demo
-                </Button>
-                <Button variant="danger" onClick={() => setReset(true)}>
-                  <Trash2 size={16} />
-                  Đặt lại demo
-                </Button>
-              </div>
-            </section>
-          )}
         </div>
         <aside className="panel settings-about">
           <span className="brand-icon">
             <ShieldCheck size={24} />
           </span>
-          <h2>Rõ ràng từ dữ liệu đến trải nghiệm.</h2>
+          <h2>Hiểu rõ dữ liệu của bạn.</h2>
           <p>
-            Frontend chuẩn bị các luồng tương tác. Backend chịu trách nhiệm xác
-            thực, tính dinh dưỡng và kiểm tra kết quả tối ưu.
+            Bạn chủ động cập nhật hồ sơ, ghi nhận bữa ăn và quản lý các cuộc trò
+            chuyện đã lưu.
           </p>
-          <div>
-            <Check size={15} />
-            Tách riêng lớp kết nối API
-          </div>
-          <div>
-            <Check size={15} />
-            Quản lý phiên bản hồ sơ
-          </div>
-          <div>
-            <Check size={15} />
-            Hiển thị trạng thái bộ tối ưu
-          </div>
-          <div>
-            <Check size={15} />
-            Trích dẫn từ chatbot hiện có
-          </div>
-          <small>NutriGuide · Phiên bản frontend 1.0</small>
+          <Link className="text-link" to="/lich-su">
+            Lịch sử thực đơn <ArrowRight size={15} />
+          </Link>
+          <Link className="text-link" to="/theo-doi">
+            Nhật ký sức khỏe <ArrowRight size={15} />
+          </Link>
+          <Link className="text-link" to="/tro-ly">
+            Quản lý hội thoại <ArrowRight size={15} />
+          </Link>
+          <small>NutriGuide</small>
         </aside>
       </div>
-      {reset && (
-        <Confirm
-          title="Đặt lại dữ liệu demo?"
-          description="Hồ sơ, thực đơn, nhật ký và hội thoại trong không gian demo hiện tại sẽ được đưa về ban đầu. Tải bản sao trước nếu muốn giữ lại."
-          onClose={() => setReset(false)}
-          onConfirm={async () => {
-            update(() => createDemoData(w.profile.name));
-            toast("Đã khôi phục dữ liệu demo ban đầu.");
-          }}
-        />
-      )}
     </div>
   );
 }

@@ -1,0 +1,69 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "128.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Dầu hỗn hợp",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chân gà ss",
+      "amountSourceText": "31.0",
+      "numericQuantity": 31.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "ss",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sốt ướp",
+      "amountSourceText": null,
+      "numericQuantity": null,
+      "unitSourceText": null,
+      "preparationSourceText": "ướp",
+      "certainty": "UNCERTAIN"
+    },
+    {
+      "nameSourceText": "Rau húng",
+      "amountSourceText": "13.0",
+      "numericQuantity": 13.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau mùi tàu",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Su su",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước sốt chấm",
+      "amountSourceText": "40.0",
+      "numericQuantity": 40.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chấm",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Sốt ướp row prints empty weight and energy column; recorded with null numeric values"
+  ],
+  "code": "HAN-113109",
+  "imageSha256": "6760f060d800b7b783e81235de8b58070e8a403ca35e7cf943d9f61693817a6a",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

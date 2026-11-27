@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000074",
+  "imageSha256": "9a1640733dc8f2f0cc7bb0e117464f416e39d734fce41d4f01edea2d24ecdff4",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "371kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Gan lợn",
+      "amountSourceText": "320g",
+      "numericQuantity": 320.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

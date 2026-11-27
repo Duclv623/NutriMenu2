@@ -1,0 +1,51 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "410kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Đậu trắng",
+      "amountSourceText": "100g",
+      "numericQuantity": 100,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Xương cục",
+      "amountSourceText": "100g",
+      "numericQuantity": 100,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá",
+      "amountSourceText": "5g",
+      "numericQuantity": 5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau mùi tàu",
+      "amountSourceText": "5g",
+      "numericQuantity": 5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột nêm",
+      "amountSourceText": "2g",
+      "numericQuantity": 2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000028",
+  "imageSha256": "63c927dadd947bbcc3086e8d9382312efb4c8c3b10b7d72441ca04ccaf143531",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

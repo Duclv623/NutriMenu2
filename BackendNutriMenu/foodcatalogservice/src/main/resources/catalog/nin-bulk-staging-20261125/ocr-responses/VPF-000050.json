@@ -1,0 +1,59 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "283kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Gà ta (nguyên con)",
+      "amountSourceText": "130g",
+      "numericQuantity": 130,
+      "unitSourceText": "g",
+      "preparationSourceText": "nguyên con",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ngải cứu",
+      "amountSourceText": "53g",
+      "numericQuantity": 53,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Táo mèo",
+      "amountSourceText": "5g",
+      "numericQuantity": 5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hạt sen",
+      "amountSourceText": "4g",
+      "numericQuantity": 4,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ý dĩ",
+      "amountSourceText": "6g",
+      "numericQuantity": 6,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột canh",
+      "amountSourceText": "2g",
+      "numericQuantity": 2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000050",
+  "imageSha256": "639b9287af602f5eac71a515dd28e699e4548ba8666436ae131b36a2900b8341",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

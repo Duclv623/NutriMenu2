@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "24kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bưởi",
+      "amountSourceText": "80g",
+      "numericQuantity": 80.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000397",
+  "imageSha256": "fc796469ada97320d789f4768cb14b3d701ff04145d22115a3c16e49edb90a8f",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

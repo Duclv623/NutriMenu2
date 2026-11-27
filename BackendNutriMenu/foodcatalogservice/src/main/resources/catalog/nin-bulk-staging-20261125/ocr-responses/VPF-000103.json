@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "396kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cá trê (cả xương)",
+      "amountSourceText": "300g",
+      "numericQuantity": 300,
+      "unitSourceText": "g",
+      "preparationSourceText": "cả xương",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau thìa là",
+      "amountSourceText": "15g",
+      "numericQuantity": 15,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000103",
+  "imageSha256": "ff8a4b9f9cc15f72200e6dec4b97d9853d8c42431d4bca436c4fcc30b2de82ee",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

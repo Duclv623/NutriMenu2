@@ -96,7 +96,7 @@ class EnergyReferenceReply:
 
 def reference_reply(settings, chunks, profile, *, mock=False):
     if profile is None:
-        return EnergyReferenceReply('Mình chưa đọc được hồ sơ backend để biết tuổi, chiều cao và phạm vi hỗ trợ. '
+        return EnergyReferenceReply('Mình chưa đọc được hồ sơ của bạn để biết tuổi, chiều cao và phạm vi hỗ trợ. '
                                     'Khung tham khảo này cần chiều cao và hồ sơ đã xác nhận là người trưởng thành mắc đái tháo đường type 2; '
                                     'chỉ cân nặng chưa đủ để tính theo công thức của nguồn.', 'needs_clarification', [],
                                     'Bạn hãy cập nhật tuổi, chiều cao (cm) và phạm vi hỗ trợ trong hồ sơ nhé.')
@@ -112,26 +112,27 @@ def reference_reply(settings, chunks, profile, *, mock=False):
     if profile.scope_status != 'eligible':
         missing.append('xác nhận phạm vi người trưởng thành mắc đái tháo đường type 2')
     if missing:
-        known = f"Hồ sơ backend phiên bản {version}"
+        known = f"Hồ sơ của bạn"
         if profile.weight is not None:
             known += f" đã ghi cân nặng {display_decimal(Decimal(str(profile.weight)))} kg"
         return EnergyReferenceReply(known + ' nhưng còn thiếu ' + ', '.join(missing) + '. '
                                     'Nguồn dùng cân nặng lý tưởng tính từ chiều cao, nên mình chưa thể tính chỉ từ cân nặng hiện tại.',
                                     'needs_clarification', [], 'Bạn hãy cập nhật ' + ', '.join(missing) + ' trong hồ sơ nhé.')
     if not MIN_HEIGHT_CM <= Decimal(str(profile.height)) <= MAX_HEIGHT_CM:
-        return EnergyReferenceReply(f'Hồ sơ backend phiên bản {version} đang ghi chiều cao {profile.height:g} cm. '
+        return EnergyReferenceReply(f'Hồ sơ của bạn đang ghi chiều cao {profile.height:g} cm. '
                                     'Phép minh họa này chỉ hỗ trợ đầu vào 120–220 cm để hạn chế nhầm đơn vị; đây không phải ngưỡng chẩn đoán. '
                                     'Mình chưa tính calo hoặc tự đổi số đo của bạn.', 'needs_clarification', [],
                                     'Bạn hãy kiểm tra và cập nhật chiều cao theo cm; nếu số đo đúng nhưng ngoài phạm vi minh họa, cần hướng dẫn riêng từ chuyên gia.')
     hits = verified_rule_hits(settings, chunks)
     if not hits:
-        return EnergyReferenceReply(f'Mình đã đọc hồ sơ backend phiên bản {version}, nhưng chưa xác minh được đầy đủ hai đoạn nguồn BYT 2020 cho phép tính này. '
+        return EnergyReferenceReply('Mình đã đọc hồ sơ của bạn, nhưng chưa xác minh được đầy đủ nguồn BYT 2020 cho phép tính này. '
                                     'Mình chưa tính khoảng calo hoặc thay mục tiêu thực đơn khi nguồn chưa hợp lệ.', 'insufficient_evidence', [])
     result = calculate_reference_range(profile.height)
     low, high = [value.quantize(Decimal('1E1'), rounding=ROUND_HALF_UP) for value in (result.minimum_kcal, result.maximum_kcal)]
-    label = 'hồ sơ giả lập' if mock else 'hồ sơ backend'
+    label = 'hồ sơ giả lập' if mock else 'hồ sơ của bạn'
+    version_label = f' phiên bản {version}' if mock else ''
     answer = (f'Khoảng tham khảo khởi đầu theo công thức BYT 2020 là {low:.0f}–{high:.0f} kcal/ngày (làm tròn khoảng 10 kcal), '
-              f'minh họa theo {label} phiên bản {version}. [C1][C2]\n\n'
+              f'tính theo {label}{version_label}. [C1][C2]\n\n'
               f'Chiều cao đang lưu: {display_decimal(result.height_m)} m. Công thức BYT 2020: cân nặng lý tưởng = '
               f'{display_decimal(result.height_m)} × {display_decimal(result.height_m)} × 22 = {display_decimal(result.ideal_weight_kg)} kg. [C1] '
               f'Lấy cân nặng lý tưởng này × 20–30 kcal/kg/ngày, được {display_decimal(result.minimum_kcal)}–{display_decimal(result.maximum_kcal)} kcal/ngày trước làm tròn. [C2]\n\n'

@@ -102,6 +102,7 @@ class PlanItem(MealModel):
     unit: Literal["g", "ml", "serving"]
     state: Literal["raw", "cooked", "ready_to_eat", "unknown"]
     nutrition_basis: Literal["as_consumed", "raw_ingredients_estimate", "unknown"]
+    carbohydrate_definition: Annotated[str, Field(max_length=120)] | None = None
     nutrients: Nutrients
     ingredients: list[Ingredient] = Field(default_factory=list, max_length=100)
     ingredients_complete: bool = False
@@ -123,6 +124,7 @@ def sum_nutrients(items: list[PlanItem]) -> Nutrients:
 
 
 class MealPlan(MealModel):
+    planning_mode: Literal["MEDICAL", "GENERAL_REFERENCE"] = "MEDICAL"
     id: Identifier
     version: Annotated[int, Field(ge=1)]
     profile_version: Annotated[int, Field(ge=1)]

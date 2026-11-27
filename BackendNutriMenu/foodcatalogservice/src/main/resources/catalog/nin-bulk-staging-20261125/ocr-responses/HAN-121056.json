@@ -1,0 +1,27 @@
+{
+  "code": "HAN-121056",
+  "imageSha256": "e6892384be5c50eac54504117b6bc4fcd1133af5d674efb96be07e20661e9bad",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh rán nhân đỗ",
+      "amountSourceText": "103.0",
+      "numericQuantity": 103.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nhân đỗ",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Vừng trắng",
+      "amountSourceText": "2.0",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "508.6 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

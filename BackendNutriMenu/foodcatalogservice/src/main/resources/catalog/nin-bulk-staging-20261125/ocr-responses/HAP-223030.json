@@ -1,0 +1,19 @@
+{
+  "code": "HAP-223030",
+  "imageSha256": "ef750c652a2fec4c4bcf553b93f5212085ea715fcaf83b149aeca5232742e947",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "167.1 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh chuối",
+      "amountSourceText": "84.0",
+      "numericQuantity": 84.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

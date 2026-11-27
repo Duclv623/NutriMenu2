@@ -45,23 +45,23 @@ public class Ingredient {
     private BigDecimal ediblePortionPct = new BigDecimal("100.00");
 
     @Builder.Default
-    @Column(name = "calories_per_100g", nullable = false, precision = 7, scale = 2)
+    @Column(name = "calories_per_100g", precision = 7, scale = 2)
     private BigDecimal caloriesPer100g = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "total_carb_g", nullable = false, precision = 6, scale = 2)
+    @Column(name = "total_carb_g", precision = 6, scale = 2)
     private BigDecimal totalCarbG = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "fiber_g", nullable = false, precision = 6, scale = 2)
+    @Column(name = "fiber_g", precision = 6, scale = 2)
     private BigDecimal fiberG = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "protein_g", nullable = false, precision = 6, scale = 2)
+    @Column(name = "protein_g", precision = 6, scale = 2)
     private BigDecimal proteinG = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "fat_g", nullable = false, precision = 6, scale = 2)
+    @Column(name = "fat_g", precision = 6, scale = 2)
     private BigDecimal fatG = BigDecimal.ZERO;
 
     @Builder.Default
@@ -108,6 +108,7 @@ public class Ingredient {
     }
 
     public BigDecimal getNetCarbPer100g() {
+        if (totalCarbG == null || fiberG == null) return null;
         return totalCarbG.subtract(fiberG).max(BigDecimal.ZERO);
     }
 }

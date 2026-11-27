@@ -1,5 +1,7 @@
 # Canonical source line endings; preserve corpus checksums on every OS.
 * text=auto eol=lf
+# Preserve the exact bytes used to reproduce the NIN catalog checksum.
+BackendNutriMenu/foodcatalogservice/src/main/resources/catalog/nin-bulk-20261126/nin-source-import.json -text
 ai-service/data/** text=auto eol=crlf
 *.pdf -text
 *.docx -text

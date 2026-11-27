@@ -1,0 +1,69 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "461.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh phở/Pho (rice noodle)",
+      "amountSourceText": "155.0",
+      "numericQuantity": 155.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò loại I/Beef meat grade I",
+      "amountSourceText": "52.0",
+      "numericQuantity": 52.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá/Welsh onion",
+      "amountSourceText": "26.0",
+      "numericQuantity": 26.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành tây/Onion",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chanh/Lemon",
+      "amountSourceText": "9.0",
+      "numericQuantity": 9.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bánh quẩy/Fried breadstick, Youtiao",
+      "amountSourceText": "42.0",
+      "numericQuantity": 42.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/bone broth",
+      "amountSourceText": "380.0",
+      "numericQuantity": 380.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table ingredient energy values sum to 461.3 Kcal vs printed imageEnergyText 461.8 Kcal (0.5 Kcal difference)."
+  ],
+  "code": "SFF-113049",
+  "imageSha256": "983d1ab132fe4a39590d9f87bad1634aa281895d81a206fdff18a144be2271b4",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

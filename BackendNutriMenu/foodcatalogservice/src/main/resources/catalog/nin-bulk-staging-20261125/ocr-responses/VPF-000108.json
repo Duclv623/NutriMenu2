@@ -1,0 +1,51 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "309kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt nạc vai",
+      "amountSourceText": "210g",
+      "numericQuantity": 210,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành củ",
+      "amountSourceText": "40g",
+      "numericQuantity": 40,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá",
+      "amountSourceText": "20g",
+      "numericQuantity": 20,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước mắm",
+      "amountSourceText": "3g",
+      "numericQuantity": 3,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hạt tiêu",
+      "amountSourceText": "3g",
+      "numericQuantity": 3,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000108",
+  "imageSha256": "380adcb96527f3edcf4bfa14e1561d705990244a18511f6d7e961f23e478a368",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

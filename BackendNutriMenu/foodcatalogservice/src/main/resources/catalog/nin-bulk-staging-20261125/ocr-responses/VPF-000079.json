@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000079",
+  "imageSha256": "cbc719b624de99540e3d9cf089192d9a3b519e2ca3aa8c4b4174483bd1deabd9",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "550.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Lưỡi lợn",
+      "amountSourceText": "250g",
+      "numericQuantity": 250.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

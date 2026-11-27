@@ -1,0 +1,37 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "335.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cánh gà tẩm bột chiên/Fried chicken wings",
+      "amountSourceText": "88.0",
+      "numericQuantity": 88.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tẩm bột chiên",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước sốt cà chua/Tomato sauces",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương ớt/Chili sauce",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table row energies sum to 335.9 Kcal vs 335.8 Kcal badge (rounding)."
+  ],
+  "code": "SFF-113069",
+  "imageSha256": "844180a72190dd13fd9f8b059442c2c0e7b80253a465ac309dc5cc3b0e6a04d1",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

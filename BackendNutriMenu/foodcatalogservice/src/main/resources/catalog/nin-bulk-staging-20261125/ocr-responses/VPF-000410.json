@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "167kcal/đĩa",
+  "ingredients": [
+    {
+      "nameSourceText": "Lê",
+      "amountSourceText": "420g",
+      "numericQuantity": 420.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000410",
+  "imageSha256": "e98772be947fa12c449ca0e5200c8c0d3b62eb56267b8cc48891a44cd0a8a7c3",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

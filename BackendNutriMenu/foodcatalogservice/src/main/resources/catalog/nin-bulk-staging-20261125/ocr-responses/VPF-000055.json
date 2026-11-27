@@ -1,0 +1,83 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "419kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt chân giò",
+      "amountSourceText": "150g",
+      "numericQuantity": 150,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nấm hương",
+      "amountSourceText": "5g",
+      "numericQuantity": 5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mộc nhĩ",
+      "amountSourceText": "2g",
+      "numericQuantity": 2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "5g",
+      "numericQuantity": 5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành khô",
+      "amountSourceText": "20g",
+      "numericQuantity": 20,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tiêu",
+      "amountSourceText": "3g",
+      "numericQuantity": 3,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột canh",
+      "amountSourceText": "2g",
+      "numericQuantity": 2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mì chính",
+      "amountSourceText": "3g",
+      "numericQuantity": 3,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hạt nêm",
+      "amountSourceText": "2g",
+      "numericQuantity": 2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000055",
+  "imageSha256": "67f64c9ea659ae6124d9b6ea6082047c653a8c164ba75be16398512ca90c9832",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

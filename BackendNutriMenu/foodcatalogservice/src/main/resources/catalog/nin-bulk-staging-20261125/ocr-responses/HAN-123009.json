@@ -1,0 +1,77 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "688.6 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi",
+      "amountSourceText": "202.0",
+      "numericQuantity": 202.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt ngan luộc",
+      "amountSourceText": "83.0",
+      "numericQuantity": 83.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tiết lợn luộc",
+      "amountSourceText": "21.0",
+      "numericQuantity": 21.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bánh quẩy",
+      "amountSourceText": "29.0",
+      "numericQuantity": 29.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Măng tươi luộc",
+      "amountSourceText": "68.0",
+      "numericQuantity": 68.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá",
+      "amountSourceText": "33.0",
+      "numericQuantity": 33.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chanh",
+      "amountSourceText": "11.3",
+      "numericQuantity": 11.3,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau thơm",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table energy sum (688.5 Kcal) differs slightly from imageEnergyText (688.6 Kcal)"
+  ],
+  "code": "HAN-123009",
+  "imageSha256": "a4c3454ae68f084198452b19a093ae94d7238d835a32794b29665893357bc8cf",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

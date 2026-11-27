@@ -1,0 +1,61 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Cháo trắng/Plain Congee",
+      "amountSourceText": "500.0",
+      "numericQuantity": 500.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bánh quẩy/Fried breadstick, Youtiao",
+      "amountSourceText": "18.0",
+      "numericQuantity": 18.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sườn sụn/Pork rib cartilage",
+      "amountSourceText": "41.0",
+      "numericQuantity": 41.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ruốc thịt lợn/pork dried flour with fish sauce",
+      "amountSourceText": "11.0",
+      "numericQuantity": 11.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ruốc nấm/Fried shredded mushroom",
+      "amountSourceText": "12.0",
+      "numericQuantity": 12.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt lợn băm rim/Simmed minced pork in fish sauce",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rim",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "No total energy badge (imageEnergyText) is printed on the image; sum of ingredient energies is 470.6 Kcal vs apiEnergy 470.5 Kcal."
+  ],
+  "code": "SFF-111020",
+  "imageSha256": "c535de288c3c99204f3ca02ac970d2f25942b357822c4ede66bb9d6449bbcd83",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

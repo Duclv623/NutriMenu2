@@ -1,0 +1,19 @@
+{
+  "code": "HAP-221002",
+  "imageSha256": "6296d7e7061eabd84ad111dceabd7f265be7e29f4b05a2a961236a90b071a5d5",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh rán nhân đỗ",
+      "amountSourceText": "69.0",
+      "numericQuantity": 69.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "332.9 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

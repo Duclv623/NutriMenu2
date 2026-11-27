@@ -1,0 +1,93 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "461.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Miến dong/Vermicelli from Bermuda tuber",
+      "amountSourceText": "53.0",
+      "numericQuantity": 53.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau muống luộc/boiled water spinach",
+      "amountSourceText": "74.0",
+      "numericQuantity": 74.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cần ta/water dropwort",
+      "amountSourceText": "37.0",
+      "numericQuantity": 37.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giá đậu xanh/Mungbean sprout",
+      "amountSourceText": "42.0",
+      "numericQuantity": 42.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giò tai/pork, ear meat steamed",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả cá/Fish ball",
+      "amountSourceText": "14.0",
+      "numericQuantity": 14.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò loại I/Beef meat grade I",
+      "amountSourceText": "31.0",
+      "numericQuantity": 31.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu phụ rán/Fried tofu",
+      "amountSourceText": "14.0",
+      "numericQuantity": 14.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Gạch cua/Crab briks",
+      "amountSourceText": "14.0",
+      "numericQuantity": 14.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá/Welsh onion",
+      "amountSourceText": "9.0",
+      "numericQuantity": 9.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table ingredient energy values sum to 416.7 Kcal vs printed imageEnergyText 461.2 Kcal (44.5 Kcal difference); Nước dùng is shown in the right-hand ingredient diagram but omitted from the printed table."
+  ],
+  "code": "SFF-113050",
+  "imageSha256": "ee1e82557c613e224db1a58a249f599c94fc94db6b0e5b58bbf105d79e059c75",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

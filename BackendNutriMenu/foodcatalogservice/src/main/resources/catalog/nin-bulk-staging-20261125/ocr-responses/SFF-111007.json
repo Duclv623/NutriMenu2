@@ -1,0 +1,27 @@
+{
+  "code": "SFF-111007",
+  "imageSha256": "21298970057e215376bf2b09f652315451308275b2fea97676e542ed4e346a3c",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "111.9 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Caramen",
+      "amountSourceText": "Caramen/Caramel",
+      "numericQuantity": 100.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước đường",
+      "amountSourceText": "Nước đường/Caramelize sugar",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

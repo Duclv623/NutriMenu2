@@ -1,0 +1,67 @@
+{
+  "code": "SFF-123005",
+  "imageSha256": "157667f95459a022c1da91861ab6ce98d404a7ab8115aeb63af8973b397cd097",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "558.9 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ/Rice",
+      "amountSourceText": "193.0",
+      "numericQuantity": 193.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau muống luộc/\nBoiled water spinach",
+      "amountSourceText": "66.0",
+      "numericQuantity": 66.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Măng tre xào/Stir-Fried bamboo",
+      "amountSourceText": "64.0",
+      "numericQuantity": 64.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt gà rang/Stir-fried chicken",
+      "amountSourceText": "47.8",
+      "numericQuantity": 47.8,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tôm đồng rang/Stir-fried Shrimp",
+      "amountSourceText": "22.0",
+      "numericQuantity": 22.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt lợn ba chỉ luộc/Boiled pork belly",
+      "amountSourceText": "26.0",
+      "numericQuantity": 26.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước canh/Soup",
+      "amountSourceText": null,
+      "numericQuantity": null,
+      "unitSourceText": null,
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

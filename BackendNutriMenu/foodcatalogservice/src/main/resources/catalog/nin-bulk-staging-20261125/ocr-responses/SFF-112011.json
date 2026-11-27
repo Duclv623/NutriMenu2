@@ -1,0 +1,59 @@
+{
+  "code": "SFF-112011",
+  "imageSha256": "550f2bd2b4c43603b6b96fa5471de089add7cad54417a8ca55fcc11feb4e170e",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh mỳ/Banh my",
+      "amountSourceText": "79.0",
+      "numericQuantity": 79.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò xào/Stir-fried beef",
+      "amountSourceText": "73.0",
+      "numericQuantity": 73.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trứng gà rán/Fried hen egg",
+      "amountSourceText": "39.0",
+      "numericQuantity": 39.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột/Cucumber",
+      "amountSourceText": "157.0",
+      "numericQuantity": 157.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/Bone broth",
+      "amountSourceText": "118.0",
+      "numericQuantity": 118.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Pate/Pate",
+      "amountSourceText": "47.0",
+      "numericQuantity": 47.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

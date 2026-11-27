@@ -1,0 +1,12 @@
+{
+  "runId": "network-check-20261125",
+  "apiUrl": "https://viendinhduong.vn/api/fe/tool/getPageFoodData",
+  "startedAt": "2026-11-25T08:14:33.826845+00:00",
+  "pageSizeRequested": 100,
+  "pages": [],
+  "complete": false,
+  "error": "<urlopen error [Errno 11001] getaddrinfo failed>",
+  "httpStatus": null,
+  "stoppedAt": "2026-11-25T08:14:33.832585+00:00",
+  "resumeCommand": "refresh --run-id network-check-20261125 --page-size 100"
+}

@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "120kcal/đĩa",
+  "ingredients": [
+    {
+      "nameSourceText": "Mít khô",
+      "amountSourceText": "28g",
+      "numericQuantity": 28,
+      "unitSourceText": "g",
+      "preparationSourceText": "khô",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000429",
+  "imageSha256": "fa5973a020ca94e4c1f4f6d62db23599057fd57ba0a69e0910b1f1fcf8e19e30",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

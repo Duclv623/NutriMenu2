@@ -1,0 +1,19 @@
+{
+  "code": "HAN-123026",
+  "imageSha256": "a94de1b99adbd6667b48730504b2f981cae5a1bbb438d49ed350fac84283cded",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Khoai lang tẩm bột chiên",
+      "amountSourceText": "100.0",
+      "numericQuantity": 100.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tẩm bột chiên",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "376.8 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

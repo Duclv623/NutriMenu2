@@ -1,0 +1,12 @@
+{
+  "ingredientListStatus": "ABSENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "127kcal",
+  "ingredients": [],
+  "uncertainties": [
+    "Ingredient list not printed on image"
+  ],
+  "code": "VPF-000430",
+  "imageSha256": "043d9e3e150694345c60a7682dd186c900a069ae9a81bc432d6a2c92d21aa26b",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

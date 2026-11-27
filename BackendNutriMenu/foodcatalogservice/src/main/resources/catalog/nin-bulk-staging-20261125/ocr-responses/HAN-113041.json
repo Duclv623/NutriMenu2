@@ -1,0 +1,54 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "479.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh phở",
+      "amountSourceText": "99.0",
+      "numericQuantity": 99.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò loại II hầm",
+      "amountSourceText": "61.0",
+      "numericQuantity": 61.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "hầm",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá",
+      "amountSourceText": "9.0",
+      "numericQuantity": 9.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bánh quẩy",
+      "amountSourceText": "50.0",
+      "numericQuantity": 50.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng",
+      "amountSourceText": null,
+      "numericQuantity": null,
+      "unitSourceText": null,
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "'Nước dùng' has no weight or energy printed in the table.",
+    "Sum of printed ingredient row energies is 478.0 Kcal vs imageEnergyText '479.0 Kcal' (1.0 Kcal difference)."
+  ],
+  "code": "HAN-113041",
+  "imageSha256": "881fd4ffc7e9d7fdcf4a0925c104e7a5a3cdf95c7fe91b2b6c8755ebe10d6a7d",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

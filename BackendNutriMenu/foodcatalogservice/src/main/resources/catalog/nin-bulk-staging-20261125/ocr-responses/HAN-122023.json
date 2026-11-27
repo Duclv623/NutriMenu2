@@ -1,0 +1,27 @@
+{
+  "code": "HAN-122023",
+  "imageSha256": "9ce6d04421280429158969e92044c08747182d81f733159f9de523c835782f28",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "346.3 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Ổi (cả vỏ)",
+      "amountSourceText": "580.0",
+      "numericQuantity": 580.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước đường",
+      "amountSourceText": "40.0",
+      "numericQuantity": 40.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

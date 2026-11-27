@@ -7,10 +7,16 @@ export type Nutrients = {
   sodiumMg: number;
 };
 export type MealType = "breakfast" | "lunch" | "dinner" | "snack";
-export type Ingredient = { id: string; name: string; grams: number };
+export type CatalogNutrients = { [K in keyof Nutrients]: number | null };
+export type Ingredient = {
+  id: string;
+  name: string;
+  grams: number | null;
+  sourceAmountText?: string | null;
+};
 export type Food = {
+  giLevel?: "LOW" | "MEDIUM" | "HIGH" | "UNKNOWN";
   listed?: boolean;
-  giLevel?: "NONE" | "LOW" | "MEDIUM" | "HIGH";
   id: string;
   name: string;
   category: string;
@@ -19,17 +25,28 @@ export type Food = {
   color: string;
   image: string;
   minutes: number | null;
-  grams: number;
+  grams: number | null;
   meals: MealType[];
   allergens: string[];
   ingredients: Ingredient[];
-  nutrition: Nutrients;
+  nutrition: CatalogNutrients;
   steps: string[];
   preparationGuideKind?: string;
   role?: string;
   servingRules?: { min: number; max: number; step: number };
   ingredientsComplete?: boolean;
-  ingredientBasis?: "raw" | "cooked";
+  ingredientBasis?: "raw" | "cooked" | "source";
+  sourceRecordId?: string | null;
+  recipeSource?: string;
+  sourceUrl?: string | null;
+  nutritionBasis?: string | null;
+  carbohydrateDefinition?: string | null;
+  nutritionQualityJson?: string | null;
+  solverEligible?: boolean | null;
+  catalogSelectable?: boolean;
+  isHistoricalOnly?: boolean;
+  servingWeightBasis?: string | null;
+  householdUnitLabel?: string | null;
 };
 export type Profile = {
   name: string;
@@ -50,15 +67,16 @@ export type Profile = {
   version: number;
 };
 export type PlanItem = {
+  completed?: boolean;
   name?: string;
   id: string;
   dishId: string;
   meal: MealType;
   servingMultiplier: number;
   locked: boolean;
-  completed?: boolean;
   // Snapshot for this item including servingMultiplier; supplied by the optimizer.
-  nutrition?: Nutrients;
+  nutrition?: CatalogNutrients;
+  carbohydrateDefinition?: string | null;
 };
 export type SolverStatus =
   | "OPTIMAL"
@@ -67,7 +85,9 @@ export type SolverStatus =
   | "UNKNOWN"
   | "MODEL_INVALID"
   | "NOT_RUN";
+export type PlanningMode = "MEDICAL" | "GENERAL_REFERENCE";
 export type Plan = {
+  planningMode?: PlanningMode;
   skippedItems?: PlanItem[];
   rating?: number | null;
   feedback?: string | null;
@@ -85,6 +105,10 @@ export type Plan = {
   validationPassed?: boolean;
 };
 export type GenerateInput = {
+  planningMode?: PlanningMode;
+  replacePlanId?: string;
+  baseVersion?: number;
+  replacementConfirmed?: boolean;
   date: string;
   target: number;
   snacks: boolean;
@@ -139,7 +163,9 @@ export type UserData = {
   conversations: Conversation[];
   completedMeals: string[];
   capabilities?: {
+    weeklyGeneration?: boolean;
     generate: boolean;
+    regenerate?: boolean;
     swap: boolean;
     favoriteRemoval: boolean;
     cookingTime: boolean;

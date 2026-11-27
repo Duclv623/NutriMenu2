@@ -1,0 +1,19 @@
+{
+  "code": "HAP-221009",
+  "imageSha256": "ae80276270a362048791d9afd5ec2d7d32fa88ad19d501a4b313179cea8593eb",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "419.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh đa vừng",
+      "amountSourceText": "Bánh đa vừng",
+      "numericQuantity": 105.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

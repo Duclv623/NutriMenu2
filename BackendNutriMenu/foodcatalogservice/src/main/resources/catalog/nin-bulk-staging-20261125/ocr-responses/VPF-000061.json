@@ -1,0 +1,43 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "309kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt lợn mông",
+      "amountSourceText": "80g",
+      "numericQuantity": 80,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cùi dừa",
+      "amountSourceText": "25g",
+      "numericQuantity": 25,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường",
+      "amountSourceText": "3g",
+      "numericQuantity": 3,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mắm",
+      "amountSourceText": "4g",
+      "numericQuantity": 4,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000061",
+  "imageSha256": "27b42566b8e91af1882cff04cc1375b5802ff068ec5456e876a7c0e66946cff5",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

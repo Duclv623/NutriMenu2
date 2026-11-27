@@ -1,0 +1,91 @@
+{
+  "code": "SFF-111009",
+  "imageSha256": "1419bf8cc670ec1c43f87214d7eed65f67a8caef18e486fd6ebc41daf0da5846",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "522.9 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Caramen/Caramel",
+      "amountSourceText": "111.0",
+      "numericQuantity": 111.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa hấu/Watermelon",
+      "amountSourceText": "21.0",
+      "numericQuantity": 21.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mít dai/Jackfruit",
+      "amountSourceText": "3.0",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Quả thanh long/Dragon fruit",
+      "amountSourceText": "12.0",
+      "numericQuantity": 12.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lê/Pear",
+      "amountSourceText": "11.0",
+      "numericQuantity": 11.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Xoài chín/Ripe mango",
+      "amountSourceText": "11.0",
+      "numericQuantity": 11.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chín",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thạch/Jelly",
+      "amountSourceText": "37.0",
+      "numericQuantity": 37.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trân Châu/Tapioca Pearls",
+      "amountSourceText": "39.5",
+      "numericQuantity": 39.5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Xôi nếp cẩm/Black sticky rice",
+      "amountSourceText": "90.0",
+      "numericQuantity": 90.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước cốt dừa/Coconut milk",
+      "amountSourceText": "47.0",
+      "numericQuantity": 47.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

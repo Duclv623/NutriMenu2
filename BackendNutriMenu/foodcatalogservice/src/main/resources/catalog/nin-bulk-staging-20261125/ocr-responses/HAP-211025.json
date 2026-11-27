@@ -1,0 +1,93 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "813.3 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ",
+      "amountSourceText": "292.0",
+      "numericQuantity": 292.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mướp luộc",
+      "amountSourceText": "29.0",
+      "numericQuantity": 29.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà rốt luộc",
+      "amountSourceText": "4.0",
+      "numericQuantity": 4.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Su hào luộc",
+      "amountSourceText": "8.0",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu cô ve luộc",
+      "amountSourceText": "33.0",
+      "numericQuantity": 33.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt gà rang",
+      "amountSourceText": "30.0",
+      "numericQuantity": 30.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt lợn ba chỉ kho",
+      "amountSourceText": "54.0",
+      "numericQuantity": 54.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "kho",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước thịt kho",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "kho",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải xanh luộc",
+      "amountSourceText": "25.0",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước canh rau",
+      "amountSourceText": "171.0",
+      "numericQuantity": 171.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table ingredient energy sum is 813.2 Kcal vs imageEnergyText 813.3 Kcal (0.1 Kcal rounding difference)."
+  ],
+  "code": "HAP-211025",
+  "imageSha256": "f5d8929d5505ec9517bcd02cb6c004f67f3cd1de6d332faa15ea33c786b89cdf",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

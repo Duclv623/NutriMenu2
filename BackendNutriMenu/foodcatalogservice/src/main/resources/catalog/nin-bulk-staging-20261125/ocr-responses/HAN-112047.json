@@ -1,0 +1,19 @@
+{
+  "code": "HAN-112047",
+  "imageSha256": "f4be332984e37d7b3e5a06182e4e3c34cf4dce070084790c0a6d591ee09c5dab",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "74.1 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Caramen",
+      "amountSourceText": "68.0",
+      "numericQuantity": 68.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

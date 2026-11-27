@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "145kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Tôm biển (phần ăn được)",
+      "amountSourceText": "100g",
+      "numericQuantity": 100,
+      "unitSourceText": "g",
+      "preparationSourceText": "phần ăn được",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "7g",
+      "numericQuantity": 7,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000142",
+  "imageSha256": "af76859dc46668e2e7a62539724dfe64cea9ce7098e23678570cfe72335e7ba1",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,51 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "661.5 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ/Rice",
+      "amountSourceText": "310.0",
+      "numericQuantity": 310.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sườn sụn quay/BBQ pork-ribs",
+      "amountSourceText": "30.0",
+      "numericQuantity": 30.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "quay/BBQ",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải bắp luộc/Boilded cabbage",
+      "amountSourceText": "95.0",
+      "numericQuantity": 95.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc/Boilded",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt móng giò nấu giả cầy/Braised pig trotters",
+      "amountSourceText": "12.0",
+      "numericQuantity": 12.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nấu giả cầy/Braised",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước mắm/Fish sauce",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-213003",
+  "imageSha256": "88cd3b97e79c85c79bc025a917c0237eb91dd172d7619e2eda1bcc0b1aae9436",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

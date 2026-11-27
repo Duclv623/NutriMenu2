@@ -1,0 +1,37 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "307.1 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cháo đỗ đen/Black bean porridge",
+      "amountSourceText": "318.0",
+      "numericQuantity": 318.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu phụ rán/Fried Soybean curt cake pressed",
+      "amountSourceText": "80.0",
+      "numericQuantity": 80.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà muối nén/Aubergine salted",
+      "amountSourceText": "14.0",
+      "numericQuantity": 14.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "muối nén",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table ingredient energy values sum to 307.0 Kcal vs printed imageEnergyText 307.1 Kcal (0.1 Kcal rounding difference)."
+  ],
+  "code": "SFF-121052",
+  "imageSha256": "0d16ccf3d291784560de5e59902f41baec94d2a5d39ec6c39d62420835388df0",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

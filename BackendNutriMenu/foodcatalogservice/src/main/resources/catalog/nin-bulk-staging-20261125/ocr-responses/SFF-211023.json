@@ -1,0 +1,67 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "571.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cháo trắng/Porridge",
+      "amountSourceText": "620.0",
+      "numericQuantity": 620.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ếch xào/Stir-fried frog",
+      "amountSourceText": "191.0",
+      "numericQuantity": 191.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào/Stir-fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành phi/Fried shallot",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "phi/Fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tía tô/Beefsteak plant",
+      "amountSourceText": "4.0",
+      "numericQuantity": 4.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá/Welsh onion",
+      "amountSourceText": "41.0",
+      "numericQuantity": 41.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước sốt ếch/Frog sauce",
+      "amountSourceText": "69.0",
+      "numericQuantity": 69.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Riềng/Galangal",
+      "amountSourceText": "2.0",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-211023",
+  "imageSha256": "438131abeda58391cf2871f5be9118ce2c369f2f19e0974ecd4642d822ff7546",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

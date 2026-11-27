@@ -1,0 +1,27 @@
+{
+  "code": "HAN-122033",
+  "imageSha256": "76680911c8c90e53b4ac4ccee07cc6f3497d54e18a5d64615473091bc7e90e8c",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh rán nhân đỗ",
+      "amountSourceText": "210.0",
+      "numericQuantity": 210.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nhân đỗ",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Vừng trắng",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "1042.0 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

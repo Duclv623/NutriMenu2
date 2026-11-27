@@ -1,0 +1,317 @@
+{
+  "assets": [
+    {
+      "contentType": "image/png",
+      "id": "7d438426c6fda1b5",
+      "kind": "image",
+      "name": "screenshot_12.png",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/7d438426c6fda1b5.png",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/07/17/screenshot_12.png"
+    },
+    {
+      "contentType": "image/png",
+      "id": "73e5af9676c15220",
+      "kind": "image",
+      "name": "screenshot_15.png",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/73e5af9676c15220.png",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/07/17/screenshot_15.png"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "aa0167e6b2c70079",
+      "kind": "image",
+      "name": "screenshot_121.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/aa0167e6b2c70079.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_121.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "10e5992bceb8628f",
+      "kind": "image",
+      "name": "screenshot_170.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/10e5992bceb8628f.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_170.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "09f903939f90fb72",
+      "kind": "image",
+      "name": "screenshot_172.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/09f903939f90fb72.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_172.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "69976a4dae92f59b",
+      "kind": "image",
+      "name": "screenshot_163.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/69976a4dae92f59b.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_163.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "07ff713e11082e0f",
+      "kind": "image",
+      "name": "screenshot_239.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/07ff713e11082e0f.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/12/screenshot_239.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "da8c081f3339821e",
+      "kind": "image",
+      "name": "screenshot_208.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/da8c081f3339821e.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/12/screenshot_208.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "e5068fec6b5a8429",
+      "kind": "image",
+      "name": "screenshot_206.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/e5068fec6b5a8429.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/12/screenshot_206.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "0a9f534c00fcbd9e",
+      "kind": "image",
+      "name": "screenshot_214.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/0a9f534c00fcbd9e.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/12/screenshot_214.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "20e4604ad6b2f301",
+      "kind": "image",
+      "name": "screenshot_258.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/20e4604ad6b2f301.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/12/screenshot_258.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "c42f518ab528cebb",
+      "kind": "image",
+      "name": "screenshot_231.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/c42f518ab528cebb.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/12/screenshot_231.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "e5706e64ed9cf49b",
+      "kind": "image",
+      "name": "screenshot_171.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/e5706e64ed9cf49b.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_171.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "afe5ab5700e831c6",
+      "kind": "image",
+      "name": "screenshot_219.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/afe5ab5700e831c6.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/12/screenshot_219.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "e41b9d4984a1bbfd",
+      "kind": "image",
+      "name": "screenshot_260.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/e41b9d4984a1bbfd.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/12/screenshot_260.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "426530839fdb68e3",
+      "kind": "image",
+      "name": "screenshot_200.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/426530839fdb68e3.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_200.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "86e7c6946d5adab9",
+      "kind": "image",
+      "name": "screenshot_202.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/86e7c6946d5adab9.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_202.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "319cbcd2a5b6824b",
+      "kind": "image",
+      "name": "screenshot_198.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/319cbcd2a5b6824b.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_198.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "a333c5ba8ef5e8e7",
+      "kind": "image",
+      "name": "screenshot_203.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/a333c5ba8ef5e8e7.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_203.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "93938038794433c4",
+      "kind": "image",
+      "name": "screenshot_1.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/93938038794433c4.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/17/screenshot_1.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "9160471508b2c9fa",
+      "kind": "image",
+      "name": "screenshot_290.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/9160471508b2c9fa.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/12/screenshot_290.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "2777b5c68df7c307",
+      "kind": "image",
+      "name": "screenshot_289.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/2777b5c68df7c307.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/12/screenshot_289.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "29df24b83c139b64",
+      "kind": "image",
+      "name": "screenshot_269.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/29df24b83c139b64.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/12/screenshot_269.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "7f4ee8ae285ebcc9",
+      "kind": "image",
+      "name": "screenshot_185.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/7f4ee8ae285ebcc9.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_185.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "05a9b98c85369dae",
+      "kind": "image",
+      "name": "screenshot_191.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/05a9b98c85369dae.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_191.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "490ef9f1dccddff4",
+      "kind": "image",
+      "name": "screenshot_132.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/490ef9f1dccddff4.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_132.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "f9d13e2d49dca033",
+      "kind": "image",
+      "name": "screenshot_139.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/f9d13e2d49dca033.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_139.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "d7d0b9eeb422365e",
+      "kind": "image",
+      "name": "screenshot_147.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/d7d0b9eeb422365e.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_147.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "a20cce1a9ed61d7d",
+      "kind": "image",
+      "name": "screenshot_135.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/a20cce1a9ed61d7d.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_135.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "c3a4a9d4ae7eeb0f",
+      "kind": "image",
+      "name": "screenshot_134.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/c3a4a9d4ae7eeb0f.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_134.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "22cc4b1a16ca3331",
+      "kind": "image",
+      "name": "screenshot_141.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/22cc4b1a16ca3331.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_141.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "5f3548d32643b2e5",
+      "kind": "image",
+      "name": "screenshot_151.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/5f3548d32643b2e5.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/11/screenshot_151.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "6476b3f2d1ba13e2",
+      "kind": "image",
+      "name": "screenshot_123.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/6476b3f2d1ba13e2.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/22/screenshot_123.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "49114dee3be591e2",
+      "kind": "image",
+      "name": "screenshot_135.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/49114dee3be591e2.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/22/screenshot_135.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "fbb56899754ea9db",
+      "kind": "image",
+      "name": "screenshot_134.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/fbb56899754ea9db.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/22/screenshot_134.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "7adc66d1fb901153",
+      "kind": "image",
+      "name": "screenshot_65.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/7adc66d1fb901153.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/21/screenshot_65.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "b86bc4f35cdff6aa",
+      "kind": "image",
+      "name": "screenshot_101.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/b86bc4f35cdff6aa.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2025/12/21/screenshot_101.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "9818d10f83fe34ae",
+      "kind": "image",
+      "name": "screenshot_315.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/9818d10f83fe34ae.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2026/02/06/screenshot_315.webp"
+    },
+    {
+      "contentType": "image/webp",
+      "id": "8d4a8eb41979b28d",
+      "kind": "image",
+      "name": "screenshot_290.webp",
+      "path": "C:\\Users\\Admin\\AppData\\Local\\Packages\\openai.codex_2p2nqsd0c76g0\\AC\\#!sandbox.{0866a429-c95f-460f-bb0e-4fd841eeee66}\\Temp/browser-use/assets/1d7b42e8-b200-42a6-8fc7-36d79462fbcd/8d4a8eb41979b28d.webp",
+      "url": "https://viendinhduong.vn/storage/app/uploads/public/2026/02/06/screenshot_290.webp"
+    }
+  ],
+  "failures": []
+}

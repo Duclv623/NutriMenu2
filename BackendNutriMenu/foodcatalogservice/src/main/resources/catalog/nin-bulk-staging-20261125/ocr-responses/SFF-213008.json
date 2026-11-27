@@ -1,0 +1,43 @@
+{
+  "code": "SFF-213008",
+  "imageSha256": "f56372d8ee4c4051ab14e920eb508c9d4cc44157537e9a6c0e18ffe1e1c1fcb7",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa chua đặc có đường/Sweetened yogurt",
+      "amountSourceText": "120.0",
+      "numericQuantity": 120.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Gạo lứt tím/Purple brown rice",
+      "amountSourceText": "40.0",
+      "numericQuantity": 40.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước cốt dừa/Coconut milk",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường kính/Sugar",
+      "amountSourceText": "3.0",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

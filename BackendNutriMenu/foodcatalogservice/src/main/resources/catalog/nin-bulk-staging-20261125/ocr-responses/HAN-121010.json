@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "85.1 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Dưa hấu (Phần ruột đỏ để ép)",
+      "amountSourceText": "478.0",
+      "numericQuantity": 478.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "Phần ruột đỏ để ép",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-121010",
+  "imageSha256": "297fdb66dc40cb257872a522506fc10908a0da4f936fda61d292a56b7a7daac7",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,5 +1,7 @@
 package com.example.mealoptimizerservice.dto.response;
 
+import com.example.mealoptimizerservice.entity.MealPlan;
+import com.example.mealoptimizerservice.entity.MealPlanItem;
 import com.example.mealoptimizerservice.entity.enums.*;
 import jakarta.validation.constraints.*;
 import lombok.*;

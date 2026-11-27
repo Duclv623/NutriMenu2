@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "110kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cá trắm cỏ",
+      "amountSourceText": "120g",
+      "numericQuantity": 120,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Muối",
+      "amountSourceText": "2g",
+      "numericQuantity": 2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000047",
+  "imageSha256": "ed3b79f4e725957c9eef40f601288230fbb6b82bfbd68284d1687c898f6f9000",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

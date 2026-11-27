@@ -1,0 +1,77 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "510.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi",
+      "amountSourceText": "250.0",
+      "numericQuantity": 250.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sườn lợn hầm",
+      "amountSourceText": "44.1",
+      "numericQuantity": 44.1,
+      "unitSourceText": "g",
+      "preparationSourceText": "hầm",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mọc mộc nhĩ",
+      "amountSourceText": "31.0",
+      "numericQuantity": 31.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Măng khô",
+      "amountSourceText": "41.0",
+      "numericQuantity": 41.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "khô",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau mùi tàu",
+      "amountSourceText": "8.0",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành tây",
+      "amountSourceText": "3.0",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau húng",
+      "amountSourceText": "4.0",
+      "numericQuantity": 4.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng",
+      "amountSourceText": "390.0",
+      "numericQuantity": 390.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Sum of printed row energies (510.1 Kcal) differs from image total (510.2 Kcal) by 0.1 Kcal due to rounding."
+  ],
+  "code": "HAN-121074",
+  "imageSha256": "54e5a7700907855d9a46cd62eba7ebcb1cfde95974b77bbaba2527379315a27e",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

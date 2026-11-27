@@ -1,0 +1,43 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "681.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh bột lọc",
+      "amountSourceText": "311.0",
+      "numericQuantity": 311.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước chấm pha",
+      "amountSourceText": "90.0",
+      "numericQuantity": 90.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau mùi",
+      "amountSourceText": "31.0",
+      "numericQuantity": 31.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt chưng",
+      "amountSourceText": "8.0",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chưng",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-112053",
+  "imageSha256": "50c8fc7fc42a129ee9873b34b8cc4093acfd505620c262c81f4e240af6c17a9a",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

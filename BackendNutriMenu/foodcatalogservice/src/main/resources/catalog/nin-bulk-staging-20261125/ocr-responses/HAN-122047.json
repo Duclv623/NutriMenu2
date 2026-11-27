@@ -1,0 +1,19 @@
+{
+  "code": "HAN-122047",
+  "imageSha256": "aaf522afe9d13865d45f4cf97cdc2f794e12b6beb24f0734f1001a2539e4eace",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Hạt dẻ nướng",
+      "amountSourceText": "102.0",
+      "numericQuantity": 102.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nướng",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "227.5 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

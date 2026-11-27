@@ -44,6 +44,33 @@ public class Dish {
     @Column(name = "diabetic_cooking_tip", length = 500)
     private String diabeticCookingTip;
 
+    @Column(name = "source_record_id", length = 100)
+    private String sourceRecordId;
+
+    @Column(name = "source_url", length = 500)
+    private String sourceUrl;
+
+    @Column(name = "nutrition_basis", length = 50)
+    private String nutritionBasis;
+
+    @Column(name = "nutrition_quality_json", columnDefinition = "text")
+    private String nutritionQualityJson;
+
+    @Builder.Default
+    @Column(name = "solver_eligible")
+    private Boolean solverEligible = true;
+
+    @Builder.Default
+    @Column(name = "allergen_evidence_complete")
+    private Boolean allergenEvidenceComplete = true;
+
+    @Builder.Default
+    @Column(name = "portion_evidence_complete")
+    private Boolean portionEvidenceComplete = true;
+
+    @Column(name = "serving_weight_basis", length = 60)
+    private String servingWeightBasis;
+
     @Enumerated(EnumType.STRING)
     @Column(name = "cooking_method", nullable = false, length = 30)
     private CookingMethod cookingMethod;
@@ -57,58 +84,58 @@ public class Dish {
     private IngredientGroup primaryIngredientGroup;
 
     @Builder.Default
-    @Column(name = "standard_serving_cooked_g", nullable = false, precision = 6, scale = 2)
+    @Column(name = "standard_serving_cooked_g", precision = 6, scale = 2)
     private BigDecimal standardServingCookedG = BigDecimal.ZERO;
 
     @Column(name = "household_unit_label", nullable = false, length = 100)
     private String householdUnitLabel;
 
     @Builder.Default
-    @Column(name = "calories_kcal", nullable = false, precision = 7, scale = 2)
+    @Column(name = "calories_kcal", precision = 7, scale = 2)
     private BigDecimal caloriesKcal = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "total_carb_g", nullable = false, precision = 6, scale = 2)
+    @Column(name = "total_carb_g", precision = 6, scale = 2)
     private BigDecimal totalCarbG = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "fiber_g", nullable = false, precision = 6, scale = 2)
+    @Column(name = "fiber_g", precision = 6, scale = 2)
     private BigDecimal fiberG = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "net_carb_g", nullable = false, precision = 6, scale = 2)
+    @Column(name = "net_carb_g", precision = 6, scale = 2)
     private BigDecimal netCarbG = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "protein_g", nullable = false, precision = 6, scale = 2)
+    @Column(name = "protein_g", precision = 6, scale = 2)
     private BigDecimal proteinG = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "fat_g", nullable = false, precision = 6, scale = 2)
+    @Column(name = "fat_g", precision = 6, scale = 2)
     private BigDecimal fatG = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "saturated_fat_g", nullable = false, precision = 6, scale = 2)
+    @Column(name = "saturated_fat_g", precision = 6, scale = 2)
     private BigDecimal saturatedFatG = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "sodium_mg", nullable = false, precision = 7, scale = 2)
+    @Column(name = "sodium_mg", precision = 7, scale = 2)
     private BigDecimal sodiumMg = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "potassium_mg", nullable = false, precision = 7, scale = 2)
+    @Column(name = "potassium_mg", precision = 7, scale = 2)
     private BigDecimal potassiumMg = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "purine_mg", nullable = false, precision = 7, scale = 2)
+    @Column(name = "purine_mg", precision = 7, scale = 2)
     private BigDecimal purineMg = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "cholesterol_mg", nullable = false, precision = 7, scale = 2)
+    @Column(name = "cholesterol_mg", precision = 7, scale = 2)
     private BigDecimal cholesterolMg = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "estimated_gi", nullable = false, precision = 5, scale = 2)
+    @Column(name = "estimated_gi", precision = 5, scale = 2)
     private BigDecimal estimatedGi = BigDecimal.ZERO;
 
     @Builder.Default
@@ -117,40 +144,40 @@ public class Dish {
     private GiLevel giLevel = GiLevel.LOW;
 
     @Builder.Default
-    @Column(name = "glycemic_load", nullable = false, precision = 5, scale = 2)
+    @Column(name = "glycemic_load", precision = 5, scale = 2)
     private BigDecimal glycemicLoad = BigDecimal.ZERO;
 
     // Các cột số nguyên nhân 10 (Scaling x10) nạp thẳng vào OR-Tools CP-SAT
     @Builder.Default
-    @Column(name = "calories_scaled_x10", nullable = false)
+    @Column(name = "calories_scaled_x10")
     private Long caloriesScaledX10 = 0L;
 
     @Builder.Default
-    @Column(name = "net_carb_scaled_x10", nullable = false)
+    @Column(name = "net_carb_scaled_x10")
     private Long netCarbScaledX10 = 0L;
 
     @Builder.Default
-    @Column(name = "fiber_scaled_x10", nullable = false)
+    @Column(name = "fiber_scaled_x10")
     private Long fiberScaledX10 = 0L;
 
     @Builder.Default
-    @Column(name = "protein_scaled_x10", nullable = false)
+    @Column(name = "protein_scaled_x10")
     private Long proteinScaledX10 = 0L;
 
     @Builder.Default
-    @Column(name = "fat_scaled_x10", nullable = false)
+    @Column(name = "fat_scaled_x10")
     private Long fatScaledX10 = 0L;
 
     @Builder.Default
-    @Column(name = "gl_scaled_x10", nullable = false)
+    @Column(name = "gl_scaled_x10")
     private Long glScaledX10 = 0L;
 
     @Builder.Default
-    @Column(name = "sodium_scaled_x10", nullable = false)
+    @Column(name = "sodium_scaled_x10")
     private Long sodiumScaledX10 = 0L;
 
     @Builder.Default
-    @Column(name = "cholesterol_scaled_x10", nullable = false)
+    @Column(name = "cholesterol_scaled_x10")
     private Long cholesterolScaledX10 = 0L;
 
     // Quy tắc bội số khẩu phần cho CP-SAT (x2: 1=0.5, 2=1.0, 3=1.5)
@@ -219,7 +246,7 @@ public class Dish {
     }
 
     private static Long scaleX10(BigDecimal val) {
-        if (val == null) return 0L;
+        if (val == null) return null;
         return val.multiply(BigDecimal.TEN).setScale(0, RoundingMode.HALF_UP).longValue();
     }
 }

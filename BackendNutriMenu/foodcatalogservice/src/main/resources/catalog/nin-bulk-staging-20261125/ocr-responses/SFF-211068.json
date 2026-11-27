@@ -1,0 +1,35 @@
+{
+  "code": "SFF-211068",
+  "imageSha256": "57bd04aac19ebb8888d745e2ba91084c8c742e94edc561a56a5df3f016934ad3",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "373.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt chim quay (270g cả con)/\nRoasted bird",
+      "amountSourceText": "162.0",
+      "numericQuantity": 162.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "quay",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lá mắc mật/Dalzell oliv leaves",
+      "amountSourceText": "2.0",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương ớt/Chili sauce",
+      "amountSourceText": "38.0",
+      "numericQuantity": 38.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

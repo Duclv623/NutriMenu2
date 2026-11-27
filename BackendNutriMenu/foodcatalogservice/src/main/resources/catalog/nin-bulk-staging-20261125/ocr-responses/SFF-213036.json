@@ -1,0 +1,109 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "799.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ/Rice",
+      "amountSourceText": "159.0",
+      "numericQuantity": 159.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cá nục kho/Braised scad fish",
+      "amountSourceText": "47.0",
+      "numericQuantity": 47.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "kho",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trứng đúc thịt rán/Minced pork omelette",
+      "amountSourceText": "40.0",
+      "numericQuantity": 40.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt ba chỉ rán/Fried pork belly",
+      "amountSourceText": "33.0",
+      "numericQuantity": 33.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa cải bắp /Pickled cabbage",
+      "amountSourceText": "33.0",
+      "numericQuantity": 33.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu phụ rán/Fried tofu",
+      "amountSourceText": "50.0",
+      "numericQuantity": 50.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả cá sốt/Fish ball with sauces",
+      "amountSourceText": "21.0",
+      "numericQuantity": 21.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "sốt",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả lợn sốt/Pork ball with sauces",
+      "amountSourceText": "18.0",
+      "numericQuantity": 18.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "sốt",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giá đậu xanh xào/Stir-fried mungbean sprout",
+      "amountSourceText": "52.0",
+      "numericQuantity": 52.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải ngọt /Stir-fried leaf mustard",
+      "amountSourceText": "19.0",
+      "numericQuantity": 19.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "Stir-fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Canh cải xanh/Mustard greens soup",
+      "amountSourceText": "450.0",
+      "numericQuantity": 450.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước mắm cá/Fish sauces",
+      "amountSourceText": "14.0",
+      "numericQuantity": 14.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table ingredient energy sum is 800.0 Kcal vs 799.7 Kcal shown on image/API."
+  ],
+  "code": "SFF-213036",
+  "imageSha256": "d90dc443e4f52029701f9459ea78802d78098dc948c0d3779e95ed9f236837a7",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

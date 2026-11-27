@@ -1,0 +1,59 @@
+{
+  "code": "SFF-112007",
+  "imageSha256": "5f013896b52a8a83d5159f3762c066f50c0da4e9f56be9fee869b42065d6918b",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "685.9 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cánh gà tẩm bột chiên/fried chicken wings with flour",
+      "amountSourceText": "65.0",
+      "numericQuantity": 65.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đùi gà tẩm bột chiên/fried chicken drumsticks with flour",
+      "amountSourceText": "53.0",
+      "numericQuantity": 53.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Khoai tây rán/French fries",
+      "amountSourceText": "47.0",
+      "numericQuantity": 47.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương cà chua/Tomato sauce",
+      "amountSourceText": "9.0",
+      "numericQuantity": 9.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương ớt/Chili sauce",
+      "amountSourceText": "8.0",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước ngọt có ga/Soda",
+      "amountSourceText": "250.0",
+      "numericQuantity": 250.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

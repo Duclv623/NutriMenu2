@@ -1,0 +1,43 @@
+{
+  "code": "SFF-112054",
+  "imageSha256": "ad032c4266f5b0255fcbb342db6a406a44994e9764700b7ba51e9860b7ec6654",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "1603.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt gà lườn tẩm bột chiên/Fried chicken breast",
+      "amountSourceText": "470.0",
+      "numericQuantity": 470.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương ớt/Chili sauce",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương cà chua/Ketchup",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sốt mayonnaise/Mayonnaise",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

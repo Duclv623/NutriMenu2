@@ -1,0 +1,94 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "753.4 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ",
+      "amountSourceText": "260.0",
+      "numericQuantity": 260.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa cải bẹ",
+      "amountSourceText": "53.0",
+      "numericQuantity": 53.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò mông sống",
+      "amountSourceText": "78.0",
+      "numericQuantity": 78.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "sống",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trứng gà",
+      "amountSourceText": "49.9",
+      "numericQuantity": 49.9,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành phi",
+      "amountSourceText": "26.0",
+      "numericQuantity": 26.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "phi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng",
+      "amountSourceText": "112.0",
+      "numericQuantity": 112.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bơ",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước mắm",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Măng chua",
+      "amountSourceText": "47.0",
+      "numericQuantity": 47.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chua",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt tươi",
+      "amountSourceText": "3.0",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Sum of printed row energies (753.5 Kcal) differs from printed total (753.4 Kcal) by 0.1 Kcal.",
+    "'Bơ' (1.0 g, 7.6 Kcal) and 'Nước mắm' (10.0 g, 3.7 Kcal) are listed in the table but not labeled in the ingredient diagram."
+  ],
+  "code": "HAN-121017",
+  "imageSha256": "facd5670223ea3306d9ab5231d86196e26c2784d80cd7fa918494a42aff9c537",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,37 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Pho mai/Cheese",
+      "amountSourceText": "48.0",
+      "numericQuantity": 48.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột chiên xù, Bột mỳ/Flour",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu ăn/Oil",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "No total energy badge is printed on the image (apiEnergy is 341.8; sum of printed row energies is 341.7 Kcal)."
+  ],
+  "code": "SFF-123024",
+  "imageSha256": "dacd3507c5deefad1478b8c71dd1ca0453f232953456e6f2885da8aee35c7877",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

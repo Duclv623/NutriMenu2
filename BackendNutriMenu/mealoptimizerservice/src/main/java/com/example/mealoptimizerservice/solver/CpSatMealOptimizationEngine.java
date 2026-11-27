@@ -28,6 +28,10 @@ public class CpSatMealOptimizationEngine {
     @Data
     @Builder
     public static class SolverInputContext {
+        @Builder.Default
+        private PlanningMode planningMode = PlanningMode.MEDICAL;
+        @Builder.Default private boolean evaluateFiber = true;
+        @Builder.Default private boolean evaluateCholesterol = true;
         private BigDecimal targetCaloriesKcal;
         private BigDecimal targetNetCarbG;
         private BigDecimal targetProteinG;
@@ -79,6 +83,11 @@ public class CpSatMealOptimizationEngine {
     }
 
     public SolverExecutionResult solveOptimalMealPlan(SolverInputContext ctx) {
+        SolverInputDataValidator.validate(ctx.getCandidates(),ctx.getPlanningMode());
+        boolean fiberEvaluated = ctx.getPlanningMode()!=PlanningMode.GENERAL_REFERENCE || ctx.isEvaluateFiber();
+        boolean cholesterolEvaluated = ctx.getPlanningMode()!=PlanningMode.GENERAL_REFERENCE || ctx.isEvaluateCholesterol();
+        if (fiberEvaluated && ctx.getCandidates().stream().anyMatch(d -> d.getFiberX10()==null)) throw new IllegalArgumentException("Fiber constraint requires known values");
+        if (cholesterolEvaluated && ctx.getCandidates().stream().anyMatch(d -> d.getCholesterolX10()==null)) throw new IllegalArgumentException("Cholesterol constraint requires known values");
         long startTime = System.currentTimeMillis();
         CpModel model = new CpModel();
 
@@ -141,19 +150,55 @@ public class CpSatMealOptimizationEngine {
             Map<Long, BoolVar> slotX = xVars.get(slot);
             Map<Long, IntVar> slotS = sVars.get(slot);
 
-            if (Boolean.TRUE.equals(slotTpl.getAllowCompositeDish())) {
-                // Bữa sáng: Chọn đúng 1 món COMPOSITE_DISH (Phở, Bún, Cháo, Miến)
-                List<Literal> compVars = filterVarsByRole(candidates, slotX, DishRole.COMPOSITE_DISH);
-                if (!compVars.isEmpty()) {
-                    model.addEquality(LinearExpr.sum(compVars.toArray(new Literal[0])), 1);
+            if (ctx.getPlanningMode() != PlanningMode.GENERAL_REFERENCE) {
+                if (Boolean.TRUE.equals(slotTpl.getAllowCompositeDish())) {
+                    // Bữa sáng: Chọn đúng 1 món COMPOSITE_DISH (Phở, Bún, Cháo, Miến)
+                    List<Literal> compVars = filterVarsByRole(candidates, slotX, DishRole.COMPOSITE_DISH);
+                    if (!compVars.isEmpty()) {
+                        model.addEquality(LinearExpr.sum(compVars.toArray(new Literal[0])), 1);
+                    }
+                } else {
+                    // Bữa Trưa / Tối / Bữa Phụ: Ghép mâm theo đúng số lượng DishRole yêu cầu
+                    enforceExactRoleCount(model, candidates, slotX, DishRole.MAIN_STARCH, slotTpl.getReqMainStarch());
+                    enforceExactRoleCount(model, candidates, slotX, DishRole.PROTEIN_DISH, slotTpl.getReqProteinDish());
+                    enforceExactRoleCount(model, candidates, slotX, DishRole.VEGGIE_DISH, slotTpl.getReqVeggieDish());
+                    enforceExactRoleCount(model, candidates, slotX, DishRole.SOUP, slotTpl.getReqSoup());
+                    enforceExactRoleCount(model, candidates, slotX, DishRole.SNACK, slotTpl.getReqSnack());
                 }
-            } else {
-                // Bữa Trưa / Tối / Bữa Phụ: Ghép mâm theo đúng số lượng DishRole yêu cầu
-                enforceExactRoleCount(model, candidates, slotX, DishRole.MAIN_STARCH, slotTpl.getReqMainStarch());
-                enforceExactRoleCount(model, candidates, slotX, DishRole.PROTEIN_DISH, slotTpl.getReqProteinDish());
-                enforceExactRoleCount(model, candidates, slotX, DishRole.VEGGIE_DISH, slotTpl.getReqVeggieDish());
-                enforceExactRoleCount(model, candidates, slotX, DishRole.SOUP, slotTpl.getReqSoup());
-                enforceExactRoleCount(model, candidates, slotX, DishRole.SNACK, slotTpl.getReqSnack());
+            }
+
+            if (ctx.getPlanningMode() == PlanningMode.GENERAL_REFERENCE) {
+                // Lunch/dinner: one composite meal OR starch + protein + soup, always a vegetable side.
+                boolean alternative = Boolean.TRUE.equals(slotTpl.getAllowCompositeDish()) && slotTpl.getReqMainStarch() > 0;
+                BoolVar traditional = alternative ? model.newBoolVar("traditional_" + slot) : null;
+                for (DishRole role : DishRole.values()) {
+                    LinearExprBuilder count = LinearExpr.newBuilder();
+                    for (Literal selected : filterVarsByRole(candidates,slotX,role)) count.add((BoolVar)selected);
+                    if (alternative && role == DishRole.COMPOSITE_DISH) model.addEquality(count.add(traditional),1);
+                    else if (alternative && role==DishRole.SOUP) model.addLessOrEqual(count.addTerm(traditional,-1),0);
+                    else if (alternative && (role == DishRole.MAIN_STARCH || role == DishRole.PROTEIN_DISH))
+                        model.addEquality(count.addTerm(traditional,-1),0);
+                    else {
+                        int required = switch (role) {
+                            case COMPOSITE_DISH -> Boolean.TRUE.equals(slotTpl.getAllowCompositeDish()) ? 1 : 0;
+                            case VEGGIE_DISH -> slotTpl.getReqVeggieDish();
+                            case SNACK -> slotTpl.getReqSnack();
+                            default -> 0;
+                        };
+                        model.addEquality(count,required);
+                    }
+                }
+            }
+
+            if (ctx.getPlanningMode() == PlanningMode.GENERAL_REFERENCE) {
+                LinearExprBuilder mealEnergy = LinearExpr.newBuilder();
+                for (DishSolverDto dish : candidates) {
+                    IntVar portion = slotS.get(dish.getDishId());
+                    if (portion != null) mealEnergy.addTerm(portion,dish.getCaloriesX10());
+                }
+                BigDecimal share = ctx.getTargetCaloriesKcal().multiply(slotTpl.getCalorieRatioPct()).divide(new BigDecimal("100"));
+                model.addLinearConstraint(mealEnergy,scaleToX20(share.multiply(new BigDecimal("0.6"))),
+                        scaleToX20(share.multiply(new BigDecimal("1.4"))));
             }
 
             // Kiểm soát Net Carb & GL từng bữa (Scaled x20)
@@ -165,7 +210,7 @@ public class CpSatMealOptimizationEngine {
                     IntVar s = slotS.get(dish.getDishId());
                     if (s != null) {
                         mealCarbX20.addTerm(s, dish.getNetCarbX10());
-                        mealGlX20.addTerm(s, dish.getGlX10());
+                        if (dish.getGlX10()!=null) mealGlX20.addTerm(s, dish.getGlX10());
                     }
                 }
 
@@ -174,7 +219,7 @@ public class CpSatMealOptimizationEngine {
                 long maxGlX20 = scaleToX20(slotTpl.getMaxGl());
 
                 model.addLinearConstraint(mealCarbX20, minCarbX20, maxCarbX20);
-                model.addLessOrEqual(mealGlX20, maxGlX20);
+                if (ctx.getPlanningMode() != PlanningMode.GENERAL_REFERENCE) model.addLessOrEqual(mealGlX20, maxGlX20);
             }
 
             // Chống trùng lặp nhóm nguyên liệu đạm trong cùng 1 bữa (VD: Gà + Gà)
@@ -229,10 +274,10 @@ public class CpSatMealOptimizationEngine {
                 totalCarbX20.addTerm(s, dish.getNetCarbX10());
                 totalProtX20.addTerm(s, dish.getProteinX10());
                 totalFatX20.addTerm(s, dish.getFatX10());
-                totalFiberX20.addTerm(s, dish.getFiberX10());
-                totalGlX20.addTerm(s, dish.getGlX10());
+                if (dish.getFiberX10()!=null) totalFiberX20.addTerm(s, dish.getFiberX10());
+                if (dish.getGlX10()!=null) totalGlX20.addTerm(s, dish.getGlX10());
                 totalSodiumX20.addTerm(s, dish.getSodiumX10());
-                totalCholesterolX20.addTerm(s, dish.getCholesterolX10());
+                if (dish.getCholesterolX10()!=null) totalCholesterolX20.addTerm(s, dish.getCholesterolX10());
 
                 int perturbation = ctx.isEnableRandomPerturbation()
                         ? ThreadLocalRandom.current().nextInt(-18, 19) : 0;
@@ -242,18 +287,24 @@ public class CpSatMealOptimizationEngine {
 
         // 5. RÀNG BUỘC CỨNG TOÀN NGÀY: GL <= 80/day, NATRI < 2400mg/day, CHOLESTEROL < 200/300mg/day
         long maxDailyGlX20 = scaleToX20(ctx.getMaxDailyGl() != null ? ctx.getMaxDailyGl() : new BigDecimal("80.0"));
-        model.addLessOrEqual(totalGlX20, maxDailyGlX20);
+        if (ctx.getPlanningMode() != PlanningMode.GENERAL_REFERENCE) model.addLessOrEqual(totalGlX20, maxDailyGlX20);
+        else {
+            // General reference bounds: daily energy within 10% of the chosen target.
+            model.addLinearConstraint(totalCalX20, scaleToX20(ctx.getTargetCaloriesKcal().multiply(new BigDecimal("0.9"))),
+                    scaleToX20(ctx.getTargetCaloriesKcal().multiply(new BigDecimal("1.1"))));
+        }
 
         long maxDailySodiumX20 = scaleToX20(ctx.getMaxDailySodiumMg() != null ? ctx.getMaxDailySodiumMg() : new BigDecimal("2400.0"));
         model.addLessOrEqual(totalSodiumX20, maxDailySodiumX20);
 
         long maxDailyCholX20 = scaleToX20(ctx.getMaxDailyCholesterolMg() != null ? ctx.getMaxDailyCholesterolMg() : new BigDecimal("300.0"));
-        model.addLessOrEqual(totalCholesterolX20, maxDailyCholX20);
+        if (cholesterolEvaluated) model.addLessOrEqual(totalCholesterolX20, maxDailyCholX20);
 
         // Đảm bảo Chất xơ đạt tối thiểu 20g/ngày (biến bù fiberUnder để phạt nếu thiếu)
         long minDailyFiberX20 = scaleToX20(ctx.getMinDailyFiberG() != null ? ctx.getMinDailyFiberG() : new BigDecimal("20.0"));
         IntVar fiberUnder = model.newIntVar(0, 5_000, "fiber_under");
-        model.addGreaterOrEqual(LinearExpr.newBuilder().add(totalFiberX20).add(fiberUnder), minDailyFiberX20);
+        if (fiberEvaluated) model.addGreaterOrEqual(LinearExpr.newBuilder().add(totalFiberX20).add(fiberUnder), minDailyFiberX20);
+        else model.addEquality(fiberUnder,0);
 
         long targetCalX20 = scaleToX20(ctx.getTargetCaloriesKcal());
         long targetCarbX20 = scaleToX20(ctx.getTargetNetCarbG());
@@ -285,7 +336,7 @@ public class CpSatMealOptimizationEngine {
         objective.addTerm(carbUnder, wp.getWeightCarbDeviation());
 
         // Phạt tổng tải lượng đường huyết GL
-        objective.addTerm(totalGlX20.build(), wp.getWeightGlycemicLoad());
+        if (ctx.getPlanningMode() != PlanningMode.GENERAL_REFERENCE) objective.addTerm(totalGlX20.build(), wp.getWeightGlycemicLoad());
 
         // Phạt lệch Calo, Đạm, Béo và phạt thiếu Chất xơ dưới 20g/ngày
         objective.addTerm(calOver, wp.getWeightCalorieDeviation());
@@ -294,10 +345,10 @@ public class CpSatMealOptimizationEngine {
         objective.addTerm(protUnder, wp.getWeightProteinFatDeviation());
         objective.addTerm(fatOver, wp.getWeightProteinFatDeviation());
         objective.addTerm(fatUnder, wp.getWeightProteinFatDeviation());
-        objective.addTerm(fiberUnder, wp.getWeightFiberBonus() * 3);
+        if (fiberEvaluated) objective.addTerm(fiberUnder, wp.getWeightFiberBonus() * 3);
 
         // Thưởng Chất xơ & Điểm yêu thích (Mang dấu âm trong hàm Minimize)
-        objective.addTerm(totalFiberX20.build(), -wp.getWeightFiberBonus());
+        if (fiberEvaluated) objective.addTerm(totalFiberX20.build(), -wp.getWeightFiberBonus());
         objective.addTerm(totalPrefScore.build(), -wp.getWeightPreferenceBonus());
 
         model.minimize(objective);
@@ -344,7 +395,7 @@ public class CpSatMealOptimizationEngine {
                     .proteinUnderG(unscaleFromX20(solver.value(protUnder)))
                     .fatOverG(unscaleFromX20(solver.value(fatOver)))
                     .fatUnderG(unscaleFromX20(solver.value(fatUnder)))
-                    .fiberUnderG(unscaleFromX20(solver.value(fiberUnder)))
+                    .fiberUnderG(fiberEvaluated ? unscaleFromX20(solver.value(fiberUnder)) : null)
                     .build();
 
             return SolverExecutionResult.builder()
@@ -354,11 +405,17 @@ public class CpSatMealOptimizationEngine {
                     .build();
         }
 
+        SolverRunStatus unsuccessful = switch (status) {
+            case INFEASIBLE -> SolverRunStatus.INFEASIBLE;
+            case MODEL_INVALID -> SolverRunStatus.MODEL_INVALID;
+            default -> SolverRunStatus.UNKNOWN;
+        };
+        log.info("CP-SAT ended with {} after {}ms for {} candidates",status,elapsedMs,candidates.size());
         return SolverExecutionResult.builder()
-                .status(SolverRunStatus.INFEASIBLE)
+                .status(unsuccessful)
                 .selectedDishes(Collections.emptyList())
                 .breakdown(MathematicalBreakdownDto.builder()
-                        .solverStatus(SolverRunStatus.INFEASIBLE)
+                        .solverStatus(unsuccessful)
                         .solveTimeMs(elapsedMs)
                         .totalCandidatesEvaluated(candidates.size())
                         .totalDecisionVariables(totalDecisionVars)

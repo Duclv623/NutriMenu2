@@ -1,13 +1,14 @@
 package com.example.foodcatalogservice.dto.request;
 import com.example.foodcatalogservice.entity.enums.MedicalTag;
 import lombok.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import jakarta.validation.constraints.*;
 
 import java.math.BigDecimal;
 import java.util.Set;
 
 @Data
-@NoArgsConstructor
+@NoArgsConstructor(onConstructor_ = @JsonCreator)
 @AllArgsConstructor
 @Builder
 public class SolverCoverageDiagnosticRequest {

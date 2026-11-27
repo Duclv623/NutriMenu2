@@ -1,0 +1,51 @@
+{
+  "code": "SFF-211057",
+  "imageSha256": "e38dfd01048997284e2021908433862cebfe30580a869ed0331e807e46d3692f",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Thạch xanh/Green jelly",
+      "amountSourceText": "65.0",
+      "numericQuantity": 65.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thạch trắng/White jelly",
+      "amountSourceText": "61.0",
+      "numericQuantity": 61.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước đường/Sugar syrup",
+      "amountSourceText": "72.0",
+      "numericQuantity": 72.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sữa bò tươi/Milk",
+      "amountSourceText": "54.0",
+      "numericQuantity": 54.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đá/Ice",
+      "amountSourceText": "133.0",
+      "numericQuantity": 133.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

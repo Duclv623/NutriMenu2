@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "38kcal/đĩa",
+  "ingredients": [
+    {
+      "nameSourceText": "Nhãn",
+      "amountSourceText": "145g",
+      "numericQuantity": 145.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000415",
+  "imageSha256": "c0904f72cab62615b3434a593dc606570b20beac234cd98df2108f28f616e333",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

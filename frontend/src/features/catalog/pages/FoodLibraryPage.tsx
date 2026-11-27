@@ -3,7 +3,13 @@ import { Clock3, Heart, Plus, Search, SlidersHorizontal } from "lucide-react";
 import { useApp } from "../../../store/UserDataProvider";
 import { API_MODE } from "../../../lib/config";
 import { serviceAction } from "../../../lib/serviceActions";
-import { allowedFood, number } from "../../../utils";
+import {
+  allowedFood,
+  carbohydrateLabel,
+  catalogVisible,
+  isSourceFood,
+  servingLabel,
+} from "../../../utils";
 import type { Food } from "../../../types";
 import {
   Badge,
@@ -11,6 +17,7 @@ import {
   Checkbox,
   Empty,
   FoodMark,
+  FoodSource,
   IconButton,
   Nutrition,
   PageTitle,
@@ -22,6 +29,7 @@ import {
 } from "../components/CatalogTools";
 import { ServiceActionDialog, asObject } from "../../../components/common/ServiceAction";
 import { MEALS } from "../../../data/seed";
+import { foodCategoryLabel } from "../utils/foodLabels";
 export function FoodLibraryPage({
   favoritesOnly = false,
 }: {
@@ -32,15 +40,18 @@ export function FoodLibraryPage({
   const [meal, setMeal] = useState("all");
   const [category, setCategory] = useState("Tất cả");
   const [compatible, setCompatible] = useState(false);
-  const [giLevel, setGiLevel] = useState("all");
   const [preference, setPreference] = useState("favorite");
   const [sort, setSort] = useState("name");
+  const [source, setSource] = useState("all");
   const [selected, setSelected] = useState<Food | null>(null);
   const [page, setPage] = useState(1);
   const [tool, setTool] = useState<"custom" | "compare" | null>(null);
   const [customCode, setCustomCode] = useState("");
   const { pending, save } = useFoodPreference();
-  const categories = ["Tất cả", ...new Set(w.foods.map((f) => f.category))];
+  const catalogFoods = w.foods.filter((f) =>
+    catalogVisible(f, API_MODE === "demo"),
+  );
+  const categories = ["Tất cả", ...new Set(catalogFoods.map((f) => f.category))];
   const foods = useMemo(() => {
     const normalize = (s: string) =>
       s
@@ -48,7 +59,7 @@ export function FoodLibraryPage({
         .replace(/[\u0300-\u036f]/g, "")
         .replace(/đ/g, "d")
         .toLowerCase();
-    return w.foods
+    return catalogFoods
       .filter(
         (f) =>
           (favoritesOnly || f.listed !== false) &&
@@ -56,15 +67,16 @@ export function FoodLibraryPage({
             (preference === "favorite"
               ? w.favorites.includes(f.id)
               : w.disliked?.includes(f.id))) &&
+          (source === "all" ||
+            (source === "nin" ? isSourceFood(f) : !isSourceFood(f))) &&
           normalize(f.name).includes(normalize(search)) &&
           (category === "Tất cả" || f.category === category) &&
           (meal === "all" || f.meals.includes(meal as keyof typeof MEALS)) &&
-          (giLevel === "all" || giLevel === f.giLevel) &&
           (!compatible || allowedFood(f, w.profile)),
       )
       .sort((a, b) =>
-        sort === "energyKcal"
-          ? a.nutrition.energyKcal - b.nutrition.energyKcal
+        sort === "energy"
+          ? (a.nutrition.energyKcal ?? Infinity) - (b.nutrition.energyKcal ?? Infinity)
           : sort === "time"
             ? (a.minutes ?? Infinity) - (b.minutes ?? Infinity)
             : a.name.localeCompare(b.name, "vi"),
@@ -77,7 +89,7 @@ export function FoodLibraryPage({
     compatible,
     sort,
     favoritesOnly,
-    giLevel,
+    source,
     preference,
   ]);
   useEffect(() => {
@@ -101,10 +113,13 @@ export function FoodLibraryPage({
         actions={
           API_MODE === "api" && !favoritesOnly ? (
             <>
+              <Badge tone="neutral">{catalogFoods.length} món trong danh mục</Badge>
               <Button variant="secondary" onClick={() => setTool("compare")}>
                 So sánh hai món
               </Button>
               <Button
+                disabled
+                title="Chưa đủ dữ liệu nguyên liệu để tính món riêng"
                 onClick={() => {
                   setCustomCode("USER-" + crypto.randomUUID().slice(0, 12));
                   setTool("custom");
@@ -163,24 +178,25 @@ export function FoodLibraryPage({
           onChange={(e) => setSort(e.target.value)}
         >
           <option value="name">Theo tên A–Z</option>
-          <option value="energyKcal">Năng lượng tăng dần</option>
+          <option value="energy">Năng lượng tăng dần</option>
           {hasCookingTimes && <option value="time">Nấu nhanh nhất</option>}
         </select>
-        {API_MODE === "api" && (
-          <select
-            aria-label="Lọc theo mức GI"
-            value={giLevel}
-            onChange={(event) => filter(() => setGiLevel(event.target.value))}
-          >
-            <option value="all">Tất cả mức GI</option>
-            <option value="NONE">Không có GI</option>
-            <option value="LOW">GI thấp</option>
-            <option value="MEDIUM">GI trung bình</option>
-            <option value="HIGH">GI cao</option>
-          </select>
-        )}
       </div>
       <div className="library-subfilters">
+        <label>
+          Nguồn dữ liệu
+          <select
+            aria-label="Nguồn dữ liệu"
+            value={source}
+            onChange={(e) => filter(() => setSource(e.target.value))}
+          >
+            <option value="all">Tất cả nguồn</option>
+            <option value="nin">Viện Dinh dưỡng</option>
+            {API_MODE === "demo" && (
+              <option value="other">Danh mục khác</option>
+            )}
+          </select>
+        </label>
         <div className="chips">
           {categories.map((c) => (
             <button
@@ -189,7 +205,7 @@ export function FoodLibraryPage({
               aria-pressed={category === c}
               onClick={() => filter(() => setCategory(c))}
             >
-              {c}
+              {foodCategoryLabel(c)}
             </button>
           ))}
         </div>
@@ -217,9 +233,7 @@ export function FoodLibraryPage({
                 <div className="food-card-top">
                   <FoodMark food={food} />
                   <IconButton
-                    disabled={
-                      pending.includes(food.id)
-                    }
+                    disabled={pending.includes(food.id)}
                     aria-pressed={w.favorites.includes(food.id)}
                     label={
                       w.favorites.includes(food.id)
@@ -245,7 +259,7 @@ export function FoodLibraryPage({
                       }
                     />
                   </IconButton>
-                  <span>{food.category}</span>
+                  <span>{foodCategoryLabel(food.category)}</span>
                 </div>
                 <div className="food-card-content">
                   <h2>
@@ -256,19 +270,20 @@ export function FoodLibraryPage({
                       {food.name}
                     </button>
                   </h2>
+                  <FoodSource food={food} />
                   <div className="food-card-meta">
-                    {food.minutes !== null && (
-                      <span>
-                        <Clock3 size={14} />
-                        {food.minutes} phút
-                      </span>
-                    )}
-                    <span>{number(food.grams)} g / phần</span>
+                    <span>
+                      <Clock3 size={14} />
+                      {food.minutes === null
+                        ? "Chưa có thời gian"
+                        : `${food.minutes} phút`}
+                    </span>
+                    <span>{servingLabel(food)}</span>
                     {w.disliked?.includes(food.id) && (
                       <Badge tone="neutral">Không thích</Badge>
                     )}
                   </div>
-                  <Nutrition value={food.nutrition} summary />
+                  <Nutrition value={food.nutrition} carbLabel={carbohydrateLabel([food.carbohydrateDefinition])} summary />
                 </div>
               </article>
             ))}
@@ -315,8 +330,7 @@ export function FoodLibraryPage({
           ]}
           description={
             <p>
-              Món riêng sẽ xuất hiện trong danh mục của tài khoản này và có thể
-              được chọn khi tạo thực đơn.
+              Danh mục hiện dùng dữ liệu Viện Dinh dưỡng. Tạo món riêng sẽ được mở khi có đủ dữ liệu nguyên liệu để tính dinh dưỡng.
             </p>
           }
           onResult={(value) => {
@@ -324,7 +338,6 @@ export function FoodLibraryPage({
             setSearch(value.nameVi);
             setMeal("all");
             setCategory("Tất cả");
-            setGiLevel("all");
             setCompatible(false);
             setPage(1);
             setTool(null);

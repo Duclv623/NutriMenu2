@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "114.6 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Trứng gà công nghiệp/Egg",
+      "amountSourceText": "46.4",
+      "numericQuantity": 46.4,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ngải cứu/Mugwort",
+      "amountSourceText": "25.0",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu ăn/Oil",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-223010",
+  "imageSha256": "3d1e72da732ae99b6b198dd9c0d010897693d2104126afaa0f871aca69c2db76",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

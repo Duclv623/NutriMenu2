@@ -1,0 +1,59 @@
+{
+  "code": "VPF-000372",
+  "imageSha256": "d7a16766b0e367d6eb87ca63a3e069a47689a369ab16761b826d4e7c136e4537",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "197kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa chua",
+      "amountSourceText": "100g",
+      "numericQuantity": 100.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mít",
+      "amountSourceText": "35g",
+      "numericQuantity": 35.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chân châu",
+      "amountSourceText": "25g",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sữa đặc có đường",
+      "amountSourceText": "10g",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thạch",
+      "amountSourceText": "10g",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước cốt dừa",
+      "amountSourceText": "5ml",
+      "numericQuantity": 5.0,
+      "unitSourceText": "ml",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

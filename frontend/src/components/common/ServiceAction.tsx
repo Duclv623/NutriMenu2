@@ -24,6 +24,8 @@ type Values = Record<string, FieldValue>;
 export type ActionData = Record<string, unknown>;
 
 const enumLabels: Record<string, string> = {
+  GENERAL_REFERENCE: "Phổ thông",
+  MEDICAL: "Bệnh lý (giới hạn GI / GL)",
   MAIN_STARCH: "Tinh bột",
   PROTEIN_DISH: "Món đạm",
   VEGGIE_DISH: "Món rau",
@@ -93,10 +95,11 @@ const labels: Record<string, string> = {
   dishNameVi: "Tên món",
   ingredientNameVi: "Tên nguyên liệu",
   planDate: "Ngày",
+  energyKcal: "Năng lượng (kcal)",
   caloriesKcal: "Năng lượng (kcal)",
   targetCaloriesKcal: "Năng lượng mục tiêu (kcal)",
   actualCaloriesKcal: "Năng lượng thực tế (kcal)",
-  netCarbG: "Carb thuần (g)",
+  netCarbG: "Carbohydrate (g)",
   proteinG: "Đạm (g)",
   fatG: "Béo (g)",
   fiberG: "Chất xơ (g)",

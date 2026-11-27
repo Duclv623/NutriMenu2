@@ -1,0 +1,27 @@
+{
+  "code": "SFF-122031",
+  "imageSha256": "c7044d9b9a7855c770a0fea9ef8cb4c2b739d172659a99beeab9b5a598cc7e2a",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "432.5 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh gio/Sticky rice ash dumpling",
+      "amountSourceText": "159.0",
+      "numericQuantity": 159.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mật mía/Molasses",
+      "amountSourceText": "48.0",
+      "numericQuantity": 48.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

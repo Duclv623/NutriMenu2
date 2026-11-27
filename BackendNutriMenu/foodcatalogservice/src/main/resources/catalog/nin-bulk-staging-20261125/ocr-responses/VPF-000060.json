@@ -1,0 +1,67 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "861kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt lợn mông",
+      "amountSourceText": "300g",
+      "numericQuantity": 300,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Củ cải",
+      "amountSourceText": "160g",
+      "numericQuantity": 160,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường",
+      "amountSourceText": "6g",
+      "numericQuantity": 6,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột canh",
+      "amountSourceText": "2g",
+      "numericQuantity": 2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "4g",
+      "numericQuantity": 4,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành củ",
+      "amountSourceText": "3g",
+      "numericQuantity": 3,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước mắm",
+      "amountSourceText": "4g",
+      "numericQuantity": 4,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000060",
+  "imageSha256": "d350073ce21ea130b7e5a1c4cc3d79b99c19b838175bbafe700d915b1833b6a5",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,19 @@
+{
+  "code": "HAP-223009",
+  "imageSha256": "dec3f02348ede052689f43aa42ade76769f1055616b927c92d4fb25f4b8b7f81",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "100.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh mỳ",
+      "amountSourceText": "Bánh mỳ",
+      "numericQuantity": 40.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

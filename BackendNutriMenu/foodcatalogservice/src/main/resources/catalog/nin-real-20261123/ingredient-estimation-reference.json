@@ -1,0 +1,4493 @@
+{
+  "schemaVersion": 1,
+  "references": {
+    "NIN_FCT2007": {
+      "title": "Vietnamese Food Composition Table 2007, NIN / Ministry of Health",
+      "url": "https://www.fao.org/fileadmin/templates/food_composition/documents/pdf/VTN_FCT_2007.pdf",
+      "localExtractionSha256": "d8cc7b3f7a92c3c5622bc07337330b99ba8ee85d0fab86a4fee63c4a6b01c937",
+      "basis": "100 g edible portion",
+      "zeroRule": "Only explicit numeric raw_value, never '-' or omitted cells.",
+      "fiberLimitation": "Celluloza is a cellulose/crude-fibre proxy, not a measured total dietary fibre equivalent."
+    },
+    "SAUROPUS_2022": {
+      "title": "Effects of Storage, Preparation and Heat Treatment on Water-Soluble Vitamins and Minerals of Sauropus androgynous",
+      "url": "https://www.foodandnutritionjournal.org/volume10number2/effects-of-storage-prepration-and-heat-treatment-on-water-soluble-vitamins-and-minerals-of-sauropus-androgynous/",
+      "doi": "10.12944/CRNFSJ.10.2.23",
+      "location": "Table 1, fresh leaves, Binh Duong, Vietnam",
+      "observation": "Lipid 0.82 +/- 0.02 g / 100 g fresh weight; proxy across cultivation/preparation."
+    },
+    "NOAA_MACKEREL": {
+      "title": "NOAA Fisheries: Atlantic mackerel, nutrition",
+      "url": "https://www.fisheries.noaa.gov/species/atlantic-mackerel",
+      "limitation": "Atlantic mackerel representative for Vietnamese unspecified mackerel species."
+    },
+    "USDA_SR28_PORK_FRANKFURTER": {
+      "title": "USDA SR28: sausages and luncheon meats, NDB 07939 Frankfurter pork",
+      "url": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/reports/sr28fg07.pdf",
+      "pdfPageOneBased": 161,
+      "limitation": "Pork frankfurter representative for Vietnamese unspecified sausage formulation."
+    },
+    "GI_TABLES2008": {
+      "title": "International tables of glycemic index and glycemic load values: 2008",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2584181/",
+      "doi": "10.2337/dc08-1239",
+      "note": "Recipe GI model uses means/proxies and authors' low-carbohydrate vegetable/dairy assignments; no NIN dish GI measured."
+    },
+    "USDA_SR28_SNACKS": {
+      "title": "USDA SR28 snacks, NDB 19041 Pork skins, plain",
+      "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg25.pdf",
+      "pdfPageOneBased": 299
+    },
+    "USDA_SR28_SOUPS": {
+      "title": "USDA SR28 soups, sauces and gravies",
+      "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg06.pdf"
+    },
+    "USDA_SR27_GREEN_BEANS": {
+      "title": "USDA SR27 vegetables: NDB 11052 Beans snap green raw",
+      "url": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR27/reports/sr27fg11.pdf"
+    },
+    "MEXT_IWANORI": {
+      "title": "Japan MEXT food composition database: 09007 Iwanori dried",
+      "url": "https://fooddb.mext.go.jp/details/details.pl?ITEM_NO=9_09007_7&MODE=0",
+      "limitation": "Dried Porphyra proxy for unspecified sushi seaweed; species and preparation differ."
+    },
+    "JECFA_MSG": {
+      "title": "FAO/WHO JECFA monosodium L-glutamate specification, CAS 6106-04-3",
+      "url": "https://www.fao.org/food/food-safety-quality/scientific-advice/jecfa/jecfa-additives/detail/en/c/141/"
+    }
+  },
+  "ingredients": [
+    {
+      "sourceName": "Gạo tẻ",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 75.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "1004",
+          "sourceName": "GẠO TẺ MÁY",
+          "sourceNameEn": "Ordinary polished rice",
+          "page": 17,
+          "rawValue": "75.9",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Ordinary rice; cultivar and cooked GI differ."
+        },
+        "fiberG": {
+          "value": 0.4,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "1004",
+          "sourceName": "GẠO TẺ MÁY",
+          "sourceNameEn": "Ordinary polished rice",
+          "page": 17,
+          "rawValue": "0.4",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Ordinary rice; cultivar and cooked GI differ."
+        },
+        "proteinG": {
+          "value": 7.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "1004",
+          "sourceName": "GẠO TẺ MÁY",
+          "sourceNameEn": "Ordinary polished rice",
+          "page": 17,
+          "rawValue": "7.9",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Ordinary rice; cultivar and cooked GI differ."
+        },
+        "fatG": {
+          "value": 1.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "1004",
+          "sourceName": "GẠO TẺ MÁY",
+          "sourceNameEn": "Ordinary polished rice",
+          "page": 17,
+          "rawValue": "1.0",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Ordinary rice; cultivar and cooked GI differ."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "1004",
+          "sourceName": "GẠO TẺ MÁY",
+          "sourceNameEn": "Ordinary polished rice",
+          "page": 17,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Ordinary rice; cultivar and cooked GI differ."
+        }
+      }
+    },
+    {
+      "sourceName": "Gạo tẻ máy",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 75.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "1004",
+          "sourceName": "GẠO TẺ MÁY",
+          "sourceNameEn": "Ordinary polished rice",
+          "page": 17,
+          "rawValue": "75.9",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Milled ordinary rice representative."
+        },
+        "fiberG": {
+          "value": 0.4,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "1004",
+          "sourceName": "GẠO TẺ MÁY",
+          "sourceNameEn": "Ordinary polished rice",
+          "page": 17,
+          "rawValue": "0.4",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Milled ordinary rice representative."
+        },
+        "proteinG": {
+          "value": 7.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "1004",
+          "sourceName": "GẠO TẺ MÁY",
+          "sourceNameEn": "Ordinary polished rice",
+          "page": 17,
+          "rawValue": "7.9",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Milled ordinary rice representative."
+        },
+        "fatG": {
+          "value": 1.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "1004",
+          "sourceName": "GẠO TẺ MÁY",
+          "sourceNameEn": "Ordinary polished rice",
+          "page": 17,
+          "rawValue": "1.0",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Milled ordinary rice representative."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "1004",
+          "sourceName": "GẠO TẺ MÁY",
+          "sourceNameEn": "Ordinary polished rice",
+          "page": 17,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Milled ordinary rice representative."
+        }
+      }
+    },
+    {
+      "sourceName": "Muối vừng",
+      "nutrients": {
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Sesame seed cholesterol proxy for sesame/salt mixture; unlisted ingredients not verified.",
+          "sourceCode": "3020",
+          "sourceName": "VỪNG (ĐEN, TRẮNG)",
+          "page": 86,
+          "rawValue": "0"
+        }
+      }
+    },
+    {
+      "sourceName": "Thịt hến",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 5.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8037",
+          "sourceName": "HẾN",
+          "sourceNameEn": "Clam",
+          "page": 425,
+          "rawValue": "5.1",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Edible freshwater clam meat."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8037",
+          "sourceName": "HẾN",
+          "sourceNameEn": "Clam",
+          "page": 425,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Edible freshwater clam meat."
+        },
+        "proteinG": {
+          "value": 4.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8037",
+          "sourceName": "HẾN",
+          "sourceNameEn": "Clam",
+          "page": 425,
+          "rawValue": "4.5",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Edible freshwater clam meat."
+        },
+        "fatG": {
+          "value": 0.7,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8037",
+          "sourceName": "HẾN",
+          "sourceNameEn": "Clam",
+          "page": 425,
+          "rawValue": "0.7",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Edible freshwater clam meat."
+        },
+        "cholesterolMg": {
+          "value": 34.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Freshwater mussel proxy for freshwater clam meat; different species; source meat already edible.",
+          "sourceCode": "8054",
+          "sourceName": "TRAI",
+          "page": 442,
+          "rawValue": "34"
+        }
+      }
+    },
+    {
+      "sourceName": "Bì lợn rán",
+      "nutrients": {
+        "cholesterolMg": {
+          "value": 95,
+          "referenceId": "USDA_SR28_SNACKS",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Plain fried pork rind proxy; source frying medium and formulation unknown.",
+          "sourceCode": "NDB_19041"
+        }
+      }
+    },
+    {
+      "sourceName": "Lạc rang dầu",
+      "nutrients": {
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Oil-roasted peanut cholesterol proxy for source roasted peanuts.",
+          "sourceCode": "11004",
+          "sourceName": "LẠC CHAO DẦU",
+          "page": 477,
+          "rawValue": "0"
+        }
+      }
+    },
+    {
+      "sourceName": "Khế",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 2.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4045",
+          "sourceName": "KHẾ",
+          "sourceNameEn": "Carambola; Star fruit",
+          "page": 147,
+          "rawValue": "2.8",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Unspecified starfruit cultivar; low-carbohydrate imputation."
+        },
+        "fiberG": {
+          "value": 2.6,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4045",
+          "sourceName": "KHẾ",
+          "sourceNameEn": "Carambola; Star fruit",
+          "page": 147,
+          "rawValue": "2.6",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Unspecified starfruit cultivar; low-carbohydrate imputation."
+        },
+        "proteinG": {
+          "value": 0.6,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4045",
+          "sourceName": "KHẾ",
+          "sourceNameEn": "Carambola; Star fruit",
+          "page": 147,
+          "rawValue": "0.6",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Unspecified starfruit cultivar; low-carbohydrate imputation."
+        },
+        "fatG": {
+          "value": 0.3,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4045",
+          "sourceName": "KHẾ",
+          "sourceNameEn": "Carambola; Star fruit",
+          "page": 147,
+          "rawValue": "0.3",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Unspecified starfruit cultivar; low-carbohydrate imputation."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4045",
+          "sourceName": "KHẾ",
+          "sourceNameEn": "Carambola; Star fruit",
+          "page": 147,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Unspecified starfruit cultivar; low-carbohydrate imputation."
+        }
+      }
+    },
+    {
+      "sourceName": "Hoa chuối",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 3.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4043",
+          "sourceName": "HOA CHUỐI",
+          "sourceNameEn": "Banana, buds and flowers",
+          "page": 145,
+          "rawValue": "3.5",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh banana blossom."
+        },
+        "fiberG": {
+          "value": 2.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4043",
+          "sourceName": "HOA CHUỐI",
+          "sourceNameEn": "Banana, buds and flowers",
+          "page": 145,
+          "rawValue": "2.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Fresh banana blossom."
+        },
+        "proteinG": {
+          "value": 1.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4043",
+          "sourceName": "HOA CHUỐI",
+          "sourceNameEn": "Banana, buds and flowers",
+          "page": 145,
+          "rawValue": "1.5",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh banana blossom."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4043",
+          "sourceName": "HOA CHUỐI",
+          "sourceNameEn": "Banana, buds and flowers",
+          "page": 145,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh banana blossom."
+        }
+      }
+    },
+    {
+      "sourceName": "Dọc mùng",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4026",
+          "sourceName": "DỌC MÙNG",
+          "sourceNameEn": "Colocasia indica",
+          "page": 128,
+          "rawValue": "0.8",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Preparation loss not measured."
+        },
+        "fiberG": {
+          "value": 2.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4026",
+          "sourceName": "DỌC MÙNG",
+          "sourceNameEn": "Colocasia indica",
+          "page": 128,
+          "rawValue": "2.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Preparation loss not measured."
+        },
+        "proteinG": {
+          "value": 0.4,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4026",
+          "sourceName": "DỌC MÙNG",
+          "sourceNameEn": "Colocasia indica",
+          "page": 128,
+          "rawValue": "0.4",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Preparation loss not measured."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4026",
+          "sourceName": "DỌC MÙNG",
+          "sourceNameEn": "Colocasia indica",
+          "page": 128,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Preparation loss not measured."
+        }
+      }
+    },
+    {
+      "sourceName": "Giá đỗ",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 5.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4036",
+          "sourceName": "GIÁ ĐẬU XANH",
+          "sourceNameEn": "Mungobean sprouts, Green gram, Tiensin green bean",
+          "page": 138,
+          "rawValue": "5.1",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mung bean sprouts representative; bean type unspecified."
+        },
+        "fiberG": {
+          "value": 2.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4036",
+          "sourceName": "GIÁ ĐẬU XANH",
+          "sourceNameEn": "Mungobean sprouts, Green gram, Tiensin green bean",
+          "page": 138,
+          "rawValue": "2.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Mung bean sprouts representative; bean type unspecified."
+        },
+        "proteinG": {
+          "value": 5.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4036",
+          "sourceName": "GIÁ ĐẬU XANH",
+          "sourceNameEn": "Mungobean sprouts, Green gram, Tiensin green bean",
+          "page": 138,
+          "rawValue": "5.5",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mung bean sprouts representative; bean type unspecified."
+        },
+        "fatG": {
+          "value": 0.2,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4036",
+          "sourceName": "GIÁ ĐẬU XANH",
+          "sourceNameEn": "Mungobean sprouts, Green gram, Tiensin green bean",
+          "page": 138,
+          "rawValue": "0.2",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mung bean sprouts representative; bean type unspecified."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4036",
+          "sourceName": "GIÁ ĐẬU XANH",
+          "sourceNameEn": "Mungobean sprouts, Green gram, Tiensin green bean",
+          "page": 138,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mung bean sprouts representative; bean type unspecified."
+        }
+      }
+    },
+    {
+      "sourceName": "Giá",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 5.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4036",
+          "sourceName": "GIÁ ĐẬU XANH",
+          "sourceNameEn": "Mungobean sprouts, Green gram, Tiensin green bean",
+          "page": 138,
+          "rawValue": "5.1",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mung bean sprouts representative."
+        },
+        "fiberG": {
+          "value": 2.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4036",
+          "sourceName": "GIÁ ĐẬU XANH",
+          "sourceNameEn": "Mungobean sprouts, Green gram, Tiensin green bean",
+          "page": 138,
+          "rawValue": "2.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Mung bean sprouts representative."
+        },
+        "proteinG": {
+          "value": 5.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4036",
+          "sourceName": "GIÁ ĐẬU XANH",
+          "sourceNameEn": "Mungobean sprouts, Green gram, Tiensin green bean",
+          "page": 138,
+          "rawValue": "5.5",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mung bean sprouts representative."
+        },
+        "fatG": {
+          "value": 0.2,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4036",
+          "sourceName": "GIÁ ĐẬU XANH",
+          "sourceNameEn": "Mungobean sprouts, Green gram, Tiensin green bean",
+          "page": 138,
+          "rawValue": "0.2",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mung bean sprouts representative."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4036",
+          "sourceName": "GIÁ ĐẬU XANH",
+          "sourceNameEn": "Mungobean sprouts, Green gram, Tiensin green bean",
+          "page": 138,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mung bean sprouts representative."
+        }
+      }
+    },
+    {
+      "sourceName": "Nước luộc hến",
+      "nutrients": {
+        "cholesterolMg": {
+          "value": 34.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "HIGH_UNCERTAINTY_BROTH_PROXY: edible freshwater mussel concentration used for clam cooking broth without invented dilution. Broth is not flesh; transfer/concentration and batch size unmeasured. Not a laboratory observation or guaranteed upper bound.",
+          "sourceCode": "8054",
+          "sourceName": "TRAI",
+          "page": 442,
+          "rawValue": "34"
+        }
+      }
+    },
+    {
+      "sourceName": "Bột canh",
+      "nutrients": {
+        "cholesterolMg": {
+          "value": 13,
+          "referenceId": "USDA_SR28_SOUPS",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Dry chicken bouillon proxy for unspecified seasoning blend; brand and animal content differ.",
+          "sourceCode": "NDB_06080",
+          "pdfPageOneBased": 679
+        },
+        "fiberG": {
+          "value": 0,
+          "referenceId": "USDA_SR28_SOUPS",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Explicit dry chicken bouillon fibre zero used as formulation proxy; not measured source seasoning.",
+          "sourceCode": "NDB_06080",
+          "pdfPageOneBased": 678
+        }
+      }
+    },
+    {
+      "sourceName": "Giò lụa",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7069",
+          "sourceName": "GIÒ LỤA",
+          "sourceNameEn": "Pork, mince lean meat steamed",
+          "page": 373,
+          "rawValue": "0.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Cooked pork sausage; starch formulation unspecified."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7069",
+          "sourceName": "GIÒ LỤA",
+          "sourceNameEn": "Pork, mince lean meat steamed",
+          "page": 373,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Cooked pork sausage; starch formulation unspecified."
+        },
+        "proteinG": {
+          "value": 21.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7069",
+          "sourceName": "GIÒ LỤA",
+          "sourceNameEn": "Pork, mince lean meat steamed",
+          "page": 373,
+          "rawValue": "21.5",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Cooked pork sausage; starch formulation unspecified."
+        },
+        "fatG": {
+          "value": 5.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7069",
+          "sourceName": "GIÒ LỤA",
+          "sourceNameEn": "Pork, mince lean meat steamed",
+          "page": 373,
+          "rawValue": "5.5",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Cooked pork sausage; starch formulation unspecified."
+        }
+      }
+    },
+    {
+      "sourceName": "Trứng vịt",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 1.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "9004",
+          "sourceName": "TRỨNG VỊT",
+          "sourceNameEn": "Duck egg, whole",
+          "page": 453,
+          "rawValue": "1.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Duck egg, not chicken egg."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "9004",
+          "sourceName": "TRỨNG VỊT",
+          "sourceNameEn": "Duck egg, whole",
+          "page": 453,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Duck egg, not chicken egg."
+        },
+        "proteinG": {
+          "value": 13.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "9004",
+          "sourceName": "TRỨNG VỊT",
+          "sourceNameEn": "Duck egg, whole",
+          "page": 453,
+          "rawValue": "13.0",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Duck egg, not chicken egg."
+        },
+        "fatG": {
+          "value": 14.2,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "9004",
+          "sourceName": "TRỨNG VỊT",
+          "sourceNameEn": "Duck egg, whole",
+          "page": 453,
+          "rawValue": "14.2",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Duck egg, not chicken egg."
+        },
+        "cholesterolMg": {
+          "value": 884.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "9004",
+          "sourceName": "TRỨNG VỊT",
+          "sourceNameEn": "Duck egg, whole",
+          "page": 453,
+          "rawValue": "884",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Duck egg, not chicken egg."
+        }
+      }
+    },
+    {
+      "sourceName": "Cà rốt",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 7.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4007",
+          "sourceName": "CÀ RỐT (CỦ ĐỎ, VÀNG)",
+          "sourceNameEn": "Carrots",
+          "page": 109,
+          "rawValue": "7.8",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Boiled-carrot GI proxy; source variety unknown."
+        },
+        "fiberG": {
+          "value": 1.2,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4007",
+          "sourceName": "CÀ RỐT (CỦ ĐỎ, VÀNG)",
+          "sourceNameEn": "Carrots",
+          "page": 109,
+          "rawValue": "1.2",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Boiled-carrot GI proxy; source variety unknown."
+        },
+        "proteinG": {
+          "value": 1.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4007",
+          "sourceName": "CÀ RỐT (CỦ ĐỎ, VÀNG)",
+          "sourceNameEn": "Carrots",
+          "page": 109,
+          "rawValue": "1.5",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Boiled-carrot GI proxy; source variety unknown."
+        },
+        "fatG": {
+          "value": 0.2,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4007",
+          "sourceName": "CÀ RỐT (CỦ ĐỎ, VÀNG)",
+          "sourceNameEn": "Carrots",
+          "page": 109,
+          "rawValue": "0.2",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Boiled-carrot GI proxy; source variety unknown."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4007",
+          "sourceName": "CÀ RỐT (CỦ ĐỎ, VÀNG)",
+          "sourceNameEn": "Carrots",
+          "page": 109,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Boiled-carrot GI proxy; source variety unknown."
+        }
+      }
+    },
+    {
+      "sourceName": "Dưa cải bẹ",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 2.4,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4112",
+          "sourceName": "DƯA CẢI BẸ",
+          "page": 214,
+          "rawValue": "2.4"
+        },
+        "fiberG": {
+          "value": 2.1,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4112",
+          "sourceName": "DƯA CẢI BẸ",
+          "page": 214,
+          "rawValue": "2.1"
+        },
+        "proteinG": {
+          "value": 1.8,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4112",
+          "sourceName": "DƯA CẢI BẸ",
+          "page": 214,
+          "rawValue": "1.8"
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4112",
+          "sourceName": "DƯA CẢI BẸ",
+          "page": 214,
+          "rawValue": "0"
+        }
+      }
+    },
+    {
+      "sourceName": "Mỡ",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "6004",
+          "sourceName": "MỠ LỢN NƯỚC",
+          "sourceNameEn": "Lard, liquid",
+          "page": 292,
+          "rawValue": "0.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Rendered pork fat representative; source species unspecified."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "6004",
+          "sourceName": "MỠ LỢN NƯỚC",
+          "sourceNameEn": "Lard, liquid",
+          "page": 292,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Rendered pork fat representative; source species unspecified."
+        },
+        "proteinG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "6004",
+          "sourceName": "MỠ LỢN NƯỚC",
+          "sourceNameEn": "Lard, liquid",
+          "page": 292,
+          "rawValue": "0.0",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Rendered pork fat representative; source species unspecified."
+        },
+        "fatG": {
+          "value": 99.6,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "6004",
+          "sourceName": "MỠ LỢN NƯỚC",
+          "sourceNameEn": "Lard, liquid",
+          "page": 292,
+          "rawValue": "99.6",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Rendered pork fat representative; source species unspecified."
+        },
+        "cholesterolMg": {
+          "value": 95.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "6004",
+          "sourceName": "MỠ LỢN NƯỚC",
+          "sourceNameEn": "Lard, liquid",
+          "page": 292,
+          "rawValue": "95",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Rendered pork fat representative; source species unspecified."
+        }
+      }
+    },
+    {
+      "sourceName": "Nước mắm",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 3.6,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13017",
+          "sourceName": "NƯỚC MẮM CÁ",
+          "sourceNameEn": "Fish sauce, ready-to-serve",
+          "page": 542,
+          "rawValue": "3.6",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Generic fish sauce; brand/salt grade unspecified."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13017",
+          "sourceName": "NƯỚC MẮM CÁ",
+          "sourceNameEn": "Fish sauce, ready-to-serve",
+          "page": 542,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Generic fish sauce; brand/salt grade unspecified."
+        },
+        "proteinG": {
+          "value": 5.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13017",
+          "sourceName": "NƯỚC MẮM CÁ",
+          "sourceNameEn": "Fish sauce, ready-to-serve",
+          "page": 542,
+          "rawValue": "5.1",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Generic fish sauce; brand/salt grade unspecified."
+        },
+        "fatG": {
+          "value": 0.01,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13017",
+          "sourceName": "NƯỚC MẮM CÁ",
+          "sourceNameEn": "Fish sauce, ready-to-serve",
+          "page": 542,
+          "rawValue": "0.01",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Generic fish sauce; brand/salt grade unspecified."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13017",
+          "sourceName": "NƯỚC MẮM CÁ",
+          "sourceNameEn": "Fish sauce, ready-to-serve",
+          "page": 542,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Generic fish sauce; brand/salt grade unspecified."
+        }
+      }
+    },
+    {
+      "sourceName": "Muối trong dưa cải bẹ*",
+      "nutrients": {}
+    },
+    {
+      "sourceName": "Thịt nạc vai",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Lean pork reference zero for unprocessed pork shoulder; not exact cut measurement.",
+          "sourceCode": "7017",
+          "sourceName": "THỊT LỢN NẠC",
+          "page": 321,
+          "rawValue": "0.0"
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Lean pork reference zero for unprocessed pork shoulder; not exact cut measurement.",
+          "sourceCode": "7017",
+          "sourceName": "THỊT LỢN NẠC",
+          "page": 321,
+          "rawValue": "0.0"
+        }
+      }
+    },
+    {
+      "sourceName": "Thịt lợn nạc vai",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Lean pork reference zero for unprocessed pork shoulder; not exact cut measurement.",
+          "sourceCode": "7017",
+          "sourceName": "THỊT LỢN NẠC",
+          "page": 321,
+          "rawValue": "0.0"
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Lean pork reference zero for unprocessed pork shoulder; not exact cut measurement.",
+          "sourceCode": "7017",
+          "sourceName": "THỊT LỢN NẠC",
+          "page": 321,
+          "rawValue": "0.0"
+        }
+      }
+    },
+    {
+      "sourceName": "Thịt lợn nạc",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7017",
+          "sourceName": "THỊT LỢN NẠC",
+          "sourceNameEn": "Pork, lean",
+          "page": 321,
+          "rawValue": "0.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Lean pork; anatomical cut unspecified."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7017",
+          "sourceName": "THỊT LỢN NẠC",
+          "sourceNameEn": "Pork, lean",
+          "page": 321,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Lean pork; anatomical cut unspecified."
+        },
+        "proteinG": {
+          "value": 19.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7017",
+          "sourceName": "THỊT LỢN NẠC",
+          "sourceNameEn": "Pork, lean",
+          "page": 321,
+          "rawValue": "19.0",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Lean pork; anatomical cut unspecified."
+        },
+        "fatG": {
+          "value": 7.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7017",
+          "sourceName": "THỊT LỢN NẠC",
+          "sourceNameEn": "Pork, lean",
+          "page": 321,
+          "rawValue": "7.0",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Lean pork; anatomical cut unspecified."
+        },
+        "cholesterolMg": {
+          "value": 67.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7017",
+          "sourceName": "THỊT LỢN NẠC",
+          "sourceNameEn": "Pork, lean",
+          "page": 321,
+          "rawValue": "67",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Lean pork; anatomical cut unspecified."
+        }
+      }
+    },
+    {
+      "sourceName": "Thịt nạc băm",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7017",
+          "sourceName": "THỊT LỢN NẠC",
+          "sourceNameEn": "Pork, lean",
+          "page": 321,
+          "rawValue": "0.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Minced lean pork; anatomical cut unspecified."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7017",
+          "sourceName": "THỊT LỢN NẠC",
+          "sourceNameEn": "Pork, lean",
+          "page": 321,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Minced lean pork; anatomical cut unspecified."
+        },
+        "proteinG": {
+          "value": 19.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7017",
+          "sourceName": "THỊT LỢN NẠC",
+          "sourceNameEn": "Pork, lean",
+          "page": 321,
+          "rawValue": "19.0",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Minced lean pork; anatomical cut unspecified."
+        },
+        "fatG": {
+          "value": 7.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7017",
+          "sourceName": "THỊT LỢN NẠC",
+          "sourceNameEn": "Pork, lean",
+          "page": 321,
+          "rawValue": "7.0",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Minced lean pork; anatomical cut unspecified."
+        },
+        "cholesterolMg": {
+          "value": 67.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7017",
+          "sourceName": "THỊT LỢN NẠC",
+          "sourceNameEn": "Pork, lean",
+          "page": 321,
+          "rawValue": "67",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Minced lean pork; anatomical cut unspecified."
+        }
+      }
+    },
+    {
+      "sourceName": "Cải xanh",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 1.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4016",
+          "sourceName": "CẢI XANH",
+          "sourceNameEn": "Mustard greens, India, leaves and stems",
+          "page": 118,
+          "rawValue": "1.9",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mustard greens."
+        },
+        "fiberG": {
+          "value": 1.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4016",
+          "sourceName": "CẢI XANH",
+          "sourceNameEn": "Mustard greens, India, leaves and stems",
+          "page": 118,
+          "rawValue": "1.8",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Mustard greens."
+        },
+        "proteinG": {
+          "value": 1.7,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4016",
+          "sourceName": "CẢI XANH",
+          "sourceNameEn": "Mustard greens, India, leaves and stems",
+          "page": 118,
+          "rawValue": "1.7",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mustard greens."
+        },
+        "fatG": {
+          "value": 0.2,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4016",
+          "sourceName": "CẢI XANH",
+          "sourceNameEn": "Mustard greens, India, leaves and stems",
+          "page": 118,
+          "rawValue": "0.2",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mustard greens."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4016",
+          "sourceName": "CẢI XANH",
+          "sourceNameEn": "Mustard greens, India, leaves and stems",
+          "page": 118,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mustard greens."
+        }
+      }
+    },
+    {
+      "sourceName": "Đậu phụ",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.7,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "3025",
+          "sourceName": "ĐẬU PHỤ",
+          "sourceNameEn": "Soybean curt cake pressed, raw",
+          "page": 91,
+          "rawValue": "0.7",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Tofu firmness unknown; soybean GI is an explicit proxy."
+        },
+        "fiberG": {
+          "value": 0.4,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "3025",
+          "sourceName": "ĐẬU PHỤ",
+          "sourceNameEn": "Soybean curt cake pressed, raw",
+          "page": 91,
+          "rawValue": "0.4",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Tofu firmness unknown; soybean GI is an explicit proxy."
+        },
+        "proteinG": {
+          "value": 10.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "3025",
+          "sourceName": "ĐẬU PHỤ",
+          "sourceNameEn": "Soybean curt cake pressed, raw",
+          "page": 91,
+          "rawValue": "10.9",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Tofu firmness unknown; soybean GI is an explicit proxy."
+        },
+        "fatG": {
+          "value": 5.4,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "3025",
+          "sourceName": "ĐẬU PHỤ",
+          "sourceNameEn": "Soybean curt cake pressed, raw",
+          "page": 91,
+          "rawValue": "5.4",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Tofu firmness unknown; soybean GI is an explicit proxy."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "3025",
+          "sourceName": "ĐẬU PHỤ",
+          "sourceNameEn": "Soybean curt cake pressed, raw",
+          "page": 91,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Tofu firmness unknown; soybean GI is an explicit proxy."
+        }
+      }
+    },
+    {
+      "sourceName": "Cà chua",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 4.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4005",
+          "sourceName": "CÀ CHUA",
+          "sourceNameEn": "Tomato",
+          "page": 107,
+          "rawValue": "4.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh tomato."
+        },
+        "fiberG": {
+          "value": 0.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4005",
+          "sourceName": "CÀ CHUA",
+          "sourceNameEn": "Tomato",
+          "page": 107,
+          "rawValue": "0.8",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Fresh tomato."
+        },
+        "proteinG": {
+          "value": 0.6,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4005",
+          "sourceName": "CÀ CHUA",
+          "sourceNameEn": "Tomato",
+          "page": 107,
+          "rawValue": "0.6",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh tomato."
+        },
+        "fatG": {
+          "value": 0.2,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4005",
+          "sourceName": "CÀ CHUA",
+          "sourceNameEn": "Tomato",
+          "page": 107,
+          "rawValue": "0.2",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh tomato."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4005",
+          "sourceName": "CÀ CHUA",
+          "sourceNameEn": "Tomato",
+          "page": 107,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh tomato."
+        }
+      }
+    },
+    {
+      "sourceName": "Dầu TV",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "6002",
+          "sourceName": "DẦU THẢO MỘC (LẠC, VỪNG, CÁM...)",
+          "sourceNameEn": "Vegetable oil, mix",
+          "page": 290,
+          "rawValue": "0.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mixed vegetable oil representative; oil species unknown."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "6002",
+          "sourceName": "DẦU THẢO MỘC (LẠC, VỪNG, CÁM...)",
+          "sourceNameEn": "Vegetable oil, mix",
+          "page": 290,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Mixed vegetable oil representative; oil species unknown."
+        },
+        "proteinG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "6002",
+          "sourceName": "DẦU THẢO MỘC (LẠC, VỪNG, CÁM...)",
+          "sourceNameEn": "Vegetable oil, mix",
+          "page": 290,
+          "rawValue": "0.0",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mixed vegetable oil representative; oil species unknown."
+        },
+        "fatG": {
+          "value": 99.7,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "6002",
+          "sourceName": "DẦU THẢO MỘC (LẠC, VỪNG, CÁM...)",
+          "sourceNameEn": "Vegetable oil, mix",
+          "page": 290,
+          "rawValue": "99.7",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mixed vegetable oil representative; oil species unknown."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Soybean oil cholesterol proxy for unspecified vegetable oil, not a source observation.",
+          "sourceCode": "6010",
+          "sourceName": "DẦU ĐẬU TƯƠNG",
+          "page": 298,
+          "rawValue": "0"
+        }
+      }
+    },
+    {
+      "sourceName": "Muối",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13005",
+          "sourceName": "MUỐI",
+          "sourceNameEn": "Table salt",
+          "page": 530,
+          "rawValue": "0.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Table salt."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13005",
+          "sourceName": "MUỐI",
+          "sourceNameEn": "Table salt",
+          "page": 530,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Table salt."
+        },
+        "proteinG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13005",
+          "sourceName": "MUỐI",
+          "sourceNameEn": "Table salt",
+          "page": 530,
+          "rawValue": "0.0",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Table salt."
+        },
+        "fatG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13005",
+          "sourceName": "MUỐI",
+          "sourceNameEn": "Table salt",
+          "page": 530,
+          "rawValue": "0.0",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Table salt."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13005",
+          "sourceName": "MUỐI",
+          "sourceNameEn": "Table salt",
+          "page": 530,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Table salt."
+        }
+      }
+    },
+    {
+      "sourceName": "Nước canh",
+      "nutrients": {}
+    },
+    {
+      "sourceName": "Cải cúc",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 1.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4013",
+          "sourceName": "CẢI CÚC",
+          "sourceNameEn": "Chrysanthemum. crown-daisy",
+          "page": 115,
+          "rawValue": "1.9",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Garland chrysanthemum greens."
+        },
+        "fiberG": {
+          "value": 2.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4013",
+          "sourceName": "CẢI CÚC",
+          "sourceNameEn": "Chrysanthemum. crown-daisy",
+          "page": 115,
+          "rawValue": "2.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Garland chrysanthemum greens."
+        },
+        "proteinG": {
+          "value": 1.6,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4013",
+          "sourceName": "CẢI CÚC",
+          "sourceNameEn": "Chrysanthemum. crown-daisy",
+          "page": 115,
+          "rawValue": "1.6",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Garland chrysanthemum greens."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4013",
+          "sourceName": "CẢI CÚC",
+          "sourceNameEn": "Chrysanthemum. crown-daisy",
+          "page": 115,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Garland chrysanthemum greens."
+        }
+      }
+    },
+    {
+      "sourceName": "Su hào",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 6.2,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4096",
+          "sourceName": "SU HÀO",
+          "sourceNameEn": "Kohlrabi",
+          "page": 198,
+          "rawValue": "6.2",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Kohlrabi."
+        },
+        "fiberG": {
+          "value": 1.7,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4096",
+          "sourceName": "SU HÀO",
+          "sourceNameEn": "Kohlrabi",
+          "page": 198,
+          "rawValue": "1.7",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Kohlrabi."
+        },
+        "proteinG": {
+          "value": 2.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4096",
+          "sourceName": "SU HÀO",
+          "sourceNameEn": "Kohlrabi",
+          "page": 198,
+          "rawValue": "2.8",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Kohlrabi."
+        },
+        "fatG": {
+          "value": 0.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4096",
+          "sourceName": "SU HÀO",
+          "sourceNameEn": "Kohlrabi",
+          "page": 198,
+          "rawValue": "0.1",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Kohlrabi."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4096",
+          "sourceName": "SU HÀO",
+          "sourceNameEn": "Kohlrabi",
+          "page": 198,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Kohlrabi."
+        }
+      }
+    },
+    {
+      "sourceName": "Thịt ba chỉ",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7018",
+          "sourceName": "THỊT LỢN NỬA NẠC, NỬA MỠ",
+          "sourceNameEn": "Pork, medium fat",
+          "page": 322,
+          "rawValue": "0.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Half-lean/half-fat pork representative; source belly fat varies."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7018",
+          "sourceName": "THỊT LỢN NỬA NẠC, NỬA MỠ",
+          "sourceNameEn": "Pork, medium fat",
+          "page": 322,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Half-lean/half-fat pork representative; source belly fat varies."
+        },
+        "proteinG": {
+          "value": 16.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7018",
+          "sourceName": "THỊT LỢN NỬA NẠC, NỬA MỠ",
+          "sourceNameEn": "Pork, medium fat",
+          "page": 322,
+          "rawValue": "16.5",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Half-lean/half-fat pork representative; source belly fat varies."
+        },
+        "fatG": {
+          "value": 21.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7018",
+          "sourceName": "THỊT LỢN NỬA NẠC, NỬA MỠ",
+          "sourceNameEn": "Pork, medium fat",
+          "page": 322,
+          "rawValue": "21.5",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Half-lean/half-fat pork representative; source belly fat varies."
+        },
+        "cholesterolMg": {
+          "value": 68.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7018",
+          "sourceName": "THỊT LỢN NỬA NẠC, NỬA MỠ",
+          "sourceNameEn": "Pork, medium fat",
+          "page": 322,
+          "rawValue": "68",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Half-lean/half-fat pork representative; source belly fat varies."
+        }
+      }
+    },
+    {
+      "sourceName": "Gia vị*",
+      "nutrients": {}
+    },
+    {
+      "sourceName": "Gia vị",
+      "nutrients": {
+        "cholesterolMg": {
+          "value": 13,
+          "referenceId": "USDA_SR28_SOUPS",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Dry chicken bouillon proxy for unspecified seasoning blend; brand and animal content differ.",
+          "sourceCode": "NDB_06080",
+          "pdfPageOneBased": 679
+        },
+        "fiberG": {
+          "value": 0,
+          "referenceId": "USDA_SR28_SOUPS",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Explicit dry chicken bouillon fibre zero used as formulation proxy; not measured source seasoning.",
+          "sourceCode": "NDB_06080",
+          "pdfPageOneBased": 678
+        }
+      }
+    },
+    {
+      "sourceName": "Sườn lợn (cả xương)",
+      "nutrients": {}
+    },
+    {
+      "sourceName": "Dưa chuột",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 2.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4027",
+          "sourceName": "DƯA CHUỘT",
+          "sourceNameEn": "Cucumber",
+          "page": 129,
+          "rawValue": "2.9",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh cucumber."
+        },
+        "fiberG": {
+          "value": 0.7,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4027",
+          "sourceName": "DƯA CHUỘT",
+          "sourceNameEn": "Cucumber",
+          "page": 129,
+          "rawValue": "0.7",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Fresh cucumber."
+        },
+        "proteinG": {
+          "value": 0.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4027",
+          "sourceName": "DƯA CHUỘT",
+          "sourceNameEn": "Cucumber",
+          "page": 129,
+          "rawValue": "0.8",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh cucumber."
+        },
+        "fatG": {
+          "value": 0.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4027",
+          "sourceName": "DƯA CHUỘT",
+          "sourceNameEn": "Cucumber",
+          "page": 129,
+          "rawValue": "0.1",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh cucumber."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4027",
+          "sourceName": "DƯA CHUỘT",
+          "sourceNameEn": "Cucumber",
+          "page": 129,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh cucumber."
+        }
+      }
+    },
+    {
+      "sourceName": "Phomai",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "10009",
+          "sourceName": "PHO MÁT",
+          "sourceNameEn": "Cheese (whole fat)",
+          "page": 471,
+          "rawValue": "0.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Cheese type unspecified; reference identity must be verified."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "10009",
+          "sourceName": "PHO MÁT",
+          "sourceNameEn": "Cheese (whole fat)",
+          "page": 471,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Cheese type unspecified; reference identity must be verified."
+        },
+        "proteinG": {
+          "value": 25.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "10009",
+          "sourceName": "PHO MÁT",
+          "sourceNameEn": "Cheese (whole fat)",
+          "page": 471,
+          "rawValue": "25.5",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Cheese type unspecified; reference identity must be verified."
+        },
+        "fatG": {
+          "value": 30.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "10009",
+          "sourceName": "PHO MÁT",
+          "sourceNameEn": "Cheese (whole fat)",
+          "page": 471,
+          "rawValue": "30.9",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Cheese type unspecified; reference identity must be verified."
+        },
+        "cholesterolMg": {
+          "value": 105.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "10009",
+          "sourceName": "PHO MÁT",
+          "sourceNameEn": "Cheese (whole fat)",
+          "page": 471,
+          "rawValue": "105",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Cheese type unspecified; reference identity must be verified."
+        }
+      }
+    },
+    {
+      "sourceName": "Rong biển",
+      "nutrients": {
+        "fiberG": {
+          "value": 36.4,
+          "referenceId": "MEXT_IWANORI",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Dried iwanori dietary fibre proxy for unspecified sushi nori; not measured recipe seaweed.",
+          "sourceCode": "09007"
+        },
+        "cholesterolMg": {
+          "value": 30,
+          "referenceId": "MEXT_IWANORI",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Dried iwanori cholesterol proxy; seaweed must not be assumed cholesterol-free.",
+          "sourceCode": "09007"
+        }
+      }
+    },
+    {
+      "sourceName": "Thịt cua",
+      "nutrients": {
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Explicit marine crab fibre zero proxy for unspecified edible crab meat.",
+          "sourceCode": "8033",
+          "sourceName": "CUA BỂ",
+          "page": 421,
+          "rawValue": "0.0"
+        }
+      }
+    },
+    {
+      "sourceName": "Nấm",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 2.2,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4126",
+          "sourceName": "NẤM THƯỜNG TƯƠI",
+          "page": 228,
+          "rawValue": "2.2"
+        },
+        "fiberG": {
+          "value": 3.5,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4126",
+          "sourceName": "NẤM THƯỜNG TƯƠI",
+          "page": 228,
+          "rawValue": "3.5"
+        },
+        "proteinG": {
+          "value": 4.6,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4126",
+          "sourceName": "NẤM THƯỜNG TƯƠI",
+          "page": 228,
+          "rawValue": "4.6"
+        },
+        "fatG": {
+          "value": 0.8,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4126",
+          "sourceName": "NẤM THƯỜNG TƯƠI",
+          "page": 228,
+          "rawValue": "0.8"
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4126",
+          "sourceName": "NẤM THƯỜNG TƯƠI",
+          "page": 228,
+          "rawValue": "0"
+        }
+      }
+    },
+    {
+      "sourceName": "Rau cải",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 1.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4016",
+          "sourceName": "CẢI XANH",
+          "sourceNameEn": "Mustard greens, India, leaves and stems",
+          "page": 118,
+          "rawValue": "1.9",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mustard greens representative; exact brassica unspecified."
+        },
+        "fiberG": {
+          "value": 1.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4016",
+          "sourceName": "CẢI XANH",
+          "sourceNameEn": "Mustard greens, India, leaves and stems",
+          "page": 118,
+          "rawValue": "1.8",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Mustard greens representative; exact brassica unspecified."
+        },
+        "proteinG": {
+          "value": 1.7,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4016",
+          "sourceName": "CẢI XANH",
+          "sourceNameEn": "Mustard greens, India, leaves and stems",
+          "page": 118,
+          "rawValue": "1.7",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mustard greens representative; exact brassica unspecified."
+        },
+        "fatG": {
+          "value": 0.2,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4016",
+          "sourceName": "CẢI XANH",
+          "sourceNameEn": "Mustard greens, India, leaves and stems",
+          "page": 118,
+          "rawValue": "0.2",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mustard greens representative; exact brassica unspecified."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4016",
+          "sourceName": "CẢI XANH",
+          "sourceNameEn": "Mustard greens, India, leaves and stems",
+          "page": 118,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mustard greens representative; exact brassica unspecified."
+        }
+      }
+    },
+    {
+      "sourceName": "Cá ngừ",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8019",
+          "sourceName": "CÁ NGỪ",
+          "sourceNameEn": "Flying fish, tuna",
+          "page": 407,
+          "rawValue": "0.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh tuna; species unspecified."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8019",
+          "sourceName": "CÁ NGỪ",
+          "sourceNameEn": "Flying fish, tuna",
+          "page": 407,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Fresh tuna; species unspecified."
+        },
+        "proteinG": {
+          "value": 21.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8019",
+          "sourceName": "CÁ NGỪ",
+          "sourceNameEn": "Flying fish, tuna",
+          "page": 407,
+          "rawValue": "21.0",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh tuna; species unspecified."
+        },
+        "fatG": {
+          "value": 0.3,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8019",
+          "sourceName": "CÁ NGỪ",
+          "sourceNameEn": "Flying fish, tuna",
+          "page": 407,
+          "rawValue": "0.3",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh tuna; species unspecified."
+        },
+        "cholesterolMg": {
+          "value": 45.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8019",
+          "sourceName": "CÁ NGỪ",
+          "sourceNameEn": "Flying fish, tuna",
+          "page": 407,
+          "rawValue": "45",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh tuna; species unspecified."
+        }
+      }
+    },
+    {
+      "sourceName": "Xúc xích",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7077",
+          "sourceName": "XÚC XÍCH",
+          "sourceNameEn": "Pork sausage",
+          "page": 381,
+          "rawValue": "0.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Sausage formulation unknown, carbohydrate not assumed zero."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7077",
+          "sourceName": "XÚC XÍCH",
+          "sourceNameEn": "Pork sausage",
+          "page": 381,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Sausage formulation unknown, carbohydrate not assumed zero."
+        },
+        "proteinG": {
+          "value": 27.2,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7077",
+          "sourceName": "XÚC XÍCH",
+          "sourceNameEn": "Pork sausage",
+          "page": 381,
+          "rawValue": "27.2",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Sausage formulation unknown, carbohydrate not assumed zero."
+        },
+        "fatG": {
+          "value": 47.4,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7077",
+          "sourceName": "XÚC XÍCH",
+          "sourceNameEn": "Pork sausage",
+          "page": 381,
+          "rawValue": "47.4",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Sausage formulation unknown, carbohydrate not assumed zero."
+        },
+        "cholesterolMg": {
+          "value": 66,
+          "referenceId": "USDA_SR28_PORK_FRANKFURTER",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Pork frankfurter formulation proxy; not measured Vietnamese sausage.",
+          "sourceCode": "NDB_07939"
+        }
+      }
+    },
+    {
+      "sourceName": "Tôm biển (đã bỏ vỏ)",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8051",
+          "sourceName": "TÔM BIỂN",
+          "sourceNameEn": "Sea shrimp, sea-water shrimp",
+          "page": 439,
+          "rawValue": "0.9",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Edible peeled marine shrimp."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8051",
+          "sourceName": "TÔM BIỂN",
+          "sourceNameEn": "Sea shrimp, sea-water shrimp",
+          "page": 439,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Edible peeled marine shrimp."
+        },
+        "proteinG": {
+          "value": 17.6,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8051",
+          "sourceName": "TÔM BIỂN",
+          "sourceNameEn": "Sea shrimp, sea-water shrimp",
+          "page": 439,
+          "rawValue": "17.6",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Edible peeled marine shrimp."
+        },
+        "fatG": {
+          "value": 0.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8051",
+          "sourceName": "TÔM BIỂN",
+          "sourceNameEn": "Sea shrimp, sea-water shrimp",
+          "page": 439,
+          "rawValue": "0.9",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Edible peeled marine shrimp."
+        },
+        "cholesterolMg": {
+          "value": 152.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8051",
+          "sourceName": "TÔM BIỂN",
+          "sourceNameEn": "Sea shrimp, sea-water shrimp",
+          "page": 439,
+          "rawValue": "152",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Edible peeled marine shrimp."
+        }
+      }
+    },
+    {
+      "sourceName": "Tôm biển (phần ăn được)",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8051",
+          "sourceName": "TÔM BIỂN",
+          "sourceNameEn": "Sea shrimp, sea-water shrimp",
+          "page": 439,
+          "rawValue": "0.9",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Edible marine shrimp."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8051",
+          "sourceName": "TÔM BIỂN",
+          "sourceNameEn": "Sea shrimp, sea-water shrimp",
+          "page": 439,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Edible marine shrimp."
+        },
+        "proteinG": {
+          "value": 17.6,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8051",
+          "sourceName": "TÔM BIỂN",
+          "sourceNameEn": "Sea shrimp, sea-water shrimp",
+          "page": 439,
+          "rawValue": "17.6",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Edible marine shrimp."
+        },
+        "fatG": {
+          "value": 0.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8051",
+          "sourceName": "TÔM BIỂN",
+          "sourceNameEn": "Sea shrimp, sea-water shrimp",
+          "page": 439,
+          "rawValue": "0.9",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Edible marine shrimp."
+        },
+        "cholesterolMg": {
+          "value": 152.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8051",
+          "sourceName": "TÔM BIỂN",
+          "sourceNameEn": "Sea shrimp, sea-water shrimp",
+          "page": 439,
+          "rawValue": "152",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Edible marine shrimp."
+        }
+      }
+    },
+    {
+      "sourceName": "Thịt tôm",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8051",
+          "sourceName": "TÔM BIỂN",
+          "sourceNameEn": "Sea shrimp, sea-water shrimp",
+          "page": 439,
+          "rawValue": "0.9",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Marine shrimp representative; species unspecified."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8051",
+          "sourceName": "TÔM BIỂN",
+          "sourceNameEn": "Sea shrimp, sea-water shrimp",
+          "page": 439,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Marine shrimp representative; species unspecified."
+        },
+        "proteinG": {
+          "value": 17.6,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8051",
+          "sourceName": "TÔM BIỂN",
+          "sourceNameEn": "Sea shrimp, sea-water shrimp",
+          "page": 439,
+          "rawValue": "17.6",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Marine shrimp representative; species unspecified."
+        },
+        "fatG": {
+          "value": 0.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8051",
+          "sourceName": "TÔM BIỂN",
+          "sourceNameEn": "Sea shrimp, sea-water shrimp",
+          "page": 439,
+          "rawValue": "0.9",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Marine shrimp representative; species unspecified."
+        },
+        "cholesterolMg": {
+          "value": 152.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8051",
+          "sourceName": "TÔM BIỂN",
+          "sourceNameEn": "Sea shrimp, sea-water shrimp",
+          "page": 439,
+          "rawValue": "152",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Marine shrimp representative; species unspecified."
+        }
+      }
+    },
+    {
+      "sourceName": "Bầu",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 2.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4001",
+          "sourceName": "BẦU",
+          "sourceNameEn": "Calabash, Bottle gourd",
+          "page": 103,
+          "rawValue": "2.9",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh bottle gourd."
+        },
+        "fiberG": {
+          "value": 1.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4001",
+          "sourceName": "BẦU",
+          "sourceNameEn": "Calabash, Bottle gourd",
+          "page": 103,
+          "rawValue": "1.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Fresh bottle gourd."
+        },
+        "proteinG": {
+          "value": 0.6,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4001",
+          "sourceName": "BẦU",
+          "sourceNameEn": "Calabash, Bottle gourd",
+          "page": 103,
+          "rawValue": "0.6",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh bottle gourd."
+        },
+        "fatG": {
+          "value": 0.02,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4001",
+          "sourceName": "BẦU",
+          "sourceNameEn": "Calabash, Bottle gourd",
+          "page": 103,
+          "rawValue": "0.02",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh bottle gourd."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4001",
+          "sourceName": "BẦU",
+          "sourceNameEn": "Calabash, Bottle gourd",
+          "page": 103,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh bottle gourd."
+        }
+      }
+    },
+    {
+      "sourceName": "Bí ngô",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 6.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4003",
+          "sourceName": "BÍ NGÔ",
+          "sourceNameEn": "Pumpkin squash",
+          "page": 105,
+          "rawValue": "6.1",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh pumpkin."
+        },
+        "fiberG": {
+          "value": 0.7,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4003",
+          "sourceName": "BÍ NGÔ",
+          "sourceNameEn": "Pumpkin squash",
+          "page": 105,
+          "rawValue": "0.7",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Fresh pumpkin."
+        },
+        "proteinG": {
+          "value": 0.3,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4003",
+          "sourceName": "BÍ NGÔ",
+          "sourceNameEn": "Pumpkin squash",
+          "page": 105,
+          "rawValue": "0.3",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh pumpkin."
+        },
+        "fatG": {
+          "value": 0.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4003",
+          "sourceName": "BÍ NGÔ",
+          "sourceNameEn": "Pumpkin squash",
+          "page": 105,
+          "rawValue": "0.1",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh pumpkin."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4003",
+          "sourceName": "BÍ NGÔ",
+          "sourceNameEn": "Pumpkin squash",
+          "page": 105,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh pumpkin."
+        }
+      }
+    },
+    {
+      "sourceName": "Bí đỏ",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 6.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4003",
+          "sourceName": "BÍ NGÔ",
+          "sourceNameEn": "Pumpkin squash",
+          "page": 105,
+          "rawValue": "6.1",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Pumpkin alias; not zucchini."
+        },
+        "fiberG": {
+          "value": 0.7,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4003",
+          "sourceName": "BÍ NGÔ",
+          "sourceNameEn": "Pumpkin squash",
+          "page": 105,
+          "rawValue": "0.7",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Pumpkin alias; not zucchini."
+        },
+        "proteinG": {
+          "value": 0.3,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4003",
+          "sourceName": "BÍ NGÔ",
+          "sourceNameEn": "Pumpkin squash",
+          "page": 105,
+          "rawValue": "0.3",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Pumpkin alias; not zucchini."
+        },
+        "fatG": {
+          "value": 0.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4003",
+          "sourceName": "BÍ NGÔ",
+          "sourceNameEn": "Pumpkin squash",
+          "page": 105,
+          "rawValue": "0.1",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Pumpkin alias; not zucchini."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4003",
+          "sourceName": "BÍ NGÔ",
+          "sourceNameEn": "Pumpkin squash",
+          "page": 105,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Pumpkin alias; not zucchini."
+        }
+      }
+    },
+    {
+      "sourceName": "Cá lóc (cả xương)",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8022",
+          "sourceName": "CÁ QUẢ",
+          "sourceNameEn": "Fish, snake head",
+          "page": 410,
+          "rawValue": "0.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Snakehead/cá quả; bone-in weight not edible flesh."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8022",
+          "sourceName": "CÁ QUẢ",
+          "sourceNameEn": "Fish, snake head",
+          "page": 410,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Snakehead/cá quả; bone-in weight not edible flesh."
+        },
+        "proteinG": {
+          "value": 18.2,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8022",
+          "sourceName": "CÁ QUẢ",
+          "sourceNameEn": "Fish, snake head",
+          "page": 410,
+          "rawValue": "18.2",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Snakehead/cá quả; bone-in weight not edible flesh."
+        },
+        "fatG": {
+          "value": 2.7,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8022",
+          "sourceName": "CÁ QUẢ",
+          "sourceNameEn": "Fish, snake head",
+          "page": 410,
+          "rawValue": "2.7",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Snakehead/cá quả; bone-in weight not edible flesh."
+        },
+        "cholesterolMg": {
+          "value": 600.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8022",
+          "sourceName": "CÁ QUẢ",
+          "sourceNameEn": "Fish, snake head",
+          "page": 410,
+          "rawValue": "600",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Snakehead/cá quả; bone-in weight not edible flesh."
+        }
+      },
+      "edibleFraction": 0.6,
+      "edibleFractionEvidence": {
+        "method": "FCT2007_DISCARD_FRACTION_ESTIMATE",
+        "referenceId": "NIN_FCT2007",
+        "sourceCode": "8022",
+        "sourceName": "CÁ QUẢ",
+        "discardPercent": 40.0,
+        "page": 410,
+        "sourceUrl": "https://www.fao.org/fileadmin/templates/food_composition/documents/pdf/VTN_FCT_2007.pdf",
+        "note": "Population reference fraction; not measured for this photographed portion."
+      }
+    },
+    {
+      "sourceName": "Dứa",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 6.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "5014",
+          "sourceName": "DỨA TA",
+          "sourceNameEn": "Pineapple, wild",
+          "page": 244,
+          "rawValue": "6.5",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Local pineapple representative; cultivar unspecified."
+        },
+        "fiberG": {
+          "value": 0.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "5014",
+          "sourceName": "DỨA TA",
+          "sourceNameEn": "Pineapple, wild",
+          "page": 244,
+          "rawValue": "0.8",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Local pineapple representative; cultivar unspecified."
+        },
+        "proteinG": {
+          "value": 0.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "5014",
+          "sourceName": "DỨA TA",
+          "sourceNameEn": "Pineapple, wild",
+          "page": 244,
+          "rawValue": "0.8",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Local pineapple representative; cultivar unspecified."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "5014",
+          "sourceName": "DỨA TA",
+          "sourceNameEn": "Pineapple, wild",
+          "page": 244,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Local pineapple representative; cultivar unspecified."
+        }
+      }
+    },
+    {
+      "sourceName": "Rau mùi tàu",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 2.4,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4082",
+          "sourceName": "RAU MÙI TÀU",
+          "sourceNameEn": "Parsley, curley",
+          "page": 184,
+          "rawValue": "2.4",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Culantro, not coriander."
+        },
+        "fiberG": {
+          "value": 1.6,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4082",
+          "sourceName": "RAU MÙI TÀU",
+          "sourceNameEn": "Parsley, curley",
+          "page": 184,
+          "rawValue": "1.6",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Culantro, not coriander."
+        },
+        "proteinG": {
+          "value": 2.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4082",
+          "sourceName": "RAU MÙI TÀU",
+          "sourceNameEn": "Parsley, curley",
+          "page": 184,
+          "rawValue": "2.1",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Culantro, not coriander."
+        },
+        "fatG": {
+          "value": 0.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4082",
+          "sourceName": "RAU MÙI TÀU",
+          "sourceNameEn": "Parsley, curley",
+          "page": 184,
+          "rawValue": "0.8",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Culantro, not coriander."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4082",
+          "sourceName": "RAU MÙI TÀU",
+          "sourceNameEn": "Parsley, curley",
+          "page": 184,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Culantro, not coriander."
+        }
+      }
+    },
+    {
+      "sourceName": "Hành củ",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 4.4,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4037",
+          "sourceName": "HÀNH CỦ TƯƠI",
+          "sourceNameEn": "Onion, Welsh",
+          "page": 139,
+          "rawValue": "4.4",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Bulb onion; source type unspecified."
+        },
+        "fiberG": {
+          "value": 0.7,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4037",
+          "sourceName": "HÀNH CỦ TƯƠI",
+          "sourceNameEn": "Onion, Welsh",
+          "page": 139,
+          "rawValue": "0.7",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Bulb onion; source type unspecified."
+        },
+        "proteinG": {
+          "value": 1.3,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4037",
+          "sourceName": "HÀNH CỦ TƯƠI",
+          "sourceNameEn": "Onion, Welsh",
+          "page": 139,
+          "rawValue": "1.3",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Bulb onion; source type unspecified."
+        },
+        "fatG": {
+          "value": 0.4,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4037",
+          "sourceName": "HÀNH CỦ TƯƠI",
+          "sourceNameEn": "Onion, Welsh",
+          "page": 139,
+          "rawValue": "0.4",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Bulb onion; source type unspecified."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4037",
+          "sourceName": "HÀNH CỦ TƯƠI",
+          "sourceNameEn": "Onion, Welsh",
+          "page": 139,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Bulb onion; source type unspecified."
+        }
+      }
+    },
+    {
+      "sourceName": "Sấu",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 3.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4095",
+          "sourceName": "SẤU XANH",
+          "sourceNameEn": "Dracontomelum fruit, unripe, raw",
+          "page": 197,
+          "rawValue": "3.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Immature sour dracontomelon fruit."
+        },
+        "proteinG": {
+          "value": 1.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4095",
+          "sourceName": "SẤU XANH",
+          "sourceNameEn": "Dracontomelum fruit, unripe, raw",
+          "page": 197,
+          "rawValue": "1.8",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Immature sour dracontomelon fruit."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4095",
+          "sourceName": "SẤU XANH",
+          "sourceNameEn": "Dracontomelum fruit, unripe, raw",
+          "page": 197,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Immature sour dracontomelon fruit."
+        }
+      }
+    },
+    {
+      "sourceName": "Ngò",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.2,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4081",
+          "sourceName": "RAU MÙI",
+          "sourceNameEn": "Coriander",
+          "page": 183,
+          "rawValue": "0.2",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Coriander in recipe context."
+        },
+        "fiberG": {
+          "value": 1.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4081",
+          "sourceName": "RAU MÙI",
+          "sourceNameEn": "Coriander",
+          "page": 183,
+          "rawValue": "1.8",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Coriander in recipe context."
+        },
+        "proteinG": {
+          "value": 2.6,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4081",
+          "sourceName": "RAU MÙI",
+          "sourceNameEn": "Coriander",
+          "page": 183,
+          "rawValue": "2.6",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Coriander in recipe context."
+        },
+        "fatG": {
+          "value": 0.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4081",
+          "sourceName": "RAU MÙI",
+          "sourceNameEn": "Coriander",
+          "page": 183,
+          "rawValue": "0.5",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Coriander in recipe context."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4081",
+          "sourceName": "RAU MÙI",
+          "sourceNameEn": "Coriander",
+          "page": 183,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Coriander in recipe context."
+        }
+      }
+    },
+    {
+      "sourceName": "Hạt nêm",
+      "nutrients": {
+        "cholesterolMg": {
+          "value": 13,
+          "referenceId": "USDA_SR28_SOUPS",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Dry chicken bouillon proxy for unspecified seasoning blend; brand and animal content differ.",
+          "sourceCode": "NDB_06080",
+          "pdfPageOneBased": 679
+        },
+        "fiberG": {
+          "value": 0,
+          "referenceId": "USDA_SR28_SOUPS",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Explicit dry chicken bouillon fibre zero used as formulation proxy; not measured source seasoning.",
+          "sourceCode": "NDB_06080",
+          "pdfPageOneBased": 678
+        }
+      }
+    },
+    {
+      "sourceName": "Hành lá",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 4.3,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4038",
+          "sourceName": "HÀNH LÁ (HÀNH HOA)",
+          "sourceNameEn": "Onion, Welsh",
+          "page": 140,
+          "rawValue": "4.3",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Spring onion."
+        },
+        "fiberG": {
+          "value": 0.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4038",
+          "sourceName": "HÀNH LÁ (HÀNH HOA)",
+          "sourceNameEn": "Onion, Welsh",
+          "page": 140,
+          "rawValue": "0.9",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Spring onion."
+        },
+        "proteinG": {
+          "value": 1.3,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4038",
+          "sourceName": "HÀNH LÁ (HÀNH HOA)",
+          "sourceNameEn": "Onion, Welsh",
+          "page": 140,
+          "rawValue": "1.3",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Spring onion."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4038",
+          "sourceName": "HÀNH LÁ (HÀNH HOA)",
+          "sourceNameEn": "Onion, Welsh",
+          "page": 140,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Spring onion."
+        }
+      }
+    },
+    {
+      "sourceName": "Rau ngót",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 3.4,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4086",
+          "sourceName": "RAU NGÓT",
+          "sourceNameEn": "Sauropus, sp. leaves",
+          "page": 188,
+          "rawValue": "3.4",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Sauropus androgynus, not spinach."
+        },
+        "fiberG": {
+          "value": 2.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4086",
+          "sourceName": "RAU NGÓT",
+          "sourceNameEn": "Sauropus, sp. leaves",
+          "page": 188,
+          "rawValue": "2.5",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Sauropus androgynus, not spinach."
+        },
+        "proteinG": {
+          "value": 5.3,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4086",
+          "sourceName": "RAU NGÓT",
+          "sourceNameEn": "Sauropus, sp. leaves",
+          "page": 188,
+          "rawValue": "5.3",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Sauropus androgynus, not spinach."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4086",
+          "sourceName": "RAU NGÓT",
+          "sourceNameEn": "Sauropus, sp. leaves",
+          "page": 188,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Sauropus androgynus, not spinach."
+        },
+        "fatG": {
+          "value": 0.82,
+          "referenceId": "SAUROPUS_2022",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Fresh Sauropus leaf composition proxy; cultivar/storage and boiling retention unmeasured."
+        }
+      }
+    },
+    {
+      "sourceName": "Trai (cả vỏ)",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 2.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8054",
+          "sourceName": "TRAI",
+          "sourceNameEn": "Manodonta",
+          "page": 442,
+          "rawValue": "2.5",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Freshwater mussel; shell-on grams not edible meat."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8054",
+          "sourceName": "TRAI",
+          "sourceNameEn": "Manodonta",
+          "page": 442,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Freshwater mussel; shell-on grams not edible meat."
+        },
+        "proteinG": {
+          "value": 4.6,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8054",
+          "sourceName": "TRAI",
+          "sourceNameEn": "Manodonta",
+          "page": 442,
+          "rawValue": "4.6",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Freshwater mussel; shell-on grams not edible meat."
+        },
+        "fatG": {
+          "value": 1.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8054",
+          "sourceName": "TRAI",
+          "sourceNameEn": "Manodonta",
+          "page": 442,
+          "rawValue": "1.1",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Freshwater mussel; shell-on grams not edible meat."
+        },
+        "cholesterolMg": {
+          "value": 34.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8054",
+          "sourceName": "TRAI",
+          "sourceNameEn": "Manodonta",
+          "page": 442,
+          "rawValue": "34",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Freshwater mussel; shell-on grams not edible meat."
+        }
+      },
+      "edibleFraction": 0.4,
+      "edibleFractionEvidence": {
+        "method": "FCT2007_DISCARD_FRACTION_ESTIMATE",
+        "referenceId": "NIN_FCT2007",
+        "sourceCode": "8054",
+        "sourceName": "TRAI",
+        "discardPercent": 60.0,
+        "page": 442,
+        "sourceUrl": "https://www.fao.org/fileadmin/templates/food_composition/documents/pdf/VTN_FCT_2007.pdf",
+        "note": "Population reference fraction; not measured for this photographed portion."
+      }
+    },
+    {
+      "sourceName": "Hành khô",
+      "nutrients": {}
+    },
+    {
+      "sourceName": "Rau răm",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 2.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4088",
+          "sourceName": "RAU RĂM",
+          "sourceNameEn": "Polygonum odoratum",
+          "page": 190,
+          "rawValue": "2.8",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Vietnamese coriander."
+        },
+        "fiberG": {
+          "value": 3.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4088",
+          "sourceName": "RAU RĂM",
+          "sourceNameEn": "Polygonum odoratum",
+          "page": 190,
+          "rawValue": "3.8",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Vietnamese coriander."
+        },
+        "proteinG": {
+          "value": 4.7,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4088",
+          "sourceName": "RAU RĂM",
+          "sourceNameEn": "Polygonum odoratum",
+          "page": 190,
+          "rawValue": "4.7",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Vietnamese coriander."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4088",
+          "sourceName": "RAU RĂM",
+          "sourceNameEn": "Polygonum odoratum",
+          "page": 190,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Vietnamese coriander."
+        }
+      }
+    },
+    {
+      "sourceName": "Thì là",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 1.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4101",
+          "sourceName": "THÌA LÀ",
+          "sourceNameEn": "Dill",
+          "page": 203,
+          "rawValue": "1.8",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh dill; identity verified against local food name."
+        },
+        "fiberG": {
+          "value": 5.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4101",
+          "sourceName": "THÌA LÀ",
+          "sourceNameEn": "Dill",
+          "page": 203,
+          "rawValue": "5.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Fresh dill; identity verified against local food name."
+        },
+        "proteinG": {
+          "value": 2.6,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4101",
+          "sourceName": "THÌA LÀ",
+          "sourceNameEn": "Dill",
+          "page": 203,
+          "rawValue": "2.6",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh dill; identity verified against local food name."
+        },
+        "fatG": {
+          "value": 1.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4101",
+          "sourceName": "THÌA LÀ",
+          "sourceNameEn": "Dill",
+          "page": 203,
+          "rawValue": "1.1",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh dill; identity verified against local food name."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4101",
+          "sourceName": "THÌA LÀ",
+          "sourceNameEn": "Dill",
+          "page": 203,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh dill; identity verified against local food name."
+        }
+      }
+    },
+    {
+      "sourceName": "Bột nêm",
+      "nutrients": {
+        "cholesterolMg": {
+          "value": 13,
+          "referenceId": "USDA_SR28_SOUPS",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Dry chicken bouillon proxy for unspecified seasoning blend; brand and animal content differ.",
+          "sourceCode": "NDB_06080",
+          "pdfPageOneBased": 679
+        },
+        "fiberG": {
+          "value": 0,
+          "referenceId": "USDA_SR28_SOUPS",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Explicit dry chicken bouillon fibre zero used as formulation proxy; not measured source seasoning.",
+          "sourceCode": "NDB_06080",
+          "pdfPageOneBased": 678
+        }
+      }
+    },
+    {
+      "sourceName": "Cá bống (nguyên con)",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8001",
+          "sourceName": "CÁ BỐNG",
+          "sourceNameEn": "Goby, gudgeon",
+          "page": 389,
+          "rawValue": "0.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Whole goby, not edible flesh weight."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8001",
+          "sourceName": "CÁ BỐNG",
+          "sourceNameEn": "Goby, gudgeon",
+          "page": 389,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Whole goby, not edible flesh weight."
+        },
+        "proteinG": {
+          "value": 15.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8001",
+          "sourceName": "CÁ BỐNG",
+          "sourceNameEn": "Goby, gudgeon",
+          "page": 389,
+          "rawValue": "15.8",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Whole goby, not edible flesh weight."
+        },
+        "fatG": {
+          "value": 0.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8001",
+          "sourceName": "CÁ BỐNG",
+          "sourceNameEn": "Goby, gudgeon",
+          "page": 389,
+          "rawValue": "0.8",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Whole goby, not edible flesh weight."
+        },
+        "cholesterolMg": {
+          "value": 70.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Carp cholesterol proxy for goby; different freshwater fish, not species measurement.",
+          "sourceCode": "8003",
+          "sourceName": "CÁ CHÉP",
+          "page": 391,
+          "rawValue": "70"
+        }
+      },
+      "edibleFraction": 0.55,
+      "edibleFractionEvidence": {
+        "method": "FCT2007_DISCARD_FRACTION_ESTIMATE",
+        "referenceId": "NIN_FCT2007",
+        "sourceCode": "8001",
+        "sourceName": "CÁ BỐNG",
+        "discardPercent": 45.0,
+        "page": 389,
+        "sourceUrl": "https://www.fao.org/fileadmin/templates/food_composition/documents/pdf/VTN_FCT_2007.pdf",
+        "note": "Population reference fraction; not measured for this photographed portion."
+      }
+    },
+    {
+      "sourceName": "Tương",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 15.7,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13020",
+          "sourceName": "TƯƠNG NẾP",
+          "sourceNameEn": "Soybean sauce with glutinous rice",
+          "page": 545,
+          "rawValue": "15.7",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fermented rice/soy sauce representative; formulation unspecified."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13020",
+          "sourceName": "TƯƠNG NẾP",
+          "sourceNameEn": "Soybean sauce with glutinous rice",
+          "page": 545,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Fermented rice/soy sauce representative; formulation unspecified."
+        },
+        "proteinG": {
+          "value": 4.3,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13020",
+          "sourceName": "TƯƠNG NẾP",
+          "sourceNameEn": "Soybean sauce with glutinous rice",
+          "page": 545,
+          "rawValue": "4.3",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fermented rice/soy sauce representative; formulation unspecified."
+        },
+        "fatG": {
+          "value": 0.7,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13020",
+          "sourceName": "TƯƠNG NẾP",
+          "sourceNameEn": "Soybean sauce with glutinous rice",
+          "page": 545,
+          "rawValue": "0.7",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fermented rice/soy sauce representative; formulation unspecified."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13020",
+          "sourceName": "TƯƠNG NẾP",
+          "sourceNameEn": "Soybean sauce with glutinous rice",
+          "page": 545,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fermented rice/soy sauce representative; formulation unspecified."
+        }
+      }
+    },
+    {
+      "sourceName": "Nước hàng",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 99.3,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "PURE_SUGAR_CARAMEL_ASSUMPTION: sugar/water caramel representative, no milk or animal additives; concentration uncertain, pure sugar is carbohydrate upper proxy.",
+          "sourceCode": "12014",
+          "sourceName": "ĐƯỜNG KÍNH",
+          "page": 510,
+          "rawValue": "99.3"
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "PURE_SUGAR_CARAMEL_ASSUMPTION: sugar/water caramel representative, no milk or animal additives; concentration uncertain, pure sugar is carbohydrate upper proxy.",
+          "sourceCode": "12014",
+          "sourceName": "ĐƯỜNG KÍNH",
+          "page": 510,
+          "rawValue": "0.0"
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "PURE_SUGAR_CARAMEL_ASSUMPTION: sugar/water caramel representative, no milk or animal additives; concentration uncertain, pure sugar is carbohydrate upper proxy.",
+          "sourceCode": "12014",
+          "sourceName": "ĐƯỜNG KÍNH",
+          "page": 510,
+          "rawValue": "0"
+        }
+      }
+    },
+    {
+      "sourceName": "Đường",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 99.3,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "12014",
+          "sourceName": "ĐƯỜNG KÍNH",
+          "sourceNameEn": "Granulated sugar",
+          "page": 510,
+          "rawValue": "99.3",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Granulated sucrose representative."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "12014",
+          "sourceName": "ĐƯỜNG KÍNH",
+          "sourceNameEn": "Granulated sugar",
+          "page": 510,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Granulated sucrose representative."
+        },
+        "proteinG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "12014",
+          "sourceName": "ĐƯỜNG KÍNH",
+          "sourceNameEn": "Granulated sugar",
+          "page": 510,
+          "rawValue": "0.0",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Granulated sucrose representative."
+        },
+        "fatG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "12014",
+          "sourceName": "ĐƯỜNG KÍNH",
+          "sourceNameEn": "Granulated sugar",
+          "page": 510,
+          "rawValue": "0.0",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Granulated sucrose representative."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "12014",
+          "sourceName": "ĐƯỜNG KÍNH",
+          "sourceNameEn": "Granulated sugar",
+          "page": 510,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Granulated sucrose representative."
+        }
+      }
+    },
+    {
+      "sourceName": "Đường kính",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 99.3,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "12014",
+          "sourceName": "ĐƯỜNG KÍNH",
+          "sourceNameEn": "Granulated sugar",
+          "page": 510,
+          "rawValue": "99.3",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Granulated sucrose."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "12014",
+          "sourceName": "ĐƯỜNG KÍNH",
+          "sourceNameEn": "Granulated sugar",
+          "page": 510,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Granulated sucrose."
+        },
+        "proteinG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "12014",
+          "sourceName": "ĐƯỜNG KÍNH",
+          "sourceNameEn": "Granulated sugar",
+          "page": 510,
+          "rawValue": "0.0",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Granulated sucrose."
+        },
+        "fatG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "12014",
+          "sourceName": "ĐƯỜNG KÍNH",
+          "sourceNameEn": "Granulated sugar",
+          "page": 510,
+          "rawValue": "0.0",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Granulated sucrose."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "12014",
+          "sourceName": "ĐƯỜNG KÍNH",
+          "sourceNameEn": "Granulated sugar",
+          "page": 510,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Granulated sucrose."
+        }
+      }
+    },
+    {
+      "sourceName": "Tiêu",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 34.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13004",
+          "sourceName": "HẠT TIÊU",
+          "sourceNameEn": "Peppercorn, seeds",
+          "page": 529,
+          "rawValue": "34.1",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Black pepper representative."
+        },
+        "fiberG": {
+          "value": 33.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13004",
+          "sourceName": "HẠT TIÊU",
+          "sourceNameEn": "Peppercorn, seeds",
+          "page": 529,
+          "rawValue": "33.5",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Black pepper representative."
+        },
+        "proteinG": {
+          "value": 7.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13004",
+          "sourceName": "HẠT TIÊU",
+          "sourceNameEn": "Peppercorn, seeds",
+          "page": 529,
+          "rawValue": "7.0",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Black pepper representative."
+        },
+        "fatG": {
+          "value": 7.4,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13004",
+          "sourceName": "HẠT TIÊU",
+          "sourceNameEn": "Peppercorn, seeds",
+          "page": 529,
+          "rawValue": "7.4",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Black pepper representative."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13004",
+          "sourceName": "HẠT TIÊU",
+          "sourceNameEn": "Peppercorn, seeds",
+          "page": 529,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Black pepper representative."
+        }
+      }
+    },
+    {
+      "sourceName": "Ớt",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 4.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4061",
+          "sourceName": "ỚT ĐỎ TO",
+          "page": 163,
+          "rawValue": "4.0"
+        },
+        "fiberG": {
+          "value": 2.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4061",
+          "sourceName": "ỚT ĐỎ TO",
+          "page": 163,
+          "rawValue": "2.0"
+        },
+        "proteinG": {
+          "value": 1.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4061",
+          "sourceName": "ỚT ĐỎ TO",
+          "page": 163,
+          "rawValue": "1.0"
+        },
+        "fatG": {
+          "value": 0.3,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4061",
+          "sourceName": "ỚT ĐỎ TO",
+          "page": 163,
+          "rawValue": "0.3"
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4061",
+          "sourceName": "ỚT ĐỎ TO",
+          "page": 163,
+          "rawValue": "0"
+        }
+      }
+    },
+    {
+      "sourceName": "Giềng",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 2.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13009",
+          "sourceName": "RIỀNG",
+          "sourceNameEn": "Alpinia root, fresh",
+          "page": 534,
+          "rawValue": "2.5",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Galangal spelling variant, not ginger."
+        },
+        "fiberG": {
+          "value": 3.7,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13009",
+          "sourceName": "RIỀNG",
+          "sourceNameEn": "Alpinia root, fresh",
+          "page": 534,
+          "rawValue": "3.7",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Galangal spelling variant, not ginger."
+        },
+        "proteinG": {
+          "value": 0.3,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13009",
+          "sourceName": "RIỀNG",
+          "sourceNameEn": "Alpinia root, fresh",
+          "page": 534,
+          "rawValue": "0.3",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Galangal spelling variant, not ginger."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13009",
+          "sourceName": "RIỀNG",
+          "sourceNameEn": "Alpinia root, fresh",
+          "page": 534,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Galangal spelling variant, not ginger."
+        }
+      }
+    },
+    {
+      "sourceName": "Trứng cút",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.4,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "9007",
+          "sourceName": "TRỨNG CHIM CÚT",
+          "sourceNameEn": "Quail egg",
+          "page": 456,
+          "rawValue": "0.4",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Quail egg, not chicken egg."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "9007",
+          "sourceName": "TRỨNG CHIM CÚT",
+          "sourceNameEn": "Quail egg",
+          "page": 456,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Quail egg, not chicken egg."
+        },
+        "proteinG": {
+          "value": 13.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "9007",
+          "sourceName": "TRỨNG CHIM CÚT",
+          "sourceNameEn": "Quail egg",
+          "page": 456,
+          "rawValue": "13.1",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Quail egg, not chicken egg."
+        },
+        "fatG": {
+          "value": 11.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "9007",
+          "sourceName": "TRỨNG CHIM CÚT",
+          "sourceNameEn": "Quail egg",
+          "page": 456,
+          "rawValue": "11.1",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Quail egg, not chicken egg."
+        },
+        "cholesterolMg": {
+          "value": 844.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "9007",
+          "sourceName": "TRỨNG CHIM CÚT",
+          "sourceNameEn": "Quail egg",
+          "page": 456,
+          "rawValue": "844",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Quail egg, not chicken egg."
+        }
+      }
+    },
+    {
+      "sourceName": "Mắm",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 3.6,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13017",
+          "sourceName": "NƯỚC MẮM CÁ",
+          "sourceNameEn": "Fish sauce, ready-to-serve",
+          "page": 542,
+          "rawValue": "3.6",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fish sauce representative in source sauce recipes."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13017",
+          "sourceName": "NƯỚC MẮM CÁ",
+          "sourceNameEn": "Fish sauce, ready-to-serve",
+          "page": 542,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Fish sauce representative in source sauce recipes."
+        },
+        "proteinG": {
+          "value": 5.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13017",
+          "sourceName": "NƯỚC MẮM CÁ",
+          "sourceNameEn": "Fish sauce, ready-to-serve",
+          "page": 542,
+          "rawValue": "5.1",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fish sauce representative in source sauce recipes."
+        },
+        "fatG": {
+          "value": 0.01,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13017",
+          "sourceName": "NƯỚC MẮM CÁ",
+          "sourceNameEn": "Fish sauce, ready-to-serve",
+          "page": 542,
+          "rawValue": "0.01",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fish sauce representative in source sauce recipes."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "13017",
+          "sourceName": "NƯỚC MẮM CÁ",
+          "sourceNameEn": "Fish sauce, ready-to-serve",
+          "page": 542,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fish sauce representative in source sauce recipes."
+        }
+      }
+    },
+    {
+      "sourceName": "Đậu cove",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 13.3,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4029",
+          "sourceName": "ĐẬU CÔ VE",
+          "sourceNameEn": "Beans, kidney, in pod, French bean; Navy been",
+          "page": 131,
+          "rawValue": "13.3",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh bean pods, not dried bean seeds."
+        },
+        "fiberG": {
+          "value": 1.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4029",
+          "sourceName": "ĐẬU CÔ VE",
+          "sourceNameEn": "Beans, kidney, in pod, French bean; Navy been",
+          "page": 131,
+          "rawValue": "1.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Fresh bean pods, not dried bean seeds."
+        },
+        "proteinG": {
+          "value": 5.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4029",
+          "sourceName": "ĐẬU CÔ VE",
+          "sourceNameEn": "Beans, kidney, in pod, French bean; Navy been",
+          "page": 131,
+          "rawValue": "5.0",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh bean pods, not dried bean seeds."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4029",
+          "sourceName": "ĐẬU CÔ VE",
+          "sourceNameEn": "Beans, kidney, in pod, French bean; Navy been",
+          "page": 131,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh bean pods, not dried bean seeds."
+        },
+        "fatG": {
+          "value": 0.22,
+          "referenceId": "USDA_SR27_GREEN_BEANS",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Raw Phaseolus green bean fat proxy; boiling retention/yield unmeasured.",
+          "sourceCode": "NDB_11052"
+        }
+      }
+    },
+    {
+      "sourceName": "Bắp cải",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 5.3,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4010",
+          "sourceName": "CẢI BẮP",
+          "sourceNameEn": "Cabbage, common",
+          "page": 112,
+          "rawValue": "5.3",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "White cabbage representative."
+        },
+        "fiberG": {
+          "value": 1.6,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4010",
+          "sourceName": "CẢI BẮP",
+          "sourceNameEn": "Cabbage, common",
+          "page": 112,
+          "rawValue": "1.6",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "White cabbage representative."
+        },
+        "proteinG": {
+          "value": 1.8,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4010",
+          "sourceName": "CẢI BẮP",
+          "sourceNameEn": "Cabbage, common",
+          "page": 112,
+          "rawValue": "1.8",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "White cabbage representative."
+        },
+        "fatG": {
+          "value": 0.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4010",
+          "sourceName": "CẢI BẮP",
+          "sourceNameEn": "Cabbage, common",
+          "page": 112,
+          "rawValue": "0.1",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "White cabbage representative."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4010",
+          "sourceName": "CẢI BẮP",
+          "sourceNameEn": "Cabbage, common",
+          "page": 112,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "White cabbage representative."
+        }
+      }
+    },
+    {
+      "sourceName": "Rau muống",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 2.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4083",
+          "sourceName": "RAU MUỐNG",
+          "sourceNameEn": "Swamp cabbage, water spinach, water convol",
+          "page": 185,
+          "rawValue": "2.1",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Water spinach."
+        },
+        "fiberG": {
+          "value": 1.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4083",
+          "sourceName": "RAU MUỐNG",
+          "sourceNameEn": "Swamp cabbage, water spinach, water convol",
+          "page": 185,
+          "rawValue": "1.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Water spinach."
+        },
+        "proteinG": {
+          "value": 3.2,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4083",
+          "sourceName": "RAU MUỐNG",
+          "sourceNameEn": "Swamp cabbage, water spinach, water convol",
+          "page": 185,
+          "rawValue": "3.2",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Water spinach."
+        },
+        "fatG": {
+          "value": 0.4,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4083",
+          "sourceName": "RAU MUỐNG",
+          "sourceNameEn": "Swamp cabbage, water spinach, water convol",
+          "page": 185,
+          "rawValue": "0.4",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Water spinach."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "4083",
+          "sourceName": "RAU MUỐNG",
+          "sourceNameEn": "Swamp cabbage, water spinach, water convol",
+          "page": 185,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Water spinach."
+        }
+      }
+    },
+    {
+      "sourceName": "Thịt bò bắp",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Lean beef reference zero for unprocessed beef shank; not exact cut measurement.",
+          "sourceCode": "7002",
+          "sourceName": "THỊT BÊ NẠC",
+          "page": 306,
+          "rawValue": "0.0"
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Lean beef reference zero for unprocessed beef shank; not exact cut measurement.",
+          "sourceCode": "7002",
+          "sourceName": "THỊT BÊ NẠC",
+          "page": 306,
+          "rawValue": "0.0"
+        }
+      }
+    },
+    {
+      "sourceName": "Thịt gà (cả xương)",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7013",
+          "sourceName": "THỊT GÀ TA",
+          "sourceNameEn": "Chicken meat, average",
+          "page": 317,
+          "rawValue": "0.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Native chicken representative; bone-in grams not edible meat."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7013",
+          "sourceName": "THỊT GÀ TA",
+          "sourceNameEn": "Chicken meat, average",
+          "page": 317,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Native chicken representative; bone-in grams not edible meat."
+        },
+        "proteinG": {
+          "value": 20.3,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7013",
+          "sourceName": "THỊT GÀ TA",
+          "sourceNameEn": "Chicken meat, average",
+          "page": 317,
+          "rawValue": "20.3",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Native chicken representative; bone-in grams not edible meat."
+        },
+        "fatG": {
+          "value": 13.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7013",
+          "sourceName": "THỊT GÀ TA",
+          "sourceNameEn": "Chicken meat, average",
+          "page": 317,
+          "rawValue": "13.1",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Native chicken representative; bone-in grams not edible meat."
+        },
+        "cholesterolMg": {
+          "value": 75.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "7013",
+          "sourceName": "THỊT GÀ TA",
+          "sourceNameEn": "Chicken meat, average",
+          "page": 317,
+          "rawValue": "75",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Native chicken representative; bone-in grams not edible meat."
+        }
+      },
+      "edibleFraction": 0.48,
+      "edibleFractionEvidence": {
+        "method": "FCT2007_DISCARD_FRACTION_ESTIMATE",
+        "referenceId": "NIN_FCT2007",
+        "sourceCode": "7013",
+        "sourceName": "THỊT GÀ TA",
+        "discardPercent": 52.0,
+        "page": 317,
+        "sourceUrl": "https://www.fao.org/fileadmin/templates/food_composition/documents/pdf/VTN_FCT_2007.pdf",
+        "note": "Population reference fraction; not measured for this photographed portion."
+      }
+    },
+    {
+      "sourceName": "Sả",
+      "nutrients": {
+        "fiberG": {
+          "value": 3.7,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "HIGH_UNCERTAINTY_AROMATIC_PLANT_PROXY: fresh galangal cellulose 3.7 g/100g used for 10 g fresh lemongrass; different plant/part, not measured lemongrass dietary fibre.",
+          "sourceCode": "13009",
+          "sourceName": "RIỀNG",
+          "page": 534,
+          "rawValue": "3.7"
+        }
+      }
+    },
+    {
+      "sourceName": "Ngũ vị hương",
+      "nutrients": {
+        "fiberG": {
+          "value": 8.9,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Curry powder fibre proxy for an unspecified dry spice blend; not measured five-spice composition.",
+          "sourceCode": "13001",
+          "sourceName": "CARY BỘT",
+          "page": 526,
+          "rawValue": "8.9"
+        }
+      }
+    },
+    {
+      "sourceName": "Dầu hào",
+      "nutrients": {
+        "fiberG": {
+          "value": 0.3,
+          "referenceId": "USDA_SR28_SOUPS",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Ready-to-serve oyster sauce proxy, brand unknown.",
+          "sourceCode": "NDB_06176",
+          "pdfPageOneBased": 516
+        }
+      }
+    },
+    {
+      "sourceName": "Cá thu",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8026",
+          "sourceName": "CÁ THU",
+          "sourceNameEn": "Mackerel, codfish, kingfish",
+          "page": 414,
+          "rawValue": "0.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mackerel, species unspecified."
+        },
+        "fiberG": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8026",
+          "sourceName": "CÁ THU",
+          "sourceNameEn": "Mackerel, codfish, kingfish",
+          "page": 414,
+          "rawValue": "0.0",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Mackerel, species unspecified."
+        },
+        "proteinG": {
+          "value": 18.2,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8026",
+          "sourceName": "CÁ THU",
+          "sourceNameEn": "Mackerel, codfish, kingfish",
+          "page": 414,
+          "rawValue": "18.2",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mackerel, species unspecified."
+        },
+        "fatG": {
+          "value": 10.3,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "8026",
+          "sourceName": "CÁ THU",
+          "sourceNameEn": "Mackerel, codfish, kingfish",
+          "page": 414,
+          "rawValue": "10.3",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Mackerel, species unspecified."
+        },
+        "cholesterolMg": {
+          "value": 70,
+          "referenceId": "NOAA_MACKEREL",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Different mackerel species nutrition proxy, raw edible portion."
+        }
+      }
+    },
+    {
+      "sourceName": "Cải chíp",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 2.4,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4015",
+          "sourceName": "CẢI THÌA (CẢI TRẮNG)",
+          "page": 117,
+          "rawValue": "2.4"
+        },
+        "fiberG": {
+          "value": 1.8,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4015",
+          "sourceName": "CẢI THÌA (CẢI TRẮNG)",
+          "page": 117,
+          "rawValue": "1.8"
+        },
+        "proteinG": {
+          "value": 1.4,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4015",
+          "sourceName": "CẢI THÌA (CẢI TRẮNG)",
+          "page": 117,
+          "rawValue": "1.4"
+        },
+        "fatG": {
+          "value": 0.2,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4015",
+          "sourceName": "CẢI THÌA (CẢI TRẮNG)",
+          "page": 117,
+          "rawValue": "0.2"
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4015",
+          "sourceName": "CẢI THÌA (CẢI TRẮNG)",
+          "page": 117,
+          "rawValue": "0"
+        }
+      }
+    },
+    {
+      "sourceName": "Rau cải ngọt",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 1.9,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4016",
+          "sourceName": "CẢI XANH",
+          "page": 118,
+          "rawValue": "1.9"
+        },
+        "fiberG": {
+          "value": 1.8,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4016",
+          "sourceName": "CẢI XANH",
+          "page": 118,
+          "rawValue": "1.8"
+        },
+        "proteinG": {
+          "value": 1.7,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4016",
+          "sourceName": "CẢI XANH",
+          "page": 118,
+          "rawValue": "1.7"
+        },
+        "fatG": {
+          "value": 0.2,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4016",
+          "sourceName": "CẢI XANH",
+          "page": 118,
+          "rawValue": "0.2"
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "Name-reviewed food-form proxy; exact cultivar/species/preparation may differ.",
+          "sourceCode": "4016",
+          "sourceName": "CẢI XANH",
+          "page": 118,
+          "rawValue": "0"
+        }
+      }
+    },
+    {
+      "sourceName": "Mì chính",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 0,
+          "referenceId": "JECFA_MSG",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "PURE_MSG_COMPOSITION_ASSUMPTION: pure monosodium glutamate salt contains no carbohydrate polymer/fibre/cholesterol; source assumed pure MSG, not seasoning blend."
+        },
+        "fiberG": {
+          "value": 0,
+          "referenceId": "JECFA_MSG",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "PURE_MSG_COMPOSITION_ASSUMPTION: pure monosodium glutamate salt contains no carbohydrate polymer/fibre/cholesterol; source assumed pure MSG, not seasoning blend."
+        },
+        "cholesterolMg": {
+          "value": 0,
+          "referenceId": "JECFA_MSG",
+          "method": "EXPLICIT_INGREDIENT_PROXY_ESTIMATE",
+          "note": "PURE_MSG_COMPOSITION_ASSUMPTION: pure monosodium glutamate salt contains no carbohydrate polymer/fibre/cholesterol; source assumed pure MSG, not seasoning blend."
+        }
+      }
+    },
+    {
+      "sourceName": "Cam",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 8.3,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "5002",
+          "sourceName": "CAM",
+          "sourceNameEn": "Orange",
+          "page": 232,
+          "rawValue": "8.3",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh orange; portion edible fraction remains uncertain."
+        },
+        "fiberG": {
+          "value": 1.4,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "5002",
+          "sourceName": "CAM",
+          "sourceNameEn": "Orange",
+          "page": 232,
+          "rawValue": "1.4",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Fresh orange; portion edible fraction remains uncertain."
+        },
+        "proteinG": {
+          "value": 0.9,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "5002",
+          "sourceName": "CAM",
+          "sourceNameEn": "Orange",
+          "page": 232,
+          "rawValue": "0.9",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh orange; portion edible fraction remains uncertain."
+        },
+        "fatG": {
+          "value": 0.1,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "5002",
+          "sourceName": "CAM",
+          "sourceNameEn": "Orange",
+          "page": 232,
+          "rawValue": "0.1",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh orange; portion edible fraction remains uncertain."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "5002",
+          "sourceName": "CAM",
+          "sourceNameEn": "Orange",
+          "page": 232,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh orange; portion edible fraction remains uncertain."
+        }
+      }
+    },
+    {
+      "sourceName": "Táo tây",
+      "nutrients": {
+        "totalCarbG": {
+          "value": 11.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "5051",
+          "sourceName": "TÁO TÂY",
+          "sourceNameEn": "Apple, common, domestic",
+          "page": 281,
+          "rawValue": "11.0",
+          "sourceNutrient": "Glucid (Carbohydrate)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh apple; skin/edible fraction remains uncertain."
+        },
+        "fiberG": {
+          "value": 0.6,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "5051",
+          "sourceName": "TÁO TÂY",
+          "sourceNameEn": "Apple, common, domestic",
+          "page": 281,
+          "rawValue": "0.6",
+          "sourceNutrient": "Celluloza (Fiber)",
+          "method": "FCT_CELLULOSE_PROXY_ESTIMATE",
+          "note": "Fresh apple; skin/edible fraction remains uncertain."
+        },
+        "proteinG": {
+          "value": 0.5,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "5051",
+          "sourceName": "TÁO TÂY",
+          "sourceNameEn": "Apple, common, domestic",
+          "page": 281,
+          "rawValue": "0.5",
+          "sourceNutrient": "Protein",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh apple; skin/edible fraction remains uncertain."
+        },
+        "fatG": {
+          "value": 0.2,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "5051",
+          "sourceName": "TÁO TÂY",
+          "sourceNameEn": "Apple, common, domestic",
+          "page": 281,
+          "rawValue": "0.2",
+          "sourceNutrient": "Lipid (Fat)",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh apple; skin/edible fraction remains uncertain."
+        },
+        "cholesterolMg": {
+          "value": 0.0,
+          "referenceId": "NIN_FCT2007",
+          "sourceCode": "5051",
+          "sourceName": "TÁO TÂY",
+          "sourceNameEn": "Apple, common, domestic",
+          "page": 281,
+          "rawValue": "0",
+          "sourceNutrient": "Cholesterol",
+          "method": "FCT2007_NAME_VERIFIED_INGREDIENT_PROXY",
+          "note": "Fresh apple; skin/edible fraction remains uncertain."
+        }
+      }
+    }
+  ]
+}

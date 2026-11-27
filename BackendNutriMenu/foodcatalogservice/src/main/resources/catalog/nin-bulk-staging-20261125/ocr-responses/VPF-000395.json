@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000395",
+  "imageSha256": "3994cce34489ba81ee4cd5b4fd0617a0f8f482f43d4ce1e2f5b3c0c38f1a12e6",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "90.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Váng sữa Monte",
+      "amountSourceText": "55g",
+      "numericQuantity": 55.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

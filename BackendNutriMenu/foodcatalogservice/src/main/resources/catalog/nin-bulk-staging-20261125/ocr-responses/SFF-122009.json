@@ -1,0 +1,27 @@
+{
+  "code": "SFF-122009",
+  "imageSha256": "eb17a59fa4d647ae0c6ddf281192625e001f40aff07be1d65fac114881ea7571",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "217.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Quả cóc",
+      "amountSourceText": "Quả cóc/Ambarella",
+      "numericQuantity": 350.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột muối ớt",
+      "amountSourceText": "Bột muối ớt/Chili powder",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

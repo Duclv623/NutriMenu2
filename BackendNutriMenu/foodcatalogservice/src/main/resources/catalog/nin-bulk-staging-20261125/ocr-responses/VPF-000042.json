@@ -1,0 +1,43 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "159kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cá ngừ",
+      "amountSourceText": "170g",
+      "numericQuantity": 170,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dứa",
+      "amountSourceText": "30g",
+      "numericQuantity": 30,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá",
+      "amountSourceText": "5g",
+      "numericQuantity": 5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mắm",
+      "amountSourceText": "5g",
+      "numericQuantity": 5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000042",
+  "imageSha256": "0559e18ff8f33615a247ed106ac0f3b5e22a2ae68c78d72a89fab53ef6558ac3",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

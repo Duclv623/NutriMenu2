@@ -1,0 +1,43 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "565kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cá nục",
+      "amountSourceText": "350g",
+      "numericQuantity": 350,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường",
+      "amountSourceText": "10g",
+      "numericQuantity": 10,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột canh",
+      "amountSourceText": "2,5g",
+      "numericQuantity": 2.5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "10g",
+      "numericQuantity": 10,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000043",
+  "imageSha256": "12af11f68472e54af572599a99082921f7569314ffc087546b723dbdb67eb30b",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

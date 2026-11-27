@@ -1,0 +1,91 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "297.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Dưa lưới",
+      "amountSourceText": "61.0",
+      "numericQuantity": 61.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Xoài chín",
+      "amountSourceText": "38.0",
+      "numericQuantity": 38.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chín",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đu đủ chín",
+      "amountSourceText": "72.0",
+      "numericQuantity": 72.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chín",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mít dai",
+      "amountSourceText": "45.0",
+      "numericQuantity": 45.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nhãn",
+      "amountSourceText": "21.0",
+      "numericQuantity": 21.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dâu tây",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Quả bơ",
+      "amountSourceText": "19.0",
+      "numericQuantity": 19.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Vú sữa",
+      "amountSourceText": "25.0",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sữa đặc",
+      "amountSourceText": "43.0",
+      "numericQuantity": 43.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước cốt dừa",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-113021",
+  "imageSha256": "9d13a06882dad566faa9d54875ece6c9ece6b7b317ff6afaedf2cbff2c417905",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

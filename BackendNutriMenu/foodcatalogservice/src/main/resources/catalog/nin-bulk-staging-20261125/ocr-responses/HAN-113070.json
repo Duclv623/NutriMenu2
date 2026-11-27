@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "287.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Đùi gà chiên xù",
+      "amountSourceText": "85.0",
+      "numericQuantity": 85.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên xù",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước sốt cà chua",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương ớt",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-113070",
+  "imageSha256": "4181593553f79ddb98d150e2eef4d16ec745b49c7851e5afbc9917b5b18a481c",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

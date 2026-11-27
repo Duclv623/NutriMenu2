@@ -1,0 +1,1660 @@
+{
+  "generatedAt": "2026-11-24T01:56:32.729524+00:00",
+  "sourceDishCount": 40,
+  "downloadedImages": 40,
+  "imageExtractedRecipes": 40,
+  "uniqueIngredients": 88,
+  "activeImportReadyCount": 0,
+  "sourcePoolImages": 49,
+  "sourcePoolExtractedRecipes": 41,
+  "selectedRecipesWithUnknownGramAmounts": [
+    "NIN_REAL_VPF_000009",
+    "NIN_REAL_VPF_000010",
+    "NIN_REAL_VPF_000011",
+    "NIN_REAL_VPF_000012"
+  ],
+  "sourceImagesWithoutIngredientLists": [
+    "VPF-000001",
+    "VPF-000004",
+    "VPF-000179",
+    "VPF-000243",
+    "VPF-000278",
+    "VPF-000298",
+    "VPF-000309",
+    "VPF-000310"
+  ],
+  "qaSeedUnchangedSha256": "333171d3d46a7f08aa43a4fd1c6fe79ff8fa9e17441d211217ec414598b3511a",
+  "missingSourceFieldDishCounts": {
+    "cholesterolMg": 16,
+    "saturatedFatG": 40,
+    "purineMg": 40,
+    "estimatedGi": 40,
+    "netCarbG": 40,
+    "glycemicLoad": 40,
+    "fiberG": 12,
+    "potassiumMg": 1,
+    "totalCarbG": 3,
+    "fatG": 6
+  },
+  "warning": "Pending data only. Do not replace the active QA seed or apply this incomplete candidate. No clinical completeness claimed.",
+  "dishes": [
+    {
+      "code": "NIN_REAL_VPF_000007",
+      "sourceCode": "VPF-000007",
+      "ingredientCount": 2,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 336,
+        "proteinG": 8.7,
+        "fatG": 5.7,
+        "totalCarbG": 62.2,
+        "fiberG": 1.2,
+        "sodiumMg": 392,
+        "potassiumMg": 235,
+        "cholesterolMg": null,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "cholesterolMg",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Muối vừng: missing ingredientGroup/giValue",
+        "Cooking method requires source/manual classification",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000008",
+      "sourceCode": "VPF-000008",
+      "ingredientCount": 10,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 291,
+        "proteinG": 18,
+        "fatG": 6.3,
+        "totalCarbG": 40.1,
+        "fiberG": 2.1,
+        "sodiumMg": 713.4,
+        "potassiumMg": 473.3,
+        "cholesterolMg": null,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "cholesterolMg",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Thịt hến: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Bì lợn rán: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Lạc rang dầu: missing ingredientGroup/proteinG/giValue",
+        "Khế: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Hoa chuối: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Dọc mùng: missing fatG/giValue",
+        "Giá đỗ: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Nước luộc hến: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Bột canh: missing ingredientGroup/fiberG/fatG/giValue",
+        "Cooking method requires source/manual classification",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000009",
+      "sourceCode": "VPF-000009",
+      "ingredientCount": 9,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 623,
+        "proteinG": 19.9,
+        "fatG": 21.9,
+        "totalCarbG": 86.6,
+        "fiberG": 1.5,
+        "sodiumMg": 1295,
+        "potassiumMg": 397,
+        "cholesterolMg": 280,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Giò lụa: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Trứng vịt: missing ingredientGroup/fiberG/giValue",
+        "Dưa cải bẹ: missing ingredientGroup/fatG/giValue",
+        "Mỡ: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Bột canh: missing ingredientGroup/fiberG/fatG/giValue",
+        "Ingredient grams unresolved: Muối trong dưa cải bẹ*",
+        "Muối trong dưa cải bẹ*: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooking method requires source/manual classification",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000010",
+      "sourceCode": "VPF-000010",
+      "ingredientCount": 8,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 759,
+        "proteinG": 29.9,
+        "fatG": 26.3,
+        "totalCarbG": 100.7,
+        "fiberG": 3.7,
+        "sodiumMg": 2059,
+        "potassiumMg": 893,
+        "cholesterolMg": 44,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Thịt nạc vai: missing totalCarbG/fiberG/giValue",
+        "Cải xanh: missing giValue",
+        "Đậu phụ: missing giValue",
+        "Dầu TV: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Ingredient grams unresolved: Nước canh",
+        "Nước canh: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooking method requires source/manual classification",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000011",
+      "sourceCode": "VPF-000011",
+      "ingredientCount": 7,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 650,
+        "proteinG": 25.1,
+        "fatG": 18.9,
+        "totalCarbG": 94.9,
+        "fiberG": 4.3,
+        "sodiumMg": 1892,
+        "potassiumMg": 851,
+        "cholesterolMg": 47,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Thịt lợn nạc vai: missing totalCarbG/fiberG/giValue",
+        "Cải cúc: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Su hào: missing giValue",
+        "Dầu TV: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Ingredient grams unresolved: Nước canh",
+        "Nước canh: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooking method requires source/manual classification",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000012",
+      "sourceCode": "VPF-000012",
+      "ingredientCount": 8,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 682,
+        "proteinG": 26,
+        "fatG": 24,
+        "totalCarbG": 90,
+        "fiberG": 3,
+        "sodiumMg": 2732,
+        "potassiumMg": 628,
+        "cholesterolMg": 49,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Dưa cải bẹ: missing ingredientGroup/fatG/giValue",
+        "Đậu phụ: missing giValue",
+        "Cải cúc: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Ingredient grams unresolved: Nước canh",
+        "Nước canh: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Dầu TV: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Ingredient grams unresolved: Gia vị*",
+        "Gia vị*: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooking method requires source/manual classification",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000013",
+      "sourceCode": "VPF-000013",
+      "ingredientCount": 4,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 616,
+        "proteinG": 24.5,
+        "fatG": 16.2,
+        "totalCarbG": 93,
+        "fiberG": 0.8,
+        "sodiumMg": 63,
+        "potassiumMg": 549,
+        "cholesterolMg": 55.25,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Sườn lợn (cả xương): missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Dưa chuột: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooking method requires source/manual classification",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000014",
+      "sourceCode": "VPF-000014",
+      "ingredientCount": 3,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 42,
+        "proteinG": 1.7,
+        "fatG": 1.5,
+        "totalCarbG": 5.6,
+        "fiberG": 0.3,
+        "sodiumMg": 52.9,
+        "potassiumMg": 23.9,
+        "cholesterolMg": 18.3,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Gạo tẻ máy: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Phomai: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Rong biển: missing ingredientGroup/fiberG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000015",
+      "sourceCode": "VPF-000015",
+      "ingredientCount": 8,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 54,
+        "proteinG": 2.7,
+        "fatG": 1.2,
+        "totalCarbG": 8.2,
+        "fiberG": null,
+        "sodiumMg": 41.8,
+        "potassiumMg": 50.2,
+        "cholesterolMg": 12.9,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "fiberG",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Phomai: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Thịt cua: missing ingredientGroup/fiberG/giValue",
+        "Dưa chuột: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Nấm: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Rau cải: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cá ngừ: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Rong biển: missing ingredientGroup/fiberG/giValue",
+        "Cooking method requires source/manual classification",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000016",
+      "sourceCode": "VPF-000016",
+      "ingredientCount": 3,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 45,
+        "proteinG": 1.8,
+        "fatG": 2.4,
+        "totalCarbG": 4,
+        "fiberG": 0.02,
+        "sodiumMg": 83.3,
+        "potassiumMg": null,
+        "cholesterolMg": null,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "potassiumMg",
+        "cholesterolMg",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Xúc xích: missing ingredientGroup/totalCarbG/fiberG/giValue",
+        "Rong biển: missing ingredientGroup/fiberG/giValue",
+        "Cooking method requires source/manual classification",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000018",
+      "sourceCode": "VPF-000018",
+      "ingredientCount": 4,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 88,
+        "proteinG": 5.4,
+        "fatG": 5.4,
+        "totalCarbG": 4.6,
+        "fiberG": 1.5,
+        "sodiumMg": 452.6,
+        "potassiumMg": 265.7,
+        "cholesterolMg": 33.4,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Bầu: missing giValue",
+        "Dầu TV: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000020",
+      "sourceCode": "VPF-000020",
+      "ingredientCount": 4,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 176,
+        "proteinG": 10.3,
+        "fatG": 8.7,
+        "totalCarbG": 14,
+        "fiberG": 1.8,
+        "sodiumMg": 644,
+        "potassiumMg": 1041.8,
+        "cholesterolMg": 33.5,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Bí ngô: missing giValue",
+        "Thịt lợn nạc: missing totalCarbG/fiberG/giValue",
+        "Dầu TV: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000021",
+      "sourceCode": "VPF-000021",
+      "ingredientCount": 12,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 294,
+        "proteinG": 34.6,
+        "fatG": 14.8,
+        "totalCarbG": 5.6,
+        "fiberG": 1.36,
+        "sodiumMg": 1754.7,
+        "potassiumMg": 244.2,
+        "cholesterolMg": null,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "cholesterolMg",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Cá lóc (cả xương): missing totalCarbG/fiberG/giValue",
+        "Giá: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Dọc mùng: missing fatG/giValue",
+        "Dứa: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Rau mùi tàu: missing giValue",
+        "Dầu TV: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Hành củ: missing giValue",
+        "Sấu: missing fiberG/fatG/giValue",
+        "Hạt nêm: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Bột canh: missing ingredientGroup/fiberG/fatG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000025",
+      "sourceCode": "VPF-000025",
+      "ingredientCount": 3,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 48,
+        "proteinG": 5.9,
+        "fatG": 1.4,
+        "totalCarbG": 3,
+        "fiberG": 2.2,
+        "sodiumMg": 571.6,
+        "potassiumMg": 323,
+        "cholesterolMg": 12,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Cải xanh: missing giValue",
+        "Thịt nạc băm: missing totalCarbG/fiberG/giValue",
+        "Hạt nêm: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000027",
+      "sourceCode": "VPF-000027",
+      "ingredientCount": 5,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 228,
+        "proteinG": 26.4,
+        "fatG": 11.6,
+        "totalCarbG": 4.5,
+        "fiberG": 1.2,
+        "sodiumMg": 420.1,
+        "potassiumMg": 300.9,
+        "cholesterolMg": 30,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Đậu phụ: missing giValue",
+        "Thịt nạc băm: missing totalCarbG/fiberG/giValue",
+        "Bột canh: missing ingredientGroup/fiberG/fatG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000033",
+      "sourceCode": "VPF-000033",
+      "ingredientCount": 4,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 114,
+        "proteinG": 6,
+        "fatG": 9.3,
+        "totalCarbG": 1.7,
+        "fiberG": 1.3,
+        "sodiumMg": 413,
+        "potassiumMg": 2857,
+        "cholesterolMg": 13.6,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Rau ngót: missing fatG/giValue",
+        "Thịt lợn nạc vai: missing totalCarbG/fiberG/giValue",
+        "Dầu TV: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000037",
+      "sourceCode": "VPF-000037",
+      "ingredientCount": 7,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 88,
+        "proteinG": 8.6,
+        "fatG": 1.8,
+        "totalCarbG": 9.5,
+        "fiberG": 1.5,
+        "sodiumMg": 352.9,
+        "potassiumMg": 317.6,
+        "cholesterolMg": 79,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Trai (cả vỏ): missing fiberG/giValue",
+        "Hành khô: missing ingredientGroup/fatG/giValue",
+        "Rau răm: missing fatG/giValue",
+        "Thì là: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Rau mùi tàu: missing giValue",
+        "Bột nêm: missing ingredientGroup/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000039",
+      "sourceCode": "VPF-000039",
+      "ingredientCount": 10,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 110,
+        "proteinG": 5.6,
+        "fatG": 5.3,
+        "totalCarbG": 10,
+        "fiberG": 0.3,
+        "sodiumMg": 534.1,
+        "potassiumMg": 103.5,
+        "cholesterolMg": null,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "cholesterolMg",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Cá bống (nguyên con): missing totalCarbG/fiberG/giValue",
+        "Tương: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Nước hàng: missing ingredientGroup/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Bột canh: missing ingredientGroup/fiberG/fatG/giValue",
+        "Tiêu: missing giValue",
+        "Ớt: missing fiberG/giValue",
+        "Giềng: missing fatG/giValue",
+        "Dầu TV: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000049",
+      "sourceCode": "VPF-000049",
+      "ingredientCount": 5,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 452,
+        "proteinG": 30.8,
+        "fatG": 35.9,
+        "totalCarbG": 2,
+        "fiberG": 0.8,
+        "sodiumMg": 837.6,
+        "potassiumMg": 476.6,
+        "cholesterolMg": 54.4,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Đậu phụ: missing giValue",
+        "Thịt nạc vai: missing totalCarbG/fiberG/giValue",
+        "Dầu TV: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Gia vị: missing ingredientGroup/fiberG/fatG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000056",
+      "sourceCode": "VPF-000056",
+      "ingredientCount": 4,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 260,
+        "proteinG": 16.5,
+        "fatG": 21.5,
+        "totalCarbG": null,
+        "fiberG": null,
+        "sodiumMg": 1193,
+        "potassiumMg": 285,
+        "cholesterolMg": 68,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "totalCarbG",
+        "fiberG",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000057",
+      "sourceCode": "VPF-000057",
+      "ingredientCount": 5,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 473,
+        "proteinG": 26.3,
+        "fatG": 36.3,
+        "totalCarbG": 10.1,
+        "fiberG": null,
+        "sodiumMg": 912,
+        "potassiumMg": 408,
+        "cholesterolMg": 504,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "fiberG",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Trứng cút: missing fiberG/giValue",
+        "Dầu TV: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Bột canh: missing ingredientGroup/fiberG/fatG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000058",
+      "sourceCode": "VPF-000058",
+      "ingredientCount": 3,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 98,
+        "proteinG": 7.5,
+        "fatG": 7.1,
+        "totalCarbG": 1.1,
+        "fiberG": 0.2,
+        "sodiumMg": 415,
+        "potassiumMg": 149,
+        "cholesterolMg": 26,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Thịt lợn nạc vai: missing totalCarbG/fiberG/giValue",
+        "Mắm: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooking method requires source/manual classification",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000071",
+      "sourceCode": "VPF-000071",
+      "ingredientCount": 1,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 58,
+        "proteinG": 4,
+        "fatG": null,
+        "totalCarbG": 10.6,
+        "fiberG": 0.8,
+        "sodiumMg": 76.8,
+        "potassiumMg": 203.2,
+        "cholesterolMg": null,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "fatG",
+        "cholesterolMg",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000077",
+      "sourceCode": "VPF-000077",
+      "ingredientCount": 1,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 65,
+        "proteinG": 8.3,
+        "fatG": null,
+        "totalCarbG": 8,
+        "fiberG": 3,
+        "sodiumMg": 34.5,
+        "potassiumMg": 246,
+        "cholesterolMg": null,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "fatG",
+        "cholesterolMg",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Giá đỗ: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000084",
+      "sourceCode": "VPF-000084",
+      "ingredientCount": 1,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 58,
+        "proteinG": 3.6,
+        "fatG": null,
+        "totalCarbG": 10.8,
+        "fiberG": 3.2,
+        "sodiumMg": 56,
+        "potassiumMg": 380,
+        "cholesterolMg": null,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "fatG",
+        "cholesterolMg",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000086",
+      "sourceCode": "VPF-000086",
+      "ingredientCount": 1,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 78,
+        "proteinG": 10,
+        "fatG": 1.2,
+        "totalCarbG": 6.6,
+        "fiberG": 3.1,
+        "sodiumMg": 116.7,
+        "potassiumMg": 1031.2,
+        "cholesterolMg": null,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "cholesterolMg",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000088",
+      "sourceCode": "VPF-000088",
+      "ingredientCount": 1,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 28,
+        "proteinG": 4.2,
+        "fatG": null,
+        "totalCarbG": 2.7,
+        "fiberG": 2,
+        "sodiumMg": 20,
+        "potassiumMg": 365.8,
+        "cholesterolMg": null,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "fatG",
+        "cholesterolMg",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Rau ngót: missing fatG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000089",
+      "sourceCode": "VPF-000089",
+      "ingredientCount": 2,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 112,
+        "proteinG": 7.2,
+        "fatG": 0.4,
+        "totalCarbG": 20,
+        "fiberG": null,
+        "sodiumMg": 155.1,
+        "potassiumMg": 898.7,
+        "cholesterolMg": null,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "fiberG",
+        "cholesterolMg",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Su hào: missing giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000092",
+      "sourceCode": "VPF-000092",
+      "ingredientCount": 1,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 59,
+        "proteinG": 10.5,
+        "fatG": 1.9,
+        "totalCarbG": null,
+        "fiberG": null,
+        "sodiumMg": 42,
+        "potassiumMg": 189,
+        "cholesterolMg": 20,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "totalCarbG",
+        "fiberG",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Thịt bò bắp: missing totalCarbG/fiberG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000094",
+      "sourceCode": "VPF-000094",
+      "ingredientCount": 1,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 577,
+        "proteinG": 58.9,
+        "fatG": 38,
+        "totalCarbG": null,
+        "fiberG": null,
+        "sodiumMg": 203,
+        "potassiumMg": 548.1,
+        "cholesterolMg": 217.5,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "totalCarbG",
+        "fiberG",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Thịt gà (cả xương): missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000100",
+      "sourceCode": "VPF-000100",
+      "ingredientCount": 1,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 189,
+        "proteinG": 40.5,
+        "fatG": 2.1,
+        "totalCarbG": 2.1,
+        "fiberG": null,
+        "sodiumMg": 340,
+        "potassiumMg": 426,
+        "cholesterolMg": 350,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "fiberG",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000105",
+      "sourceCode": "VPF-000105",
+      "ingredientCount": 5,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 242,
+        "proteinG": 14.2,
+        "fatG": 19.5,
+        "totalCarbG": 1.9,
+        "fiberG": null,
+        "sodiumMg": 33.8,
+        "potassiumMg": 173.6,
+        "cholesterolMg": 57.6,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "fiberG",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Thịt gà (cả xương): missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Ngũ vị hương: missing ingredientGroup/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Ớt: missing fiberG/giValue",
+        "Dầu hào: missing ingredientGroup/fiberG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000117",
+      "sourceCode": "VPF-000117",
+      "ingredientCount": 5,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 511,
+        "proteinG": 45.8,
+        "fatG": 35.8,
+        "totalCarbG": 1.4,
+        "fiberG": null,
+        "sodiumMg": 1061,
+        "potassiumMg": 1315.6,
+        "cholesterolMg": null,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "fiberG",
+        "cholesterolMg",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Cá thu: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Dầu TV: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Thì là: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000144",
+      "sourceCode": "VPF-000144",
+      "ingredientCount": 4,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 105,
+        "proteinG": 16.5,
+        "fatG": 2.9,
+        "totalCarbG": 3.1,
+        "fiberG": null,
+        "sodiumMg": 337,
+        "potassiumMg": 319,
+        "cholesterolMg": 140,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "fiberG",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Thịt tôm: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Mắm: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Dầu TV: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooking method requires source/manual classification",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000146",
+      "sourceCode": "VPF-000146",
+      "ingredientCount": 3,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 282,
+        "proteinG": 10.7,
+        "fatG": 26.2,
+        "totalCarbG": 0.8,
+        "fiberG": null,
+        "sodiumMg": 119,
+        "potassiumMg": 184,
+        "cholesterolMg": 508,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "fiberG",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Trứng vịt: missing ingredientGroup/fiberG/giValue",
+        "Thịt lợn nạc vai: missing totalCarbG/fiberG/giValue",
+        "Dầu TV: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000155",
+      "sourceCode": "VPF-000155",
+      "ingredientCount": 3,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 66,
+        "proteinG": 0.2,
+        "fatG": 5,
+        "totalCarbG": 5.1,
+        "fiberG": 0.6,
+        "sodiumMg": 535.3,
+        "potassiumMg": 286,
+        "cholesterolMg": null,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "cholesterolMg",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Dầu TV: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Hạt nêm: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000174",
+      "sourceCode": "VPF-000174",
+      "ingredientCount": 4,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 216,
+        "proteinG": 14.3,
+        "fatG": 11.7,
+        "totalCarbG": 13.6,
+        "fiberG": 9.6,
+        "sodiumMg": 452.5,
+        "potassiumMg": 500,
+        "cholesterolMg": null,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "cholesterolMg",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Cải chíp: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Nấm: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Dầu TV: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000175",
+      "sourceCode": "VPF-000175",
+      "ingredientCount": 4,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 62,
+        "proteinG": 1.1,
+        "fatG": 5,
+        "totalCarbG": 3.1,
+        "fiberG": null,
+        "sodiumMg": 388.1,
+        "potassiumMg": 167.6,
+        "cholesterolMg": null,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "fiberG",
+        "cholesterolMg",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Rau cải ngọt: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Dầu TV: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Bột canh: missing ingredientGroup/fiberG/fatG/giValue",
+        "Mì chính: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000398",
+      "sourceCode": "VPF-000398",
+      "ingredientCount": 1,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 36,
+        "proteinG": 0.9,
+        "fatG": null,
+        "totalCarbG": 8.2,
+        "fiberG": 1.4,
+        "sodiumMg": 3.9,
+        "potassiumMg": 105.3,
+        "cholesterolMg": null,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "fatG",
+        "cholesterolMg",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Cam: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooking method requires source/manual classification",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000423",
+      "sourceCode": "VPF-000423",
+      "ingredientCount": 1,
+      "sourceImageAvailable": true,
+      "sourceNumericFieldsUnscaled": {
+        "caloriesKcal": 38,
+        "proteinG": 0.4,
+        "fatG": null,
+        "totalCarbG": 9,
+        "fiberG": 0.5,
+        "sodiumMg": 12,
+        "potassiumMg": 81.6,
+        "cholesterolMg": 0.16,
+        "saturatedFatG": null,
+        "purineMg": null,
+        "estimatedGi": null,
+        "netCarbG": null,
+        "glycemicLoad": null
+      },
+      "sourceNumericFieldsMissing": [
+        "fatG",
+        "saturatedFatG",
+        "purineMg",
+        "estimatedGi",
+        "netCarbG",
+        "glycemicLoad"
+      ],
+      "imageEnergyMatchesSource": true,
+      "otherSourceNutrientServingBasisVerified": false,
+      "cookedServingWeightVerified": false,
+      "activeImportReady": false,
+      "blockers": [
+        "Táo tây: missing ingredientGroup/caloriesPer100g/totalCarbG/fiberG/proteinG/fatG/giValue",
+        "Cooking method requires source/manual classification",
+        "Cooked serving mass not stated in source; no raw-sum or 100g substitution allowed",
+        "Per-dish complete nutrition/GI/purine evidence not yet approved for unchanged DB requirements"
+      ]
+    }
+  ]
+}

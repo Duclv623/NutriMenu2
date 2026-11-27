@@ -1,0 +1,59 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "449kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cá trôi (cả xương)",
+      "amountSourceText": "260g",
+      "numericQuantity": 260,
+      "unitSourceText": "g",
+      "preparationSourceText": "cả xương",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà chua",
+      "amountSourceText": "130g",
+      "numericQuantity": 130,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá",
+      "amountSourceText": "5g",
+      "numericQuantity": 5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mì chính",
+      "amountSourceText": "2g",
+      "numericQuantity": 2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột canh",
+      "amountSourceText": "3g",
+      "numericQuantity": 3,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "20g",
+      "numericQuantity": 20,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000119",
+  "imageSha256": "03cebbf20a1b163b636fdece191b85e9d5592f584fe2287ad08ecf873a42bf91",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

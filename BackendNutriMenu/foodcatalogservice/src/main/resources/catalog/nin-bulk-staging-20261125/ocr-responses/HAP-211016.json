@@ -1,0 +1,19 @@
+{
+  "code": "HAP-211016",
+  "imageSha256": "9b54f72c2116b3582351022fb3e040ba96993cd2bde2cda1e9ff365ccefa749d",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Hàu nướng",
+      "amountSourceText": "309.0",
+      "numericQuantity": 309.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nướng",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "152.1 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

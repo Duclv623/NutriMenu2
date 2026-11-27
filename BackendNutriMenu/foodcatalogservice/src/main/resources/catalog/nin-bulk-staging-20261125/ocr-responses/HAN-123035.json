@@ -1,0 +1,45 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "253.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cháo trắng",
+      "amountSourceText": "408.0",
+      "numericQuantity": 408.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trai xào",
+      "amountSourceText": "34.0",
+      "numericQuantity": 34.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau răm",
+      "amountSourceText": "13.0",
+      "numericQuantity": 13.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành phi",
+      "amountSourceText": "4.0",
+      "numericQuantity": 4.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table energy sum (261.0 Kcal) does not match imageEnergyText (253.7 Kcal)"
+  ],
+  "code": "HAN-123035",
+  "imageSha256": "59915abebdf13d5bd41ebfe5054c8433462438aec03a10dbdd65fa7bbb9a29f7",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

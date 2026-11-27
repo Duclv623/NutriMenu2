@@ -1,0 +1,51 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "728.6 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh phở/Pho (rice noodle)",
+      "amountSourceText": "293.0",
+      "numericQuantity": 293.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải xanh luộc/Boil leaf mustard",
+      "amountSourceText": "50.0",
+      "numericQuantity": 50.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc/Boil",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò xào cần tỏi/Stir-fried beef with Water celery and garlic",
+      "amountSourceText": "186.0",
+      "numericQuantity": 186.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào/Stir-fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành tây xào/Stir-fried Onion",
+      "amountSourceText": "31.0",
+      "numericQuantity": 31.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào/Stir-fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột/Cucumber",
+      "amountSourceText": "58.0",
+      "numericQuantity": 58.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-211112",
+  "imageSha256": "a7848da7db5d2b1d8350fdc0d20ed6b85b3bc854c6e89da19a6c61a601122c8f",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

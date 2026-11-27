@@ -1,0 +1,91 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "664.6 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ/Rice",
+      "amountSourceText": "195.0",
+      "numericQuantity": 195.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu phụ rán/Fried tofu",
+      "amountSourceText": "29.0",
+      "numericQuantity": 29.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả lá lốt/Pork rolled with lolot leaves",
+      "amountSourceText": "17.0",
+      "numericQuantity": 17.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giá đậu xanh xào/Stir-fried mungbean sprout",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải ngọt xào/Stir-fried Mustard Greens",
+      "amountSourceText": "53.0",
+      "numericQuantity": 53.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sườn lợn rán/Fried pork-ribs",
+      "amountSourceText": "33.0",
+      "numericQuantity": 33.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt ba chỉ luộc/Boiled pork belly",
+      "amountSourceText": "38.0",
+      "numericQuantity": 38.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa cải, cần, cà rốt muối/Pickled vegetables (mustard greens, water celery, carrot)",
+      "amountSourceText": "60.0",
+      "numericQuantity": 60.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "muối",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Canh rau cải/Mustard Greens soup",
+      "amountSourceText": "450.0",
+      "numericQuantity": 450.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước mắm cá ớt/Fish sauces with chili",
+      "amountSourceText": "14.0",
+      "numericQuantity": 14.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-213034",
+  "imageSha256": "039db083cf269b46649d35fd6e4d72d3f1ab5d733f8fa709f2f499959e7ff0fe",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

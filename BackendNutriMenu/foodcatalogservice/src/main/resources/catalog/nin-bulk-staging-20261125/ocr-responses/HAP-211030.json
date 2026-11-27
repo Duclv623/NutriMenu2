@@ -1,0 +1,77 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "704.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ",
+      "amountSourceText": "292.0",
+      "numericQuantity": 292.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt lợn ba chỉ quay",
+      "amountSourceText": "22.0",
+      "numericQuantity": 22.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "quay",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt gà rang",
+      "amountSourceText": "27.5",
+      "numericQuantity": 27.5,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt móng giò nấu giả cầy",
+      "amountSourceText": "16.7",
+      "numericQuantity": 16.7,
+      "unitSourceText": "g",
+      "preparationSourceText": "nấu giả cầy",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải bắp xào",
+      "amountSourceText": "87.0",
+      "numericQuantity": 87.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà rốt xào",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải xanh luộc",
+      "amountSourceText": "25.0",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước canh rau",
+      "amountSourceText": "171.0",
+      "numericQuantity": 171.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table ingredient energy sum is 704.7 Kcal vs imageEnergyText 704.8 Kcal (0.1 Kcal rounding difference)."
+  ],
+  "code": "HAP-211030",
+  "imageSha256": "0e8395244b5c2686e0638226c7ba88e00f8e1bd3423af3c0f2f67a95f401306b",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "222kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt lợn chín",
+      "amountSourceText": "100g",
+      "numericQuantity": 100,
+      "unitSourceText": "g",
+      "preparationSourceText": "chín",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường",
+      "amountSourceText": "5g",
+      "numericQuantity": 5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Muối",
+      "amountSourceText": "1g",
+      "numericQuantity": 1,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000109",
+  "imageSha256": "27adca9bea0434171084f4ac28881ed84e75d4ea35d37cab896f4344b0333e87",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

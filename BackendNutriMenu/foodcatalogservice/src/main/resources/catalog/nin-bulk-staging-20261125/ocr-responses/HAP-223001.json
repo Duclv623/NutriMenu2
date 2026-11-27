@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "278.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cá viên chiên đường phố",
+      "amountSourceText": "109.0",
+      "numericQuantity": 109.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAP-223001",
+  "imageSha256": "79959b29f3492ae56a88840dc7fd7b7e2ea33517b92bd704d7d02211c1d13ca7",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "452kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sườn lợn bỏ xương",
+      "amountSourceText": "150g",
+      "numericQuantity": 150,
+      "unitSourceText": "g",
+      "preparationSourceText": "bỏ xương",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "10g",
+      "numericQuantity": 10,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường kính",
+      "amountSourceText": "5g",
+      "numericQuantity": 5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000135",
+  "imageSha256": "f6122c6b3242814d3a66d6d200b4535f7a135c4e9e3fedd8428922aaac8c0f8a",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

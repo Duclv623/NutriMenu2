@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000384",
+  "imageSha256": "eac6f776d980b8efcfd981669c8a668841d8da54587b5ad21a0faa772aef0051",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "130kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa bột",
+      "amountSourceText": "36g",
+      "numericQuantity": 36.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

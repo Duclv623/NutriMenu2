@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "54kcal/đĩa",
+  "ingredients": [
+    {
+      "nameSourceText": "Nho ngọt",
+      "amountSourceText": "80g",
+      "numericQuantity": 80.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000416",
+  "imageSha256": "3de81be21f1b17c774f3c582726bd35bd5401ae14a08e5ba8547c4a9079b3b06",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

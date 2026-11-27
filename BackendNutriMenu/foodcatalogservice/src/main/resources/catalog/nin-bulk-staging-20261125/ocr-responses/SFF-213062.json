@@ -1,0 +1,19 @@
+{
+  "code": "SFF-213062",
+  "imageSha256": "05c89635acb73ade719c198cc5245ad9eb929bb8fbe9951ed98b103162ff1994",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa chua có đường/Sweetened yogurt",
+      "amountSourceText": "180.0",
+      "numericQuantity": 180.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

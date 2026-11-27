@@ -1,0 +1,43 @@
+{
+  "code": "HAP-223037",
+  "imageSha256": "6f3101244c355e062cebaf037df6c2f5774e137f92fd5338086418750e2518fc",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "351.9 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh đa",
+      "amountSourceText": "18.0",
+      "numericQuantity": 18.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Kê nấu",
+      "amountSourceText": "114.0",
+      "numericQuantity": 114.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nấu",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu xanh đỗ",
+      "amountSourceText": "29.0",
+      "numericQuantity": 29.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường kính",
+      "amountSourceText": "7.0",
+      "numericQuantity": 7.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

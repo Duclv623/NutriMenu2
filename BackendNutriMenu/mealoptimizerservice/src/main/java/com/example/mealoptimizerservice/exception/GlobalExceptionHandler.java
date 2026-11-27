@@ -13,6 +13,11 @@ import java.util.stream.Collectors;
 
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+    @ExceptionHandler(org.springframework.http.converter.HttpMessageNotReadableException.class)
+    public ResponseEntity<ErrorResponse> handleInvalidJson(org.springframework.http.converter.HttpMessageNotReadableException exception) {
+        return ResponseEntity.badRequest().body(new ErrorResponse(LocalDateTime.now(), 400, "INVALID_REQUEST",
+                "Dữ liệu tạo thực đơn không hợp lệ. Kiểm tra ngày theo định dạng yyyy-MM-dd, chế độ và các trường bắt buộc."));
+    }
 
     @ExceptionHandler({org.springframework.dao.OptimisticLockingFailureException.class,
             jakarta.persistence.OptimisticLockException.class})

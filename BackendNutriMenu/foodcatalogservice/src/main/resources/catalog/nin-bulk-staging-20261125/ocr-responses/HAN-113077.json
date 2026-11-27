@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "139.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Kem cốm",
+      "amountSourceText": "70.0",
+      "numericQuantity": 70.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-113077",
+  "imageSha256": "bff28aa6437082eb1a39d901b1ec765e76ef2c6b79bebc5a174b5a415fe730f6",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

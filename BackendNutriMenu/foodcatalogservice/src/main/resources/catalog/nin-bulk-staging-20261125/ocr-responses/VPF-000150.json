@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "798kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt ba chỉ",
+      "amountSourceText": "300g",
+      "numericQuantity": 300,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường",
+      "amountSourceText": "5g",
+      "numericQuantity": 5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Muối",
+      "amountSourceText": "1g",
+      "numericQuantity": 1,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000150",
+  "imageSha256": "b34fa76e5f5acd58b73bad77326822bcfa563a2392d228cf8465a806e8818777",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

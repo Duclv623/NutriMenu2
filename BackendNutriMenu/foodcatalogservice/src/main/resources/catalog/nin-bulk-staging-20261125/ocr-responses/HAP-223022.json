@@ -1,0 +1,27 @@
+{
+  "code": "HAP-223022",
+  "imageSha256": "947f2ba05242bef7d2cb18af7926c3523e703b8fa81e925f68f8949c37355345",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "340.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh dày",
+      "amountSourceText": "116.0",
+      "numericQuantity": 116.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giò lụa",
+      "amountSourceText": "54.0",
+      "numericQuantity": 54.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

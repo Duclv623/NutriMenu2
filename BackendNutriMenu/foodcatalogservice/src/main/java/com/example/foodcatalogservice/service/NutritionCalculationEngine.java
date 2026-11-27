@@ -4,13 +4,23 @@ import com.example.foodcatalogservice.dto.request.*;
 import com.example.foodcatalogservice.dto.response.*;
 import com.example.foodcatalogservice.entity.*;
 import com.example.foodcatalogservice.entity.enums.*;
+import com.example.foodcatalogservice.exception.BusinessRuleException;
+import com.example.foodcatalogservice.exception.ResourceNotFoundException;
 import com.example.foodcatalogservice.dao.repository.*;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.text.Normalizer;
+import java.time.LocalDateTime;
 import java.util.*;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
 
 @Service
 @RequiredArgsConstructor
@@ -19,6 +29,10 @@ public class NutritionCalculationEngine {
     private final YieldFactorRepository yieldFactorRepository;
 
     public void computeNutritionAndMedicalTags(Dish dish, List<DishIngredient> items) {
+        if (dish.getSourceRecordId() != null) {
+            throw new BusinessRuleException(HttpStatus.UNPROCESSABLE_ENTITY,
+                    "Món nguồn dùng tổng theo khẩu phần và bằng chứng riêng; không được ghi đè bằng tính lại công thức.");
+        }
         BigDecimal totalCookedWeight = BigDecimal.ZERO;
         BigDecimal totalCalories = BigDecimal.ZERO;
         BigDecimal totalCarb = BigDecimal.ZERO;
@@ -41,6 +55,13 @@ public class NutritionCalculationEngine {
 
         for (DishIngredient item : items) {
             Ingredient ing = item.getIngredient();
+            if (ing.getCaloriesPer100g() == null || ing.getTotalCarbG() == null || ing.getFiberG() == null
+                    || ing.getProteinG() == null || ing.getFatG() == null || ing.getGiValue() == null
+                    || ing.getSaturatedFatG() == null || ing.getSodiumMg() == null || ing.getPotassiumMg() == null
+                    || ing.getPurineMg() == null || ing.getCholesterolMg() == null || item.getRawWeightG() == null) {
+                throw new BusinessRuleException(HttpStatus.UNPROCESSABLE_ENTITY,
+                        "Nguyên liệu nguồn chưa đủ dữ liệu dinh dưỡng/gram để mô phỏng công thức.");
+            }
             BigDecimal rawG = item.getRawWeightG();
             BigDecimal ratio100 = rawG.divide(new BigDecimal("100.0"), 6, RoundingMode.HALF_UP);
 

@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000387",
+  "imageSha256": "59862b4bfb8856af40a21522516cd305302a6fcb58e6c16e0a4c453b206dddda",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "61Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa chua không đường TH True yogurt",
+      "amountSourceText": "100g",
+      "numericQuantity": 100.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

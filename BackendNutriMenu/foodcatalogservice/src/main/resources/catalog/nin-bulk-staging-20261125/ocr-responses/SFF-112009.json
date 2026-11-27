@@ -1,0 +1,43 @@
+{
+  "code": "SFF-112009",
+  "imageSha256": "795ad0fca3ba7b848c16a62ec290718da914cc9b3eaa898fb8ee33927e50110e",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "537.4 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh mỳ/Burger buns",
+      "amountSourceText": "58.0",
+      "numericQuantity": 58.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tôm tẩm bột chiên/Crispy fried shrimp",
+      "amountSourceText": "75.0",
+      "numericQuantity": 75.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau xà lách/Lettuce",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sốt mayonnaise/Mayonnaise",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

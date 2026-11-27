@@ -1,0 +1,19 @@
+{
+  "code": "HAN-122045",
+  "imageSha256": "b6ac59987f47a62ab0e2b0b3c30916ff9f960c4f0fe538a5fa752fb6fa80bc75",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Hạt dẻ luộc",
+      "amountSourceText": "71.4",
+      "numericQuantity": 71.4,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "159.3 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,72 +1,77 @@
-# NutriMenu
+# NutriMenu2
 
-## Applications
+Đã tích hợp commit `8eb7061` trên nhánh `main`. Hợp đồng hồ sơ, món và thực đơn cá nhân dùng các tên trường mới. Đổi món có kiểm tra hỗ trợ 0,5–12 suất theo quy tắc từng món. Xem [hợp đồng API](frontend/API_CONTRACT.md) và [nhật ký tích hợp trước đó](UPSTREAM-20261126.md).
 
-| Directory | Runtime | Default port | Responsibility |
-|---|---|---|---|
-| frontend | React / TypeScript / Vite | 5173 | Web UI |
-| BackendNutriMenu/gateway | Java 21 / Spring Cloud Gateway | 8080 | JWT verification and HTTP routing |
-| BackendNutriMenu/Userservice | Java 21 / Spring Boot | 8083 | JWT accounts, profiles and personal activity |
-| BackendNutriMenu/foodcatalogservice | Java 21 / Spring Boot | 8081 | Catalog, recipe nutrition |
-| BackendNutriMenu/mealoptimizerservice | Java 21 / Spring Boot / OR-Tools | 8082 | Plans and checked meal changes |
-| ai-service | Python / FastAPI / ChromaDB | 8000 | Nutrition RAG and real meal-plan context |
+Bản tích hợp dùng cấu trúc của repo nhóm, JWT do User Service Java cấp và Spring Cloud Gateway Java định tuyến. Mã nguồn được tích hợp tại `C:\NutriMenu2`; bản `C:\testda` chỉ được dùng để đọc và đối chiếu.
 
-No Eureka is required. Gateway does not run Python or store application state.
+| Thư mục | Công nghệ | Cổng | Trách nhiệm |
+|---|---|---:|---|
+| BackendNutriMenu/Userservice | Java 21, Spring Boot, PostgreSQL | 8083 | Đăng ký, JWT, hồ sơ, nhật ký, trạng thái mua sắm |
+| BackendNutriMenu/foodcatalogservice | Java 21, PostgreSQL | 8081 | Món NIN, thành phần, chất lượng nguồn, yêu thích |
+| BackendNutriMenu/mealoptimizerservice | Java 21, OR-Tools CP-SAT | 8082 | Sinh, lưu, tạo lại, đổi món có kiểm tra |
+| BackendNutriMenu/gateway | Spring Cloud Gateway | 8080 | Kiểm tra JWT, phân quyền và định tuyến |
+| ai-service | Python 3.12, FastAPI, ChromaDB, PostgreSQL | 8000 | RAG, ngữ cảnh thực đơn, hội thoại |
+| frontend/src/features | React, TypeScript, Vite | 5173 | Giao diện chia theo tính năng |
 
-## Setup
+## Chạy tại máy này
 
-Use Java 21, Maven (or included wrappers), Node 22.12+, Python 3.12 and PostgreSQL.
-Create databases: menufood_users, diabetes_food_catalog_db,
-diabetes_meal_optimizer_db, nutriguide.
-
-For local Java services, copy `BackendNutriMenu/.env.example` to `BackendNutriMenu/.env` and set `DB_PASSWORD` to your PostgreSQL password. Start each service from its module directory.
-
-User Service uses Flyway V1-V3; V3 adds workspace account IDs and UI state.
-Catalog and Optimizer initialize their tables/defaults. Do not point the integrated
-User Service at a database with the old, different V2 migration without a migration plan.
-
-Open a terminal in each Java application directory and run:
+Dừng các terminal đang chạy bản cũ để giải phóng các cổng trên. Kiểm tra mật khẩu PostgreSQL trong `BackendNutriMenu/.env` và DSN chatbot trong `ai-service/.env`.
 
 ```powershell
-.\mvnw.cmd spring-boot:run
+cd C:\NutriMenu2
+.\setup.ps1 -CreateDatabases -Build
+.\run-all.ps1
 ```
 
-No startup/test PowerShell scripts are required. No gateway .env or Python packages
-are required; override service addresses using environment variables if needed.
+Lệnh setup tạo thêm database còn thiếu, giữ database đang có và chuẩn bị khóa JWT lưu bền trong `.runtime/keys`. Lệnh build cần truy cập Maven Central để tải dependency JWT/Spring Cloud còn thiếu. Máy mới cần Java 21, Maven, Node 22.12+, Python 3.12, PostgreSQL; dùng thêm `-Install` để cài thư viện Python/Node và chuẩn bị tokenizer.
 
-In frontend: `npm ci`, then `npm run dev`. Its .env.local settings are:
+`run-all.ps1` chạy dịch vụ nền, ghi log vào `.runtime/<service>.log` và `<service>-error.log`. Nếu muốn mở 6 cửa sổ PowerShell riêng để xem log trực tiếp như bản cũ, dùng `.\run-all.ps1 -LaunchAll`. Lệnh chỉ báo đã khởi chạy tiến trình; cần kiểm tra sau khi dịch vụ khởi động xong:
 
-```dotenv
-VITE_API_MODE=api
-VITE_API_BASE_URL=/api
-VITE_RAG_BASE_URL=/api/chatbot
-VITE_RAG_ENABLED=true
+```powershell
+.\check-demo.ps1
 ```
 
-For chatbot, create a Python environment, install ai-service/requirements.lock.txt,
-copy ai-service/.env.example to ai-service/.env and configure POSTGRES_DSN (nutriguide),
-provider keys and corpus storage. Keep MEAL_SERVICE_MODE=http,
-GATEWAY_AUTH_URL=http://127.0.0.1:8083/api/internal/identity,
-MEAL_API_BASE_URL=http://127.0.0.1:8080/api/internal/.
-Start it with `python -m uvicorn rag_app.main:create_app --factory --host 127.0.0.1 --port 8000`
-from ai-service/. GATEWAY_SERVICE_KEY is no longer required for JWT introspection.
+Mở http://127.0.0.1:5173 và dùng thống nhất hostname này. Để dừng các tiến trình do lần chạy này tạo:
 
-Open http://127.0.0.1:5173. Use one hostname consistently for JWT document cookies.
-Configure JWT_PRIVATE_KEY_PATH/JWT_PUBLIC_KEY_PATH for persistent signing keys;
-development-generated JWTs expire when User Service restarts.
+```powershell
+.\stop-all.ps1
+```
 
-## Flow and limits
+Có thể chạy từng dịch vụ ở các terminal riêng bằng `run-service.ps1 users`, `catalog`, `optimizer`, `gateway`, `chatbot`, `frontend`.
 
-Frontend features call their own APIs through the gateway. Profile and activity go to User Service,
-foods and favorites to Catalog, and plans and meal logs to Optimizer. Each service resolves the
-authenticated account from the User Service JWT. Existing numeric account IDs, shopping and
-check-in data remain in the V3 table. New plans store the source profile version in Optimizer.
-Plans created on the earlier integration branch can still read their historical metadata from User Service.
+## Giữ liên kết dữ liệu tài khoản cũ
 
-Meal Planner supports daily, profile-based and seven-day generation, feasibility checks, item status, manual or solver-assisted swaps, and rebalancing. The supported plan template has four meals. Existing plan dates are protected from overwrite. Catalog includes custom recipes and dish comparison. Shopping and history read per-account optimizer reports. The gateway restricts administration routes to JWTs with the ADMIN role.
-Swap preview/apply uses Optimizer validation and signatures. Chat edits open the frontend
-meal editor; direct autonomous chat swaps are not enabled without full policy evidence.
-Knowledge answers require configured provider keys and an indexed corpus.
+Các migration V1/V2 của User Service khớp bản cũ; V3 thêm bảng ánh xạ tài khoản và trạng thái giao diện. Gateway Python cũ dùng một ánh xạ số khác. Cần chuyển ánh xạ trước lần đăng nhập đầu tiên trên bản mới để đọc đúng thực đơn, yêu thích và nhật ký đang có.
 
-See [gateway](BackendNutriMenu/gateway/README.md), [User Service](BackendNutriMenu/Userservice/README.md),
-[chatbot](ai-service/README.md), [frontend API contract](frontend/API_CONTRACT.md).
+Sau khi User Service chạy migration V3, kiểm tra cấu hình `LEGACY_GATEWAY_POSTGRES_DSN` và `LEGACY_GATEWAY_SCHEMA` trong `BackendNutriMenu/.env`, rồi chạy:
+
+```powershell
+.\ai-service\.venv\Scripts\python.exe scripts\migrate_legacy_accounts.py
+.\ai-service\.venv\Scripts\python.exe scripts\migrate_legacy_accounts.py --apply
+```
+
+Lệnh đầu chỉ đọc và thống kê. Lệnh thứ hai ghi trong một transaction ở database đích, giữ nguồn cũ, kiểm tra xung đột ID/trạng thái và dừng nếu có dữ liệu mới khác nhau. Không đọc danh tính từ `state.json` của bản Node. Chỉ chuyển các UUID đã có trong User Service. Việc chuyển này chưa chạy được trong môi trường kiểm thử bị chặn socket.
+
+## Dữ liệu và luồng đã ghép
+
+- Catalog `nin-bulk-20261126`: 1.023 món, 597 món đủ dữ liệu cho bộ sinh phổ thông; 426 món cần bổ sung hoặc đối chiếu. Có 1.023 ảnh cục bộ, 1.063 ánh xạ ảnh gồm cả mã lịch sử.
+- Chỉ mục RAG đã chuyển có 193 đoạn; 33 nguồn đã kiểm tra SHA-256. Chroma giữ corpus/vector, PostgreSQL giữ hội thoại theo tài khoản.
+- Yêu thích hỗ trợ thêm/bỏ và lưu qua Catalog; lịch sử vẫn đọc được món đã rời danh mục chọn mới.
+- Dashboard có khoảng 7/14/30 ngày, phân biệt kế hoạch với món đã ghi nhận ăn, cảnh báo và liên kết hành động.
+- Điều hướng dùng cache theo tài khoản trong bộ nhớ; tái sử dụng danh mục và dữ liệu đã tải, làm mới nền khi quá hạn. Nhóm món/bộ lọc và nhãn dị ứng hiển thị tiếng Việt.
+- Danh sách mua sắm theo thực đơn giữ lượng dạng chữ, đơn vị nguồn và cảnh báo phần còn thiếu; trạng thái đã mua lưu ở User Service.
+- Màn thực đơn cá nhân hỗ trợ tạo 1 ngày hoặc 7 ngày liên tiếp. Cả 7 ngày phải còn trống; ghi cả tuần trong một transaction, giữ cùng phiên bản hồ sơ. Các món có thể lặp giữa các ngày.
+- Tạo lại từng ngày cần ID, phiên bản và xác nhận; bộ tối ưu lưu revision trước khi thay thế thành công. Món khóa/đã ăn ngăn tạo lại. Đổi món cần preview và chữ ký để apply.
+- Chatbot đọc thực đơn sở hữu bởi JWT hiện tại. Yêu cầu chỉnh sửa mở trình đổi món để người dùng chọn và xác nhận.
+
+Giá trị dinh dưỡng hoặc định lượng chưa biết được giữ là `null`. Bộ NIN hiện có 0 món đủ bằng chứng cho chế độ bệnh lý do thiếu GI/GL; chọn rõ **Phổ thông / tham khảo** để thử bộ mới. Phạm vi này không phải xác nhận dùng cho điều trị.
+
+## Kiểm thử
+
+```powershell
+.\verify.ps1 -Offline
+```
+
+Kiểm tra Catalog, Optimizer/CP-SAT, frontend, dữ liệu/ảnh, collector và 136 ca RAG/JWT đã chọn. RAG mặc định dùng corpus đã xuất sau khi kiểm tra dấu vân tay nguồn; `-RebuildCorpus` xây lại từ tài liệu và cần tokenizer. `-AllJava` thêm build/test User Service và Gateway, cần đủ dependency; `-WithDatabases` bật các test khởi động Spring với PostgreSQL.
+
+Báo cáo chi tiết: [INTEGRATION-20261126.md](INTEGRATION-20261126.md). Các kiểm tra tự động đã đạt không thay thế nghiệm thu trên dịch vụ đang chạy.

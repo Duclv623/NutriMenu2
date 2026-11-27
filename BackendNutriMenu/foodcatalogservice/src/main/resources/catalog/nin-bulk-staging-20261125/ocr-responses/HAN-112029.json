@@ -1,0 +1,43 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "162.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Dầu hỗn hợp",
+      "amountSourceText": "2.1",
+      "numericQuantity": 2.1,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chân gà (183g)",
+      "amountSourceText": "27.5",
+      "numericQuantity": 27.5,
+      "unitSourceText": "g",
+      "preparationSourceText": "(183g)",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột",
+      "amountSourceText": "161.0",
+      "numericQuantity": 161.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước sốt",
+      "amountSourceText": "36.0",
+      "numericQuantity": 36.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-112029",
+  "imageSha256": "9627241f00d77fbc7ceae439e0a876311662ff5e22ddb72f248975ab4a83351c",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "180.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Kem vani",
+      "amountSourceText": "62.0",
+      "numericQuantity": 62.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ốc quế",
+      "amountSourceText": "13.0",
+      "numericQuantity": 13.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-113085",
+  "imageSha256": "095c3e98f608fc5bd9864bf0c8ad9bf3cccb1fd6656cc069e04bed54fc761cb7",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

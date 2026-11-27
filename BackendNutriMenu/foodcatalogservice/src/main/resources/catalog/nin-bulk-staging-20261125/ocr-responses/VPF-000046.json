@@ -1,0 +1,67 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "298kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Trạch (cả xương, bỏ đầu)",
+      "amountSourceText": "200g",
+      "numericQuantity": 200,
+      "unitSourceText": "g",
+      "preparationSourceText": "cả xương, bỏ đầu",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giềng",
+      "amountSourceText": "10g",
+      "numericQuantity": 10,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương",
+      "amountSourceText": "20g",
+      "numericQuantity": 20,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sả",
+      "amountSourceText": "10g",
+      "numericQuantity": 10,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Gừng",
+      "amountSourceText": "8g",
+      "numericQuantity": 8,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường",
+      "amountSourceText": "15g",
+      "numericQuantity": 15,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "5g",
+      "numericQuantity": 5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000046",
+  "imageSha256": "3fe1e65da84e453daf051b3fda8f710546ef1c8da22a412972fd7093c323ca89",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

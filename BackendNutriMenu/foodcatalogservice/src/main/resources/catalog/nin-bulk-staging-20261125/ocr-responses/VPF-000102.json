@@ -1,0 +1,67 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "428kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt bò bắp",
+      "amountSourceText": "300g",
+      "numericQuantity": 300,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành củ",
+      "amountSourceText": "10g",
+      "numericQuantity": 10,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tỏi",
+      "amountSourceText": "10g",
+      "numericQuantity": 10,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ngũ vị hương",
+      "amountSourceText": "2g",
+      "numericQuantity": 2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sả",
+      "amountSourceText": "10g",
+      "numericQuantity": 10,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt",
+      "amountSourceText": "1g",
+      "numericQuantity": 1,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương bần",
+      "amountSourceText": "40g",
+      "numericQuantity": 40,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000102",
+  "imageSha256": "981cde0ee566130c2ffb11870496b4e1b267cc041e7be6cdc788e05b5a794c7c",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

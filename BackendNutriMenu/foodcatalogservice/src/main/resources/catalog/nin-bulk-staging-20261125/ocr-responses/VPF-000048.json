@@ -1,0 +1,51 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "194kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Đậu phụ non",
+      "amountSourceText": "120g",
+      "numericQuantity": 120,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nấm hương tươi",
+      "amountSourceText": "60g",
+      "numericQuantity": 60,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt nạc băm",
+      "amountSourceText": "30g",
+      "numericQuantity": 30,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột canh",
+      "amountSourceText": "2g",
+      "numericQuantity": 2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường",
+      "amountSourceText": "3g",
+      "numericQuantity": 3,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000048",
+  "imageSha256": "796327ec10c154ae6c5383e4309c79f7db305b1b1028e84aaae90f5dabc499d8",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

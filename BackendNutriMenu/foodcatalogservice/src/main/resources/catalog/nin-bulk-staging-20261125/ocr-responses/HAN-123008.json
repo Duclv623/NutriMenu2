@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "229.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cháo đậu đỗ",
+      "amountSourceText": "495.0",
+      "numericQuantity": 495.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-123008",
+  "imageSha256": "6ec41885373f2ad13ca555897a3a51eb5bd075e1d7dd19d53c7b5dfd4b369462",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

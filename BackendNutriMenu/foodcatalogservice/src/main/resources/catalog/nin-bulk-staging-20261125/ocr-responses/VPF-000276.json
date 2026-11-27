@@ -1,0 +1,12 @@
+{
+  "ingredientListStatus": "ABSENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "47kcal/cái",
+  "ingredients": [],
+  "uncertainties": [
+    "Badge states '47kcal/cái' (per roll; 5 rolls shown on plate) whereas apiEnergy is 47 without unit."
+  ],
+  "code": "VPF-000276",
+  "imageSha256": "75d64f125ff3c1f73e6de0e2fb516d00903861e08fad8eb8026aa7d54eaa1faf",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

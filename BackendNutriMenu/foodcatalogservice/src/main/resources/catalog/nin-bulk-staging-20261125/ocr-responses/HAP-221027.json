@@ -1,0 +1,19 @@
+{
+  "code": "HAP-221027",
+  "imageSha256": "70cd3153e15cbfac8fb97703c33d8aeb6a2f69ed2b52fd6d0d35c18db0a8bd0e",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "301.4 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Ngô nếp luộc",
+      "amountSourceText": "Ngô nếp luộc",
+      "numericQuantity": 175.5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

@@ -1,0 +1,83 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "588kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Chuối xanh",
+      "amountSourceText": "100g",
+      "numericQuantity": 100,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cá mè (cả xương)",
+      "amountSourceText": "180g",
+      "numericQuantity": 180,
+      "unitSourceText": "g",
+      "preparationSourceText": "cả xương",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu phụ",
+      "amountSourceText": "40g",
+      "numericQuantity": 40,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt ba chỉ",
+      "amountSourceText": "50g",
+      "numericQuantity": 50,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "20g",
+      "numericQuantity": 20,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành khô",
+      "amountSourceText": "6g",
+      "numericQuantity": 6,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Gừng",
+      "amountSourceText": "4g",
+      "numericQuantity": 4,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột canh",
+      "amountSourceText": "2g",
+      "numericQuantity": 2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước mắm",
+      "amountSourceText": "1g",
+      "numericQuantity": 1,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000022",
+  "imageSha256": "3fe7b0ca3aababc1aad87b202f722b7f5cff8947cd68cffb05362be3aff7947f",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

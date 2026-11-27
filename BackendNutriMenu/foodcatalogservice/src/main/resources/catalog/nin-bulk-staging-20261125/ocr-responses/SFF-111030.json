@@ -1,0 +1,107 @@
+{
+  "code": "SFF-111030",
+  "imageSha256": "cbc0865c8452fd5639fb752b4949510ad59548c24eef1a8c8686e911de7e96fb",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "749.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh đa đỏ/Red thick rice noodle",
+      "amountSourceText": "69.6",
+      "numericQuantity": 69.6,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước xốt cua/Fresh water crab paste",
+      "amountSourceText": "49.0",
+      "numericQuantity": 49.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cần ta/Water dropwort",
+      "amountSourceText": "85.0",
+      "numericQuantity": 85.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giá đậu xanh/Mungbean sprout",
+      "amountSourceText": "27.0",
+      "numericQuantity": 27.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mọc/meatball",
+      "amountSourceText": "31.0",
+      "numericQuantity": 31.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cá rô phi chiên/fried Tilapia fish",
+      "amountSourceText": "29.0",
+      "numericQuantity": 29.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu phụ rán/fried tofu",
+      "amountSourceText": "42.0",
+      "numericQuantity": 42.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả cá/fishball",
+      "amountSourceText": "21.0",
+      "numericQuantity": 21.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò loại I chần/ Beef meat",
+      "amountSourceText": "57.0",
+      "numericQuantity": 57.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chần",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Quất chín/Mandarin",
+      "amountSourceText": "24.0",
+      "numericQuantity": 24.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chín",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/Broth",
+      "amountSourceText": "430.0",
+      "numericQuantity": 430.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt khô chưng mỡ/Chili oil",
+      "amountSourceText": "14.0",
+      "numericQuantity": 14.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chưng mỡ",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

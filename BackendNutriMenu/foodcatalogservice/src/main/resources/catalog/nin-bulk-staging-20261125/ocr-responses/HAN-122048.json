@@ -1,0 +1,19 @@
+{
+  "code": "HAN-122048",
+  "imageSha256": "bd55101ce1e02fbb009845f3f1c4625e930713c5eef7bc5bdd800e5d3b01e060",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "175.4 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh gai",
+      "amountSourceText": "70.0",
+      "numericQuantity": 70.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

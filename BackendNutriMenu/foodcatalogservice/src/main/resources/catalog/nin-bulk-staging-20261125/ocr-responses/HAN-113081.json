@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "134.9 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Kem sô cô la",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Kem vani",
+      "amountSourceText": "45.0",
+      "numericQuantity": 45.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-113081",
+  "imageSha256": "cb89c2deee216af8cc3410ed99d008a590031f33646fa9d83e0a9e0446d68cfe",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

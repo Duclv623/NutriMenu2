@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "338kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cá thu",
+      "amountSourceText": "150g",
+      "numericQuantity": 150,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "10g",
+      "numericQuantity": 10,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000116",
+  "imageSha256": "06b3baf5891851febb231521962dfb373ec7f6e46af515eb847e1d9d33ff971e",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

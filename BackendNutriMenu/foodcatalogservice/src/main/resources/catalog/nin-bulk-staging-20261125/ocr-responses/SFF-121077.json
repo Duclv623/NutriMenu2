@@ -1,0 +1,19 @@
+{
+  "code": "SFF-121077",
+  "imageSha256": "f91ae4b54f682e57366378faf35d5f67b6895ff4522822249f970a5b049723e2",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Bỏng ngô/Popcorn",
+      "amountSourceText": "68.0",
+      "numericQuantity": 68.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,35 @@
+{
+  "code": "VPF-000129",
+  "imageSha256": "85751cb0e91f5257c26cb35eecf128561e3d153d751cc53d193239fd8b7bc41d",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần:",
+  "imageEnergyText": "466kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Khoai tây",
+      "amountSourceText": "80g",
+      "numericQuantity": 80.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu",
+      "amountSourceText": "10g",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột canh",
+      "amountSourceText": "1g",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -8,6 +8,7 @@ public enum TrafficLightBadge {
     RED_RESTRICTED;      // GI >= 70 hoặc GL >= 20 (Cần hạn chế tối đa)
 
     public static TrafficLightBadge evaluate(BigDecimal gi, BigDecimal gl) {
+        if (gi == null || gl == null) return null;
         if (gi.compareTo(new BigDecimal("70.0")) >= 0 || gl.compareTo(new BigDecimal("20.0")) >= 0) {
             return RED_RESTRICTED;
         }

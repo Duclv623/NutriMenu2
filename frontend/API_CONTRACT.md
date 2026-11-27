@@ -3,19 +3,41 @@
 Frontend calls Java Gateway on /api. Authentication uses User Service CSRF + JWT;
 frontend adapts fullName and the wrapped login response. Profile, catalog and meal-plan screens use separate domain endpoints. Gateway verifies the JWT before forwarding protected requests.
 RAG uses /api/chatbot/* -> chatbot /api/*. See ../BackendNutriMenu/gateway/README.md.
-Favorite removal is supported. Arbitrary savePlan and overwrite-regeneration are not.
+Favorite removal and explicit versioned regeneration are supported. Arbitrary savePlan is not exposed.
+
+`planningMode` is required when generating: `GENERAL_REFERENCE` or `MEDICAL`.
+`POST /meal-plans/generate-weekly` accepts the same input as daily generation; `date` is the first day.
+It returns seven `Plan` objects, preserves the source profile version and writes the week in one transaction.
+All seven dates must be empty. Weekly creation rejects replacement intent and never overwrites existing days.
+`replacementConfirmed` is optional for new plans and defaults to `false`; it must be `true` for replacement.
+`GET /meal-plans/capabilities` includes `weeklyGeneration`; the personal planner shows 1/7-day choices when enabled.
+The weekly request timeout is 90 seconds; the Java gateway allows 95 seconds.
+Regeneration additionally requires `replacePlanId`, `baseVersion` and `replacementConfirmed=true`.
+The optimizer archives the previous revision atomically; locked/completed items block replacement.
+`PUT /me/meal-logs` returns the refreshed `Plan`, including its new version.
+Source nutrients, serving weights and ingredient grams can be `null`; unknowns stay unknown.
+`ingredientBasis="source"` and `sourceAmountText` preserve the original source units/quantity notes.
+New production choices use `NIN_BULK_*`; historical foods remain readable through their IDs.
+
+Navigation retains an account-scoped in-memory resource cache. Personal resources are fresh for 30 seconds,
+catalog data for 5 minutes; expired cached pages stay visible while revalidation runs. Missing resources
+are loaded once with concurrent request deduplication, and remaining page datasets are warmed after first paint.
+Mutations update the cache and invalidate older reads; login/logout clears the account cache. A late 401
+for a previous JWT cannot clear the current JWT session. Explicit reload forces a refresh.
+Display categories and allergen labels are Vietnamese; raw `Food.role` and allergen codes stay unchanged for API rules.
 
 ## Personal plan, profile and catalog fields
 
 | JSON field | Type | Unit | Nullability and meaning |
 |---|---|---|---|
 | energyKcal | number | kcal | Required in UI nutrition. Energy per catalog serving or per complete plan item. |
-| netCarbG | number | g | Required. Net carbohydrate. |
-| totalCarbG | number | g | Catalog detail only. Total carbohydrate, separate from netCarbG. |
-| proteinG, fatG, fiberG | number | g | Required in UI nutrition. |
-| sodiumMg | number | mg | Required in UI nutrition. |
+| netCarbG | number or null | g | Carbohydrate value used by the optimizer. For NIN dishes of unspecified Glucid definition, this retains the full source value. |
+| totalCarbG | number or null | g | Catalog detail only. See source quality metadata for the definition of a reported NIN value. |
+| carbohydrateDefinition | string or null | none | Metadata for plan items. Values starting with UNSPECIFIED_SOURCE_GLUCID are labeled Glucid theo nguồn NIN. |
+| proteinG, fatG, fiberG | number or null | g | Unknown values remain null. |
+| sodiumMg | number or null | mg | Unknown values remain null. |
 | dishId | string | identifier | Required on plan items and swap requests. References the catalog dish. |
-| servingMultiplier | number | standard servings | Required. Swap accepts 0.5 to 3 in steps of 0.5. Item nutrition already includes this factor. |
+| servingMultiplier | number | standard servings | Required. Swap accepts 0.5 to 12 in half-serving units, within the dish’s min, max and step rules. Item nutrition already includes this factor. |
 | locked | boolean | none | Required. Whether this item is locked. |
 | activityLevel | string | enum | sedentary, light, moderate, active, very_active. Empty string for an unset profile. |
 | excludedFoods | string[] | user terms | Profile response uses an array. Terms may identify dishes or ingredients. |

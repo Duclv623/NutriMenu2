@@ -1,0 +1,19 @@
+{
+  "code": "HAN-111034",
+  "imageSha256": "4e16d916f3e461ba2a16d6deffa4ed20902bf0168cdef05c86f864d5d3bd744d",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "1496.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cốm",
+      "amountSourceText": "500.0",
+      "numericQuantity": 500.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

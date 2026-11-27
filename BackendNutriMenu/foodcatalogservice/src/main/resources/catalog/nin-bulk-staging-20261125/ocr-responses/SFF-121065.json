@@ -1,0 +1,67 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "599.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ/Rice",
+      "amountSourceText": "231.0",
+      "numericQuantity": 231.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải thảo luộc/Boiled Cabbage",
+      "amountSourceText": "145.0",
+      "numericQuantity": 145.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc/Boiled",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt chân giò luộc/Boiled pig trotters",
+      "amountSourceText": "22.0",
+      "numericQuantity": 22.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc/Boiled",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả lá lốt/Betel leaf wrapped pork balls",
+      "amountSourceText": "18.0",
+      "numericQuantity": 18.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cá trắm cỏ kho/Braised grass carp",
+      "amountSourceText": "48.8",
+      "numericQuantity": 48.8,
+      "unitSourceText": "g",
+      "preparationSourceText": "kho/Braised",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước canh bí xanh/Bone broth",
+      "amountSourceText": "145.0",
+      "numericQuantity": 145.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bí xanh nấu canh/Cooked wax gourd",
+      "amountSourceText": "14.0",
+      "numericQuantity": 14.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nấu canh/Cooked",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-121065",
+  "imageSha256": "72fce5f687f4632e6e38af54cf7fac9afc61257f8c2054a989006e9da2f54555",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

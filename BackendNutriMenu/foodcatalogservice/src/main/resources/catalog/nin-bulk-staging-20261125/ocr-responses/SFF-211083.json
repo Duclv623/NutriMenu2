@@ -1,0 +1,51 @@
+{
+  "code": "SFF-211083",
+  "imageSha256": "4eac73ed3ac9b7d748ec47bc26116c79d87bb0efae5b4eb7f0e92bea624b1e19",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "771.6 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Xôi trắng/Sticky rice",
+      "amountSourceText": "242.0",
+      "numericQuantity": 242.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột/Cucumber",
+      "amountSourceText": "36.0",
+      "numericQuantity": 36.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Pate/Pate",
+      "amountSourceText": "43.0",
+      "numericQuantity": 43.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ruốc thịt lợn/pork dried flour with fish sauce",
+      "amountSourceText": "7.0",
+      "numericQuantity": 7.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước thịt/Sauces",
+      "amountSourceText": "158.0",
+      "numericQuantity": 158.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

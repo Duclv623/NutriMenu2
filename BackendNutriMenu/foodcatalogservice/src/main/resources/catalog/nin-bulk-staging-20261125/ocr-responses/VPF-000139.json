@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "204kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt lợn thăn",
+      "amountSourceText": "60g",
+      "numericQuantity": 60,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột mỳ",
+      "amountSourceText": "9g",
+      "numericQuantity": 9,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "10g",
+      "numericQuantity": 10,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000139",
+  "imageSha256": "e0fc229309c38d8e04776ee35be8ed6e6d24cc63fcdd50dc6a37894c3e38fcd1",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,75 @@
+{
+  "code": "SFF-111031",
+  "imageSha256": "06c83b8047548a4f2fa72613145fdee71a8569da5c65ccad275ca2bf02377a82",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh mỳ (4 cái)/Banh my",
+      "amountSourceText": "112.00",
+      "numericQuantity": 112.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Pate gan/Liver Pate",
+      "amountSourceText": "70.00",
+      "numericQuantity": 70.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Xúc xích/Pork sausage",
+      "amountSourceText": "39.00",
+      "numericQuantity": 39.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trứng gà rán/Fried hen egg",
+      "amountSourceText": "37.00",
+      "numericQuantity": 37.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Khoai tây/Potato",
+      "amountSourceText": "23.00",
+      "numericQuantity": 23.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt chân giò lợn muối/\nsalted pig legs",
+      "amountSourceText": "26.00",
+      "numericQuantity": 26.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "muối",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước sốt/Sauces",
+      "amountSourceText": "20.00",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nộm Su hào/Pickled kohlrabi",
+      "amountSourceText": "20.00",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

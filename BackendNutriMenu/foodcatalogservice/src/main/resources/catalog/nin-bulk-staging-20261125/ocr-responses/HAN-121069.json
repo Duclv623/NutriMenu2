@@ -1,0 +1,85 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "631.1 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ",
+      "amountSourceText": "175.0",
+      "numericQuantity": 175.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lạc rang",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt chân giò luộc",
+      "amountSourceText": "26.0",
+      "numericQuantity": 26.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt lợn ba chỉ rang",
+      "amountSourceText": "30.0",
+      "numericQuantity": 30.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đùi gà rán",
+      "amountSourceText": "33.6",
+      "numericQuantity": 33.6,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Su su xào",
+      "amountSourceText": "60.0",
+      "numericQuantity": 60.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà rốt",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước canh bí xanh",
+      "amountSourceText": "198.0",
+      "numericQuantity": 198.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bí xanh nấu canh",
+      "amountSourceText": "35.0",
+      "numericQuantity": 35.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nấu canh",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Sum of printed row energies (631.2 Kcal) differs from image total (631.1 Kcal) by 0.1 Kcal due to rounding."
+  ],
+  "code": "HAN-121069",
+  "imageSha256": "f62a8ad09f31cd411fe9e50cd238c4483d2ca9717af1dab8ead9e2e87263c6b8",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "162.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Nem nướng",
+      "amountSourceText": "115.0",
+      "numericQuantity": 115.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nướng",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương ớt",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-112023",
+  "imageSha256": "f8b6f65eb23e40557323f9785d815745c089769ea2cd399f7d77312514a08107",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

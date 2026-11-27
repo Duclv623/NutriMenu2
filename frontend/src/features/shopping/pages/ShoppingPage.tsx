@@ -1,26 +1,12 @@
+import { useMemo, useState } from "react";
+import { Link, useSearchParams } from "react-router-dom";
+import { ArrowRight, Check, Download, ShoppingBasket } from "lucide-react";
+import { Alert, Badge, Button, Checkbox, Empty, PageTitle } from "../../../components/common/ui";
+import { useApp } from "../../../store/UserDataProvider";
 import { API_MODE } from "../../../lib/config";
 import { activityService } from "../../activity/services/activityService";
-import { useMemo, useState } from "react";
-
-import { Link, useSearchParams } from "react-router-dom";
-
-import { ArrowRight, Check, Download, ShoppingBasket } from "lucide-react";
-
-import { Alert, Badge, Button, Checkbox, Empty, PageTitle } from "../../../components/common/ui";
-
-import { useApp } from "../../../store/UserDataProvider";
-
-
-
-import { dateLabel, downloadFile, localDate, number, shoppingList } from "../../../utils";
-
-import { OptimizerShopping } from "./OptimizerShopping";
-
+import { dateLabel, downloadFile, localDate, number, shoppingDetails } from "../../../utils";
 export function ShoppingPage() {
-  return API_MODE === "api" ? <OptimizerShopping /> : <DemoShoppingPage />;
-}
-
-function DemoShoppingPage() {
   const { userData: w, update, toast } = useApp();
   const [params, setParams] = useSearchParams();
   const [busy, setBusy] = useState(false);
@@ -31,14 +17,25 @@ function DemoShoppingPage() {
   const shopping = useMemo(() => {
     try {
       return {
-        ingredients: plan ? shoppingList(plan, w.foods) : [],
+        ...(plan
+          ? shoppingDetails(plan, w.foods)
+          : { ingredients: [], incompleteFoods: [] }),
         error: "",
       };
     } catch (e) {
-      return { ingredients: [], error: (e as Error).message };
+      return {
+        ingredients: [],
+        incompleteFoods: [],
+        error: (e as Error).message,
+      };
     }
   }, [plan, w.foods]);
   const { ingredients, error: shoppingError } = shopping;
+  const hasSourceQuantities = plan?.items.some(
+    (item) =>
+      w.foods.find((food) => food.id === item.dishId)?.ingredientBasis ===
+      "source",
+  );
   const done = ingredients.filter((i) =>
     w.checkedShopping.includes(`${plan?.id}:${i.id}`),
   ).length;
@@ -65,10 +62,17 @@ function DemoShoppingPage() {
         `NutriGuide · Danh sách nguyên liệu ${dateLabel(plan.date)}`,
         ...ingredients.map(
           (i) =>
-            `${w.checkedShopping.includes(`${plan.id}:${i.id}`) ? "[x]" : "[ ]"} ${i.name}: ${number(i.grams)} g`,
+            `${w.checkedShopping.includes(`${plan.id}:${i.id}`) ? "[x]" : "[ ]"} ${i.name}: ${i.grams === null ? "" : `${number(i.grams, 1)} g`}${i.details.length ? ` ${i.details.join("; ")}` : ""}`,
         ),
+        ...(shopping.incompleteFoods.length
+          ? [
+              `\nDanh sách chưa đầy đủ. Cần kiểm tra nguyên liệu: ${shopping.incompleteFoods.join(", ")}.`,
+            ]
+          : []),
         API_MODE === "api"
-          ? "\nKhối lượng nguyên liệu sống theo công thức hiện tại trong danh mục; kiểm tra lại trước khi mua."
+          ? hasSourceQuantities
+            ? "\nCó định lượng từ ảnh nguồn; chưa xác định đầy đủ trạng thái sống/chín. Kiểm tra lại trước khi mua."
+            : "\nKhối lượng nguyên liệu sống theo công thức hiện tại trong danh mục; kiểm tra lại trước khi mua."
           : "\nKhối lượng theo công thức minh họa; kiểm tra trạng thái sống/chín trong dữ liệu nguồn.",
       ].join("\n"),
     );
@@ -82,7 +86,7 @@ function DemoShoppingPage() {
         actions={
           <Button
             variant="secondary"
-            disabled={!plan || !!shoppingError}
+            disabled={!plan || !!shoppingError || !ingredients.length}
             onClick={exportList}
           >
             <Download size={16} />
@@ -91,6 +95,13 @@ function DemoShoppingPage() {
         }
       />
       {shoppingError && <Alert error>{shoppingError}</Alert>}
+      {shopping.incompleteFoods.length > 0 && (
+        <Alert>
+          Danh sách hiện có một phần nguyên liệu. Cần kiểm tra thêm nguyên liệu
+          và định lượng của: {shopping.incompleteFoods.join(", ")}. Không sử
+          dụng danh sách này như một danh sách đầy đủ.
+        </Alert>
+      )}
       {plan ? (
         <div className="shopping-layout">
           <section className="panel shopping-list">
@@ -140,18 +151,29 @@ function DemoShoppingPage() {
                   >
                     {i.name}
                   </Checkbox>
-                  <strong>
-                    {number(i.grams)} <small>g</small>
+                  <strong className="shopping-amount">
+                    {i.grams === null ? "" : `${number(i.grams, 1)} g`}
+                    {i.details.map((detail, index) => (
+                      <small key={index}>{detail}</small>
+                    ))}
                   </strong>
                 </div>
               );
             })}
-            {done === ingredients.length && ingredients.length > 0 && (
-              <div className="shopping-ready">
-                <Check size={19} />
-                Bạn đã có đủ nguyên liệu cho thực đơn này.
-              </div>
+            {!ingredients.length && (
+              <Empty title="Chưa có định lượng nguyên liệu">
+                Thực đơn này chưa đủ dữ liệu để lập danh sách. Bạn có thể xem
+                nguyên liệu tại chi tiết từng món.
+              </Empty>
             )}
+            {done === ingredients.length &&
+              ingredients.length > 0 &&
+              !shopping.incompleteFoods.length && (
+                <div className="shopping-ready">
+                  <Check size={19} />
+                  Bạn đã đánh dấu có đủ các nguyên liệu trong danh sách này.
+                </div>
+              )}
           </section>
           <aside className="stack">
             <div className="daily-note shopping-note">
@@ -173,7 +195,9 @@ function DemoShoppingPage() {
             <Alert>
               {plan.dataMode === "demo"
                 ? "Khối lượng là dữ liệu mẫu. Cơm trong danh sách đã ở trạng thái chín; không quy đổi thành gạo sống."
-                : "Kiểm tra trạng thái nguyên liệu sống/chín theo công thức trước khi mua."}
+                : hasSourceQuantities
+                  ? "Có định lượng từ ảnh nguồn; chưa xác định đầy đủ trạng thái sống/chín. Kiểm tra lại trước khi mua."
+                  : "Kiểm tra trạng thái nguyên liệu sống/chín theo công thức trước khi mua."}
             </Alert>
           </aside>
         </div>
@@ -192,3 +216,4 @@ function DemoShoppingPage() {
     </div>
   );
 }
+

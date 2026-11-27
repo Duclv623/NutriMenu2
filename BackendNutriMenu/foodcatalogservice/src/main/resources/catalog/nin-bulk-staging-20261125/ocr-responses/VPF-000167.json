@@ -1,0 +1,43 @@
+{
+  "code": "VPF-000167",
+  "imageSha256": "f37732be672250d264a509e0d3521b88fed51d37e8a8c3ddf60811d9788e68d9",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "203kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Mực",
+      "amountSourceText": "85g",
+      "numericQuantity": 85.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dứa",
+      "amountSourceText": "130g",
+      "numericQuantity": 130.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "10g",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Muối",
+      "amountSourceText": "0,8g",
+      "numericQuantity": 0.8,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

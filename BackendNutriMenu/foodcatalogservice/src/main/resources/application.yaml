@@ -39,6 +39,7 @@ app:
     seed-enabled: ${CATALOG_SEED_ENABLED:true}
 
 server:
+  address: ${SERVICE_HOST:127.0.0.1}
   port: ${PORT:8081}
   servlet:
     encoding:

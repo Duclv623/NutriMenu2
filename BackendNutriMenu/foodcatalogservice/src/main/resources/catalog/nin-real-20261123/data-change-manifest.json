@@ -1,0 +1,1159 @@
+{
+  "scope": "NIN-only catalog runtime and consumer guards; legacy QA recipes excluded from startup and new choices, rows retained for history; source quality, nutrition constraints and unknown values preserved",
+  "fileManifestScope": "Dataset artifacts, reproducibility scripts and explicitly reviewed backend/frontend/gateway application/test files; this is not a claim of ownership of the whole repository diff; curated README is preserved on rebuild",
+  "reviewedApplicationPaths": [
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/config/CatalogDataSeederConfig.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/config/SourceCatalogSeederConfig.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/config/CatalogRetirementConfig.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/dto/RecipeIngredientBreakdownDto.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/dto/response/DishDetailResponse.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/dto/request/CandidateFilterRequest.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/dto/request/SolverCoverageDiagnosticRequest.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/controller/InternalSolverCatalogController.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/entity/Dish.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/entity/DishIngredient.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/entity/Ingredient.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/entity/enums/TrafficLightBadge.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/service/CatalogNutritionQuality.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/service/CatalogSourcePolicy.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/service/CatalogRetirementService.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/service/FoodCatalogService.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/service/NutritionCalculationEngine.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/service/PreparationGuide.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/service/SourceCatalogImportService.java",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/dto/DishSolverDto.java",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/solver/CpSatMealOptimizationEngine.java",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/solver/SolverInputDataValidator.java",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/service/NewSourceCatalogPolicy.java",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/client/FoodCatalogIntegrationClient.java",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/controller/InternalOptimizerController.java",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/service/MealOptimizerService.java",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/service/CheckedMealChangeService.java",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/entity/enums/PlanningMode.java",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/service/GeneralReferencePolicy.java",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/entity/MealPlan.java",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/dto/request/GenerateDailyMealRequest.java",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/dto/request/CheckedMealChangeRequest.java",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/dto/response/MealPlanResponse.java",
+    "foodcatalogservice/src/test/java/com/example/foodcatalogservice/service/PreparationGuideTest.java",
+    "foodcatalogservice/src/test/java/com/example/foodcatalogservice/service/SourceCatalogImportServiceTest.java",
+    "foodcatalogservice/src/test/java/com/example/foodcatalogservice/service/SourceCatalogCandidateHttpTest.java",
+    "foodcatalogservice/src/test/java/com/example/foodcatalogservice/service/CatalogSourcePolicyTest.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/repository/DishRepository.java",
+    "foodcatalogservice/src/main/java/com/example/foodcatalogservice/repository/IngredientRepository.java",
+    "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/solver/CpSatMealOptimizationEngineTest.java",
+    "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/solver/SolverInputDataValidatorTest.java",
+    "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/solver/NinSourceDatasetTest.java",
+    "foodcatalogservice/scripts/tests/test_nin_source_import.py",
+    "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/service/NewSourceCatalogPolicyTest.java",
+    "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/service/CheckedMealChangeServiceTest.java",
+    "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/service/GeneralReferencePolicyTest.java",
+    "frontend/src/types.ts",
+    "frontend/src/utils.ts",
+    "frontend/src/components/ui.tsx",
+    "frontend/src/components/FoodDetail.tsx",
+    "frontend/src/components/MealChangeModal.tsx",
+    "frontend/src/pages/FoodLibrary.tsx",
+    "frontend/src/pages/MealPlanner.tsx",
+    "frontend/src/pages/Dashboard.tsx",
+    "frontend/src/pages/Tools.tsx",
+    "frontend/src/services/api.ts",
+    "frontend/src/styles.css",
+    "frontend/src/test/source-catalog.test.tsx",
+    "frontend/src/test/planning-mode.test.tsx",
+    "frontend/src/test/meal-change.test.tsx",
+    "frontend/src/test/integration.test.tsx",
+    "frontend/src/test/food-images.test.tsx",
+    "frontend/src/data/ninImages.ts",
+    "frontend/src/foodImages.ts",
+    "gateway/gateway_app/integration.py",
+    "gateway/tests/test_team_bridge.py",
+    "gateway/tests/test_new_source_only.py",
+    "gateway/tests/test_checked_change.py",
+    "gateway/tests/test_exclusions.py",
+    "gateway/tests/test_planning_modes.py",
+    "chatbot/rag_app/meal_models.py",
+    "README.md",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/entity/MealPlanRevision.java",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/repository/MealPlanRevisionRepository.java",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/service/MealPlanArchiveService.java",
+    "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/controller/UserMealPlanController.java",
+    "mealoptimizerservice/schema/20261125_meal_plan_regeneration.sql",
+    "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/controller/GenerationApiContractTest.java",
+    "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/service/MealRegenerationServiceTest.java",
+    "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/service/MealExclusionPipelineTest.java",
+    "frontend/src/test/regeneration.test.tsx",
+    "frontend/src/test/flows.test.tsx",
+    "frontend/API_CONTRACT.md",
+    "gateway/tests/test_regeneration.py",
+    "gateway/README.md",
+    "frontend/public/food-images/nin-real-20261123/VPF-000007.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000008.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000009.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000010.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000011.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000012.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000013.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000014.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000015.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000016.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000018.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000020.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000021.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000025.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000027.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000033.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000037.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000039.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000049.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000056.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000057.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000058.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000071.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000077.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000084.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000086.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000088.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000089.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000092.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000094.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000100.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000105.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000117.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000144.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000146.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000155.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000174.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000175.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000398.webp",
+    "frontend/public/food-images/nin-real-20261123/VPF-000423.webp"
+  ],
+  "activeDatabaseApplied": false,
+  "qaSeedChanged": false,
+  "originalSeedBackupSha256": "333171d3d46a7f08aa43a4fd1c6fe79ff8fa9e17441d211217ec414598b3511a",
+  "currentQaSeedSha256": "333171d3d46a7f08aa43a4fd1c6fe79ff8fa9e17441d211217ec414598b3511a",
+  "runtimeSourceDishCount": 40,
+  "runtimePublicVisibleCount": 40,
+  "runtimeCoreCompleteCount": 40,
+  "runtimeCoreIncompleteCount": 0,
+  "runtimeSolverPendingCount": 0,
+  "runtimeSolverEligibleCount": 40,
+  "qaBackfillRetained": false,
+  "files": [
+    {
+      "path": "chatbot/rag_app/meal_models.py",
+      "bytes": 8123,
+      "sha256": "7b0a8ecae7f8d6fd3aa69c322e6a61a7af9321355608502698b822cced79e740"
+    },
+    {
+      "path": "foodcatalogservice/scripts/audit_nin_catalog.py",
+      "bytes": 3944,
+      "sha256": "2631edfe1a3089f7b2ab4589e70c2d1c818de20716f2726bccddd3f7aeac026b"
+    },
+    {
+      "path": "foodcatalogservice/scripts/build_nin_frontend_assets.py",
+      "bytes": 4426,
+      "sha256": "9b9e94272c686cef9aee07e840539b951708cf385b74eba2152da144be4ee9f1"
+    },
+    {
+      "path": "foodcatalogservice/scripts/build_nin_reference_snapshot.py",
+      "bytes": 11554,
+      "sha256": "a27b58c88bc692a76a96edea33b2de621912a2b9ab86bb36f3586145778248c7"
+    },
+    {
+      "path": "foodcatalogservice/scripts/build_nin_source_import.py",
+      "bytes": 21508,
+      "sha256": "118911a46d8cfdd1c1d465fe06da16d4c9d489401c57232097b6897bcb66e5a2"
+    },
+    {
+      "path": "foodcatalogservice/scripts/collect_nin_recipe_images.py",
+      "bytes": 8503,
+      "sha256": "1299884bdc0c9e0874f47a9741f5348a9620e71c0ea7860cdb4aa470d57c2e3b"
+    },
+    {
+      "path": "foodcatalogservice/scripts/import_nin_catalog.py",
+      "bytes": 19809,
+      "sha256": "139d67fc89f01a72c49bd23daf9db3c4acb59c810902dbfea4c5d8166dc6c842"
+    },
+    {
+      "path": "foodcatalogservice/scripts/nin_ingredient_model.py",
+      "bytes": 8970,
+      "sha256": "f670b580992f5c50277988b428f71e61978e012111381bd37f164c98392435db"
+    },
+    {
+      "path": "foodcatalogservice/scripts/prepare_nin_catalog.py",
+      "bytes": 23556,
+      "sha256": "479f8fd547983ddb3f255ded514c0e44c4a7c12c30dbee2f4bdcae79dfd1a6a3"
+    },
+    {
+      "path": "foodcatalogservice/scripts/tests/test_nin_source_import.py",
+      "bytes": 4895,
+      "sha256": "55d2237fc8486f5cd6d77e39967612d0a9188a9fbccc244af1439fbd52249ccd"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/config/CatalogDataSeederConfig.java",
+      "bytes": 309,
+      "sha256": "a03421cd6901c931447819220dcedde15bb28c027b2c2d3c2f1b5722b065386a"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/config/CatalogRetirementConfig.java",
+      "bytes": 684,
+      "sha256": "480b28e37583af7ccc7c67cf888e8a50efde5cc12551e5f690d7063f5f5f8926"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/config/SourceCatalogSeederConfig.java",
+      "bytes": 2781,
+      "sha256": "973cf4079b87c18c08d9ce9ac3b644e3497fa77e071ab602b5a3e0d1a7a32a40"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/controller/InternalSolverCatalogController.java",
+      "bytes": 1813,
+      "sha256": "c3d12bb62c590365d9fd42302dc2754bacf1ecf0b7ee4eb7158d000d897a2955"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/dto/RecipeIngredientBreakdownDto.java",
+      "bytes": 469,
+      "sha256": "4bfa64c6f278e648919c0733fa080b071f540dc7d80121ce84dbfba91e914c7c"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/dto/request/CandidateFilterRequest.java",
+      "bytes": 1122,
+      "sha256": "de0b09c6bb6d4b88ea8c9a08cdab4e23c59af5508d5372504fe4972843b2e6ab"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/dto/request/SolverCoverageDiagnosticRequest.java",
+      "bytes": 583,
+      "sha256": "cc9e3c6b4aba8a7fbbdb85d29c8fe00660fc4a45e0bf03d26f6e3c30f651f466"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/dto/response/DishDetailResponse.java",
+      "bytes": 5085,
+      "sha256": "547d34266dd5da59d542ecb2af35f961aa869c5170f1e75ba45f5e2a8af22b83"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/entity/Dish.java",
+      "bytes": 8422,
+      "sha256": "45399532167c9669844830d6b008a49f4f5a9ed6abbd88619e47642e7f84ec03"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/entity/DishIngredient.java",
+      "bytes": 1302,
+      "sha256": "d92f7c08c5fbe4fffafc1a36388bab1283b5e5c2a7b8a21c86bc6e2f7204a332"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/entity/enums/TrafficLightBadge.java",
+      "bytes": 848,
+      "sha256": "0ba2f77b62a1cd8da6e77dfc6342fcd16192169b56d584e5f2d22b243167726f"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/entity/Ingredient.java",
+      "bytes": 3845,
+      "sha256": "420028691c2cb5a606a7277fa9ad6738b5acaae99c470fe11c651b1da4124157"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/repository/DishRepository.java",
+      "bytes": 4631,
+      "sha256": "62b3ce9ad84536ff92ed3a7b5f889bfa559aa814ab047c2ea75651a69c0c647f"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/repository/IngredientRepository.java",
+      "bytes": 1445,
+      "sha256": "33c9ad88babcda2c35f4e659c39f441aa2fb0e1266f1c63f648b62e8a1f4d851"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/service/CatalogNutritionQuality.java",
+      "bytes": 2635,
+      "sha256": "b957b1df2c5e0298e04f26dec6b1a4bb2b4e7c327b17ab2ec853d01bc48deffa"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/service/CatalogRetirementService.java",
+      "bytes": 973,
+      "sha256": "888bd73575139d42f68ec6fdc169b6d944f4186d09787edfb5cf839bed0e324c"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/service/CatalogSourcePolicy.java",
+      "bytes": 2385,
+      "sha256": "063686befdd50c4f8359463ad5a463b2c63b47e85126ada4c3abc12c35f5f8f3"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/service/FoodCatalogService.java",
+      "bytes": 37874,
+      "sha256": "cdd631eedf33e8395dbb057ff165fb94694497cfd8e7f4a6a4b8212f679ef4f1"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/service/NutritionCalculationEngine.java",
+      "bytes": 9478,
+      "sha256": "733afacabff0e03eeb707748aa6062ac2e79bf996b3cc48eb51fce8f2add7d1c"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/service/PreparationGuide.java",
+      "bytes": 3463,
+      "sha256": "f450adf6ed5f668edb09dd2fe7acfe7118bc627f1c6e64f08ce50fae4153d31d"
+    },
+    {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/service/SourceCatalogImportService.java",
+      "bytes": 9274,
+      "sha256": "b6784915e2e4bdd805ddb0ff2f50760a5ebf5101f05798775a7aec1de8ff1273"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/backups/food-catalog-vi-qa.before-nin.json",
+      "bytes": 149983,
+      "sha256": "333171d3d46a7f08aa43a4fd1c6fe79ff8fa9e17441d211217ec414598b3511a"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/deactivate-nin-import.sql",
+      "bytes": 972,
+      "sha256": "dcd9a86b4c75391e0de6843a6cc2632fde5104885ab10b0ada049791dc6169c5"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/extracted-recipes.json",
+      "bytes": 233925,
+      "sha256": "01b0c63030dcedfda23b42a0c5a0d60726622eea7377a1226295f90a846196b1"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/food-catalog-nin-pending.json",
+      "bytes": 87372,
+      "sha256": "5dc4961bada251df966b0cbd271b1c501b274f3475eca9aff41ad45e7a715745"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/fruit-nutrient-reference.json",
+      "bytes": 516,
+      "sha256": "89f08ab6a34d7dc4c286d24449a6762d9c2931972c33e5efc7df4c069b8f896e"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/image-download-manifest.json",
+      "bytes": 747,
+      "sha256": "368219591d0273595793018a7c101e9b51b8c1ea19a83728791c5b5c14d29235"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000001.png",
+      "bytes": 371492,
+      "sha256": "1ea62de7f77076ebaec17b6bf92c17f2522f3634bb71f69263b2a9f66bd63414"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000004.png",
+      "bytes": 430534,
+      "sha256": "edcc21f440c8a063462f02e3c047c264a61b5c05ff347b75413c5f54dccd4c11"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000007.webp",
+      "bytes": 11218,
+      "sha256": "1236b4679d8de241a80e30684c5e123cf7d3c9eca6931cf3d7980ce92e2236e5"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000008.webp",
+      "bytes": 24540,
+      "sha256": "1358a370a342fd73efc29b191f72e93a91991ef160075b8e56248aad4fdf054e"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000009.webp",
+      "bytes": 39356,
+      "sha256": "a74285036d5e5e5c8ef992eb3f618a560a26208f69a2cdf00f765f397c91c30c"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000010.webp",
+      "bytes": 31296,
+      "sha256": "b05b794473e1e11c0a3fa7528d6e86c556aa9397b4dbbe96cbf0d30cbb0e5dfe"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000011.webp",
+      "bytes": 24986,
+      "sha256": "18cbc001ffea14290f4c8bc036f0f965e7b3f9ab2fd3988df03e3a241b139bad"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000012.webp",
+      "bytes": 27010,
+      "sha256": "72271041c347947d2d6143ee44c7b1cb3031bdec6e9977226a5e27283088fbff"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000013.webp",
+      "bytes": 20854,
+      "sha256": "06fec0c3fa801d96e80e6169abd64b541a8928da3c1903438ae3a4cff570f35e"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000014.webp",
+      "bytes": 11118,
+      "sha256": "510306e5ba92262ac266e67bcc1622e611c641e956148bf3272207babe9bf5e2"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000015.webp",
+      "bytes": 14220,
+      "sha256": "fe39bf92237ba03411f85456c8becb991745379a901f194e07f1f5798a83d4fd"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000016.webp",
+      "bytes": 10666,
+      "sha256": "aaa6a98f42ebf8eb592e1929f4256481759963b3e8beb5339a47b3eb48c6310e"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000018.webp",
+      "bytes": 16692,
+      "sha256": "32bf538f0d1cd3ebd57d5cc79246faf032bc4caf82059705174ea80b58a1ac93"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000020.webp",
+      "bytes": 15070,
+      "sha256": "c0d6683a296cb86277fbd462d57268dc8d1619605898acf5c93b68b3ae23264e"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000021.webp",
+      "bytes": 28230,
+      "sha256": "f12ce50eed33dde2602dc1aa131de6192b0f7429087a11826d1bf09b76ed2c96"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000025.webp",
+      "bytes": 18884,
+      "sha256": "4c146f12af23318d17ba43d7d917a5fe64ee01689e56724f821f4b1bf8cd2a8c"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000027.webp",
+      "bytes": 24390,
+      "sha256": "3ac2cdce733c79d2976888fc47eeddddad25cccfbe777c59760bd5363c880954"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000033.webp",
+      "bytes": 21792,
+      "sha256": "6f1d6c44695a5a5e2303d56e72efaba3ec40a1c448090c0663372c152baa6d81"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000037.webp",
+      "bytes": 21508,
+      "sha256": "0249c2a16eb11ab20b7ab643d87f6815c459896a427a5d860ba84773ed96a635"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000039.webp",
+      "bytes": 22238,
+      "sha256": "6cde5ca309b7e7a7f5a9bf30d64e5493b9899173bf75066b27f9fcf65cd8d5a4"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000049.webp",
+      "bytes": 17764,
+      "sha256": "e44b3ec3de5495f97ac8a4e5272edf9a3303f35e7ac4e10e061cd4cb95133cae"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000056.webp",
+      "bytes": 13810,
+      "sha256": "e5417d43211a5d19084cf02763b0259800b344d9e5a819610a4e6f01ee87e4ca"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000057.webp",
+      "bytes": 15932,
+      "sha256": "37840acb50916877e0e18e2eb82d101fe56493dfa4c4482b43baf3443e6e0a5c"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000058.webp",
+      "bytes": 15618,
+      "sha256": "febf44a35b9959b4c3e5fff4c79ba80d4e791b87cbc931eeafb33184e1efb6a6"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000071.webp",
+      "bytes": 11766,
+      "sha256": "337c65d40176734f5f65602a0a2f1b90bc5e4335ae3238a462b5ad7ef925d99b"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000077.webp",
+      "bytes": 16986,
+      "sha256": "9ae687d4aecd0510c335aa6604be9e910d9908a07fd79a2c453684ca350315bf"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000084.webp",
+      "bytes": 12288,
+      "sha256": "a0e4d5c6ec470ce45cbb36ee8bc4cc4a8ff390328edc4cf37774bbe57f7f5357"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000086.webp",
+      "bytes": 19046,
+      "sha256": "551222483c8db0bb29d8683e9614f91cab70bcf15334dfec91256c4c914a17ba"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000088.webp",
+      "bytes": 16930,
+      "sha256": "951cd0851be51c6c337f42469b704c56307d4b8d8db78c88f57d290e374528f6"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000089.webp",
+      "bytes": 13232,
+      "sha256": "8258c19b1d37d39600cc131dc7ea8216f0f9980c08bc71c02abc1b660e822801"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000092.webp",
+      "bytes": 15866,
+      "sha256": "129aa735d5cad2ba74e7dd1437443bc3e56762c58827c3c24baaff5d9aa154f7"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000094.webp",
+      "bytes": 17638,
+      "sha256": "c20f614361c92d692d4148271298da4d6e0a5a55f861de4f0e14293bf3ee018d"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000100.webp",
+      "bytes": 20586,
+      "sha256": "1c37666b42b411517fb43e844ce158bd22a52f7ecbaf9f0b2464260e2e88ae75"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000105.webp",
+      "bytes": 18962,
+      "sha256": "7c4efa8e7881726d8e112928ed5519b1a8495f8d0205625c1f6448b7614a495b"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000117.webp",
+      "bytes": 22398,
+      "sha256": "c4cd534555663590cf98a343f46e865bb2429f41be57efc93eae67b114649349"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000125.webp",
+      "bytes": 18352,
+      "sha256": "0ed3c0f390693058f2dceaa172cea0151a58db0fb0935098450ffca3f9cddb8a"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000144.webp",
+      "bytes": 22340,
+      "sha256": "501bfc061eb017488461c7a2e0ff97da33e32977ca66adf9234387e8caa8fead"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000146.webp",
+      "bytes": 16290,
+      "sha256": "4a3051ab361ad78d49dbcf4a0e47a40f133d0d8ed0c88c6e9092cadca303f75f"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000155.webp",
+      "bytes": 10566,
+      "sha256": "99b4487a50600523124fc2b3dfc8b5984319c80773cb275159d5dbdef3ed306e"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000174.webp",
+      "bytes": 23870,
+      "sha256": "e95d72ca3c36d984b501bed4a087ca9ad53e737605f60176dafe88863c7dce04"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000175.webp",
+      "bytes": 14714,
+      "sha256": "58fd149a4f7daa01c10aa014283d96ddfcec68e4054c3d6943831910dc95dcd5"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000179.webp",
+      "bytes": 24060,
+      "sha256": "8524993c578108a9900b669262c4d9bc66bdff62ba11a6a6fbeed07ae0e3abf3"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000243.webp",
+      "bytes": 16990,
+      "sha256": "0f62286fbdcffae65655abdf2b8d30a52228cb672c49f46d6d74b2e55f94e614"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000278.webp",
+      "bytes": 21634,
+      "sha256": "bec54f690a929133512f9be3219cec90aeffa4f62fad5312fe74b06812e2b3b3"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000298.webp",
+      "bytes": 8880,
+      "sha256": "4a88338b44fe940723e8c7546b156b46771e43a526cc1877b4480a8605fb1e10"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000309.webp",
+      "bytes": 11496,
+      "sha256": "5cc90912d8619b979ae7b10c2b0456ed16de9d04dd5b2043a94386c1a10ec0d9"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000310.webp",
+      "bytes": 15794,
+      "sha256": "e37ea14882fd78371e36a818a13939385c47c4338f3c9b38534ce1c75efe6d04"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000398.webp",
+      "bytes": 9200,
+      "sha256": "692b5813638d2a019912271151799d317db6e9ed7de635d424dc3d592dc1c5f9"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/images/VPF-000423.webp",
+      "bytes": 8368,
+      "sha256": "03cbe8e060908e7b092abb2710058502d9bd3c5ec395d52c84509de312359ccc"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/ingredient-estimation-reference.json",
+      "bytes": 162302,
+      "sha256": "c3372af50b396981299095ea893754471b56b7614f8a53d3981b670826cb217e"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/ingredient-model-links.json",
+      "bytes": 381608,
+      "sha256": "db6819f39da6a2730af3e29c2a8a84d4c7a5bd6feea81b129b040045d31addd3"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/ingredient-source-links.json",
+      "bytes": 5769,
+      "sha256": "3e3f7cb69e34c0c93b12f40d559664ad138b6260f209b6de2e6bba31983fc9b1"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/integration-readiness.json",
+      "bytes": 16802,
+      "sha256": "898b450cb1f3e46476f36672524939305a4cdfcdb3730431a378bef97bc7642c"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/nin-catalog-provenance.json",
+      "bytes": 587319,
+      "sha256": "b0981fe15395bbb03099b4c8333f5c53bf3ba99a9d966e4cc7d399118cf66f97"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/nin-catalog-readiness.json",
+      "bytes": 58593,
+      "sha256": "c61cdb31ae84e63e0edb2c0cdcb234a0d8c9e4dae7829e7e8e5e83b25efaf7ad"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/nin-source-import.json",
+      "bytes": 523868,
+      "sha256": "a2bd4de0437df65615f894832d9c8f5c41a3ba5f7b6a875c7207aefe9798147a"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/nullable-source-migration.sql",
+      "bytes": 2313,
+      "sha256": "f01193bf73e657243b986e1dd0ff1ea4204737ff34b99464a9936cabda56c7b1"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/preferred-recipe-codes.txt",
+      "bytes": 480,
+      "sha256": "2dd0fdc745ee3ce9aa9e90abf0415561cce351238cd8845fe8a1d7dab0e6d0c1"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/raw/browser-download-manifest-replacements.json",
+      "bytes": 4214,
+      "sha256": "065971fafac66e2f6d09cfaa802c48df33ce43f03b56d432c67a6db68b31a277"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/raw/browser-download-manifest.json",
+      "bytes": 18116,
+      "sha256": "f664153472fe3dda79df475b24f20eddf8889045a363d3a174b998b2d284514f"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/README.md",
+      "bytes": 8912,
+      "sha256": "49845d4613790bbe0a541210d42e2a0c2b7327905abfd80edf98c6813b286888"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/recipes-to-review.json",
+      "bytes": 4023,
+      "sha256": "cc74f4a091c7ca34682ac578e389ea834507e7156ace6b1e1d86fe6256f616ce"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/selected-codes.txt",
+      "bytes": 480,
+      "sha256": "2dd0fdc745ee3ce9aa9e90abf0415561cce351238cd8845fe8a1d7dab0e6d0c1"
+    },
+    {
+      "path": "foodcatalogservice/src/main/resources/catalog/nin-real-20261123/source-readiness.json",
+      "bytes": 6233,
+      "sha256": "b713cd938e024cd091d14374135dbd425ec4c07743177ceea93fbea47b0a8189"
+    },
+    {
+      "path": "foodcatalogservice/src/test/java/com/example/foodcatalogservice/service/CatalogSourcePolicyTest.java",
+      "bytes": 7069,
+      "sha256": "02a169d30c9a70738624d70465f7baa6fc01eb6ab7a9c2cdf5076c4612c51165"
+    },
+    {
+      "path": "foodcatalogservice/src/test/java/com/example/foodcatalogservice/service/PreparationGuideTest.java",
+      "bytes": 1148,
+      "sha256": "a09347028ca3ccfd73dc0cf5e3465a00cb56abb5b6927d84c47e6a2420b5c282"
+    },
+    {
+      "path": "foodcatalogservice/src/test/java/com/example/foodcatalogservice/service/SourceCatalogCandidateHttpTest.java",
+      "bytes": 10333,
+      "sha256": "69391ee1441b8e976e5ebe2abfdcd7860659f1a57f3312309c4689ecf6f236b8"
+    },
+    {
+      "path": "foodcatalogservice/src/test/java/com/example/foodcatalogservice/service/SourceCatalogImportServiceTest.java",
+      "bytes": 8639,
+      "sha256": "677d83c4b2d0daa3261f7815dbeeaa6ac85c5f1b19cf46a5078559a2f98ebb38"
+    },
+    {
+      "path": "frontend/API_CONTRACT.md",
+      "bytes": 12965,
+      "sha256": "186ca800f45ed3635bee104549584d27b534a1d022d448d860b794c48328cea4"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000007.webp",
+      "bytes": 11218,
+      "sha256": "1236b4679d8de241a80e30684c5e123cf7d3c9eca6931cf3d7980ce92e2236e5"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000008.webp",
+      "bytes": 24540,
+      "sha256": "1358a370a342fd73efc29b191f72e93a91991ef160075b8e56248aad4fdf054e"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000009.webp",
+      "bytes": 39356,
+      "sha256": "a74285036d5e5e5c8ef992eb3f618a560a26208f69a2cdf00f765f397c91c30c"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000010.webp",
+      "bytes": 31296,
+      "sha256": "b05b794473e1e11c0a3fa7528d6e86c556aa9397b4dbbe96cbf0d30cbb0e5dfe"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000011.webp",
+      "bytes": 24986,
+      "sha256": "18cbc001ffea14290f4c8bc036f0f965e7b3f9ab2fd3988df03e3a241b139bad"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000012.webp",
+      "bytes": 27010,
+      "sha256": "72271041c347947d2d6143ee44c7b1cb3031bdec6e9977226a5e27283088fbff"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000013.webp",
+      "bytes": 20854,
+      "sha256": "06fec0c3fa801d96e80e6169abd64b541a8928da3c1903438ae3a4cff570f35e"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000014.webp",
+      "bytes": 11118,
+      "sha256": "510306e5ba92262ac266e67bcc1622e611c641e956148bf3272207babe9bf5e2"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000015.webp",
+      "bytes": 14220,
+      "sha256": "fe39bf92237ba03411f85456c8becb991745379a901f194e07f1f5798a83d4fd"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000016.webp",
+      "bytes": 10666,
+      "sha256": "aaa6a98f42ebf8eb592e1929f4256481759963b3e8beb5339a47b3eb48c6310e"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000018.webp",
+      "bytes": 16692,
+      "sha256": "32bf538f0d1cd3ebd57d5cc79246faf032bc4caf82059705174ea80b58a1ac93"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000020.webp",
+      "bytes": 15070,
+      "sha256": "c0d6683a296cb86277fbd462d57268dc8d1619605898acf5c93b68b3ae23264e"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000021.webp",
+      "bytes": 28230,
+      "sha256": "f12ce50eed33dde2602dc1aa131de6192b0f7429087a11826d1bf09b76ed2c96"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000025.webp",
+      "bytes": 18884,
+      "sha256": "4c146f12af23318d17ba43d7d917a5fe64ee01689e56724f821f4b1bf8cd2a8c"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000027.webp",
+      "bytes": 24390,
+      "sha256": "3ac2cdce733c79d2976888fc47eeddddad25cccfbe777c59760bd5363c880954"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000033.webp",
+      "bytes": 21792,
+      "sha256": "6f1d6c44695a5a5e2303d56e72efaba3ec40a1c448090c0663372c152baa6d81"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000037.webp",
+      "bytes": 21508,
+      "sha256": "0249c2a16eb11ab20b7ab643d87f6815c459896a427a5d860ba84773ed96a635"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000039.webp",
+      "bytes": 22238,
+      "sha256": "6cde5ca309b7e7a7f5a9bf30d64e5493b9899173bf75066b27f9fcf65cd8d5a4"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000049.webp",
+      "bytes": 17764,
+      "sha256": "e44b3ec3de5495f97ac8a4e5272edf9a3303f35e7ac4e10e061cd4cb95133cae"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000056.webp",
+      "bytes": 13810,
+      "sha256": "e5417d43211a5d19084cf02763b0259800b344d9e5a819610a4e6f01ee87e4ca"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000057.webp",
+      "bytes": 15932,
+      "sha256": "37840acb50916877e0e18e2eb82d101fe56493dfa4c4482b43baf3443e6e0a5c"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000058.webp",
+      "bytes": 15618,
+      "sha256": "febf44a35b9959b4c3e5fff4c79ba80d4e791b87cbc931eeafb33184e1efb6a6"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000071.webp",
+      "bytes": 11766,
+      "sha256": "337c65d40176734f5f65602a0a2f1b90bc5e4335ae3238a462b5ad7ef925d99b"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000077.webp",
+      "bytes": 16986,
+      "sha256": "9ae687d4aecd0510c335aa6604be9e910d9908a07fd79a2c453684ca350315bf"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000084.webp",
+      "bytes": 12288,
+      "sha256": "a0e4d5c6ec470ce45cbb36ee8bc4cc4a8ff390328edc4cf37774bbe57f7f5357"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000086.webp",
+      "bytes": 19046,
+      "sha256": "551222483c8db0bb29d8683e9614f91cab70bcf15334dfec91256c4c914a17ba"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000088.webp",
+      "bytes": 16930,
+      "sha256": "951cd0851be51c6c337f42469b704c56307d4b8d8db78c88f57d290e374528f6"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000089.webp",
+      "bytes": 13232,
+      "sha256": "8258c19b1d37d39600cc131dc7ea8216f0f9980c08bc71c02abc1b660e822801"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000092.webp",
+      "bytes": 15866,
+      "sha256": "129aa735d5cad2ba74e7dd1437443bc3e56762c58827c3c24baaff5d9aa154f7"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000094.webp",
+      "bytes": 17638,
+      "sha256": "c20f614361c92d692d4148271298da4d6e0a5a55f861de4f0e14293bf3ee018d"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000100.webp",
+      "bytes": 20586,
+      "sha256": "1c37666b42b411517fb43e844ce158bd22a52f7ecbaf9f0b2464260e2e88ae75"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000105.webp",
+      "bytes": 18962,
+      "sha256": "7c4efa8e7881726d8e112928ed5519b1a8495f8d0205625c1f6448b7614a495b"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000117.webp",
+      "bytes": 22398,
+      "sha256": "c4cd534555663590cf98a343f46e865bb2429f41be57efc93eae67b114649349"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000144.webp",
+      "bytes": 22340,
+      "sha256": "501bfc061eb017488461c7a2e0ff97da33e32977ca66adf9234387e8caa8fead"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000146.webp",
+      "bytes": 16290,
+      "sha256": "4a3051ab361ad78d49dbcf4a0e47a40f133d0d8ed0c88c6e9092cadca303f75f"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000155.webp",
+      "bytes": 10566,
+      "sha256": "99b4487a50600523124fc2b3dfc8b5984319c80773cb275159d5dbdef3ed306e"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000174.webp",
+      "bytes": 23870,
+      "sha256": "e95d72ca3c36d984b501bed4a087ca9ad53e737605f60176dafe88863c7dce04"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000175.webp",
+      "bytes": 14714,
+      "sha256": "58fd149a4f7daa01c10aa014283d96ddfcec68e4054c3d6943831910dc95dcd5"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000398.webp",
+      "bytes": 9200,
+      "sha256": "692b5813638d2a019912271151799d317db6e9ed7de635d424dc3d592dc1c5f9"
+    },
+    {
+      "path": "frontend/public/food-images/nin-real-20261123/VPF-000423.webp",
+      "bytes": 8368,
+      "sha256": "03cbe8e060908e7b092abb2710058502d9bd3c5ec395d52c84509de312359ccc"
+    },
+    {
+      "path": "frontend/src/components/FoodDetail.tsx",
+      "bytes": 7707,
+      "sha256": "7d8ccbfa16766f1a8aab70bde3254ebffdef9f69b452748919b27cf00cfbcdc0"
+    },
+    {
+      "path": "frontend/src/components/MealChangeModal.tsx",
+      "bytes": 10255,
+      "sha256": "521a94222ecc7d780d09bf2fe7909c5d392647403a109efbb216da7328947b61"
+    },
+    {
+      "path": "frontend/src/components/ui.tsx",
+      "bytes": 8933,
+      "sha256": "8e20d3ed2e591cb7a549a02ef491cabd02110f9356628244a0c23bde6a7f0b05"
+    },
+    {
+      "path": "frontend/src/data/ninImages.ts",
+      "bytes": 12219,
+      "sha256": "7be98a8d4b0a5b017dfa5e951d0b94feeecfebe7be8f2234c7046c7b130c3868"
+    },
+    {
+      "path": "frontend/src/foodImages.ts",
+      "bytes": 597,
+      "sha256": "be35403fefb3e6d830ba0f2a4c694044dcde02d06fe56aad70f6d459ff4c573a"
+    },
+    {
+      "path": "frontend/src/pages/Dashboard.tsx",
+      "bytes": 12951,
+      "sha256": "c5342d6b9046d37cc25761a88c95f11a47fd5b4d8894689b8b4c082e9c87a9d6"
+    },
+    {
+      "path": "frontend/src/pages/FoodLibrary.tsx",
+      "bytes": 9389,
+      "sha256": "8ad632ea53fbc72a2e132c4776fe1b45e2a14272c69a43412207bfae7a1b1f06"
+    },
+    {
+      "path": "frontend/src/pages/MealPlanner.tsx",
+      "bytes": 29608,
+      "sha256": "a62d1dc87c7be88b83ef0145fe5439e03d0c546cacb86a7194312cb78a0ad9ca"
+    },
+    {
+      "path": "frontend/src/pages/Tools.tsx",
+      "bytes": 32684,
+      "sha256": "5292846ed67d9fe373259f7c8d4331859b6488cce163a68ba7d8a23bbc16ddab"
+    },
+    {
+      "path": "frontend/src/services/api.ts",
+      "bytes": 10985,
+      "sha256": "d8ce5f1110b6811b2c4b1ab7eb64e7e067aaf7befd69011b98f634d9c58f6e8a"
+    },
+    {
+      "path": "frontend/src/styles.css",
+      "bytes": 92983,
+      "sha256": "3e5c586d9ddecec254d16926e1837d823e37eca3a7152c2817e591a88cf4a8f2"
+    },
+    {
+      "path": "frontend/src/test/flows.test.tsx",
+      "bytes": 6572,
+      "sha256": "2264f9b7be895c434267961f2775e7ffc435fd59bff349d5504ba15ef9dd7e54"
+    },
+    {
+      "path": "frontend/src/test/food-images.test.tsx",
+      "bytes": 2181,
+      "sha256": "dd9637e07540aa7c5931d4e3bfe7fa823330c703d6bda7978ceaf4672fcdbedd"
+    },
+    {
+      "path": "frontend/src/test/integration.test.tsx",
+      "bytes": 9540,
+      "sha256": "ef9054ef63fc580abbb4ec5cab5c1cff273343360e619eb1260579ea63463ff4"
+    },
+    {
+      "path": "frontend/src/test/meal-change.test.tsx",
+      "bytes": 8068,
+      "sha256": "c5881115aadd9c547bade5c5c0353eb7a11a24fdf2289d9316b4b4fc93f4f4b1"
+    },
+    {
+      "path": "frontend/src/test/planning-mode.test.tsx",
+      "bytes": 4894,
+      "sha256": "70f8dcb1e5914f0943a8e1dfa01392cfb7f2b6529e232011768909d0b8448e94"
+    },
+    {
+      "path": "frontend/src/test/regeneration.test.tsx",
+      "bytes": 5792,
+      "sha256": "0c7286b321a2791397f0aef9de8b10cb099c0bfdbbee6fbfff8b0c7068cf850d"
+    },
+    {
+      "path": "frontend/src/test/source-catalog.test.tsx",
+      "bytes": 8947,
+      "sha256": "35b2b6e2d51c42cc62bd61e7604bd46de6a67f4ba740c52f43939527a715ac9d"
+    },
+    {
+      "path": "frontend/src/types.ts",
+      "bytes": 4288,
+      "sha256": "dfc528189f206fd977ceffeeaa9ed455a86c8467b44e97c01c32bee20271bc3b"
+    },
+    {
+      "path": "frontend/src/utils.ts",
+      "bytes": 8595,
+      "sha256": "0cc988870c8f22fa64991b36dc3e2c57408c5e00c738ef49551abbffdb38cbcc"
+    },
+    {
+      "path": "gateway/gateway_app/integration.py",
+      "bytes": 53863,
+      "sha256": "c0b394bdbe9ca4d9abdee7e026e1faf60a9bb974c8a1abe7011bde87bed9864b"
+    },
+    {
+      "path": "gateway/README.md",
+      "bytes": 17356,
+      "sha256": "a4951ea97e05f238c40e8baf6e8d7a40caaf3da472e5d69e85b57831e79bff4d"
+    },
+    {
+      "path": "gateway/tests/test_checked_change.py",
+      "bytes": 5202,
+      "sha256": "fd97fcf37c6d9f36221fdfa68a3da659d196b9975eba1d952938a92bb0d74b35"
+    },
+    {
+      "path": "gateway/tests/test_exclusions.py",
+      "bytes": 3933,
+      "sha256": "e61d348f1cde1ca5dd9ba2406e5dd8909766467b01b2fe8a1a4c93074d783103"
+    },
+    {
+      "path": "gateway/tests/test_new_source_only.py",
+      "bytes": 2126,
+      "sha256": "d30fd0ffeeb44e4708b2bcda4bdf90ebf897924c452aa4af0ffbf680b39d608d"
+    },
+    {
+      "path": "gateway/tests/test_planning_modes.py",
+      "bytes": 5530,
+      "sha256": "caff70be298ace44fbf6ddc39f2b4cb8cd35e51ce812a3949aa44406104a5c04"
+    },
+    {
+      "path": "gateway/tests/test_regeneration.py",
+      "bytes": 9242,
+      "sha256": "3181722ff45fb1e3d1e88a60e607554e47eceb942c8fc68f824ebd1e805b7853"
+    },
+    {
+      "path": "gateway/tests/test_team_bridge.py",
+      "bytes": 16421,
+      "sha256": "b1fdc1fd8a6b7e66bdbcc5f58056ee979a5fdc140bab698804a36799f16324a9"
+    },
+    {
+      "path": "mealoptimizerservice/schema/20261125_meal_plan_regeneration.sql",
+      "bytes": 647,
+      "sha256": "be1d19de45bd333d72ce06d11302e2fc3569d791138aa785ef6c25bebbb079d8"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/client/FoodCatalogIntegrationClient.java",
+      "bytes": 5231,
+      "sha256": "f9703a7bc7ff533b1ed83773f03e4eca9889fd52cae0e1d6353b11509fdf8d0d"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/controller/InternalOptimizerController.java",
+      "bytes": 1909,
+      "sha256": "106c97ef0952d95e9202a2924be83109409fc4bd8e1edb41a65560e64a2f16e3"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/controller/UserMealPlanController.java",
+      "bytes": 7095,
+      "sha256": "fad0b36bcb66eb4fd455faaa064c887b27175de031d8e832687685968c7a00a0"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/dto/DishSolverDto.java",
+      "bytes": 2469,
+      "sha256": "84f123f1b6081f79a23174a3bd8278ae47fbca3b66f5bdbc299bb68e6148f0ea"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/dto/request/CheckedMealChangeRequest.java",
+      "bytes": 764,
+      "sha256": "b8509810454efa880b5172e927f933d0e8127dbdc1a8710f14956e89da943aa9"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/dto/request/GenerateDailyMealRequest.java",
+      "bytes": 2939,
+      "sha256": "220d0140f882a06bb91d59a2afda85e18677b484ae05c18f4f8449a804e6653b"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/dto/response/MealPlanResponse.java",
+      "bytes": 3771,
+      "sha256": "f0552fec473c48dd95b61c126214789a3687fc796505264fdc693b98074cae38"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/entity/enums/PlanningMode.java",
+      "bytes": 198,
+      "sha256": "b30b87e8adc4055a6a39ce298e2ab51f92368cc2f20d1f02a1ac72d44883b567"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/entity/MealPlan.java",
+      "bytes": 6592,
+      "sha256": "d463a85cb6fdd38a8570c313ae08c757f0027a011983df0c6b96388f4c391c2b"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/entity/MealPlanRevision.java",
+      "bytes": 950,
+      "sha256": "b4a885afafe28a4e5e82e4837c8775526cbb4f7a48b11ee8827da7577e545b34"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/repository/MealPlanRevisionRepository.java",
+      "bytes": 399,
+      "sha256": "bf27a6ba7d695c7bff89882518a99952f8ef17f8ad167c5b3142bbb58b83e3d1"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/service/CheckedMealChangeService.java",
+      "bytes": 15444,
+      "sha256": "88013fc142b63e1a46a535907cf9f3f73f86231cd3ac2e33dc6bc48695ab3a13"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/service/GeneralReferencePolicy.java",
+      "bytes": 3653,
+      "sha256": "d35afe87f1c1d66d4b244561b3f8d7684ee13001259cffcd619dd8c3dd5f4de5"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/service/MealOptimizerService.java",
+      "bytes": 51008,
+      "sha256": "04c336cf65e4469d4b09b37e75295c6df9f06fcbc736ca4e623362eb535cecda"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/service/MealPlanArchiveService.java",
+      "bytes": 1807,
+      "sha256": "e5f998c83c72fff85014552018d4bf79ce890abf167ede3133aadc564171ff4b"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/service/NewSourceCatalogPolicy.java",
+      "bytes": 4577,
+      "sha256": "4b18b8a4b6252d553f38d100262842c27a41068158aa39624480e7f1bdf7697e"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/solver/CpSatMealOptimizationEngine.java",
+      "bytes": 23374,
+      "sha256": "905c8e5a6e3413a3a37cf5d3dab217fb803bb95e39017c98f12b87829a79a336"
+    },
+    {
+      "path": "mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/solver/SolverInputDataValidator.java",
+      "bytes": 2056,
+      "sha256": "772d4da4d9cf01ea5621d6605c9a96d8d33fc3c3ffce3de02bf4e1902f4396d1"
+    },
+    {
+      "path": "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/controller/GenerationApiContractTest.java",
+      "bytes": 2234,
+      "sha256": "60ab7870f153347984a24d13a2c118475bb3189303519e71705eb35bcf02327e"
+    },
+    {
+      "path": "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/service/CheckedMealChangeServiceTest.java",
+      "bytes": 13017,
+      "sha256": "032383caef8d5ff3a22b7cc0a00d9a84d5171c4892faaaa67fafa799204a175c"
+    },
+    {
+      "path": "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/service/GeneralReferencePolicyTest.java",
+      "bytes": 3461,
+      "sha256": "fcab35ee1dd85e8e0fe637aa11aa568b16e894dc0413457141f81ed6e75b7a97"
+    },
+    {
+      "path": "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/service/MealExclusionPipelineTest.java",
+      "bytes": 4160,
+      "sha256": "d39b02341f899b166d60b5d903d82dc9f2b88650f9af505ca3e06c639373608a"
+    },
+    {
+      "path": "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/service/MealRegenerationServiceTest.java",
+      "bytes": 10219,
+      "sha256": "faae0e4ee92724c235713218fcaf2dbadf00f4062a566febcefa56a79ac8b1ec"
+    },
+    {
+      "path": "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/service/NewSourceCatalogPolicyTest.java",
+      "bytes": 3302,
+      "sha256": "9e9b29d4eddd0fe49512484a2beab8b8c1501d88abe8b15d0418fc219df4bd8d"
+    },
+    {
+      "path": "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/solver/CpSatMealOptimizationEngineTest.java",
+      "bytes": 18645,
+      "sha256": "4e2d87fd062f96b165738e48ce0d95f1bfdc81e81c1da119c40bd880a5404ed0"
+    },
+    {
+      "path": "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/solver/NinSourceDatasetTest.java",
+      "bytes": 11378,
+      "sha256": "ab27ebabfc3258fc1079cea32f53288e5084e040b3b9efc4ffa175401b9324dc"
+    },
+    {
+      "path": "mealoptimizerservice/src/test/java/com/example/mealoptimizerservice/solver/SolverInputDataValidatorTest.java",
+      "bytes": 2352,
+      "sha256": "6d8085ed6b3ccbb676ceb20138fd9c82c93696ec6f926fbb43a183b9c27e31db"
+    },
+    {
+      "path": "README.md",
+      "bytes": 8133,
+      "sha256": "1c85a08e0dbf0b03e2c2ab87ca3f4cc04ad4d6f68ceed10550308d89cf9aff0e"
+    }
+  ]
+}

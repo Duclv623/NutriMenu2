@@ -1,0 +1,27 @@
+{
+  "code": "HAP-221015",
+  "imageSha256": "a1b95f3c02a987591d4ad5aaa216afeeeac8849d0585636b7b2ffe4d21fa16c6",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Khoai lang luộc (củ nguyên)",
+      "amountSourceText": "319.0",
+      "numericQuantity": 319.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Khoai lang luộc (củ thái lát)",
+      "amountSourceText": "262.0",
+      "numericQuantity": 262.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "707.1 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

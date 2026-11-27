@@ -1,0 +1,27 @@
+{
+  "code": "VPF-000132",
+  "imageSha256": "91d24ba457cf6ed8f31e551e1c951638a062294b8a7ad32710a890cf2ec79f10",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "462kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Mực trứng",
+      "amountSourceText": "320g",
+      "numericQuantity": 320.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "20g",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

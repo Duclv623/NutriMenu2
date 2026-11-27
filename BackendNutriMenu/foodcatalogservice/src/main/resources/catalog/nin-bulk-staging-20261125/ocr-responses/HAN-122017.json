@@ -1,0 +1,19 @@
+{
+  "code": "HAN-122017",
+  "imageSha256": "fb34983f58bd7fda05b0adae2776636160b09490e901cf524e68fdccfd5ef85a",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "357.4 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Củ từ luộc",
+      "amountSourceText": "361.8",
+      "numericQuantity": 361.8,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

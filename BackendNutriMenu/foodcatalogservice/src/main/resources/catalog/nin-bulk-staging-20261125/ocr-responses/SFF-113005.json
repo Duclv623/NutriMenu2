@@ -1,0 +1,69 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "601.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi/Soft Rice vermicelli",
+      "amountSourceText": "179.0",
+      "numericQuantity": 179.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tiết ngan luộc/Boiled goose blood",
+      "amountSourceText": "46.5",
+      "numericQuantity": 46.5,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mọc mộc nhĩ/Meatball with wood ear",
+      "amountSourceText": "39.2",
+      "numericQuantity": 39.2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt ngan luộc/Boiled goose",
+      "amountSourceText": "68.0",
+      "numericQuantity": 68.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá/Welsh onion",
+      "amountSourceText": "22.0",
+      "numericQuantity": 22.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Măng tươi/fresh bamboo shoots",
+      "amountSourceText": "55.0",
+      "numericQuantity": 55.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/Bone broth",
+      "amountSourceText": "310.0",
+      "numericQuantity": 310.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table energy sum (601.3 Kcal) differs by 0.1 from printed imageEnergyText (601.2 Kcal)."
+  ],
+  "code": "SFF-113005",
+  "imageSha256": "af8e33a36a4f87bedcc11f8fc7036d2144bacc95bfc24971035b6ceb11fafa5a",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

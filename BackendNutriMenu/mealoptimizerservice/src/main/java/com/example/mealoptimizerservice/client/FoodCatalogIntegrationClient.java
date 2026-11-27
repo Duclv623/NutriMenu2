@@ -2,8 +2,11 @@ package com.example.mealoptimizerservice.client;
 
 import com.example.mealoptimizerservice.dto.DishSolverDto;
 import com.example.mealoptimizerservice.entity.enums.MealSlot;
+import com.example.mealoptimizerservice.entity.enums.PlanningMode;
 import com.example.mealoptimizerservice.entity.enums.MedicalTag;
 import com.example.mealoptimizerservice.exception.OptimizerBusinessException;
+import com.example.mealoptimizerservice.solver.SolverInputDataValidator;
+import com.example.mealoptimizerservice.service.NewSourceCatalogPolicy;
 import tools.jackson.databind.JsonNode;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
@@ -43,16 +46,22 @@ public class FoodCatalogIntegrationClient {
     public List<DishSolverDto> fetchCandidatesForSolver(
             Long userId, BigDecimal maxGi, Set<MedicalTag> contraindications,
             Set<Long> excludedDishIds, Set<MealSlot> requiredMealSlots) {
+        return fetchCandidatesForSolver(userId,maxGi,contraindications,excludedDishIds,requiredMealSlots,PlanningMode.MEDICAL);
+    }
+    public List<DishSolverDto> fetchCandidatesForSolver(Long userId, BigDecimal maxGi,Set<MedicalTag> contraindications,
+            Set<Long> excludedDishIds,Set<MealSlot> requiredMealSlots,PlanningMode planningMode) {
         try {
             List<DishSolverDto> dishes = restClient.post()
                     .uri(DISHES_PATH + "/candidates")
                     .contentType(MediaType.APPLICATION_JSON)
-                    .body(new CandidateFilter(userId, maxGi, contraindications, excludedDishIds, requiredMealSlots))
+                    .body(new CandidateFilter(userId, maxGi, contraindications, excludedDishIds, requiredMealSlots,planningMode))
                     .retrieve()
                     .body(new ParameterizedTypeReference<List<DishSolverDto>>() {});
             if (dishes == null) {
                 throw new OptimizerBusinessException(HttpStatus.BAD_GATEWAY, "Food Catalog không trả về danh sách món ăn.");
             }
+            dishes = NewSourceCatalogPolicy.onlyNewSource(dishes);
+            requireValidNutrition(dishes,planningMode);
             return dishes;
         } catch (RestClientException e) {
             throw catalogFailure(e);
@@ -71,12 +80,22 @@ public class FoodCatalogIntegrationClient {
             if (dish == null) {
                 throw new OptimizerBusinessException(HttpStatus.BAD_GATEWAY, "Food Catalog không trả về thông tin món ăn.");
             }
+            if (activeOnly && !NewSourceCatalogPolicy.isNewSource(dish.getCode())) return Optional.empty();
+            requireValidNutrition(List.of(dish),PlanningMode.GENERAL_REFERENCE);
             return Optional.of(dish);
         } catch (HttpClientErrorException.NotFound e) {
             return Optional.empty();
         } catch (RestClientException e) {
             throw catalogFailure(e);
         }
+    }
+
+    private OptimizerBusinessException catalogFailure(RestClientException error) {
+        log.warn("Food Catalog request failed ({})", error.getClass().getSimpleName());
+        if (error instanceof ResourceAccessException) {
+            return new OptimizerBusinessException(HttpStatus.SERVICE_UNAVAILABLE, "Không kết nối được với Food Catalog.");
+        }
+        return new OptimizerBusinessException(HttpStatus.BAD_GATEWAY, "Food Catalog trả về lỗi khi lấy dữ liệu món ăn.");
     }
 
     public List<JsonNode> foods(String authorization) {
@@ -99,12 +118,14 @@ public class FoodCatalogIntegrationClient {
         }
     }
 
-    private OptimizerBusinessException catalogFailure(RestClientException error) {
-        log.warn("Food Catalog request failed ({})", error.getClass().getSimpleName());
-        if (error instanceof ResourceAccessException) {
-            return new OptimizerBusinessException(HttpStatus.SERVICE_UNAVAILABLE, "Không kết nối được với Food Catalog.");
+
+    private static void requireValidNutrition(List<DishSolverDto> dishes,PlanningMode mode) {
+        try {
+            SolverInputDataValidator.validate(dishes,mode);
+        } catch (IllegalArgumentException error) {
+            throw new OptimizerBusinessException(HttpStatus.BAD_GATEWAY,
+                    "Food Catalog có món thiếu dữ liệu dinh dưỡng/khẩu phần; không được thay số thiếu bằng 0.");
         }
-        return new OptimizerBusinessException(HttpStatus.BAD_GATEWAY, "Food Catalog trả về lỗi khi lấy dữ liệu món ăn.");
     }
 
     private record CandidateFilter(
@@ -112,6 +133,6 @@ public class FoodCatalogIntegrationClient {
             BigDecimal maxGiAllowed,
             Set<MedicalTag> excludedMedicalTags,
             Set<Long> excludedRecentDishIds,
-            Set<MealSlot> requiredMealSlots) {
+            Set<MealSlot> requiredMealSlots, PlanningMode planningMode) {
     }
 }

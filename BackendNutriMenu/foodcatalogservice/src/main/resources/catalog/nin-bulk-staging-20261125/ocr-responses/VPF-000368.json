@@ -1,0 +1,35 @@
+{
+  "code": "VPF-000368",
+  "imageSha256": "12ebbe648adb2ba07896463030bd76f9ac3913dd9d37c6753783fbd4ed9cb560",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "666kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Đỗ xanh",
+      "amountSourceText": "150g",
+      "numericQuantity": 150.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường",
+      "amountSourceText": "40g",
+      "numericQuantity": 40.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Vừng",
+      "amountSourceText": "2g",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

@@ -1,0 +1,59 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "286.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi/Rice noodle",
+      "amountSourceText": "175.0",
+      "numericQuantity": 175.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tôm biển luộc/Boiled shrimp",
+      "amountSourceText": "46.0",
+      "numericQuantity": 46.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc/Boiled",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nấm hương, mộc nhĩ chần/Blanched mushroom and wood ear",
+      "amountSourceText": "12.0",
+      "numericQuantity": 12.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chần/Blanched",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau cần/Celery",
+      "amountSourceText": "13.0",
+      "numericQuantity": 13.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành, mùi/Welsh onion, coriander",
+      "amountSourceText": "11.0",
+      "numericQuantity": 11.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/Bone broth",
+      "amountSourceText": "306.0",
+      "numericQuantity": 306.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-211070",
+  "imageSha256": "95c34e570b12be29817255c5ba639b6c24cd9adeeb93d213416d9b96c8c690eb",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

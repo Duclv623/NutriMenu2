@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "195.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Kem cacao",
+      "amountSourceText": "61.0",
+      "numericQuantity": 61.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ốc quế",
+      "amountSourceText": "13.0",
+      "numericQuantity": 13.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-113086",
+  "imageSha256": "f1cf54849e2ce3b032a81fef61165990e81add289ca8e5b5e654bffa46b7d392",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

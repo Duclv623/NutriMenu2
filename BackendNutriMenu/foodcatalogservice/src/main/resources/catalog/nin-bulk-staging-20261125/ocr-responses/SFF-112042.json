@@ -1,0 +1,35 @@
+{
+  "code": "SFF-112042",
+  "imageSha256": "bb3c1ec2ca16660cf1e13bbc66151a10df03a74578eb4ead9750145067916216",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "424.5 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa bò tươi/Fresh milk",
+      "amountSourceText": "225.0",
+      "numericQuantity": 225.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường kính/Sugar",
+      "amountSourceText": "31.0",
+      "numericQuantity": 31.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trân châu đen/Black Pearl",
+      "amountSourceText": "39.0",
+      "numericQuantity": 39.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

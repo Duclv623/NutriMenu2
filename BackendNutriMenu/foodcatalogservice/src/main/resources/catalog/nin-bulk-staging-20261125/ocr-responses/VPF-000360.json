@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "420kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Gạo nếp",
+      "amountSourceText": "120g",
+      "numericQuantity": 120,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000360",
+  "imageSha256": "9547944f31cb722a9547b6602ea81d27f2604c7b0424280f587e4082578611b4",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

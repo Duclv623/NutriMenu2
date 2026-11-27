@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "622kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cá rô phi (cả xương)",
+      "amountSourceText": "530g",
+      "numericQuantity": 530,
+      "unitSourceText": "g",
+      "preparationSourceText": "cả xương",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau thìa là",
+      "amountSourceText": "15g",
+      "numericQuantity": 15,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu thực vật",
+      "amountSourceText": "10ml",
+      "numericQuantity": 10,
+      "unitSourceText": "ml",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000114",
+  "imageSha256": "927c08450b2bd6e8477cb9ce54fd7765d1588f5365ee508ca19a02cd2555f375",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

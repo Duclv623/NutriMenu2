@@ -1,0 +1,45 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "421.4 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Tào phớ",
+      "amountSourceText": "320.0",
+      "numericQuantity": 320.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thạch sương sáo",
+      "amountSourceText": "31.0",
+      "numericQuantity": 31.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trân châu",
+      "amountSourceText": "77.0",
+      "numericQuantity": 77.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước đường",
+      "amountSourceText": "64.0",
+      "numericQuantity": 64.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Sum of ingredient energies (421.5 Kcal) differs slightly from badge (421.4 Kcal) due to rounding."
+  ],
+  "code": "HAN-122044",
+  "imageSha256": "c3074a7f3c5e870ff54f4e1854c433216e39f99f18be6e8322e7323afa050034",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

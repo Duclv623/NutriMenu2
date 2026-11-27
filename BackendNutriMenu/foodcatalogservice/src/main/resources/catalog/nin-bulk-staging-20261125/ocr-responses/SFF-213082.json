@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "195.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cháo sườn/Spinach porridge with pork-rib",
+      "amountSourceText": "230.0",
+      "numericQuantity": 230.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu xanh bào/Mashed mungbeans",
+      "amountSourceText": "25.0",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành phi/Fried shallot",
+      "amountSourceText": "8.0",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "phi",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-213082",
+  "imageSha256": "f45a684197592db576bbff6a206cecabc6fc2533ff89e5853e48e018a4ab4d5e",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

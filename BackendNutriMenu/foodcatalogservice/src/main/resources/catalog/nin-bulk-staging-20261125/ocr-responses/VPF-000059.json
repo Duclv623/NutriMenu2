@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "139kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt lợn thăn",
+      "amountSourceText": "100g",
+      "numericQuantity": 100,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước mắm",
+      "amountSourceText": "7,5g",
+      "numericQuantity": 7.5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000059",
+  "imageSha256": "e9bef6a80b504089d24918f6edce8eb0c78a58d6cda3463df60daf48429b759d",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

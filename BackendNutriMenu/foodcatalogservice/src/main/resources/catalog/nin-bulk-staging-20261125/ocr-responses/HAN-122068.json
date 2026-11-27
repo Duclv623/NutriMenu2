@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "505.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Xôi trắng (đồ)",
+      "amountSourceText": "213.0",
+      "numericQuantity": 213.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "đồ",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Muối vừng",
+      "amountSourceText": "3.0",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-122068",
+  "imageSha256": "62e4734f80f5210773ae8bd4f56b0167061db4cc615b79e1f45288e125a02465",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

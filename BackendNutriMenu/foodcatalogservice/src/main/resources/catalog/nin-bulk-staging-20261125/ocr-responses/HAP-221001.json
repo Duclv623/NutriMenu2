@@ -1,0 +1,19 @@
+{
+  "code": "HAP-221001",
+  "imageSha256": "c51383d6dbe212625d0d9c062ccfdc914268aff914a748aba8e2f94b7322c952",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "227.3 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh su kem",
+      "amountSourceText": "Bánh su kem",
+      "numericQuantity": 88.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

@@ -1,0 +1,19 @@
+{
+  "code": "HAN-121055",
+  "imageSha256": "fffd89872acc2288f67b50177c9b307cba3e98b471e1283e82a2a13ee02bd526",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh rán bọc đường",
+      "amountSourceText": "115.0",
+      "numericQuantity": 115.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "bọc đường",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "325.9 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

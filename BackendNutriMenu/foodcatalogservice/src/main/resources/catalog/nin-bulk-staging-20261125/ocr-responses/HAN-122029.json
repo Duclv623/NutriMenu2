@@ -1,0 +1,19 @@
+{
+  "code": "HAN-122029",
+  "imageSha256": "ac7a9df51358b35c4b35b5a61b8ed9e48e4365a9c4c1568591b1827a9fa343b3",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Khoai lang nướng",
+      "amountSourceText": "438.6",
+      "numericQuantity": 438.6,
+      "unitSourceText": "g",
+      "preparationSourceText": "nướng",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "746.2 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

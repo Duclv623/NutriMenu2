@@ -1,0 +1,83 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "970.3 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ/Rice",
+      "amountSourceText": "292.0",
+      "numericQuantity": 292.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tôm biển rang/Roasted sea shrimp",
+      "amountSourceText": "71.0",
+      "numericQuantity": 71.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang/Roasted",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt gà xào sả/Stir-fried chicken with Lemongrass, chili",
+      "amountSourceText": "104.0",
+      "numericQuantity": 104.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào sả/Stir-fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ốc bươu nấu/Cooked snails",
+      "amountSourceText": "3.0",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nấu/Cooked",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chuối xanh nấu/Cooked green banana",
+      "amountSourceText": "61.0",
+      "numericQuantity": 61.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nấu/Cooked",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lá lốt/Piper lalot",
+      "amountSourceText": "3.5",
+      "numericQuantity": 3.5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu phụ rán/Fried tofu",
+      "amountSourceText": "21.0",
+      "numericQuantity": 21.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán/Fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải xanh luộc/Boiled Mustard greens",
+      "amountSourceText": "25.0",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc/Boiled",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước canh rau/Soup",
+      "amountSourceText": "171.0",
+      "numericQuantity": 171.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-211028",
+  "imageSha256": "5b67bf14b17a3951eb36680ad6c44e8555eaac306d1f38d9da790a15390adbe4",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

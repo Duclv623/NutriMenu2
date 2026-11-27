@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import {
   ArrowRight,
@@ -18,10 +18,17 @@ import type { Food, GenerateInput, MealType, Plan, PlanItem } from "../../../typ
 import {
   addDays,
   assertEligible,
+  assertNewSourceSelection,
   dateLabel,
   downloadFile,
   localDate,
   number,
+  ingredientAmount,
+  planCarbohydrateLabel,
+  planUsesHistoricalData,
+  planningReady,
+  scaleAmount,
+  servingLabel,
   sumNutrition,
 } from "../../../utils";
 import { API_MODE } from "../../../lib/config";
@@ -36,6 +43,7 @@ import {
   Checkbox,
   Empty,
   FoodMark,
+  FoodSource,
   IconButton,
   Modal,
   Nutrition,
@@ -51,10 +59,10 @@ import {
 const solverLabels = {
   OPTIMAL: "Tối ưu",
   FEASIBLE: "Có phương án",
-  INFEASIBLE: "Không có nghiệm",
+  INFEASIBLE: "Chưa có thực đơn phù hợp",
   UNKNOWN: "Chưa tìm được phương án",
   MODEL_INVALID: "Cấu hình không hợp lệ",
-  NOT_RUN: "Mẫu giao diện · Chưa tối ưu",
+  NOT_RUN: "Chưa kiểm tra dinh dưỡng",
 };
 export function MealPlannerPage() {
   const { userData: w, update, reload, toast } = useApp();
@@ -68,6 +76,7 @@ export function MealPlannerPage() {
       ? w.plans.find((p) => p.id === params.get("plan") && p.date === date)
       : undefined) || w.plans.find((p) => p.date === date);
   const [generateOpen, setGenerateOpen] = useState(false);
+  const [advancedGenerateOpen, setAdvancedGenerateOpen] = useState(false);
   const [tool, setTool] = useState<PlanTool | null>(null);
   const [swap, setSwap] = useState<PlanItem | null>(null);
   const [detail, setDetail] = useState<Food | null>(null);
@@ -76,6 +85,7 @@ export function MealPlannerPage() {
     setParams({ date: value });
   };
   const totals = plan ? sumNutrition(plan.items, w.foods) : null;
+  const historical = plan && planUsesHistoricalData(plan, w.foods);
   const stale = plan && plan.profileVersion !== w.profile.version;
   const hasSkipped = !!plan?.skippedItems?.length;
   const rejected =
@@ -105,7 +115,7 @@ export function MealPlannerPage() {
     }
   }
   async function complete(item: PlanItem) {
-    if (!plan) return;
+    if (!plan || date > localDate() || busy) return;
     const key = `${plan.id}:${item.id}`;
     const selected = !w.completedMeals.includes(key);
     if (API_MODE === "api") {
@@ -117,7 +127,7 @@ export function MealPlannerPage() {
       update((s) => ({
         ...s,
         completedMeals: selected
-          ? [...s.completedMeals, key]
+          ? [...new Set([...s.completedMeals, key])]
           : s.completedMeals.filter((k) => k !== key),
       }));
     } catch (e) {
@@ -159,22 +169,13 @@ export function MealPlannerPage() {
     if (!plan || !totals) return;
     const lines = [
       `NutriGuide — Thực đơn ${dateLabel(date)}`,
+      `Chế độ: ${plan.planningMode === "GENERAL_REFERENCE" ? "Phổ thông" : "Bệnh lý"}`,
       `Trạng thái: ${solverLabels[plan.solverStatus]}`,
       ...plan.items.map((i) => {
-        const food = w.foods.find((f) => f.id === i.dishId);
-        const heading = `\n${MEALS[i.meal].name}: ${food?.name || i.name || "Món trong thực đơn"}\nKhẩu phần: ${number(i.servingMultiplier, 2)} phần`;
-        return food
-          ? heading +
-              ` · ${number(food.grams * i.servingMultiplier)} g\n` +
-              food.ingredients
-                .map(
-                  (ingredient) =>
-                    `${ingredient.name}: ${number(ingredient.grams * i.servingMultiplier)} g`,
-                )
-                .join("\n")
-          : heading;
+        const f = w.foods.find((f) => f.id === i.dishId)!;
+        return `\n${MEALS[i.meal].name}: ${f.name}\nKhẩu phần: ${number(i.servingMultiplier, 2)} phần · ${servingLabel(f, i.servingMultiplier)}\n${f.ingredients.map((x) => `${x.name}: ${ingredientAmount(x, i.servingMultiplier)}`).join("\n")}`;
       }),
-      `\nTổng: ${number(totals.energyKcal)} kcal; Carb ${number(totals.netCarbG, 1)} g; Đạm ${number(totals.proteinG, 1)} g; Béo ${number(totals.fatG, 1)} g; Xơ ${number(totals.fiberG, 1)} g; Natri ${number(totals.sodiumMg)} mg.`,
+      `\nTổng: ${number(totals.energyKcal)} kcal; ${planCarbohydrateLabel(plan.items, w.foods)} ${number(totals.netCarbG, 1)} g; Đạm ${number(totals.proteinG, 1)} g; Béo ${number(totals.fatG, 1)} g; Xơ ${number(totals.fiberG, 1)} g; Natri ${number(totals.sodiumMg)} mg.`,
       ...plan.notes,
     ];
     downloadFile(`thuc-don-${date}.txt`, lines.join("\n"));
@@ -201,9 +202,10 @@ export function MealPlannerPage() {
                 Kiểm tra khả năng tạo
               </Button>
             )}
+            {API_MODE === "api" && <Button variant="secondary" onClick={() => setAdvancedGenerateOpen(true)}>Tạo theo hồ sơ / tùy chỉnh</Button>}
             <Button onClick={() => setGenerateOpen(true)}>
               <Plus size={17} />
-              Tạo thực đơn
+              {plan ? "Tạo lại thực đơn" : "Tạo thực đơn"}
             </Button>
           </>
         }
@@ -267,6 +269,25 @@ export function MealPlannerPage() {
           </Button>
         </div>
       </div>
+      {plan && (
+        <div className="panel fineprint">
+          <strong>
+            {plan.planningMode === "GENERAL_REFERENCE"
+              ? "Phổ thông"
+              : "Chế độ bệnh lý"}
+          </strong>
+          {plan.planningMode === "GENERAL_REFERENCE"
+            ? ": Dựa trên mục tiêu năng lượng bạn chọn. Dinh dưỡng được ước tính theo khẩu phần; chế độ này không đánh giá GI/GL và không dùng để điều trị bệnh."
+            : ": Giữ giới hạn GI, GL và quy tắc bệnh lý của bộ tối ưu. Kết quả chưa thay thế tư vấn của chuyên gia."}
+        </div>
+      )}
+      {historical && (
+        <Alert>
+          <strong>Thực đơn dùng dữ liệu cũ</strong>. Thực đơn này được giữ để
+          xem lại. Bạn có thể chọn Tạo lại thực đơn và xác nhận thay thế bằng dữ
+          liệu NIN mới. Bản cũ được lưu khi máy chủ tạo lại thành công.
+        </Alert>
+      )}
       {stale && (
         <Alert error>
           Hồ sơ đã đổi từ lúc tạo thực đơn. Chọn một ngày trống để tạo thực đơn
@@ -275,8 +296,8 @@ export function MealPlannerPage() {
       )}
       {plan && w.capabilities?.swap === false && (
         <Alert>
-          Máy chủ chưa bật chức năng đổi món có kiểm tra. Cần cập nhật và khởi
-          động lại Meal Optimizer rồi tải lại trang.
+          Đổi món tạm thời chưa sẵn sàng. Bạn có thể xem thực đơn và thử lại
+          sau.
         </Alert>
       )}
       {!plan ? (
@@ -322,6 +343,7 @@ export function MealPlannerPage() {
                       </div>
                       {items.map((item) => {
                         const food = w.foods.find((f) => f.id === item.dishId);
+                        if (!food) return <Alert key={item.id} error>Chưa tải được dữ liệu {item.name || "món trong thực đơn"}.</Alert>;
                         const completed = w.completedMeals.includes(
                           `${plan.id}:${item.id}`,
                         );
@@ -330,42 +352,32 @@ export function MealPlannerPage() {
                             <div className="planned-food">
                               {food && <FoodMark food={food} />}
                               <div className="planned-food-copy">
-                                {food ? (
-                                  <button
-                                    className="food-name"
-                                    onClick={() => setDetail(food)}
-                                  >
-                                    {food.name}
-                                  </button>
-                                ) : (
-                                  <strong>
-                                    {item.name || "Món trong thực đơn"}
-                                  </strong>
-                                )}
+                                <button
+                                  className="food-name"
+                                  onClick={() => setDetail(food)}
+                                >
+                                  {food.name}
+                                </button>
+                                <FoodSource food={food} />
                                 <p>
-                                  {number(item.servingMultiplier, 2)} khẩu phần
-                                  {food && (
-                                    <>
-                                      {" "}
-                                      · {number(food.grams * item.servingMultiplier)} g
-                                    </>
-                                  )}
-                                  {food && food.minutes !== null && (
-                                    <>
-                                      {" "}
-                                      · <Clock3 size={13} />
-                                      {food.minutes} phút
-                                    </>
-                                  )}
+                                  {number(item.servingMultiplier, 2)} khẩu phần ·{" "}
+                                  {servingLabel(food, item.servingMultiplier)}{" "}
+                                  <span>·</span>
+                                  <Clock3 size={13} />
+                                  {food.minutes === null
+                                    ? "Chưa có thời gian"
+                                    : `${food.minutes} phút`}
                                 </p>
                                 <div className="mini-macros">
                                   <span>
-                                    Carb{" "}
+                                    {planCarbohydrateLabel([item], w.foods)}{" "}
                                     <strong>
                                       {number(
                                         item.nutrition?.netCarbG ??
-                                          (food?.nutrition.netCarbG ?? 0) *
+                                          scaleAmount(
+                                            food.nutrition.netCarbG,
                                             item.servingMultiplier,
+                                          ),
                                         1,
                                       )}{" "}
                                       g
@@ -376,8 +388,10 @@ export function MealPlannerPage() {
                                     <strong>
                                       {number(
                                         item.nutrition?.proteinG ??
-                                          (food?.nutrition.proteinG ?? 0) *
+                                          scaleAmount(
+                                            food.nutrition.proteinG,
                                             item.servingMultiplier,
+                                          ),
                                         1,
                                       )}{" "}
                                       g
@@ -388,8 +402,10 @@ export function MealPlannerPage() {
                                     <strong>
                                       {number(
                                         item.nutrition?.fatG ??
-                                          (food?.nutrition.fatG ?? 0) *
+                                          scaleAmount(
+                                            food.nutrition.fatG,
                                             item.servingMultiplier,
+                                          ),
                                         1,
                                       )}{" "}
                                       g
@@ -403,6 +419,12 @@ export function MealPlannerPage() {
                                 variant="ghost"
                                 disabled={
                                   !!stale ||
+                                  !!historical ||
+                                  !planningReady(
+                                    food,
+                                    API_MODE === "demo",
+                                    plan.planningMode,
+                                  ) ||
                                   !!busy ||
                                   !food ||
                                   hasSkipped ||
@@ -425,7 +447,9 @@ export function MealPlannerPage() {
                                       ? `Bỏ giữ ${food?.name ?? item.name ?? "món"}`
                                       : `Giữ ${food?.name ?? item.name ?? "món"}`
                                   }
-                                  disabled={!!busy}
+                                  disabled={
+                                    !!busy || (!!historical && !item.locked)
+                                  }
                                   onClick={() => void lock(item)}
                                 >
                                   {item.locked ? (
@@ -437,7 +461,9 @@ export function MealPlannerPage() {
                                 <Button
                                   aria-pressed={completed}
                                   variant={completed ? "primary" : "secondary"}
-                                  disabled={!!busy}
+                                  disabled={
+                                    !!stale || !!busy || date > localDate()
+                                  }
                                   onClick={() => void complete(item)}
                                 >
                                   <Check size={14} />
@@ -454,6 +480,7 @@ export function MealPlannerPage() {
                                     disabled={
                                       !!busy ||
                                       !!stale ||
+                                      !!historical ||
                                       item.locked ||
                                       completed ||
                                       hasSkipped ||
@@ -470,6 +497,7 @@ export function MealPlannerPage() {
                                     disabled={
                                       !!busy ||
                                       !!stale ||
+                                      !!historical ||
                                       item.locked ||
                                       completed ||
                                       hasSkipped ||
@@ -534,11 +562,16 @@ export function MealPlannerPage() {
               <section className="panel">
                 <span className="eyebrow">TỔNG DINH DƯỠNG</span>
                 <h2>Cả ngày của bạn</h2>
-                {totals && <Nutrition value={totals} compact />}
+                {totals && <Nutrition value={totals} carbLabel={planCarbohydrateLabel(plan?.items || [], w.foods)} compact />}
                 <div className="summary-target">
                   <span>Mục tiêu năng lượng</span>
                   <strong>{number(plan.target)} kcal</strong>
                 </div>
+                <p className="fineprint">
+                  {plan.dataMode === "demo"
+                    ? "Số liệu tính từ dữ liệu mẫu. Chưa kiểm tra các ràng buộc dinh dưỡng cá nhân."
+                    : "Dinh dưỡng được ước tính theo khẩu phần từng món trong thực đơn."}
+                </p>
                 {API_MODE === "api" && (
                   <div className="actions workflow-plan-actions">
                     <Button
@@ -549,7 +582,7 @@ export function MealPlannerPage() {
                     </Button>
                     <Button
                       variant="secondary"
-                      disabled={!!stale || !!busy}
+                      disabled={!!stale || !!busy || !!historical || hasSkipped}
                       onClick={() => setTool({ kind: "rebalance" })}
                     >
                       Cân bằng các bữa còn lại
@@ -588,29 +621,13 @@ export function MealPlannerPage() {
           ))}
         </>
       )}
-      {generateOpen &&
-        (API_MODE === "api" ? (
-          <OptimizerGenerateDialog
-            date={date}
-            onClose={() => setGenerateOpen(false)}
-          />
-        ) : (
-          <GenerateModal
-            date={date}
-            onClose={() => setGenerateOpen(false)}
-            onGenerated={(next) =>
-              setParams({ date: next.date, plan: next.id })
-            }
-          />
-        ))}
-      {tool && (
-        <PlanToolDialog
-          tool={tool}
-          plan={plan}
-          date={date}
-          onClose={() => setTool(null)}
-        />
+      {generateOpen && (
+        <GenerateModal date={date} existingPlan={plan}
+          onClose={() => setGenerateOpen(false)}
+          onGenerated={(next) => setParams({ date: next.date, plan: next.id })} />
       )}
+      {advancedGenerateOpen && <OptimizerGenerateDialog date={date} onClose={() => setAdvancedGenerateOpen(false)} />}
+      {tool && <PlanToolDialog tool={tool} plan={plan} date={date} onClose={() => setTool(null)} />}
       {swap && plan && (
         <MealChangeModal
           plan={plan}
@@ -624,22 +641,41 @@ export function MealPlannerPage() {
 }
 function GenerateModal({
   date,
+  existingPlan,
   onClose,
   onGenerated,
 }: {
   date: string;
+  existingPlan?: Plan;
   onClose: () => void;
   onGenerated: (plan: Plan) => void;
 }) {
   const { userData: w, update, toast } = useApp();
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+  const [replacementConfirmed, setReplacementConfirmed] = useState(false);
+  const [days, setDays] = useState<1 | 7>(1);
+  const modeSelectRef = useRef<HTMLSelectElement>(null);
+  const replacementBlocked =
+    existingPlan &&
+    (existingPlan.items.some(
+      (item) =>
+        item.locked ||
+        w.completedMeals.includes(`${existingPlan.id}:${item.id}`),
+    )
+      ? "Thực đơn có món đang giữ hoặc đã ăn. Hãy bỏ giữ món hoặc chọn ngày khác; chỉ bỏ ghi nhận đã ăn nếu bạn đã đánh dấu nhầm."
+      : API_MODE === "api" && w.capabilities?.regenerate === false
+        ? "Tạo lại thực đơn tạm thời chưa sẵn sàng. Vui lòng thử lại sau."
+        : "");
   const [input, setInput] = useState<GenerateInput>({
+    planningMode: existingPlan
+      ? existingPlan.planningMode || "MEDICAL"
+      : undefined,
     date,
-    target: 1800,
+    target: existingPlan?.target || 1800,
     snacks: true,
-    maxMinutes: 45,
-    excludeRepeat: true,
+    maxMinutes: w.capabilities?.cookingTime === false ? 0 : 45,
+    excludeRepeat: w.capabilities ? false : true,
   });
   async function submit(e: FormEvent) {
     e.preventDefault();
@@ -647,17 +683,78 @@ function GenerateModal({
     setError("");
     try {
       assertEligible(w.profile);
-      const next = generateDemo(input, w);
-      sumNutrition(next.items, w.foods);
+      if (!input.planningMode)
+        throw new Error("Vui lòng chọn chế độ thực đơn trước khi tạo.");
+      if (replacementBlocked) throw new Error(replacementBlocked);
+      if (existingPlan && !replacementConfirmed)
+        throw new Error("Cần xác nhận thay thế trước khi tạo lại thực đơn.");
+      const request: GenerateInput = {
+        ...input,
+        ...(existingPlan
+          ? {
+              replacePlanId: existingPlan.id,
+              baseVersion: existingPlan.version,
+              replacementConfirmed,
+            }
+          : {}),
+      };
+      if (days === 7) {
+        const end = addDays(input.date, 6);
+        const occupied = w.plans.filter(p => p.date >= input.date && p.date <= end);
+        if (occupied.length) throw new Error("Khoảng 7 ngày đã có thực đơn. Chọn khoảng trống hoặc tạo lại từng ngày.");
+      }
+      const created = days === 7
+        ? API_MODE === "demo"
+          ? Array.from({ length: 7 }, (_, index) => generateDemo({ ...request, date: addDays(request.date, index) }, w))
+          : await mealPlanService.generateWeekly(request, w.profile.version)
+        : [API_MODE === "demo" ? generateDemo(request, w) : await mealPlanService.generate(request, w.profile.version)];
+      if (created.length !== days || new Set(created.map(p => p.date)).size !== days ||
+          created.some((p, index) => p.date !== addDays(request.date, index)))
+        throw new Error("Chưa nhận được đủ các ngày đã yêu cầu. Tải lại trang để kiểm tra thực đơn đã lưu.");
+      const next = created[0];
+      if (
+        API_MODE === "api" &&
+        existingPlan &&
+        (next.id !== existingPlan.id || next.version <= existingPlan.version)
+      )
+        throw new Error(
+          "Chưa xác nhận được thực đơn mới. Hãy tải lại trang để kiểm tra.",
+        );
+      if (
+        API_MODE === "api" &&
+        created.some(p => !["OPTIMAL", "FEASIBLE"].includes(p.solverStatus))
+      )
+        throw new Error(
+          next.notes.join(" ") ||
+            "Chưa có phương án sử dụng được. Thực đơn cũ được giữ nguyên.",
+        );
+      for (const plan of created) {
+        if (API_MODE === "api") assertNewSourceSelection(plan, w.foods);
+        sumNutrition(plan.items, w.foods);
+      }
       update((s) => ({
         ...s,
         plans: [
-          next,
-          ...s.plans.filter((p) => p.id !== next.id && p.date !== next.date),
+          ...created,
+          ...s.plans.filter((p) => !created.some(plan => plan.id === p.id || plan.date === p.date)),
         ],
+        completedMeals: existingPlan
+          ? s.completedMeals.filter(
+              (key) => !key.startsWith(`${existingPlan.id}:`),
+            )
+          : s.completedMeals,
+        checkedShopping: existingPlan
+          ? s.checkedShopping.filter(
+              (key) => !key.startsWith(`${existingPlan.id}:`),
+            )
+          : s.checkedShopping,
       }));
       onGenerated(next);
-      toast("Đã tạo và lưu thực đơn minh họa.");
+      toast(days === 7 ? "Đã tạo và lưu thực đơn 7 ngày." :
+        next.solverStatus === "NOT_RUN"
+          ? "Đã tạo và lưu thực đơn minh họa."
+          : "Đã tạo và lưu thực đơn.",
+      );
       onClose();
     } catch (e) {
       setError((e as Error).message);
@@ -666,15 +763,22 @@ function GenerateModal({
     }
   }
   return (
-    <Modal title="Tạo thực đơn mới" onClose={onClose}>
-      <p>Thiết lập một ngày ăn uống theo hồ sơ đã lưu của bạn.</p>
+    <Modal
+      title={existingPlan ? "Tạo lại thực đơn" : "Tạo thực đơn mới"}
+      onClose={onClose}
+    >
+      <p>
+        {existingPlan
+          ? "Thực đơn hiện tại chỉ được thay thế khi tạo lại thành công. Bạn có thể chọn lại chế độ; hệ thống không tự chuyển chế độ."
+          : "Chọn số ngày và thiết lập thực đơn theo hồ sơ đã lưu của bạn."}
+      </p>
       <form onSubmit={submit} className="stack">
         <div className="profile-mini">
           <span className="avatar">{w.profile.name[0]}</span>
           <div>
             <strong>{w.profile.name}</strong>
             <span>
-              Hồ sơ phiên bản {w.profile.version} ·{" "}
+              Hồ sơ của bạn ·{" "}
               {w.profile.allergies.length
                 ? `Dị ứng: ${w.profile.allergies.join(", ")}`
                 : "Không khai báo dị ứng"}
@@ -685,7 +789,45 @@ function GenerateModal({
           </Link>
         </div>
         <label>
-          Ngày thực đơn
+          Chế độ thực đơn
+          <select
+            aria-label="Chế độ thực đơn"
+            ref={modeSelectRef}
+            required
+            value={input.planningMode || ""}
+            onChange={(e) =>
+              setInput({
+                ...input,
+                planningMode: e.target.value as GenerateInput["planningMode"],
+              })
+            }
+          >
+            <option value="" disabled>
+              Chọn chế độ thực đơn
+            </option>
+            <option value="MEDICAL">Bệnh lý (giữ giới hạn GI / GL)</option>
+            <option value="GENERAL_REFERENCE">Phổ thông</option>
+          </select>
+          <small>
+            {!input.planningMode
+              ? "Chọn Phổ thông cho kế hoạch bữa ăn hằng ngày, hoặc Bệnh lý để áp dụng thêm giới hạn GI/GL."
+              : input.planningMode === "GENERAL_REFERENCE"
+                ? "Lên kế hoạch theo mục tiêu năng lượng, kiểm tra đạm, chất béo, carbohydrate, natri, dị ứng và món không ăn. Không đánh giá GI/GL; một số chỉ số có thể chưa đủ dữ liệu. Món có thể lặp giữa các ngày. Chế độ này không dùng để điều trị bệnh."
+                : "Áp dụng thêm giới hạn GI/GL. Chế độ này cần đủ dữ liệu dinh dưỡng của từng món; nếu chưa có phương án phù hợp, bạn sẽ nhận được thông báo để xem lại lựa chọn."}
+          </small>
+        </label>
+        {!existingPlan && (API_MODE === "demo" || w.capabilities?.weeklyGeneration) && (
+          <label>
+            Số ngày tạo thực đơn
+            <select aria-label="Số ngày tạo thực đơn" value={days} onChange={e => setDays(Number(e.target.value) as 1 | 7)}>
+              <option value={1}>1 ngày</option>
+              <option value={7}>7 ngày liên tiếp</option>
+            </select>
+            {days === 7 && <small>Từ {dateLabel(input.date)} đến {dateLabel(addDays(input.date, 6))}. Chỉ tạo khi cả 7 ngày còn trống; các món có thể lặp giữa các ngày.</small>}
+          </label>
+        )}
+        <label>
+          {days === 7 ? "Ngày bắt đầu" : "Ngày thực đơn"}
           <input type="date" required value={input.date} readOnly />
         </label>
         <label>
@@ -702,42 +844,111 @@ function GenerateModal({
             }
           />
           <small>
-            Giá trị để thử giao diện. Bản demo chưa tối ưu theo mục tiêu này.
+            {API_MODE === "demo"
+              ? "Giá trị để thử giao diện; bản demo không tối ưu theo mục tiêu này."
+              : "Mục tiêu được kiểm tra cùng các điều kiện của thực đơn trước khi tạo."}
           </small>
         </label>
-        <label>
-          Thời gian nấu tối đa mỗi món
-          <select
-            value={input.maxMinutes}
-            onChange={(e) =>
-              setInput({ ...input, maxMinutes: Number(e.target.value) })
-            }
-          >
-            <option value={15}>15 phút</option>
-            <option value={30}>30 phút</option>
-            <option value={45}>45 phút</option>
-            <option value={60}>60 phút</option>
-          </select>
-        </label>
-        <Checkbox
-          checked={input.snacks}
-          onChange={(v) => setInput({ ...input, snacks: v })}
-        >
-          Thêm bữa phụ
-        </Checkbox>
-        <Checkbox
-          checked={input.excludeRepeat}
-          onChange={(v) => setInput({ ...input, excludeRepeat: v })}
-        >
-          Tránh lặp món trong ngày
-        </Checkbox>
+        {w.capabilities?.cookingTime !== false && (
+          <label>
+            Thời gian nấu tối đa mỗi món
+            <select
+              value={input.maxMinutes}
+              onChange={(e) =>
+                setInput({ ...input, maxMinutes: Number(e.target.value) })
+              }
+            >
+              <option value={15}>15 phút</option>
+              <option value={30}>30 phút</option>
+              <option value={45}>45 phút</option>
+              <option value={60}>60 phút</option>
+            </select>
+          </label>
+        )}
+        {!w.capabilities && (
+          <>
+            <Checkbox
+              checked={input.snacks}
+              disabled={!!w.capabilities}
+              onChange={(v) => setInput({ ...input, snacks: v })}
+            >
+              Thêm bữa phụ
+            </Checkbox>
+            <Checkbox
+              checked={input.excludeRepeat}
+              disabled={!!w.capabilities}
+              onChange={(v) => setInput({ ...input, excludeRepeat: v })}
+            >
+              Tránh lặp món trong ngày
+            </Checkbox>
+          </>
+        )}
+        {w.capabilities && (
+          <Alert>
+            Thực đơn gồm bữa sáng, trưa, tối và bữa phụ, tránh lặp món trong
+            ngày. Món yêu thích được ưu tiên khi đáp ứng các điều kiện; dị ứng
+            và món không ăn được áp dụng theo hồ sơ đã lưu.
+          </Alert>
+        )}
+        <Alert>
+          {API_MODE === "demo"
+            ? "Chế độ minh họa: chọn món theo bộ lọc, giữ dị ứng và món không ăn. CP-SAT chưa được thực thi."
+            : "Thực đơn được kiểm tra bằng bộ tối ưu. Khi không có phương án phù hợp, thực đơn cũ được giữ nguyên."}
+        </Alert>
+        {existingPlan && (
+          <>
+            <Alert>
+              {API_MODE === "api"
+                ? "Xác nhận sẽ thay thế toàn bộ thực đơn của ngày này, kể cả khi chọn chế độ khác. Bản cũ và các quy tắc đã áp dụng được lưu để xem lại."
+                : "Xác nhận sẽ thay thế thực đơn minh họa của ngày này."}
+            </Alert>
+            <Checkbox
+              checked={replacementConfirmed}
+              disabled={!!replacementBlocked || busy}
+              onChange={setReplacementConfirmed}
+            >
+              Tôi xác nhận thay thế thực đơn hiện tại
+            </Checkbox>
+            {replacementBlocked && <Alert error>{replacementBlocked}</Alert>}
+          </>
+        )}
         {error && <Alert error>{error}</Alert>}
+        {!input.planningMode && (
+          <Alert>
+            <span>Chọn chế độ thực đơn ở phía trên để bật nút tạo.</span>{" "}
+            <Button
+              type="button"
+              variant="ghost"
+              onClick={() => {
+                modeSelectRef.current?.scrollIntoView?.({
+                  behavior: "smooth",
+                  block: "center",
+                });
+                modeSelectRef.current?.focus({ preventScroll: true });
+              }}
+            >
+              Đi tới chọn chế độ
+            </Button>
+          </Alert>
+        )}
         <div className="modal-actions">
           <Button type="button" variant="secondary" onClick={onClose}>
             Hủy
           </Button>
-          <Button busy={busy} type="submit">
-            Tạo & lưu mẫu
+          <Button
+            busy={busy}
+            type="submit"
+            disabled={
+              !input.planningMode ||
+              !!replacementBlocked ||
+              (!!existingPlan && !replacementConfirmed)
+            }
+          >
+            {existingPlan
+              ? "Xác nhận tạo lại"
+              : days === 7 ? "Tạo thực đơn 7 ngày" : API_MODE === "demo"
+                ? "Tạo & lưu mẫu"
+                : "Tạo bằng bộ tối ưu"}
             <ArrowRight size={16} />
           </Button>
         </div>

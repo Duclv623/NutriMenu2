@@ -901,10 +901,10 @@ code {
 .carb {
   background: var(--brand);
 }
-.proteinG {
+.protein {
   background: var(--accent-energy);
 }
-.fatG {
+.fat {
   background: var(--chart-fat);
 }
 .track {
@@ -4461,6 +4461,292 @@ td > div > a {
   }
   .chat-page .chat-welcome {
     margin: 8px auto;
+  }
+}
+.food-source {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 6px 0;
+}
+
+/* Nutrition journal and contextual guidance. */
+.dashboard .overview-grid {
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  align-items: start;
+}
+.insight-panel,
+.intake-trends {
+  padding: 24px;
+  min-width: 0;
+}
+.insight-panel h2 {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+.insight-panel h2 svg {
+  color: var(--brand);
+}
+.insight-intro {
+  font-size: 13px;
+  margin: -6px 0 16px;
+}
+.insight-list {
+  display: grid;
+  gap: 12px;
+  max-height: 390px;
+  overflow-y: auto;
+}
+.insight-item {
+  padding: 14px 16px;
+  border-radius: 12px;
+  background: #f4f7f5;
+  border-left: 3px solid #adc4b8;
+}
+.insight-amber {
+  background: #fff9ed;
+  border-color: #d9a54d;
+}
+.insight-green {
+  background: #eef7f0;
+  border-color: #528c68;
+}
+.insight-item strong {
+  font-size: 14px;
+  line-height: 1.5;
+}
+.insight-item p {
+  font-size: 13px;
+  line-height: 1.65;
+  margin: 6px 0 9px;
+  color: var(--text-secondary, #55665e);
+}
+.insight-item a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--brand);
+  font-weight: 650;
+  font-size: 13px;
+}
+.trend-heading {
+  align-items: start;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+.trend-heading p {
+  font-size: 13px;
+  margin-top: 7px;
+  color: var(--text-secondary, #55665e);
+}
+.trend-range {
+  display: grid;
+  gap: 6px;
+  font-size: 12px;
+}
+.trend-range select {
+  min-width: 125px;
+}
+.trend-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-subtle, #e5ebe7);
+}
+.trend-stats > div {
+  display: grid;
+  gap: 8px;
+}
+.trend-stats span {
+  font-size: 12px;
+  color: var(--text-secondary, #55665e);
+}
+.trend-stats strong {
+  font-size: 25px;
+  line-height: 1.3;
+}
+.trend-stats small {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-secondary, #55665e);
+}
+.trend-legend {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  margin: 22px 0 16px;
+  font-size: 12px;
+}
+.trend-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+.trend-legend i {
+  width: 11px;
+  height: 11px;
+  border-radius: 3px;
+  display: inline-block;
+}
+.legend-planned {
+  background: #c5dacf;
+}
+.legend-recorded {
+  background: #36785b;
+}
+.trend-legend .legend-target {
+  width: 18px;
+  height: 0;
+  border-top: 2px dashed #af7931;
+  border-radius: 0;
+}
+.intake-chart-scroll {
+  overflow-x: auto;
+  padding: 10px 0;
+}
+.intake-chart {
+  display: flex;
+  gap: 12px;
+  height: 265px;
+  padding-top: 8px;
+}
+.intake-axis {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 205px;
+  width: 44px;
+  flex-shrink: 0;
+  font-size: 11px;
+  color: #718078;
+  text-align: right;
+}
+.intake-columns {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  height: 248px;
+  gap: 8px;
+  background: repeating-linear-gradient(
+      to top,
+      transparent 0,
+      transparent 50px,
+      #edf1ee 50px,
+      #edf1ee 51px
+    )
+    top left / 100% 205px no-repeat;
+}
+.intake-column {
+  flex: 1;
+  min-width: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.intake-bars {
+  width: 100%;
+  height: 205px;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 4px;
+  border-bottom: 1px solid #dce4df;
+}
+.intake-bar {
+  width: min(28%, 24px);
+  border-radius: 4px 4px 0 0;
+  min-height: 1px;
+}
+.intake-bar.planned {
+  background: #c5dacf;
+}
+.intake-bar.recorded {
+  background: #36785b;
+}
+.intake-target {
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  border-top: 2px dashed #af7931;
+  z-index: 1;
+}
+.intake-missing {
+  align-self: center;
+  color: #a1aaa5;
+}
+.intake-date {
+  margin-top: 10px;
+  font-size: 11px;
+  white-space: nowrap;
+}
+.intake-log-status {
+  margin-top: 4px;
+  font-size: 10px;
+  color: #718078;
+  white-space: nowrap;
+}
+.dashboard-data-note {
+  font-size: 12px;
+  line-height: 1.7;
+  color: var(--text-secondary, #55665e);
+  margin: 14px 0 0;
+}
+.trend-table {
+  margin-top: 17px;
+  font-size: 13px;
+}
+.trend-table summary {
+  color: var(--brand);
+  cursor: pointer;
+  padding: 8px 0;
+  font-weight: 600;
+}
+.trend-table th,
+.trend-table td {
+  white-space: nowrap;
+}
+.shopping-item .shopping-amount {
+  text-align: right;
+  max-width: 55%;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.shopping-item .shopping-amount small {
+  display: block;
+  font-weight: 400;
+}
+@media (max-width: 1000px) {
+  .dashboard .overview-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .insight-list {
+    max-height: none;
+  }
+}
+@media (max-width: 560px) {
+  .insight-panel,
+  .intake-trends {
+    padding: 18px 15px;
+  }
+  .trend-stats {
+    gap: 12px;
+  }
+  .trend-stats strong {
+    font-size: 21px;
+  }
+  .trend-stats small {
+    display: block;
+    font-size: 10px;
+  }
+  .trend-legend {
+    gap: 11px;
+    font-size: 11px;
+  }
+  .dashboard .energy-ring {
+    flex-shrink: 0;
   }
 }
 

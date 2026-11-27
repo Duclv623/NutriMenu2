@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000069",
+  "imageSha256": "7334bf8c5140317e27c3038ee55a0055a6baa7b5ca2ec9d203702e0dd5209e0c",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "274.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Dồi lợn",
+      "amountSourceText": "200g",
+      "numericQuantity": 200.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

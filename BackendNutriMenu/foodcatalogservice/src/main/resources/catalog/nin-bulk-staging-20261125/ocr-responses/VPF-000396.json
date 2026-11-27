@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "58kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Phô mai tam giác",
+      "amountSourceText": "15g",
+      "numericQuantity": 15,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000396",
+  "imageSha256": "e8f9a883454920f5746ee07228d3195edd28838d073bd3650cf7210adba74482",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

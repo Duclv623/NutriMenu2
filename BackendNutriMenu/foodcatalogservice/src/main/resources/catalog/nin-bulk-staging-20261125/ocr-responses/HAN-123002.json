@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "118.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Trứng vịt lộn luộc",
+      "amountSourceText": "58.0",
+      "numericQuantity": 58.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau răm",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Gừng tươi",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-123002",
+  "imageSha256": "4a0a59e13695ac57cac47c9c550f4bba64dab782b27fc646bd430b8f61b839c4",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

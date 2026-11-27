@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "244.6 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cháo đỗ xanh",
+      "amountSourceText": "297.0",
+      "numericQuantity": 297.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường kính",
+      "amountSourceText": "16.0",
+      "numericQuantity": 16.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường nâu",
+      "amountSourceText": "11.0",
+      "numericQuantity": 11.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAP-211048",
+  "imageSha256": "7f123323bb91a9a7093852e2d933d53c912e877bfecc4aecee23dab52c5361b9",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

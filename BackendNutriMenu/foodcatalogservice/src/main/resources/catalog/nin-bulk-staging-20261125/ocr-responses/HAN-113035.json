@@ -1,0 +1,45 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "527.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh mỳ",
+      "amountSourceText": "67.0",
+      "numericQuantity": 67.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò loại II hầm",
+      "amountSourceText": "115.0",
+      "numericQuantity": 115.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "hầm",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau mùi",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá",
+      "amountSourceText": "7.0",
+      "numericQuantity": 7.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table energy sum (527.6 Kcal) differs slightly from imageEnergyText (527.7 Kcal)."
+  ],
+  "code": "HAN-113035",
+  "imageSha256": "77fb67b9bd3e85c47cd6b3e9d7ae403ce69f6a01bddab59b79863d4c5e3e2712",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,29 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Tương ớt/Chili sauces",
+      "amountSourceText": "30.0",
+      "numericQuantity": 30.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cá viên chiên (1 xiên)/Fried fish balls",
+      "amountSourceText": "75.0",
+      "numericQuantity": 75.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Không có nhãn tổng năng lượng (Kcal) in trên ảnh (tổng năng lượng trong bảng là 203.5 Kcal)."
+  ],
+  "code": "SFF-121083",
+  "imageSha256": "881960064f339a9e5ddd2c5938da799eddd59954d81a48c3c3808275a8d3ae7d",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,27 @@
+{
+  "code": "HAP-211107",
+  "imageSha256": "74638cd9bb70191ea52ca92351cece7270ea7d2d61e3b33f5f1162e45a504023",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh giò",
+      "amountSourceText": "332.0",
+      "numericQuantity": 332.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giò lụa",
+      "amountSourceText": "43.0",
+      "numericQuantity": 43.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "473.9 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

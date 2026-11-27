@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "92kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Chuối tiêu",
+      "amountSourceText": "135g",
+      "numericQuantity": 135,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000401",
+  "imageSha256": "e001d6646bae63bdcee05261f106ed94dbc59021e4f639dd9eb168daac6bd092",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

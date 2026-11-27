@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "54kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cá quả",
+      "amountSourceText": "56g",
+      "numericQuantity": 56,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước mắm",
+      "amountSourceText": "5g",
+      "numericQuantity": 5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000044",
+  "imageSha256": "464ab6177a74a4417d405db713b5720c6482a466eac35356b89fbc20e4136451",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

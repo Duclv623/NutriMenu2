@@ -1,0 +1,77 @@
+{
+  "code": "HAN-123006",
+  "imageSha256": "e9ee5b3e02fdd9b8c48f2eef380b5b023cdbfef047282df6d19a42c0d3ab028f",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ",
+      "amountSourceText": "195.0",
+      "numericQuantity": 195.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cá nục kho",
+      "amountSourceText": "29.0",
+      "numericQuantity": 29.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "kho",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt gà rang",
+      "amountSourceText": "49.4",
+      "numericQuantity": 49.4,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tôm đồng rang",
+      "amountSourceText": "22.0",
+      "numericQuantity": 22.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt lợn ba chỉ luộc",
+      "amountSourceText": "26.0",
+      "numericQuantity": 26.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Măng tre xào",
+      "amountSourceText": "63.0",
+      "numericQuantity": 63.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau muống luộc",
+      "amountSourceText": "67.0",
+      "numericQuantity": 67.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Canh rau muống",
+      "amountSourceText": null,
+      "numericQuantity": null,
+      "unitSourceText": null,
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "595.9 Kcal",
+  "uncertainties": [
+    "Source image table lists 'Canh rau muống' with blank weight and blank energy values."
+  ],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

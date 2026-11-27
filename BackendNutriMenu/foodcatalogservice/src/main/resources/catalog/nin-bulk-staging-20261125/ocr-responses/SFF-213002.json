@@ -1,0 +1,83 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "893.5 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ/Rice",
+      "amountSourceText": "306.0",
+      "numericQuantity": 306.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lưỡi lợn luộc/Boiled Pork Tongue",
+      "amountSourceText": "33.0",
+      "numericQuantity": 33.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc/Boiled",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa cải muối/Pickled Mustard green",
+      "amountSourceText": "44.0",
+      "numericQuantity": 44.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "muối/Pickled",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt lợn mông kho/Braised pork ham",
+      "amountSourceText": "44.0",
+      "numericQuantity": 44.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "kho/Braised",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trứng gà kho/Braised egg",
+      "amountSourceText": "50.0",
+      "numericQuantity": 50.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "kho/Braised",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt gà đùi xào sả ớt/Stir-fried chicken thighs with lemongrass and chili",
+      "amountSourceText": "22.0",
+      "numericQuantity": 22.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào/Stir-fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải bắp xào/Stir-fried Cabbage",
+      "amountSourceText": "90.0",
+      "numericQuantity": 90.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào/Stir-fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà rốt xào/Stir-fried carrot",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào/Stir-fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước mắm cá/Fish sauces",
+      "amountSourceText": "8.0",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-213002",
+  "imageSha256": "2527fc40aa6ca43f3229e2534a76ad61d5abb34272207975f4cbcaa48db39256",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

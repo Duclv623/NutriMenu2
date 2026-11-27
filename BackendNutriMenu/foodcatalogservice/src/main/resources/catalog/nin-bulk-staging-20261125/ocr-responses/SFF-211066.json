@@ -1,0 +1,43 @@
+{
+  "code": "SFF-211066",
+  "imageSha256": "bfa7d52376b3ad93dd82359c478f851272a97a41bf49132c2fcdc87278deac64",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "18.3 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Nước trà hoa cúc",
+      "amountSourceText": "Nước trà hoa cúc/Daisy tea",
+      "numericQuantity": 200.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước đường",
+      "amountSourceText": "Nước đường/Sugar syrup",
+      "numericQuantity": 40.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Quất",
+      "amountSourceText": "Quất/Kumquat",
+      "numericQuantity": 9.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cam thảo",
+      "amountSourceText": "Cam thảo/Rosary pea",
+      "numericQuantity": 0.2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

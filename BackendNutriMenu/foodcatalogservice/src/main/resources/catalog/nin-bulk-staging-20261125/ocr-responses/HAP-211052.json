@@ -1,0 +1,78 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "337.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt gà ta đùi hầm",
+      "amountSourceText": "47.0",
+      "numericQuantity": 47.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "hầm",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt gà ta đùi hầm",
+      "amountSourceText": "68.0",
+      "numericQuantity": 68.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "hầm",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Táo khô tần",
+      "amountSourceText": "11.0",
+      "numericQuantity": 11.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "khô tần",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước gà tần",
+      "amountSourceText": "117.0",
+      "numericQuantity": 117.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tần",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ngải cứu nấu",
+      "amountSourceText": "198.0",
+      "numericQuantity": 198.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nấu",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Quất",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt đỏ",
+      "amountSourceText": "3.0",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột canh",
+      "amountSourceText": "3.0",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Năng lượng (Kcal) for Bột canh (3.0 g) is blank in the table.",
+    "Thịt gà ta đùi hầm appears twice in the table (47.0 g and 68.0 g)."
+  ],
+  "code": "HAP-211052",
+  "imageSha256": "0b7cd47f92c47a83e492a58d1a66573ba501384116c8545e0c8cd03ea9158d78",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

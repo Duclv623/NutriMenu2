@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "39kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Quýt",
+      "amountSourceText": "138g",
+      "numericQuantity": 138.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000420",
+  "imageSha256": "c937b442111f4ac7692df3d2387b84161ca62f92b1379207284674727195ad74",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

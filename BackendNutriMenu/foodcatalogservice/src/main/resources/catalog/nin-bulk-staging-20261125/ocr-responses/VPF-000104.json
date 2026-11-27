@@ -1,0 +1,51 @@
+{
+  "code": "VPF-000104",
+  "imageSha256": "5d1f5e0a9fefc9f4d5bf81ad5655505a03a71878ca44de20e2497ef6ffb9f0bc",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "363kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Chim câu (cả con)",
+      "amountSourceText": "250g",
+      "numericQuantity": 250.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "cả con",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ngũ vị hương",
+      "amountSourceText": "2g",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành củ",
+      "amountSourceText": "10g",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tỏi",
+      "amountSourceText": "10g",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sả",
+      "amountSourceText": "10g",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

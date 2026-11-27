@@ -1,0 +1,99 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "451.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi/Rice noodle",
+      "amountSourceText": "203.0",
+      "numericQuantity": 203.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cá bò chiên/Fried stone triggerfish",
+      "amountSourceText": "21.0",
+      "numericQuantity": 21.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên/Fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cá thu chiên/Fried mackerel fish",
+      "amountSourceText": "17.0",
+      "numericQuantity": 17.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên/Fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả cá thu chần/Blanched mackerel fish ball",
+      "amountSourceText": "27.0",
+      "numericQuantity": 27.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chần/Blanched",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt chân giò lợn luộc/Boiled pig trotters",
+      "amountSourceText": "22.0",
+      "numericQuantity": 22.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc/Boiled",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau xà lách/Lettuce",
+      "amountSourceText": "32.0",
+      "numericQuantity": 32.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành, mùi/Welsh onion, coriander",
+      "amountSourceText": "13.0",
+      "numericQuantity": 13.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt/Chili",
+      "amountSourceText": "2.0",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt đỏ chưng/cooked chili",
+      "amountSourceText": "24.0",
+      "numericQuantity": 24.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chưng/cooked",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước me/Tamarind sauce",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/Bone broth",
+      "amountSourceText": "341.0",
+      "numericQuantity": 341.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-211104",
+  "imageSha256": "63ae7a2bb735bc90dba8c5a7b3d0e3e2e01ba55caff25de4869ec4078e0ae6ef",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

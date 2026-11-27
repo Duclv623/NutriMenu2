@@ -1,0 +1,27 @@
+{
+  "code": "SFF-211036",
+  "imageSha256": "5138e49607d3fe29522dbbe1df4d63d47cf54030ad0420b411f0ccc93560be2f",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa chua đặc có đường/\nSweetened yogurt",
+      "amountSourceText": "120.0",
+      "numericQuantity": 120.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cơm gạo lứt tím/Cooked black rice",
+      "amountSourceText": "70.0",
+      "numericQuantity": 70.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nấu",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

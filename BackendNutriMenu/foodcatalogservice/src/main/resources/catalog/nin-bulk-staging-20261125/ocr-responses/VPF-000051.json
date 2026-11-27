@@ -1,0 +1,51 @@
+{
+  "code": "VPF-000051",
+  "imageSha256": "4b49cf8155a0483762e0d0921d9b74a7059c9233a1c99e6af5efe885e709429e",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "530kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Lươn",
+      "amountSourceText": "98g",
+      "numericQuantity": 98.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chuối xanh",
+      "amountSourceText": "105g",
+      "numericQuantity": 105.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu phụ",
+      "amountSourceText": "125g",
+      "numericQuantity": 125.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "15g",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Gia vị",
+      "amountSourceText": "5g",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,27 @@
+{
+  "code": "HAP-223017",
+  "imageSha256": "d218d641461461ab1a89835b8aa2f6562d2b8073235e5972962d76ab542fec99",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "513.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh quẩy",
+      "amountSourceText": "Bánh quẩy",
+      "numericQuantity": 170.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường kính",
+      "amountSourceText": "Đường kính",
+      "numericQuantity": 4.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

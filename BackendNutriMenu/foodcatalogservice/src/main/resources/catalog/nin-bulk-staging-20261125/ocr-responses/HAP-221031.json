@@ -1,0 +1,53 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "234.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cháo trắng",
+      "amountSourceText": "387.0",
+      "numericQuantity": 387.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt lợn nạc xay hầm",
+      "amountSourceText": "13.0",
+      "numericQuantity": 13.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xay hầm",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ruốc thịt lợn",
+      "amountSourceText": "11.0",
+      "numericQuantity": 11.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tía tô",
+      "amountSourceText": "8.0",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Sum of printed row energies (234.2 Kcal) differs from printed dish energy (234.0 Kcal) by 0.2 Kcal due to rounding."
+  ],
+  "code": "HAP-221031",
+  "imageSha256": "1cb2d5b59c6df29aaa75e1488d7ee82a4f6753645f0124febdd78198088b472f",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

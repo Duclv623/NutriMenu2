@@ -1,0 +1,43 @@
+{
+  "code": "VPF-000166",
+  "imageSha256": "ec026fc34351a7ee9d6603546353b44badef450d474aa62988b6ef2e5592ca08",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "175kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Mực tươi",
+      "amountSourceText": "85g",
+      "numericQuantity": 85.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa cải",
+      "amountSourceText": "60g",
+      "numericQuantity": 60.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "10g",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột canh",
+      "amountSourceText": "1,8g",
+      "numericQuantity": 1.8,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

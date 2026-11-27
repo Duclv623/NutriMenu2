@@ -1,0 +1,19 @@
+{
+  "code": "SFF-213060",
+  "imageSha256": "a7da307f6eaadb33ecf21fa17a7b632b8d4e9341feaed7cafb60aa7a2fe8e093",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "123.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa ngô",
+      "amountSourceText": "Sữa ngô/Corn soup",
+      "numericQuantity": 228.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

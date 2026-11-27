@@ -1,0 +1,51 @@
+{
+  "code": "HAP-223026",
+  "imageSha256": "61eec04062c62cd7161834c0c12832dc0036eff4f17431c87411d832d48b5d0b",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "303.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Lòng non lợn luộc",
+      "amountSourceText": "73.0",
+      "numericQuantity": 73.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dồi lợn luộc",
+      "amountSourceText": "161.0",
+      "numericQuantity": 161.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dạ dày lợn luộc",
+      "amountSourceText": "51.0",
+      "numericQuantity": 51.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau thơm",
+      "amountSourceText": "29.0",
+      "numericQuantity": 29.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước chấm pha",
+      "amountSourceText": "42.0",
+      "numericQuantity": 42.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "pha",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

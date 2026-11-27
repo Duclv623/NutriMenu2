@@ -1,0 +1,27 @@
+{
+  "code": "HAP-221016",
+  "imageSha256": "f1fe0385012cee84544bd2b79d82f0cb9e5a4ea484ddaeba51d76ffb8edd383e",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Củ sắn luộc (củ nguyên)",
+      "amountSourceText": "273.7",
+      "numericQuantity": 273.7,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Củ sắn luộc (3 miếng)",
+      "amountSourceText": "94.0",
+      "numericQuantity": 94.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "580.2 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

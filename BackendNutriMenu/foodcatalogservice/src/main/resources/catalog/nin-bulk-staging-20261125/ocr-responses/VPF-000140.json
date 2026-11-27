@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "195kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt ba chỉ",
+      "amountSourceText": "70g",
+      "numericQuantity": 70,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "1,5g",
+      "numericQuantity": 1.5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000140",
+  "imageSha256": "59075c02f1d10744abf48508b15b60b070851732af120a92a508c6e24a57e603",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

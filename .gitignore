@@ -33,6 +33,9 @@ __pycache__/
 .coverage
 coverage/
 htmlcov/
+.build-cache/
+.runtime/
+/tests/legacy-frontend/
 
 # Local review artifacts and private backups
 /audit-*/

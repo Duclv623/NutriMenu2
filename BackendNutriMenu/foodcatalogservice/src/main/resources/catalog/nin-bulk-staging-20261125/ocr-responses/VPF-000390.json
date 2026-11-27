@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000390",
+  "imageSha256": "65b9f6d65a6345454da384224b59d37d1c95922986a4eda4305c158d11d29a0e",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "108.6 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa đậu nành Fami",
+      "amountSourceText": "200ml",
+      "numericQuantity": 200.0,
+      "unitSourceText": "ml",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

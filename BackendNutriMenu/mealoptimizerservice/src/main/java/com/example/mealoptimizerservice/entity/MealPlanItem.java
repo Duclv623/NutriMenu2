@@ -4,6 +4,10 @@ import com.example.mealoptimizerservice.entity.enums.*;
 import jakarta.persistence.*;
 import lombok.*;
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 // --- FILE: MealPlanItem.java ---
 @Entity
@@ -65,7 +69,7 @@ public class MealPlanItem {
     @Column(name = "snapshot_net_carb_g", nullable = false, precision = 6, scale = 2)
     private BigDecimal snapshotNetCarbG;
 
-    @Column(name = "snapshot_fiber_g", nullable = false, precision = 6, scale = 2)
+    @Column(name = "snapshot_fiber_g", nullable = true, precision = 6, scale = 2)
     private BigDecimal snapshotFiberG;
 
     @Column(name = "snapshot_protein_g", nullable = false, precision = 6, scale = 2)
@@ -74,7 +78,7 @@ public class MealPlanItem {
     @Column(name = "snapshot_fat_g", nullable = false, precision = 6, scale = 2)
     private BigDecimal snapshotFatG;
 
-    @Column(name = "snapshot_gl", nullable = false, precision = 5, scale = 2)
+    @Column(name = "snapshot_gl", nullable = true, precision = 5, scale = 2)
     private BigDecimal snapshotGl;
 
     @Builder.Default
@@ -82,7 +86,7 @@ public class MealPlanItem {
     private BigDecimal snapshotSodiumMg = BigDecimal.ZERO;
 
     @Builder.Default
-    @Column(name = "snapshot_cholesterol_mg", nullable = false, precision = 7, scale = 2)
+    @Column(name = "snapshot_cholesterol_mg", nullable = true, precision = 7, scale = 2)
     private BigDecimal snapshotCholesterolMg = BigDecimal.ZERO;
 
     @Builder.Default

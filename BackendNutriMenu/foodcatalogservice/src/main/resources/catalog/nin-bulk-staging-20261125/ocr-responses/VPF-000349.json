@@ -1,0 +1,12 @@
+{
+  "code": "VPF-000349",
+  "imageSha256": "ea911ae8006d21147e77595796fa25357b28178c0f5e1277248450f7e0a81871",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "ABSENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "650kcal",
+  "ingredients": [],
+  "uncertainties": [
+    "No ingredient list present on image; only dish photo and energy badge shown."
+  ]
+}

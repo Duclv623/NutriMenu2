@@ -60,7 +60,7 @@ public class IngredientService {
     @Transactional(readOnly = true)
     public Page<Ingredient> searchIngredients(IngredientGroup group, GiLevel giLevel, String keyword, int page, int size) {
         String normalizedKw = VietnameseTextUtils.removeAccents(keyword);
-        return ingredientRepository.searchIngredients(group, giLevel, normalizedKw, PageRequest.of(page, size));
+        return ingredientRepository.searchIngredients(CatalogSourcePolicy.ingredientCodes(), group, giLevel, normalizedKw, PageRequest.of(page, size));
     }
 
     @Transactional

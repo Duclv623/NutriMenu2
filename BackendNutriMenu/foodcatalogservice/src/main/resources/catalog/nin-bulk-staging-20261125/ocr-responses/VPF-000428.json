@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "161kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Chuối khô",
+      "amountSourceText": "74g",
+      "numericQuantity": 74,
+      "unitSourceText": "g",
+      "preparationSourceText": "khô",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000428",
+  "imageSha256": "4cc91743fd36038c766e50dc173a654603cd0ae8db9f17f8fd64b4284c3a0164",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

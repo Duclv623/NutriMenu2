@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "151.9 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa đặc có đường",
+      "amountSourceText": "23.0",
+      "numericQuantity": 23.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau câu tươi",
+      "amountSourceText": "42.0",
+      "numericQuantity": 42.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Xoài chín",
+      "amountSourceText": "84.0",
+      "numericQuantity": 84.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chín",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-111013",
+  "imageSha256": "da270b131cea7caf7806b4349e42cb39d22641debbcfb4ff95783d4aa6896669",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

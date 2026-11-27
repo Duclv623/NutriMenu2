@@ -1,0 +1,29 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "529.9 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt lợn quay",
+      "amountSourceText": "244.0",
+      "numericQuantity": 244.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "quay",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước chấm pha",
+      "amountSourceText": "43.0",
+      "numericQuantity": 43.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Tổng năng lượng các thành phần trong bảng là 529.8 Kcal, chênh 0.1 Kcal so với 529.9 Kcal trên ảnh."
+  ],
+  "code": "HAP-223024",
+  "imageSha256": "6a73a948fb4836a45cf0031f224e4555d2aa843f814be7c02fc2416526bf67ac",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

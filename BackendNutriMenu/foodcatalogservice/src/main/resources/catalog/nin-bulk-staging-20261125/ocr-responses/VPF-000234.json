@@ -1,0 +1,12 @@
+{
+  "ingredientListStatus": "ABSENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "275kcal",
+  "ingredients": [],
+  "uncertainties": [
+    "imageEnergyText ('275kcal') differs from apiEnergy (422); image is identical to VPF-000233."
+  ],
+  "code": "VPF-000234",
+  "imageSha256": "6154f1fa1a6a33ab68b7358639b781f97656536c4f93e9e35b7ecc832fbcee6a",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

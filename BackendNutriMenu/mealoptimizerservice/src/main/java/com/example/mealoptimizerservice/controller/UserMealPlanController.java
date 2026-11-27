@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 import com.example.mealoptimizerservice.dto.request.*;
 import com.example.mealoptimizerservice.dto.response.*;
 
@@ -37,6 +38,12 @@ public class UserMealPlanController {
             @RequestHeader(value = "X-User-Id", defaultValue = "1") Long userId,
             @PathVariable Long planId) {
         return ResponseEntity.ok(optimizerService.getMealPlanDetail(userId, planId));
+    }
+
+    @GetMapping("/{planId}/revisions")
+    public ResponseEntity<List<MealPlanRevision>> getMealPlanRevisions(
+            @RequestHeader(value="X-User-Id",defaultValue="1") Long userId, @PathVariable Long planId) {
+        return ResponseEntity.ok(optimizerService.getMealPlanRevisions(userId,planId));
     }
 
     @DeleteMapping("/{planId}")

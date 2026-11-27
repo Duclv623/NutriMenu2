@@ -20,6 +20,12 @@ public class DishDetailResponse {
     private String nameVi;
     private String imageUrl;
     private String diabeticCookingTip;
+    private String sourceRecordId;
+    private String sourceUrl;
+    private String nutritionBasis;
+    private String nutritionQualityJson;
+    private Boolean solverEligible;
+    private String servingWeightBasis;
     private DishRole role;
     private CookingMethod cookingMethod;
     private IngredientGroup primaryIngredientGroup;
@@ -55,6 +61,7 @@ public class DishDetailResponse {
                 ? d.getIngredients().stream().map(di -> RecipeIngredientBreakdownDto.builder()
                 .ingredientId(di.getIngredient().getId())
                 .ingredientNameVi(di.getIngredient().getNameVi())
+                .sourceAmountText(di.getSourceAmountText())
                 .rawWeightG(di.getRawWeightG())
                 .appliedYieldFactor(di.getAppliedYieldFactor())
                 .cookedWeightG(di.getCookedWeightG())
@@ -68,6 +75,12 @@ public class DishDetailResponse {
                 .nameVi(d.getNameVi())
                 .imageUrl(d.getImageUrl())
                 .diabeticCookingTip(d.getDiabeticCookingTip())
+                .sourceRecordId(d.getSourceRecordId())
+                .sourceUrl(d.getSourceUrl())
+                .nutritionBasis(d.getNutritionBasis())
+                .nutritionQualityJson(d.getNutritionQualityJson())
+                .solverEligible(d.getSolverEligible())
+                .servingWeightBasis(d.getServingWeightBasis())
                 .preparationSteps(includeBreakdown ? PreparationGuide.steps(d) : List.of())
                 .preparationGuideKind("method_based")
                 .minServingScaledX2(d.getMinServingScaledX2())

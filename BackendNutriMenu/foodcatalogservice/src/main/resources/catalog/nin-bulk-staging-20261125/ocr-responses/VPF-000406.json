@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "68kcal/đĩa",
+  "ingredients": [
+    {
+      "nameSourceText": "Đào",
+      "amountSourceText": "250g",
+      "numericQuantity": 250,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000406",
+  "imageSha256": "8831efee8b8d15196150047404353af8107591a633fe8c653667eac8e363be4d",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

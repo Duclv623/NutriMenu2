@@ -1,0 +1,51 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "689.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Xôi trắng (đồ)/Sticky rice",
+      "amountSourceText": "226.0",
+      "numericQuantity": 226.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "đồ",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt lợn ba chỉ kho tàu/Braised pork belly",
+      "amountSourceText": "22.0",
+      "numericQuantity": 22.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "kho tàu/Braised",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trứng vịt rán/Fried duck egg",
+      "amountSourceText": "57.0",
+      "numericQuantity": 57.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán/Fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước thịt kho/Sauces",
+      "amountSourceText": "40.0",
+      "numericQuantity": 40.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "kho",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành phi/Fried onion",
+      "amountSourceText": "2.5",
+      "numericQuantity": 2.5,
+      "unitSourceText": "g",
+      "preparationSourceText": "phi/Fried",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-122003",
+  "imageSha256": "22fa72ce6248532773d0f7809ebf8d475f0f428ace48279fa25e96fc76430dda",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

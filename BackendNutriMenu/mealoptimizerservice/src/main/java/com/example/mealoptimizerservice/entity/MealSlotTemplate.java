@@ -4,6 +4,10 @@ import com.example.mealoptimizerservice.entity.enums.*;
 import jakarta.persistence.*;
 import lombok.*;
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 // --- FILE: MealSlotTemplate.java ---
 @Entity

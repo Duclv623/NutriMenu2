@@ -1,5 +1,6 @@
 package com.example.mealoptimizerservice.entity.enums;
 
+import java.math.BigDecimal;
 
 public enum DishRole {
     MAIN_STARCH,     // Cơm gạo lứt, cơm trắng, bún tươi...

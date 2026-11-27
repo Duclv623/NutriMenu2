@@ -1,0 +1,21 @@
+{
+  "code": "SFF-221013",
+  "imageSha256": "499e8dedaf513c48b4f946477116fa84148238d9c24dcb52afb3c2d7fe5534e9",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Nước Lê ép/Pear juice (ép từ Lê nguyên miếng/Pear)",
+      "amountSourceText": "350.0",
+      "numericQuantity": 350.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "ép",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Dual quantities on image: extracted juice 350.0g vs raw pear pieces 479.6g"
+  ],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

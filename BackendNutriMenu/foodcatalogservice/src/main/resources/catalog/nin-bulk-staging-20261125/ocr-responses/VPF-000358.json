@@ -1,0 +1,27 @@
+{
+  "code": "VPF-000358",
+  "imageSha256": "972185e6a4df3ec54076b006c1a58b683a5b2b53fd35de8b42d2155cf363c559",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "878kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Gạo nếp",
+      "amountSourceText": "235g",
+      "numericQuantity": 235.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sắn",
+      "amountSourceText": "50g",
+      "numericQuantity": 50.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

@@ -1,0 +1,35 @@
+{
+  "code": "VPF-000122",
+  "imageSha256": "d2cbd28a7827ed7b7593cd8b1ca28dbde55fcc7f3562fafe1193d7ff5f87a0b1",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "111kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt lợn nạc vai",
+      "amountSourceText": "40g",
+      "numericQuantity": 40.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lá xương xông",
+      "amountSourceText": "8g",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "2g",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

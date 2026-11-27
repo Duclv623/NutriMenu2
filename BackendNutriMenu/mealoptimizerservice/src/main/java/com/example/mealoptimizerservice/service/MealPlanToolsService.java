@@ -14,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.time.LocalDate;
 import java.util.*;
 import static org.springframework.http.HttpStatus.*;
+import com.example.mealoptimizerservice.entity.enums.SolverRunStatus;
 
 @Service
 @Transactional
@@ -61,7 +62,10 @@ public class MealPlanToolsService {
         var account = account(token, version);
         configure(token, account, daily);
         requireAvailableDates(account.serviceUserId(), daily.getPlanDate(), 1);
-        return optimizer.generateOptimalDailyMealPlan(account.serviceUserId(), daily);
+        var result = optimizer.generateOptimalDailyMealPlan(account.serviceUserId(), daily);
+        requireSaved(result);
+        account(token, version);
+        return result;
     }
 
     public List<MealPlanResponse> weekly(String token, long version, GenerateWeeklyMealRequest weekly) {
@@ -71,7 +75,15 @@ public class MealPlanToolsService {
         daily.setPlanDate(weekly.getStartDate());
         configure(token, account, daily);
         requireAvailableDates(account.serviceUserId(), weekly.getStartDate(), 7);
-        return optimizer.generateWeeklyMealPlans(account.serviceUserId(), weekly);
+        var results = optimizer.generateWeeklyMealPlans(account.serviceUserId(), weekly);
+        if (results.size() != 7) throw new OptimizerBusinessException(UNPROCESSABLE_CONTENT, "Chưa tạo đủ bảy ngày; chưa lưu tuần này.");
+        for (int day = 0; day < 7; day++) {
+            requireSaved(results.get(day));
+            if (!weekly.getStartDate().plusDays(day).equals(results.get(day).getPlanDate()))
+                throw new OptimizerBusinessException(UNPROCESSABLE_CONTENT, "Ngày thực đơn trả về không khớp; chưa lưu tuần này.");
+        }
+        account(token, version);
+        return results;
     }
 
     public Map<String,Object> fromProfile(String token, long version, PatientProfileMealRequest input) {
@@ -100,6 +112,12 @@ public class MealPlanToolsService {
         var account = account(token, version);
         configure(token, account, daily);
         return optimizer.explainInfeasibility(account.serviceUserId(), daily);
+    }
+
+    private void requireSaved(MealPlanResponse result) {
+        if (result == null || result.getPlanId() == null ||
+                (result.getSolverStatus() != SolverRunStatus.FEASIBLE && result.getSolverStatus() != SolverRunStatus.OPTIMAL))
+            throw new OptimizerBusinessException(UNPROCESSABLE_CONTENT, "Chưa tìm được phương án phù hợp; chưa lưu thay đổi.");
     }
 
     private MealEditPolicy policy(String token, MealAccount account, long planId, long baseVersion) {

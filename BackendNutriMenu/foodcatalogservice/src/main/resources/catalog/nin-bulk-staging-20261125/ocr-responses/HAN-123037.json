@@ -1,0 +1,45 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "319.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cháo sườn",
+      "amountSourceText": "418.0",
+      "numericQuantity": 418.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ruốc thịt lợn",
+      "amountSourceText": "9.0",
+      "numericQuantity": 9.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tía tô",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bánh quẩy",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table energy sum (319.6 Kcal) differs slightly from imageEnergyText (319.7 Kcal)"
+  ],
+  "code": "HAN-123037",
+  "imageSha256": "7b8b506522af11f9c1b28044cd2cc5b0daa6f3077fff3b65675d2085d35741f6",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

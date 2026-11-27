@@ -1,0 +1,35 @@
+{
+  "code": "VPF-000361",
+  "imageSha256": "cb90e7a8dbf56d5f347e21b3e3d49466e0f8a5b8fbeb5dd277f6cf3ff6922402",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "697kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Gạo nếp",
+      "amountSourceText": "125g",
+      "numericQuantity": 125.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trứng vịt",
+      "amountSourceText": "104g",
+      "numericQuantity": 104.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "8g",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

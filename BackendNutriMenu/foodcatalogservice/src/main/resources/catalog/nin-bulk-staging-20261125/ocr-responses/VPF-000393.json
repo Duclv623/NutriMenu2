@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000393",
+  "imageSha256": "20e0ec31bd75a32b2b0fe242078759ef9fa338033bfe5a162bb44ebaf0561cf6",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "137.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa tươi tiệt trùng có đường Vinamilk",
+      "amountSourceText": "180ml",
+      "numericQuantity": 180.0,
+      "unitSourceText": "ml",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

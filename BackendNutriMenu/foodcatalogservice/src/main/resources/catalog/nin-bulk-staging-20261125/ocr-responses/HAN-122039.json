@@ -1,0 +1,21 @@
+{
+  "code": "HAN-122039",
+  "imageSha256": "dd338a03a69e04471756d1c69768b6dcf9e095dc086bbe2a856befb6155741f2",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh nếp nhân ngọt",
+      "amountSourceText": "159.0",
+      "numericQuantity": 159.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nhân ngọt",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "374.9 Kcal",
+  "uncertainties": [
+    "Source record title is 'Bánh dày ngọt', but image table text specifically names the dish 'Bánh nếp nhân ngọt'."
+  ],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

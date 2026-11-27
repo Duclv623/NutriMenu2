@@ -1,0 +1,19 @@
+{
+  "code": "HAN-122025",
+  "imageSha256": "50c37f101a959d9f273d6eb892446e4b301c15cec8389e6785f5634574eafed0",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "286.4 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Ngô nếp luộc",
+      "amountSourceText": "166.7",
+      "numericQuantity": 166.7,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

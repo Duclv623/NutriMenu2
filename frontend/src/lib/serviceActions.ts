@@ -182,6 +182,7 @@ const keyword = str("?keyword", "Từ khóa");
 const adminId = num("{id}", "ID bản ghi", undefined, 1);
 const template = str("templateCode", "Mẫu thực đơn", false, "STANDARD_4_MEALS");
 const targetFields = [
+  choice("planningMode", "Chế độ thực đơn", ["GENERAL_REFERENCE", "MEDICAL"], true),
   num(
     "targetCaloriesKcal",
     "Mục tiêu năng lượng (kcal)",
@@ -283,7 +284,7 @@ const change = [
   plan,
   item("itemId"),
   dish("dishId", "Món thay thế"),
-  num("servingMultiplier", "Số khẩu phần", 1, 0.5, 3, 0.5),
+  num("servingMultiplier", "Số khẩu phần", 1, 0.5, 12, 0.5),
 ];
 const weights = [
   num("weightCarbDeviation", "Trọng số sai lệch carb", 50),
@@ -506,7 +507,7 @@ export const serviceActions: Action[] = [
     plan,
     item(),
     dish("newDishId", "Món thay thế"),
-    servingNumber("newServingScaledX2", "Số khẩu phần mới", 1, 3),
+    servingNumber("newServingScaledX2", "Số khẩu phần mới", 0.5, 3),
   ]),
   meal("GET", "/analytics", "Xem thống kê dinh dưỡng", [
     num("?days", "Số ngày", 7, 1, 365),
@@ -535,7 +536,7 @@ export const serviceActions: Action[] = [
       undefined,
       0.1,
     ),
-    num("consumedNetCarbG", "Carb thuần đã ăn (g)", 0, 0, undefined, 0.1),
+    num("consumedNetCarbG", "Carbohydrate đã ăn (g)", 0, 0, undefined, 0.1),
     num("consumedProteinG", "Đạm đã ăn (g)", 0, 0, undefined, 0.1),
     num("consumedFatG", "Chất béo đã ăn (g)", 0, 0, undefined, 0.1),
   ]),

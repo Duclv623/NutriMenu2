@@ -25,21 +25,85 @@ import java.util.stream.Collectors;
 @Service
 @RequiredArgsConstructor
 public class FoodCatalogService {
-    @Transactional
-    public void removeFavorite(Long userId, Long dishId) {
-        preferenceRepository.findByUserIdAndDishId(userId, dishId)
-                .filter(preference -> preference.getPreferenceType() == PreferenceType.FAVORITE)
-                .ifPresent(preferenceRepository::delete);
+
+    @Transactional(readOnly = true)
+    public List<DishDetailResponse> getFoodLibrary(long userId) {
+        return dishRepository.searchDishesForUser(CatalogSourcePolicy.dishIdentities(), userId, null, null, null, "", org.springframework.data.domain.Pageable.unpaged())
+                .map(dish -> DishDetailResponse.fromEntity(dish, true)).getContent();
     }
+
+    @Transactional(readOnly = true)
+    public DishDetailResponse getVisibleDish(long userId, long id) {
+        Dish dish = getDishOrThrow(id);
+        if (dish.getCreatedByUserId() != null && !Objects.equals(dish.getCreatedByUserId(), userId)) {
+            throw new ResourceNotFoundException("Không tìm thấy món ăn ID: " + id);
+        }
+        return DishDetailResponse.fromEntity(dish, true);
+    }
+
 
     private final DishRepository dishRepository;
     private final IngredientRepository ingredientRepository;
+    private final DishIngredientRepository dishIngredientRepository;
+    private final YieldFactorRepository yieldFactorRepository;
     private final UserFoodPreferenceRepository preferenceRepository;
     private final NutritionCalculationEngine calculationEngine;
 
     // -------------------------------------------------------------------------
     // ADMIN OPERATIONS
     // -------------------------------------------------------------------------
+    @Transactional
+    public Ingredient createIngredient(UpsertIngredientRequest req) {
+        if (ingredientRepository.findByVfcCode(req.getVfcCode()).isPresent()) {
+            throw new BusinessRuleException(HttpStatus.CONFLICT, "Mã VFC đã tồn tại: " + req.getVfcCode());
+        }
+        Ingredient ing = new Ingredient();
+        applyIngredientFields(ing, req);
+        return ingredientRepository.save(ing);
+    }
+
+    @Transactional
+    public Ingredient updateIngredientAndCascade(Long id, UpsertIngredientRequest req) {
+        Ingredient ing = ingredientRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Không tìm thấy nguyên liệu ID: " + id));
+        applyIngredientFields(ing, req);
+        Ingredient saved = ingredientRepository.save(ing);
+        recalculateDishesContainingIngredient(id);
+        return saved;
+    }
+
+    @Transactional(readOnly = true)
+    public Page<Ingredient> searchIngredients(IngredientGroup group, GiLevel giLevel, String keyword, int page, int size) {
+        String normalizedKw = VietnameseTextUtils.removeAccents(keyword);
+        return ingredientRepository.searchIngredients(CatalogSourcePolicy.ingredientCodes(), group, giLevel, normalizedKw, PageRequest.of(page, size));
+    }
+
+    @Transactional
+    public void deleteIngredientSafely(Long id) {
+        if (dishIngredientRepository.existsByIngredientId(id)) {
+            throw new BusinessRuleException(HttpStatus.CONFLICT,
+                    "Không thể xóa nguyên liệu này vì đang nằm trong công thức của một hoặc nhiều món ăn!");
+        }
+        ingredientRepository.deleteById(id);
+    }
+
+    @Transactional
+    public YieldRetentionFactor upsertYieldFactor(UpsertYieldFactorRequest req) {
+        YieldRetentionFactor yrf = YieldRetentionFactor.builder()
+                .ingredientId(req.getIngredientId())
+                .ingredientGroup(req.getIngredientGroup())
+                .cookingMethod(req.getCookingMethod())
+                .yieldFactor(req.getYieldFactor())
+                .oilAbsorptionPct(req.getOilAbsorptionPct())
+                .build();
+        return yieldFactorRepository.save(yrf);
+    }
+
+    @Transactional(readOnly = true)
+    public List<YieldRetentionFactor> getAllYieldFactors() {
+        return yieldFactorRepository.findAll();
+    }
+
     @Transactional
     public DishDetailResponse updateDishStatus(Long dishId, boolean isActive) {
         Dish dish = getDishOrThrow(dishId);
@@ -77,6 +141,39 @@ public class FoodCatalogService {
         dish.setMedicalTags(new HashSet<>(req.getMedicalTags()));
         dish.setLockManualTags(req.getLockManualTags());
         return DishDetailResponse.fromEntity(dishRepository.save(dish), false);
+    }
+
+    @Transactional
+    public BulkImportReportResponse bulkImportIngredients(List<UpsertIngredientRequest> items) {
+        int inserted = 0;
+        int updated = 0;
+        List<String> errors = new ArrayList<>();
+
+        for (int i = 0; i < items.size(); i++) {
+            UpsertIngredientRequest req = items.get(i);
+            try {
+                Optional<Ingredient> existing = ingredientRepository.findByVfcCode(req.getVfcCode());
+                if (existing.isPresent()) {
+                    Ingredient ing = existing.get();
+                    applyIngredientFields(ing, req);
+                    ingredientRepository.save(ing);
+                    updated++;
+                } else {
+                    Ingredient ing = new Ingredient();
+                    applyIngredientFields(ing, req);
+                    ingredientRepository.save(ing);
+                    inserted++;
+                }
+            } catch (Exception e) {
+                errors.add("Dòng " + (i + 1) + " (" + req.getVfcCode() + "): " + e.getMessage());
+            }
+        }
+        return BulkImportReportResponse.builder()
+                .totalProcessed(items.size())
+                .insertedCount(inserted)
+                .updatedCount(updated)
+                .errors(errors)
+                .build();
     }
 
     @Transactional(readOnly = true)
@@ -142,6 +239,8 @@ public class FoodCatalogService {
 
     @Transactional
     public DishDetailResponse createDish(CreateDishRequest req, Long createdByUserId) {
+        if (createdByUserId != null) throw new BusinessRuleException(HttpStatus.UNPROCESSABLE_ENTITY,
+                "Danh mục hiện chỉ dùng dữ liệu NIN mới; dữ liệu nguyên liệu chưa đủ để tạo món tùy chỉnh.");
         Dish dish = new Dish();
         dish.setCreatedByUserId(createdByUserId);
         populateAndComputeDish(dish, req);
@@ -156,17 +255,39 @@ public class FoodCatalogService {
         return DishDetailResponse.fromEntity(dishRepository.save(dish), true);
     }
 
+    @Transactional
+    public CascadeRecalculationResponse recalculateDishesContainingIngredient(Long ingredientId) {
+        Ingredient ing = ingredientRepository.findById(ingredientId)
+                .orElseThrow(() -> new ResourceNotFoundException("Không tìm thấy nguyên liệu ID: " + ingredientId));
+
+        List<Long> dishIds = dishIngredientRepository.findDishIdsByIngredientId(ingredientId);
+        List<Dish> affectedDishes = dishRepository.findAllById(dishIds);
+        List<String> updatedCodes = new ArrayList<>();
+
+        for (Dish dish : affectedDishes) {
+            calculationEngine.computeNutritionAndMedicalTags(dish, dish.getIngredients());
+            dishRepository.save(dish);
+            updatedCodes.add(dish.getCode());
+        }
+        return CascadeRecalculationResponse.builder()
+                .ingredientId(ing.getId())
+                .ingredientName(ing.getNameVi())
+                .affectedDishesCount(updatedCodes.size())
+                .updatedDishCodes(updatedCodes)
+                .build();
+    }
+
     @Transactional(readOnly = true)
     public SolverCoverageDiagnosticResponse analyzeSolverCoverage(SolverCoverageDiagnosticRequest req) {
         BigDecimal maxGi = req.getMaxGiAllowed() != null ? req.getMaxGiAllowed() : new BigDecimal("50.0");
-        Set<MedicalTag> excludedTags = (req.getExcludedMedicalTags() == null || req.getExcludedMedicalTags().isEmpty())
+        Set<MedicalTag> excludedTags = (req.getExcludedMedicalTags() == null)
                 ? Set.of(MedicalTag.HIGH_GI) : req.getExcludedMedicalTags();
         boolean hasExIds = req.getExcludedRecentDishIds() != null && !req.getExcludedRecentDishIds().isEmpty();
         Set<Long> safeExIds = hasExIds ? req.getExcludedRecentDishIds() : Set.of(-1L);
 
         List<Dish> eligible = dishRepository.findCandidatesForSolver(
-                null, maxGi, EnumSet.allOf(MealSlot.class), hasExIds, safeExIds, excludedTags
-        );
+                CatalogSourcePolicy.dishIdentities(), null, maxGi, EnumSet.allOf(MealSlot.class), hasExIds, safeExIds, excludedTags, true
+        ).stream().filter(CatalogSourcePolicy::isCurrentSource).filter(d -> CatalogNutritionQuality.eligibleFor(d, excludedTags)).toList();
 
         Map<MealSlot, Map<DishRole, Integer>> matrix = new EnumMap<>(MealSlot.class);
         for (MealSlot slot : MealSlot.values()) {
@@ -208,23 +329,8 @@ public class FoodCatalogService {
     public Page<DishDetailResponse> searchDishesForUser(
             Long userId, DishRole role, MealSlot slot, GiLevel giLevel, String keyword, int page, int size) {
         String normalizedKw = VietnameseTextUtils.removeAccents(keyword);
-        return dishRepository.searchDishesForUser(userId, role, slot, giLevel, normalizedKw, PageRequest.of(page, size))
+        return dishRepository.searchDishesForUser(CatalogSourcePolicy.dishIdentities(), userId, role, slot, giLevel, normalizedKw, PageRequest.of(page, size))
                 .map(d -> DishDetailResponse.fromEntity(d, false));
-    }
-
-    @Transactional(readOnly = true)
-    public List<DishDetailResponse> getFoodLibrary(long userId) {
-        return dishRepository.searchDishesForUser(userId, null, null, null, "", org.springframework.data.domain.Pageable.unpaged())
-                .map(dish -> DishDetailResponse.fromEntity(dish, true)).getContent();
-    }
-
-    @Transactional(readOnly = true)
-    public DishDetailResponse getVisibleDish(long userId, long id) {
-        Dish dish = getDishOrThrow(id);
-        if (dish.getCreatedByUserId() != null && !Objects.equals(dish.getCreatedByUserId(), userId)) {
-            throw new ResourceNotFoundException("Không tìm thấy món ăn ID: " + id);
-        }
-        return DishDetailResponse.fromEntity(dish, true);
     }
 
     @Transactional(readOnly = true)
@@ -235,9 +341,8 @@ public class FoodCatalogService {
     @Transactional
     public void setUserDishPreference(Long userId, Long dishId, PreferenceType type) {
         Dish dish = getDishOrThrow(dishId);
-        if (dish.getCreatedByUserId() != null && !Objects.equals(dish.getCreatedByUserId(), userId)) {
-            throw new ResourceNotFoundException("Không tìm thấy món ăn ID: " + dishId);
-        }
+        if (dish.getCreatedByUserId() != null && !Objects.equals(dish.getCreatedByUserId(), userId))
+            throw new ResourceNotFoundException("Không tìm thấy món ăn");
         UserFoodPreference pref = preferenceRepository.findByUserIdAndDishId(userId, dishId)
                 .orElse(UserFoodPreference.builder()
                         .userId(userId)
@@ -253,10 +358,12 @@ public class FoodCatalogService {
     public UserPreferenceResponse getUserPreferences(Long userId) {
         List<UserFoodPreference> prefs = preferenceRepository.findByUserId(userId);
         List<DishDetailResponse> favorites = prefs.stream()
+                .filter(p -> CatalogSourcePolicy.isCurrentSource(p.getDish()))
                 .filter(p -> p.getPreferenceType() == PreferenceType.FAVORITE)
                 .map(p -> DishDetailResponse.fromEntity(p.getDish(), false))
                 .toList();
         List<DishDetailResponse> dislikes = prefs.stream()
+                .filter(p -> CatalogSourcePolicy.isCurrentSource(p.getDish()))
                 .filter(p -> p.getPreferenceType() == PreferenceType.DISLIKE)
                 .map(p -> DishDetailResponse.fromEntity(p.getDish(), false))
                 .toList();
@@ -267,26 +374,46 @@ public class FoodCatalogService {
                 .build();
     }
 
+    @Transactional
+    public void removeFavorite(Long userId, Long dishId) {
+        // Removing a favourite must not clear a separate dislike preference.
+        preferenceRepository.findByUserIdAndDishId(userId, dishId)
+                .filter(pref -> pref.getPreferenceType() == PreferenceType.FAVORITE)
+                .ifPresent(preferenceRepository::delete);
+    }
+
+    @Transactional
+    public void removeDislike(Long userId, Long dishId) {
+        preferenceRepository.findByUserIdAndDishId(userId, dishId)
+                .filter(pref -> pref.getPreferenceType() == PreferenceType.DISLIKE)
+                .ifPresent(preferenceRepository::delete);
+    }
+
     @Transactional(readOnly = true)
     public DynamicServingResponse calculateDynamicServing(Long dishId, BigDecimal multiplier) {
-        if (multiplier == null || multiplier.compareTo(new BigDecimal("0.25")) < 0 || multiplier.compareTo(new BigDecimal("4.0")) > 0) {
-            throw new BusinessRuleException(HttpStatus.BAD_REQUEST, "Hệ số khẩu phần (multiplier) phải nằm trong khoảng [0.25, 4.0]");
-        }
         Dish d = getDishOrThrow(dishId);
+        BigDecimal maxMultiplier = new BigDecimal("4.0");
+        if (d.getSourceRecordId()!=null && d.getMaxServingScaledX2() != null)
+            maxMultiplier = maxMultiplier.max(BigDecimal.valueOf(d.getMaxServingScaledX2()).divide(new BigDecimal("2")));
+        if (multiplier == null || multiplier.compareTo(new BigDecimal("0.25")) < 0 || multiplier.compareTo(maxMultiplier) > 0)
+            throw new BusinessRuleException(HttpStatus.BAD_REQUEST,
+                    "Hệ số khẩu phần phải nằm trong khoảng [0.25, " + maxMultiplier + "] theo định lượng nguồn.");
 
-        BigDecimal adjCookedG = d.getStandardServingCookedG().multiply(multiplier).setScale(1, RoundingMode.HALF_UP);
+        if (!CatalogNutritionQuality.completeCoreNutrition(d)) throw new BusinessRuleException(HttpStatus.UNPROCESSABLE_ENTITY,"Thiếu dữ liệu dinh dưỡng cốt lõi để tính khẩu phần.");
+
+        BigDecimal adjCookedG = multiplyKnown(d.getStandardServingCookedG(), multiplier);
         BigDecimal adjCal = d.getCaloriesKcal().multiply(multiplier).setScale(1, RoundingMode.HALF_UP);
         BigDecimal adjNetCarb = d.getNetCarbG().multiply(multiplier).setScale(1, RoundingMode.HALF_UP);
-        BigDecimal adjFiber = d.getFiberG().multiply(multiplier).setScale(1, RoundingMode.HALF_UP);
+        BigDecimal adjFiber = multiplyKnown(d.getFiberG(),multiplier);
         BigDecimal adjProtein = d.getProteinG().multiply(multiplier).setScale(1, RoundingMode.HALF_UP);
         BigDecimal adjFat = d.getFatG().multiply(multiplier).setScale(1, RoundingMode.HALF_UP);
         BigDecimal adjSodium = d.getSodiumMg().multiply(multiplier).setScale(1, RoundingMode.HALF_UP);
-        BigDecimal adjChol = d.getCholesterolMg().multiply(multiplier).setScale(1, RoundingMode.HALF_UP);
-        BigDecimal adjGl = d.getGlycemicLoad().multiply(multiplier).setScale(1, RoundingMode.HALF_UP);
+        BigDecimal adjChol = multiplyKnown(d.getCholesterolMg(),multiplier);
+        BigDecimal adjGl = multiplyKnown(d.getGlycemicLoad(),multiplier);
 
         TrafficLightBadge badge = TrafficLightBadge.evaluate(d.getEstimatedGi(), adjGl);
-        boolean isGlExceeded = adjGl.compareTo(new BigDecimal("20.0")) >= 0;
-        String warningMsg = isGlExceeded
+        boolean isGlExceeded = adjGl!=null && adjGl.compareTo(new BigDecimal("20.0")) >= 0;
+        String warningMsg = adjGl==null || d.getEstimatedGi()==null ? "Chưa đủ số liệu GI/GL để đánh giá đường huyết cho khẩu phần này." : isGlExceeded
                 ? String.format("CẢNH BÁO: Nếu ăn %.1f khẩu phần này, tải lượng đường huyết (GL) tăng lên %s (>= 20), dễ gây tăng đường huyết sau ăn!", multiplier, adjGl)
                 : "Lượng đường huyết của khẩu phần này nằm trong ngưỡng an toàn.";
 
@@ -294,9 +421,10 @@ public class FoodCatalogService {
                 .map(di -> RecipeIngredientBreakdownDto.builder()
                         .ingredientId(di.getIngredient().getId())
                         .ingredientNameVi(di.getIngredient().getNameVi())
-                        .rawWeightG(di.getRawWeightG().multiply(multiplier).setScale(1, RoundingMode.HALF_UP))
+                        .sourceAmountText(di.getSourceAmountText())
+                        .rawWeightG(multiplyKnown(di.getRawWeightG(), multiplier))
                         .appliedYieldFactor(di.getAppliedYieldFactor())
-                        .cookedWeightG(di.getCookedWeightG().multiply(multiplier).setScale(1, RoundingMode.HALF_UP))
+                        .cookedWeightG(multiplyKnown(di.getCookedWeightG(), multiplier))
                         .isMainIngredient(Boolean.TRUE.equals(di.getIsMainIngredient()))
                         .build()).toList();
 
@@ -325,6 +453,12 @@ public class FoodCatalogService {
     @Transactional(readOnly = true)
     public SafetyCheckResponse checkPersonalizedSafety(Long dishId, SafetyCheckRequest req) {
         Dish d = getDishOrThrow(dishId);
+        if (!CatalogNutritionQuality.eligibleFor(d, req.getPatientContraindications())) {
+            return SafetyCheckResponse.builder().dishId(d.getId()).dishNameVi(d.getNameVi())
+                    .isSafeForPatient(false).badge(null).conflictingTags(Set.of())
+                    .detailedWarnings(List.of("Chưa đủ dữ liệu dinh dưỡng/khẩu phần hoặc dữ liệu bệnh nền để kết luận an toàn. Xem nguồn và chất lượng dữ liệu."))
+                    .cookingAdjustmentTips(List.of()).build();
+        }
         Set<MedicalTag> conflicts = new HashSet<>(d.getMedicalTags());
         if (req.getPatientContraindications() != null) {
             conflicts.retainAll(req.getPatientContraindications());
@@ -364,15 +498,18 @@ public class FoodCatalogService {
     @Transactional(readOnly = true)
     public List<DishDetailResponse> findAlternatives(Long dishId, MealSlot mealSlot) {
         Dish current = getDishOrThrow(dishId);
+        CatalogNutritionQuality.requireCompleteSolverNutrition(current);
         BigDecimal minCarb = current.getNetCarbG().multiply(new BigDecimal("0.80")).subtract(new BigDecimal("5.0")).max(BigDecimal.ZERO);
         BigDecimal maxCarb = current.getNetCarbG().multiply(new BigDecimal("1.20")).add(new BigDecimal("5.0"));
         BigDecimal minCal = current.getCaloriesKcal().multiply(new BigDecimal("0.80"));
         BigDecimal maxCal = current.getCaloriesKcal().multiply(new BigDecimal("1.20"));
 
         return dishRepository.findSimilarAlternatives(
-                        current.getId(), current.getDishRole(), mealSlot,
+                        CatalogSourcePolicy.dishIdentities(), current.getId(), current.getDishRole(), mealSlot,
                         minCarb, maxCarb, minCal, maxCal, current.getGlycemicLoad())
                 .stream()
+                .filter(CatalogSourcePolicy::isCurrentSource)
+                .filter(CatalogNutritionQuality::baseEligible)
                 .limit(10)
                 .map(d -> DishDetailResponse.fromEntity(d, false))
                 .toList();
@@ -382,6 +519,8 @@ public class FoodCatalogService {
     public DishComparisonResponse compareTwoDishes(Long dish1Id, Long dish2Id) {
         Dish d1 = getDishOrThrow(dish1Id);
         Dish d2 = getDishOrThrow(dish2Id);
+        CatalogNutritionQuality.requireCompleteSolverNutrition(d1);
+        CatalogNutritionQuality.requireCompleteSolverNutrition(d2);
 
         Dish better = d1.getGlycemicLoad().compareTo(d2.getGlycemicLoad()) <= 0 ? d1 : d2;
         Dish worse = better == d1 ? d2 : d1;
@@ -407,6 +546,20 @@ public class FoodCatalogService {
     // INTERNAL CP-SAT SOLVER OPERATIONS
     // -------------------------------------------------------------------------
     @Transactional(readOnly = true)
+    public Map<String,Object> getSourceReadiness() {
+        var general=CandidateFilterRequest.builder().planningMode(PlanningMode.GENERAL_REFERENCE).maxGiAllowed(new BigDecimal("100"))
+                .excludedMedicalTags(Set.of()).maxCandidatesPerRole(Integer.MAX_VALUE).build();
+        var medical=CandidateFilterRequest.builder().maxGiAllowed(new BigDecimal("50"))
+                .excludedMedicalTags(Set.of()).maxCandidatesPerRole(Integer.MAX_VALUE).build();
+        return Map.of("contractVersion",3,"optionalNutritionSupported",true,"perAllergenEvidence",true,
+                "loadedSourceDishCount",dishRepository.findCandidatesForSolver(CatalogSourcePolicy.dishIdentities(),null,new BigDecimal("100"),EnumSet.allOf(MealSlot.class),false,Set.of(-1L),Set.of(),false).stream().filter(CatalogSourcePolicy::isCurrentSource).count(),
+                "datasetId",CatalogSourcePolicy.datasetId(),
+                "expectedSourceDishCount",CatalogSourcePolicy.dishCodes().size(),
+                "generalEligibleDishCount",getCandidateDishesForSolver(general).size(),
+                "medicalEligibleDishCount",getCandidateDishesForSolver(medical).size());
+    }
+
+    @Transactional(readOnly = true)
     public List<DishSolverDto> getCandidateDishesForSolver(CandidateFilterRequest req) {
         BigDecimal maxGi = req.getMaxGiAllowed() != null ? req.getMaxGiAllowed() : new BigDecimal("50.0");
         Set<Long> mergedExcludedIds = new HashSet<>(req.getExcludedRecentDishIds() != null ? req.getExcludedRecentDishIds() : Set.of());
@@ -424,7 +577,7 @@ public class FoodCatalogService {
 
         boolean hasExcludedIds = !mergedExcludedIds.isEmpty();
         Set<Long> safeExcludedIds = hasExcludedIds ? mergedExcludedIds : Set.of(-1L);
-        Set<MedicalTag> safeExcludedTags = (req.getExcludedMedicalTags() == null || req.getExcludedMedicalTags().isEmpty())
+        Set<MedicalTag> safeExcludedTags = (req.getExcludedMedicalTags() == null)
                 ? Set.of(MedicalTag.HIGH_GI) : req.getExcludedMedicalTags();
         Set<MealSlot> slots = (req.getRequiredMealSlots() == null || req.getRequiredMealSlots().isEmpty())
                 ? EnumSet.allOf(MealSlot.class) : req.getRequiredMealSlots();
@@ -432,11 +585,13 @@ public class FoodCatalogService {
                 ? 25 : req.getMaxCandidatesPerRole();
 
         List<Dish> rawCandidates = dishRepository.findCandidatesForSolver(
-                req.getUserId(), maxGi, slots, hasExcludedIds, safeExcludedIds, safeExcludedTags
+                CatalogSourcePolicy.dishIdentities(), req.getUserId(), maxGi, slots, hasExcludedIds, safeExcludedIds, safeExcludedTags, req.getPlanningMode() != PlanningMode.GENERAL_REFERENCE
         );
 
         Map<DishRole, List<Dish>> groupedByRole = rawCandidates.stream()
-                .collect(Collectors.groupingBy(Dish::getDishRole));
+                .filter(CatalogSourcePolicy::isCurrentSource)
+                .filter(d -> CatalogNutritionQuality.eligibleFor(d, safeExcludedTags, req.getPlanningMode()))
+                .collect(Collectors.groupingBy(Dish::getDishRole,() -> new EnumMap<>(DishRole.class),Collectors.toList()));
 
         List<DishSolverDto> result = new ArrayList<>();
         for (Map.Entry<DishRole, List<Dish>> entry : groupedByRole.entrySet()) {
@@ -452,16 +607,16 @@ public class FoodCatalogService {
     public DishSolverDto getSingleSolverDto(Long dishId, Long userId, boolean activeOnly) {
         Dish dish = getDishOrThrow(dishId);
         boolean visibleToUser = dish.getCreatedByUserId() == null || Objects.equals(dish.getCreatedByUserId(), userId);
-        if (!visibleToUser || (activeOnly && !Boolean.TRUE.equals(dish.getIsActive()))) {
+        if (!visibleToUser || (activeOnly && (!Boolean.TRUE.equals(dish.getIsActive()) || !CatalogSourcePolicy.isCurrentSource(dish)))) {
             throw new ResourceNotFoundException("Không tìm thấy món ăn ID: " + dishId);
         }
-        return toSolverDto(dish, false);
+        return toSolverDto(dish, false, !activeOnly && !CatalogSourcePolicy.isCurrentSource(dish));
     }
 
     @Transactional(readOnly = true)
     public List<DishDetailResponse> getBatchDetails(List<Long> dishIds) {
         return dishRepository.findAllById(dishIds).stream()
-                .map(d -> DishDetailResponse.fromEntity(d, false))
+                .map(d -> DishDetailResponse.fromEntity(d, true))
                 .toList();
     }
 
@@ -471,6 +626,25 @@ public class FoodCatalogService {
     private Dish getDishOrThrow(Long dishId) {
         return dishRepository.findById(dishId)
                 .orElseThrow(() -> new ResourceNotFoundException("Không tìm thấy món ăn ID: " + dishId));
+    }
+
+    private void applyIngredientFields(Ingredient ing, UpsertIngredientRequest req) {
+        ing.setVfcCode(req.getVfcCode());
+        ing.setNameVi(req.getNameVi());
+        ing.setIngredientGroup(req.getIngredientGroup());
+        if (req.getEdiblePortionPct() != null) ing.setEdiblePortionPct(req.getEdiblePortionPct());
+        ing.setCaloriesPer100g(req.getCaloriesPer100g());
+        ing.setTotalCarbG(req.getTotalCarbG());
+        ing.setFiberG(req.getFiberG());
+        ing.setProteinG(req.getProteinG());
+        ing.setFatG(req.getFatG());
+        ing.setSaturatedFatG(req.getSaturatedFatG() != null ? req.getSaturatedFatG() : BigDecimal.ZERO);
+        ing.setCholesterolMg(req.getCholesterolMg() != null ? req.getCholesterolMg() : BigDecimal.ZERO);
+        ing.setSodiumMg(req.getSodiumMg() != null ? req.getSodiumMg() : BigDecimal.ZERO);
+        ing.setPotassiumMg(req.getPotassiumMg() != null ? req.getPotassiumMg() : BigDecimal.ZERO);
+        ing.setPurineMg(req.getPurineMg() != null ? req.getPurineMg() : BigDecimal.ZERO);
+        ing.setGiValue(req.getGiValue());
+        ing.setAllergenTags(req.getAllergenTags() != null ? new HashSet<>(req.getAllergenTags()) : new HashSet<>());
     }
 
     private void populateAndComputeDish(Dish dish, CreateDishRequest req) {
@@ -515,6 +689,14 @@ public class FoodCatalogService {
     }
 
     private DishSolverDto toSolverDto(Dish d, boolean isUserFavorite) {
+        return toSolverDto(d, isUserFavorite, false);
+    }
+
+    private DishSolverDto toSolverDto(Dish d, boolean isUserFavorite, boolean historical) {
+        if (!historical && !CatalogNutritionQuality.generalEligible(d))
+            throw new BusinessRuleException(HttpStatus.UNPROCESSABLE_ENTITY,"Món chưa đủ dữ liệu năng lượng, macro, natri và khẩu phần.");
+        if (historical && !CatalogNutritionQuality.completeCoreNutrition(d))
+            throw new BusinessRuleException(HttpStatus.UNPROCESSABLE_ENTITY,"Món lịch sử thiếu dữ liệu dinh dưỡng cốt lõi.");
         int finalScore = d.getPopularityScore() + (isUserFavorite ? 150 : 0);
         Map<Long, DishSolverDto.RawIngredientNeedDto> rawIngredients = new LinkedHashMap<>();
         for (DishIngredient item : d.getIngredients()) {
@@ -549,5 +731,9 @@ public class FoodCatalogService {
                 .householdUnitLabel(d.getHouseholdUnitLabel())
                 .rawIngredientsPerServing(rawIngredients)
                 .build();
+    }
+
+    private static BigDecimal multiplyKnown(BigDecimal value, BigDecimal multiplier) {
+        return value == null ? null : value.multiply(multiplier).setScale(1, RoundingMode.HALF_UP);
     }
 }

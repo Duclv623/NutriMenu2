@@ -1,0 +1,271 @@
+{
+  "repository": "https://github.com/Duclv623/NutriMenu2.git",
+  "branch": "main",
+  "baselineCommit": "9c2fa7fe2372a98e83635bec1d4cc3f484b4a1c7",
+  "upstreamCommit": "8eb70613b137bee449cd47e43ce3321395eb45df",
+  "integratedAt": "2026-11-27T03:19:47.067992+00:00",
+  "method": "verified snapshot three-way integration preserving local changes",
+  "files": [
+    {
+      "path": "BackendNutriMenu/foodcatalogservice/src/main/java/com/example/foodcatalogservice/client/UserIdentityClient.java",
+      "upstreamGitBlobSha": "b511f447d5c0a33cf9e0ba712201c410ddae830b",
+      "integratedSha256": "8a3d99b2d108dd5f58f7fcabf6556c6d0e67120d64d613d7f6d0249d79aaea93"
+    },
+    {
+      "path": "BackendNutriMenu/foodcatalogservice/src/main/java/com/example/foodcatalogservice/controller/FoodLibraryController.java",
+      "upstreamGitBlobSha": "440b69fab3288a9ee28408a835735d36bef0c930",
+      "integratedSha256": "2c9cc0d238783e5b8d16f5db4cc63bd2291a4bd32552931abfb8b855fefa0bc8"
+    },
+    {
+      "path": "BackendNutriMenu/foodcatalogservice/src/main/java/com/example/foodcatalogservice/dao/repository/DishRepository.java",
+      "upstreamGitBlobSha": "7fb403a98733fe50cd6ea3a781e9c54abbd028cf",
+      "integratedSha256": "eeab4c8fa4ec73055ff41937513451db9347b978c228052ccc2b16d48216db7c"
+    },
+    {
+      "path": "BackendNutriMenu/foodcatalogservice/src/main/java/com/example/foodcatalogservice/dto/request/CreateDishRequest.java",
+      "upstreamGitBlobSha": "b11748477628b5cc43443324822a90a28109dc48",
+      "integratedSha256": "238162a2a19917ce5a63b326f78834adebb9b4c3aebaad244fac596ceb74a9c9"
+    },
+    {
+      "path": "BackendNutriMenu/gateway/src/main/java/com/menufood/gateway/filter/AuthenticationFilter.java",
+      "upstreamGitBlobSha": "168b54ff9c46d3a7ded96b9f14bf2b0ae4d08799",
+      "integratedSha256": "1e05ccc502f14a70136c3a4f9cf8348f2e1a8ab44e8579aecec1f5cc55f9c236"
+    },
+    {
+      "path": "BackendNutriMenu/mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/controller/MealPlanToolsController.java",
+      "upstreamGitBlobSha": "639f94fdf806586a90fc92989c0742fee9388969",
+      "integratedSha256": "f63ef6c3be36a735a3525ce4fe2b8b25c17fd57449c90e8f15ea47466f932175"
+    },
+    {
+      "path": "BackendNutriMenu/mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/dto/request/GenerateDailyMealRequest.java",
+      "upstreamGitBlobSha": "cad85c7621876a71a9adb1e88c8b53091e9774af",
+      "integratedSha256": "e07ff2363c4a773417e54a568118266ffaa403429beb1c1a762d21d5fa769aa3"
+    },
+    {
+      "path": "BackendNutriMenu/mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/dto/request/ManualReplaceItemRequest.java",
+      "upstreamGitBlobSha": "fc5a945f78bbe0d8a35edcfa3b165dc9e9ec3dcc",
+      "integratedSha256": "6f82a088e72b2648d1b8b389c4bcd9a161e924df08a68f2297733d1943d8da96"
+    },
+    {
+      "path": "BackendNutriMenu/mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/dto/request/MealEditPolicy.java",
+      "upstreamGitBlobSha": "4094ed3328111aaad0dc54ada1de5dca5eb2ba6e",
+      "integratedSha256": "2a12f84d3410a79bf434128bc575e6e2e81ad6a3116af9caa3206e3108667ea3"
+    },
+    {
+      "path": "BackendNutriMenu/mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/dto/request/PatientProfileMealRequest.java",
+      "upstreamGitBlobSha": "ec0279a7fcc1af326fefaf884166017dd774d04b",
+      "integratedSha256": "8ced982209a417b505838c0ac74adac48ef17e1bbcc143f7109e1117d80dcb81"
+    },
+    {
+      "path": "BackendNutriMenu/mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/dto/request/RebalanceRemainingMealsRequest.java",
+      "upstreamGitBlobSha": "ce98e773b98c2c9e167ea3ce7dbea93990a06fb9",
+      "integratedSha256": "4022e2a39191e62b2b4330dc853559637e57c9e4623df9414cbe25db2a03084b"
+    },
+    {
+      "path": "BackendNutriMenu/mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/dto/request/SwapSingleDishRequest.java",
+      "upstreamGitBlobSha": "f75ee42679195567d37798a528388ed713802f21",
+      "integratedSha256": "4b345b53d9bd163b5904481b3860640e51b4bcccbc0910bb20074a0a1b5dcff8"
+    },
+    {
+      "path": "BackendNutriMenu/mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/dto/response/PersonalMealPlanResponseDTO.java",
+      "upstreamGitBlobSha": "c0e31964a3a58c88f3bd3576bfcb64994e195d38",
+      "integratedSha256": "c96a33354762c55d9a39400676ae07c97ae4b3c68d1ba678ad4ea1461ef5d7ec"
+    },
+    {
+      "path": "BackendNutriMenu/mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/entity/MealPlan.java",
+      "upstreamGitBlobSha": "7f0929c86c4a6993e67ceabad1689440ffb72080",
+      "integratedSha256": "76787cffae5703abd717db56373ea3604095fecc93c827f2b20666e7c3fea17e"
+    },
+    {
+      "path": "BackendNutriMenu/mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/mapper/MealPlanMapper.java",
+      "upstreamGitBlobSha": "cdba2e1dd29e89879af3ef4d5a3d8fff248e0b91",
+      "integratedSha256": "0ad519257adf9e4fce375f9c26e38922f6c431840fa85b8d607bcf5f8f5e7e4d"
+    },
+    {
+      "path": "BackendNutriMenu/mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/service/CheckedMealChangeService.java",
+      "upstreamGitBlobSha": "58701fcb6feaa507861ac01bf80d8ae9d53cfe9e",
+      "integratedSha256": "4ad283e71ff51ad14b4065ac781a3d792fcb329d3b3ee0f74ad778fd1727b75e"
+    },
+    {
+      "path": "BackendNutriMenu/mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/service/MealOptimizerService.java",
+      "upstreamGitBlobSha": "f000c502480dfebf2e7f2e886ecc3e81c81c7999",
+      "integratedSha256": "2c86834143b8fffe4678c5dc3704811b06b1165f4f9d106aeb906085f5e25b70"
+    },
+    {
+      "path": "BackendNutriMenu/mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/service/MealPlanToolsService.java",
+      "upstreamGitBlobSha": "83f4271b9026cc187360ac126693260cc81201fc",
+      "integratedSha256": "3cf50eead2336abb526c215de6cd0d0813ed1da35be61bcd94fdb611ba360a3d"
+    },
+    {
+      "path": "BackendNutriMenu/mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/service/PersonalMealPlanService.java",
+      "upstreamGitBlobSha": "dccce3605dd27cde4db3380b1bed4057efa3fbfe",
+      "integratedSha256": "498150494c279ce61892661260cdd8833cab1a1fd80a8ac57149d8f547b290ee"
+    },
+    {
+      "path": "README.md",
+      "upstreamGitBlobSha": "cc5600ffe68ed06edefe4f5f8f3647e436d2bc13",
+      "integratedSha256": "ec0f46074673fa857fe8091fdc4022c31805eb0e372300178808e195a4e14850"
+    },
+    {
+      "path": "frontend/src/components/common/ServiceAction.tsx",
+      "upstreamGitBlobSha": "9151d55efbcd23b0bf32e98624433498c521afab",
+      "integratedSha256": "f81266c88ad7b77f662e24dc16cf8cd8827b68926e2be282176f69261b603d13"
+    },
+    {
+      "path": "frontend/src/features/admin/pages/ServiceAdministration.tsx",
+      "upstreamGitBlobSha": "4ed07ea40f228957ab67242e4413660913721331",
+      "integratedSha256": "ec7a57afb7b4b51b4447ee417096c9a3d0d2410ed485e691199c25220036ced6"
+    },
+    {
+      "path": "frontend/src/features/catalog/components/CatalogTools.tsx",
+      "upstreamGitBlobSha": "707ac1bc1e77a0515372debb1d06576f9856126e",
+      "integratedSha256": "577193de6b27250931c085e4427df93a7c6bc2d5e2b7d4c52f28ac1589c1d655"
+    },
+    {
+      "path": "frontend/src/features/catalog/components/FoodDetail.tsx",
+      "upstreamGitBlobSha": "0ef1ed0f92bb4b3fc4c996f3c63547e3677a1aef",
+      "integratedSha256": "9757796472708df3ae84e1395f8189d8ef73e630ff0ccf1b03f83b33dc4149c7"
+    },
+    {
+      "path": "frontend/src/features/catalog/pages/FoodLibraryPage.tsx",
+      "upstreamGitBlobSha": "7bef4f5c6e9c61ac3a3268b8dbe6af0296cd5ffe",
+      "integratedSha256": "ef9152910f5cb4a06b25d04757a24e96360a6a1d4b4efb9bbc751bd0f10e6762"
+    },
+    {
+      "path": "frontend/src/features/catalog/services/foodService.ts",
+      "upstreamGitBlobSha": "dd0a186d286a7ce386fb0ead2a58e4f8fcf44a0f",
+      "integratedSha256": "f2f3b58c451813ea0532f74d74875fe5f2f856a5fecbcc2ca5271edbfff85495"
+    },
+    {
+      "path": "frontend/src/features/meals/components/PlanTools.tsx",
+      "upstreamGitBlobSha": "3c278eee4de422dd032454eb9784f4567ff2e3c8",
+      "integratedSha256": "47ea81a68513733306f89355cd195cfc536941db3362f92ba90cef4e15e0cc61"
+    },
+    {
+      "path": "frontend/src/features/meals/pages/MealPlannerPage.tsx",
+      "upstreamGitBlobSha": "0772dbdeb4ed53338fa1ba73b66c26c568940a77",
+      "integratedSha256": "a71b8aeff73e66d62dae49086c653f15d0a61806d27b56557444a5617a0ddf80"
+    },
+    {
+      "path": "frontend/src/features/profile/pages/ProfilePage.tsx",
+      "upstreamGitBlobSha": "bb255a9780eb99f2b2337e5496d12a8269f9f09b",
+      "integratedSha256": "2d80e3b3634714c95657b6bf25cdc805747dad752e6160649a2929a5eaaefcb5"
+    },
+    {
+      "path": "frontend/src/lib/api.ts",
+      "upstreamGitBlobSha": "2713edb7832527f2dd56341f57f3250186813b49",
+      "integratedSha256": "9691088b4a33c49fe23306cdc7618ba9d27d5dc293cb42f126be672d420040be"
+    },
+    {
+      "path": "frontend/src/lib/serviceActions.ts",
+      "upstreamGitBlobSha": "4731d80f76ec7bbad96af56f80a90a79c2d57a95",
+      "integratedSha256": "cecd96180fd7766df5882849e5d6c6abcfcb30574f3cb509a3f2424e4133f2eb"
+    },
+    {
+      "path": "frontend/src/routes/AppRouter.tsx",
+      "upstreamGitBlobSha": "b75da480b57038c35a053cd596d0c7775fbc1458",
+      "integratedSha256": "1d4e3032b46cf5e5e0d9229fc672fa511ec139baaa98861c415f07df0087451e"
+    },
+    {
+      "path": "frontend/src/store/UserDataProvider.tsx",
+      "upstreamGitBlobSha": "353a3fcb9dc6090a4fa3e2e026935c1fe58ab8fa",
+      "integratedSha256": "84ad47ffac09ec24e8bb256177afe8c35786ab122930cf6bb72ff25a23284b5c"
+    },
+    {
+      "path": "frontend/src/store/loadPageData.ts",
+      "upstreamGitBlobSha": "d623c18b3ab5dbf116bb65638068d6ad713c6c27",
+      "integratedSha256": "3a5438881c460eb045ddd6e8e221c7a7b6de81e9676e604f307b7f99e17be0a3"
+    },
+    {
+      "path": "frontend/src/styles.css",
+      "upstreamGitBlobSha": "f2bdd670baa2f636b93b0af122d39c7b698c62a8",
+      "integratedSha256": "0149c7985e4c7cd42d734b8da1eac522e20bcb2bf143763f0cb036fd5fa2c274"
+    },
+    {
+      "path": "frontend/src/types.ts",
+      "upstreamGitBlobSha": "953b0d2fd1b8f7d8905c5f41f6db5aa9748eb8b4",
+      "integratedSha256": "49cce7a6c3a96fb73ac8218793ed14f1cf5d2789526c58b0327d94e79c653570"
+    },
+    {
+      "path": "frontend/src/utils.ts",
+      "upstreamGitBlobSha": "6f71f68913fb37b95e3902ec9c99de2a45de731c",
+      "integratedSha256": "24b02fc6549a7c7a9d5dddd18365622e2b37f68e1d09cdc52048f3f6df31be15"
+    },
+    {
+      "path": "BackendNutriMenu/Userservice/src/main/java/com/menufood/userservice/dto/request/NutritionProfileRequestDTO.java",
+      "upstreamGitBlobSha": "957377406d8c294c0063ca3ec332b2c01d0d4e79",
+      "integratedSha256": "b0836c212d0ab41d0da45cdd2dff132856443b35b49ec3f506cef6b82e688df3"
+    },
+    {
+      "path": "BackendNutriMenu/Userservice/src/main/java/com/menufood/userservice/dto/response/NutritionProfileResponseDTO.java",
+      "upstreamGitBlobSha": "b9e195b94401539fefdb7f37fa92f1773917c310",
+      "integratedSha256": "1ffe12ef762e9513057875d370d2895cb3fa6b7fa69c67fbb60e841a6fc0d7ef"
+    },
+    {
+      "path": "BackendNutriMenu/Userservice/src/main/java/com/menufood/userservice/mapper/NutritionProfileMapper.java",
+      "upstreamGitBlobSha": "b3ffd152c930e8797db61bb92acf40a74009b334",
+      "integratedSha256": "b2cf6f9a93ddbc14382c5f9ea2084b94f33761f99a209c1980f0bc8bdd25908c"
+    },
+    {
+      "path": "BackendNutriMenu/foodcatalogservice/src/main/java/com/example/foodcatalogservice/dto/response/DishDetailResponse.java",
+      "upstreamGitBlobSha": "3e3b313c0ee8f29db6e58510d07d96289a8e231e",
+      "integratedSha256": "be586f4ec9bfe9424109658d73e7ea9c037258c421f0938fc6a3494bff16f446"
+    },
+    {
+      "path": "BackendNutriMenu/mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/client/MealAccountClient.java",
+      "upstreamGitBlobSha": "6beb37f2c9daa746a389c195acbf39e0bef9867a",
+      "integratedSha256": "a70462108f1a27f09965512ba54e94b8b509da0c220a7074862ce2010a7e273c"
+    },
+    {
+      "path": "BackendNutriMenu/mealoptimizerservice/src/main/java/com/example/mealoptimizerservice/dto/request/SwapMealRequestDTO.java",
+      "upstreamGitBlobSha": "f9c3b7d8cab72eefb0b007b77d387ef33734fe4d",
+      "integratedSha256": "c7745d1a20f125ad20e67f53ab05e37925d6632ac6f28b24de37cfc5526b5236"
+    },
+    {
+      "path": "frontend/API_CONTRACT.md",
+      "upstreamGitBlobSha": "d6d960c4ec96d38d42902a7c3cb60f0ea9dca2cc",
+      "integratedSha256": "614823a5124cff5a8028719189046fe2798acaf30fffeef8cea453310190cc5f"
+    },
+    {
+      "path": "frontend/src/components/common/ui.tsx",
+      "upstreamGitBlobSha": "102a17bb2cb663fe987badc297c9c3baddb57d8a",
+      "integratedSha256": "279df7230de6d665020a4e9c0010274fd56779ce6186400eedd28f99c816671c"
+    },
+    {
+      "path": "frontend/src/data/seed.ts",
+      "upstreamGitBlobSha": "ec4e0f028c66fda4c30b12cbb0b2d9daf05643a0",
+      "integratedSha256": "1be94a326acfad3e568c8bcde75b59a727826a0a76a9c0fec946dfef6e3cf1a2"
+    },
+    {
+      "path": "frontend/src/features/chatbot/pages/ChatPage.tsx",
+      "upstreamGitBlobSha": "b42693e954b09f466bf62060a324dbf2f32278ec",
+      "integratedSha256": "c07a84f585e1e2d710c77a37efb2253ec1c5b8b6cefbcdcaabb38cf1c7bfdaf0"
+    },
+    {
+      "path": "frontend/src/features/dashboard/pages/DashboardPage.tsx",
+      "upstreamGitBlobSha": "57af2890b73804154ee92b1e8290d5f147aead66",
+      "integratedSha256": "32272fd4639d0b15afb08902fe370c3efa2e30f703a4fdc9ec79b50fc5d1ac5b"
+    },
+    {
+      "path": "frontend/src/features/meals/components/MealChangeModal.tsx",
+      "upstreamGitBlobSha": "bec39272ff30b394a1f0ba8654e30cda3f779b54",
+      "integratedSha256": "42f3c81cbd45dbd575901a7f127b09a9bae6b5606f51d74fb04e827a26949068"
+    },
+    {
+      "path": "frontend/src/features/meals/pages/HistoryPage.tsx",
+      "upstreamGitBlobSha": "01d55416b915d8fff886d75e720c252a7152ef93",
+      "integratedSha256": "a3b72ddbd035ead6df86ab3fde3ee9bd9bab1437cc0b55d90f3b6dd7d4506a80"
+    },
+    {
+      "path": "frontend/src/features/meals/services/demoMealPlan.ts",
+      "upstreamGitBlobSha": "04b499c85f5db25a288585fbbd2ab24ad5091e55",
+      "integratedSha256": "4f9e25f39d047aa98fed6470b8369af1419fb12c910f77ba9a2f017a4e0e7ef9"
+    },
+    {
+      "path": "frontend/src/features/meals/services/mealPlanService.ts",
+      "upstreamGitBlobSha": "d36da09c65def149d28145e87248881cd6004e44",
+      "integratedSha256": "81d8b76c3dd28cfe68f46e22fa5e8d94fd3d6ee5d3537068148b9f8fb34d8e2d"
+    }
+  ],
+  "previousUpstreamCommit": "760f06630e6c258d6b4611ca5ba716d9ed381b43"
+}

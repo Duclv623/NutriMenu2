@@ -1,0 +1,27 @@
+{
+  "code": "HAN-122053",
+  "imageSha256": "c4b111b6ff87f1e1f8ef3f10fa84cfb694604157a4bd40ead423590eece1d150",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "193.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh đúc",
+      "amountSourceText": "300.0",
+      "numericQuantity": 300.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương nếp",
+      "amountSourceText": "44.0",
+      "numericQuantity": 44.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

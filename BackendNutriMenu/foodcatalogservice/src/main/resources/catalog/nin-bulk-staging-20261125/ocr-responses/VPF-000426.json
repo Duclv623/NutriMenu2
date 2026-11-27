@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "49kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Vú sữa",
+      "amountSourceText": "150g",
+      "numericQuantity": 150.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000426",
+  "imageSha256": "eab1bd0a9d56cc64e24a7ffdafe9dbedff150332375040845bdc8457cffd7129",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

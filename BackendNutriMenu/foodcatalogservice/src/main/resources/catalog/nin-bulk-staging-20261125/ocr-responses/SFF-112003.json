@@ -1,0 +1,61 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "1022.3 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm rang/Fried Rice",
+      "amountSourceText": "444.0",
+      "numericQuantity": 444.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò/Raw beef, grade I",
+      "amountSourceText": "84.0",
+      "numericQuantity": 84.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa cải sen/Pickled mustard greens",
+      "amountSourceText": "122.0",
+      "numericQuantity": 122.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột muối/Pickled cucumber",
+      "amountSourceText": "90.0",
+      "numericQuantity": 90.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/Broth/bone broth",
+      "amountSourceText": "140.0",
+      "numericQuantity": 140.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá/Welsh onion",
+      "amountSourceText": "1.0",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Sum of ingredient energies (1022.4 Kcal) differs slightly from imageEnergyText (1022.3 Kcal) by 0.1 Kcal, likely due to rounding."
+  ],
+  "code": "SFF-112003",
+  "imageSha256": "6e9cdc6298ff9000fd9c21f048151d88ef588d0a51140dc26d5cfb267a1ab006",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

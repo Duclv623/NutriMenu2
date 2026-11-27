@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "107kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Đậu cove",
+      "amountSourceText": "80g",
+      "numericQuantity": 80,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "3g",
+      "numericQuantity": 3,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hạt nêm",
+      "amountSourceText": "2g",
+      "numericQuantity": 2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000159",
+  "imageSha256": "7d7688cb66ffd4f29c9184ef47d8b52e628075d4b1e3cbc6075a8757acd1ea91",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

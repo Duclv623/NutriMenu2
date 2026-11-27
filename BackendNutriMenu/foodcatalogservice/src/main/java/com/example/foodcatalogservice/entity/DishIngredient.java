@@ -28,14 +28,17 @@ public class DishIngredient {
     @JoinColumn(name = "ingredient_id", nullable = false)
     private Ingredient ingredient;
 
-    @Column(name = "raw_weight_g", nullable = false, precision = 6, scale = 2)
+    @Column(name = "raw_weight_g", precision = 6, scale = 2)
     private BigDecimal rawWeightG;
 
-    @Column(name = "applied_yield_factor", nullable = false, precision = 5, scale = 3)
+    @Column(name = "applied_yield_factor", precision = 5, scale = 3)
     private BigDecimal appliedYieldFactor;
 
-    @Column(name = "cooked_weight_g", nullable = false, precision = 6, scale = 2)
+    @Column(name = "cooked_weight_g", precision = 6, scale = 2)
     private BigDecimal cookedWeightG;
+
+    @Column(name = "source_amount_text", length = 500)
+    private String sourceAmountText;
 
     @Builder.Default
     @Column(name = "is_main_ingredient", nullable = false)

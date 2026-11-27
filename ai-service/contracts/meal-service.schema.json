@@ -497,11 +497,77 @@
     "PlanItem": {
       "additionalProperties": false,
       "properties": {
+        "amount": {
+          "exclusiveMinimum": 0,
+          "title": "Amount",
+          "type": "number"
+        },
+        "carbohydrateDefinition": {
+          "anyOf": [
+            {
+              "maxLength": 120,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Carbohydratedefinition"
+        },
         "id": {
           "maxLength": 100,
           "minLength": 1,
           "pattern": "^[\\w:.-]+$",
           "title": "Id",
+          "type": "string"
+        },
+        "ingredients": {
+          "items": {
+            "$ref": "#/$defs/Ingredient"
+          },
+          "maxItems": 100,
+          "title": "Ingredients",
+          "type": "array"
+        },
+        "ingredientsComplete": {
+          "default": false,
+          "title": "Ingredientscomplete",
+          "type": "boolean"
+        },
+        "mealType": {
+          "enum": [
+            "BREAKFAST",
+            "LUNCH",
+            "DINNER",
+            "SNACK"
+          ],
+          "title": "Mealtype",
+          "type": "string"
+        },
+        "name": {
+          "maxLength": 200,
+          "minLength": 1,
+          "title": "Name",
+          "type": "string"
+        },
+        "nutrients": {
+          "$ref": "#/$defs/Nutrients"
+        },
+        "nutritionBasis": {
+          "enum": [
+            "as_consumed",
+            "raw_ingredients_estimate",
+            "unknown"
+          ],
+          "title": "Nutritionbasis",
+          "type": "string"
+        },
+        "portionId": {
+          "maxLength": 100,
+          "minLength": 1,
+          "pattern": "^[\\w:.-]+$",
+          "title": "Portionid",
           "type": "string"
         },
         "recipeId": {
@@ -518,42 +584,16 @@
           "title": "Recipeversion",
           "type": "string"
         },
-        "name": {
-          "maxLength": 200,
-          "minLength": 1,
-          "title": "Name",
-          "type": "string"
-        },
-        "mealType": {
-          "enum": [
-            "BREAKFAST",
-            "LUNCH",
-            "DINNER",
-            "SNACK"
-          ],
-          "title": "Mealtype",
-          "type": "string"
-        },
-        "portionId": {
-          "maxLength": 100,
-          "minLength": 1,
-          "pattern": "^[\\w:.-]+$",
-          "title": "Portionid",
-          "type": "string"
-        },
-        "amount": {
-          "exclusiveMinimum": 0,
-          "title": "Amount",
-          "type": "number"
-        },
-        "unit": {
-          "enum": [
-            "g",
-            "ml",
-            "serving"
-          ],
-          "title": "Unit",
-          "type": "string"
+        "sourceRefs": {
+          "items": {
+            "maxLength": 300,
+            "minLength": 1,
+            "type": "string"
+          },
+          "maxItems": 30,
+          "minItems": 1,
+          "title": "Sourcerefs",
+          "type": "array"
         },
         "state": {
           "enum": [
@@ -565,41 +605,14 @@
           "title": "State",
           "type": "string"
         },
-        "nutritionBasis": {
+        "unit": {
           "enum": [
-            "as_consumed",
-            "raw_ingredients_estimate",
-            "unknown"
+            "g",
+            "ml",
+            "serving"
           ],
-          "title": "Nutritionbasis",
+          "title": "Unit",
           "type": "string"
-        },
-        "nutrients": {
-          "$ref": "#/$defs/Nutrients"
-        },
-        "ingredients": {
-          "items": {
-            "$ref": "#/$defs/Ingredient"
-          },
-          "maxItems": 100,
-          "title": "Ingredients",
-          "type": "array"
-        },
-        "ingredientsComplete": {
-          "default": false,
-          "title": "Ingredientscomplete",
-          "type": "boolean"
-        },
-        "sourceRefs": {
-          "items": {
-            "maxLength": 300,
-            "minLength": 1,
-            "type": "string"
-          },
-          "maxItems": 30,
-          "minItems": 1,
-          "title": "Sourcerefs",
-          "type": "array"
         }
       },
       "required": [

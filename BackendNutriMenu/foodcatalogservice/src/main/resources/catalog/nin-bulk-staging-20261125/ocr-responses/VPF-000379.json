@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "82kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Trứng vịt lộn",
+      "amountSourceText": "45g",
+      "numericQuantity": 45,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000379",
+  "imageSha256": "36aab9b2c38624f375944177b164c77246fe76bac145f1c23a3dde155f88a939",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

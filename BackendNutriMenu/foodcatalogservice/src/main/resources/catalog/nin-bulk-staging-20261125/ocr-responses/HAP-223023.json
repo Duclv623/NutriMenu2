@@ -1,0 +1,19 @@
+{
+  "code": "HAP-223023",
+  "imageSha256": "edfa5a2df08dfc354eb1d297afd974b9b8bb3d661b9f14544450c1dc0c689cd1",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "647.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh chưng rán",
+      "amountSourceText": "240.0",
+      "numericQuantity": 240.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

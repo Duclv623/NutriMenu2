@@ -9,8 +9,9 @@ import {
   X,
 } from "lucide-react";
 import { Link } from "react-router-dom";
-import type { Food, Nutrients } from "../../types";
-import { number, safeUrl } from "../../utils";
+import type { CatalogNutrients, Food } from "../../types";
+import { isSourceFood, number, planningReady } from "../../utils";
+import { foodImageSources } from "../../foodImages";
 export function Button({
   children,
   variant = "primary",
@@ -275,18 +276,19 @@ export function FoodMark({
   food: Food;
   small?: boolean;
 }) {
-  const [failed, setFailed] = useState(false);
+  const sources = foodImageSources(food);
+  const [failedCount, setFailedCount] = useState(0);
   useEffect(() => {
-    setFailed(false);
-  }, [food.image]);
-  if (food.image && safeUrl(food.image) && !failed)
+    setFailedCount(0);
+  }, [food.image, food.recipeSource]);
+  if (sources[failedCount])
     return (
       <div className={`food-mark ${small ? "small" : ""}`}>
         <img
-          src={safeUrl(food.image)}
+          src={sources[failedCount]}
           alt={food.name}
           loading="lazy"
-          onError={() => setFailed(true)}
+          onError={() => setFailedCount((count) => count + 1)}
         />
       </div>
     );
@@ -304,14 +306,16 @@ export function Nutrition({
   value,
   compact = false,
   summary = false,
+  carbLabel = "Carbohydrate",
 }: {
-  value: Nutrients;
+  value: CatalogNutrients;
   compact?: boolean;
   summary?: boolean;
+  carbLabel?: string;
 }) {
   const entries = [
     ["Năng lượng", value.energyKcal, "kcal"],
-    ["Carb thuần", value.netCarbG, "g"],
+    [carbLabel, value.netCarbG, "g"],
     ["Chất đạm", value.proteinG, "g"],
     ["Chất béo", value.fatG, "g"],
     ["Chất xơ", value.fiberG, "g"],
@@ -327,14 +331,31 @@ export function Nutrition({
             key={label}
             className={unit === "kcal" ? "nutrition-energy" : undefined}
           >
-            <dt>{label}</dt>
+            <dt>{summary && label === "Carbohydrate" ? "Carb" : label}</dt>
             <dd>
-              {number(amount, 1)} <small>{unit}</small>
+              {amount === null ? (
+                "Chưa có"
+              ) : (
+                <>
+                  {number(amount, 1)} <small>{unit}</small>
+                </>
+              )}
             </dd>
           </div>
         ),
       )}
     </dl>
+  );
+}
+export function FoodSource({ food }: { food: Food }) {
+  if (!isSourceFood(food)) return null;
+  return (
+    <div className="food-source">
+      <Badge tone="neutral">Viện Dinh dưỡng</Badge>
+      {!planningReady(food, false, "GENERAL_REFERENCE") && (
+        <Badge tone="amber">Chờ bổ sung dữ liệu</Badge>
+      )}
+    </div>
   );
 }
 export function Checkbox({

@@ -1,0 +1,43 @@
+{
+  "code": "VPF-000101",
+  "imageSha256": "d1bda829b82b16a70febd6111d2366b83f42583f7adff6ec66e9d84a759df277",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "277kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt bê",
+      "amountSourceText": "300g",
+      "numericQuantity": 300.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chuối tiêu xanh",
+      "amountSourceText": "16g",
+      "numericQuantity": 16.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Khế xanh",
+      "amountSourceText": "16g",
+      "numericQuantity": 16.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Vừng",
+      "amountSourceText": "1g",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

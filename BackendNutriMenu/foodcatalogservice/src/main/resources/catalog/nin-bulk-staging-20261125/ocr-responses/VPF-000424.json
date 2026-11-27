@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "32kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thanh long",
+      "amountSourceText": "90g",
+      "numericQuantity": 90.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000424",
+  "imageSha256": "203349f425850d6964eefa7c22ae75bf1ee97a1bbadaaaa8565c01f2eeb92b5f",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

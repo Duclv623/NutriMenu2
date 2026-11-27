@@ -1,0 +1,59 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "384kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Khoai sọ",
+      "amountSourceText": "200g",
+      "numericQuantity": 200,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sườn lợn bỏ xương",
+      "amountSourceText": "40g",
+      "numericQuantity": 40,
+      "unitSourceText": "g",
+      "preparationSourceText": "bỏ xương",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau muống",
+      "amountSourceText": "40g",
+      "numericQuantity": 40,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau rút",
+      "amountSourceText": "30g",
+      "numericQuantity": 30,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "5g",
+      "numericQuantity": 5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Muối",
+      "amountSourceText": "1g",
+      "numericQuantity": 1,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000030",
+  "imageSha256": "fd980b6d1dc69d9caaaf738b1a419991fc82424e62d756d4f5a9355688f80b83",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

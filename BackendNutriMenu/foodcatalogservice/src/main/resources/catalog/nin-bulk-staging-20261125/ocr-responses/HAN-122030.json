@@ -1,0 +1,19 @@
+{
+  "code": "HAN-122030",
+  "imageSha256": "fe10a0fbbaa5a3de3ee77b980128b246972210a0b63ec2d9071e9bf0e02913d5",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh giò",
+      "amountSourceText": "260.0",
+      "numericQuantity": 260.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "325.5 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

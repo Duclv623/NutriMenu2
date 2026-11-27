@@ -1,0 +1,27 @@
+{
+  "code": "HAP-213078",
+  "imageSha256": "7a3c6c1822671084a0548c03f1cee8db073373527ec732e781d6c6d085b571e2",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh giò (1 cái)",
+      "amountSourceText": "218.0",
+      "numericQuantity": 218.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giò lụa (2 miếng)",
+      "amountSourceText": "48.0",
+      "numericQuantity": 48.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "337.9 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "264.6 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Tôm viên chiên đường phố/Fried shrimp ball",
+      "amountSourceText": "108.0",
+      "numericQuantity": 108.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-223002",
+  "imageSha256": "a0f45ef3e364d8d543f33c028829289c1ad179c3f17fcbf9cb755779a3507373",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

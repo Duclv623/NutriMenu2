@@ -1,0 +1,86 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "793.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ/Rice",
+      "amountSourceText": "204.0",
+      "numericQuantity": 204.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải thảo luộc/Boiled Napa Cabbage",
+      "amountSourceText": "88.0",
+      "numericQuantity": 88.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc/Boiled",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trứng chim cút kho/Braised quail eggs",
+      "amountSourceText": "14.0",
+      "numericQuantity": 14.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "kho/Braised",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả lá lốt/Pork rolls with guise leaves",
+      "amountSourceText": "18.0",
+      "numericQuantity": 18.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt lợn ba chỉ kho tàu/Braised pork belly",
+      "amountSourceText": "33.0",
+      "numericQuantity": 33.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "kho tàu/Braised",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Giò thủ lợn/pork head roll",
+      "amountSourceText": "44.0",
+      "numericQuantity": 44.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước canh bí xanh/Bone broth",
+      "amountSourceText": "198.0",
+      "numericQuantity": 198.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bí xanh nấu canh/Cooked wax gourd",
+      "amountSourceText": "35.0",
+      "numericQuantity": 35.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nấu canh/Cooked",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt móng giò nấu giả cầy/",
+      "amountSourceText": null,
+      "numericQuantity": null,
+      "unitSourceText": null,
+      "preparationSourceText": "nấu giả cầy",
+      "certainty": "UNCERTAIN"
+    }
+  ],
+  "uncertainties": [
+    "Bottom row in right column ('Thịt móng giò nấu giả cầy/') is cut off at the bottom edge of the source image; its English translation, weight, and energy are omitted/cropped out.",
+    "Sum of printed visible row energies (785.1 Kcal) is 8.7 Kcal less than the printed total (793.8 Kcal), likely corresponding to the truncated bottom row."
+  ],
+  "code": "SFF-121067",
+  "imageSha256": "4e47b24085959101ceff5f7ca3214eff1d7e634ae323dc5830c342161a41777f",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

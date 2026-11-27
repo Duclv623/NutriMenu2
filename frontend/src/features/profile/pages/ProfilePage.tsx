@@ -303,6 +303,19 @@ export function ProfilePage() {
               </div>
             </div>
             <div className="stack">
+              <Checkbox
+                checked={draft.pregnant}
+                onChange={(v) => field("pregnant", v)}
+              >
+                Đang mang thai hoặc cho con bú
+              </Checkbox>
+              <Checkbox
+                checked={draft.specialDiet}
+                onChange={(v) => field("specialDiet", v)}
+              >
+                Có biến chứng cấp, lọc máu hoặc cần chế độ dinh dưỡng chuyên
+                biệt
+              </Checkbox>
               {(draft.age < 18 || draft.pregnant || draft.specialDiet) && (
                 <Alert error>
                   Hồ sơ này nằm ngoài phạm vi tạo thực đơn. Vui lòng tham khảo

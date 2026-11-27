@@ -1,0 +1,35 @@
+{
+  "code": "HAP-213057",
+  "imageSha256": "048b77f4956cb4d165d878c074d1152d91e4e4ea1a0da0013bcac444beb786c8",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "19.4 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Trà hoa cúc",
+      "amountSourceText": "Trà hoa cúc",
+      "numericQuantity": 150.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước đường",
+      "amountSourceText": "Nước đường",
+      "numericQuantity": 30.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Quất",
+      "amountSourceText": "Quất",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

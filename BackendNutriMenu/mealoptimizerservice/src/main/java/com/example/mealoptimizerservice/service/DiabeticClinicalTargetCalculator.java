@@ -1,14 +1,30 @@
 package com.example.mealoptimizerservice.service;
 
+import com.example.mealoptimizerservice.client.FoodCatalogIntegrationClient;
 import com.example.mealoptimizerservice.dto.*;
 import com.example.mealoptimizerservice.dto.request.PatientProfileMealRequest.ComputedClinicalTargetsDto;
 import com.example.mealoptimizerservice.entity.*;
 import com.example.mealoptimizerservice.entity.enums.*;
+import com.example.mealoptimizerservice.exception.OptimizerBusinessException;
+import com.example.mealoptimizerservice.exception.ResourceNotFoundException;
 import com.example.mealoptimizerservice.dao.repository.*;
+import com.example.mealoptimizerservice.solver.CpSatMealOptimizationEngine;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.http.HttpStatus;
+import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.time.LocalDate;
 import java.util.*;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.TimeUnit;
 import com.example.mealoptimizerservice.dto.request.*;
 import com.example.mealoptimizerservice.dto.response.*;
 

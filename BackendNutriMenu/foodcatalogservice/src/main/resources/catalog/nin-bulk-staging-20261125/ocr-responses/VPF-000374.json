@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/quả",
+  "imageEnergyText": "15kcal/quả",
+  "ingredients": [
+    {
+      "nameSourceText": "Trứng cút 1 quả",
+      "amountSourceText": "10g",
+      "numericQuantity": 10,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000374",
+  "imageSha256": "1d1a9c83f9bbd317aac394f2d06db4be95c643ce20bf70325474f174f5251f2e",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

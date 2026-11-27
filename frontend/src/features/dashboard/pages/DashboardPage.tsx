@@ -1,14 +1,10 @@
-import { API_MODE } from "../../../lib/config";
-import { mealPlanService } from "../../meals/services/mealPlanService";
 import { useState } from "react";
 import {
   ArrowRight,
-  ArrowUpRight,
   CalendarDays,
   Check,
   ChevronRight,
   Droplets,
-  Leaf,
   MessageSquare,
   Plus,
   Sun,
@@ -23,9 +19,14 @@ import {
   emptyNutrition,
   localDate,
   number,
+  planCarbohydrateLabel,
+  planUsesHistoricalData,
+  scaleAmount,
+  servingLabel,
   sumNutrition,
 } from "../../../utils";
-
+import { API_MODE } from "../../../lib/config";
+import { mealPlanService } from "../../../features/meals/services/mealPlanService";
 import {
   Alert,
   Badge,
@@ -35,11 +36,13 @@ import {
   SectionTitle,
 } from "../../../components/common/ui";
 import { MEALS } from "../../../data/seed";
+import { dailySummaries, noRecordedNutrition } from "../../../insights";
+import { InsightPanel, IntakeTrends } from "../../../features/dashboard/components/DashboardTrends";
 export function DashboardPage() {
   const { userData: w, update, toast } = useApp();
   const today = localDate();
   const [pendingMeal, setPendingMeal] = useState(false);
-  const plan = w.plans.find((p) => p.date === today);
+  const plan = dailySummaries(w, today, 1)[0].plan;
   const hasMenu = Boolean(plan?.items.length);
   const calorieGoal = hasMenu && plan && plan.target > 0 ? plan.target : null;
   const totals = plan ? sumNutrition(plan.items, w.foods) : emptyNutrition();
@@ -47,23 +50,29 @@ export function DashboardPage() {
     plan?.items.filter((i) =>
       w.completedMeals.includes(`${plan.id}:${i.id}`),
     ) || [];
-  const consumed = sumNutrition(done, w.foods);
-  const last = [...w.checkIns].sort((a, b) => b.date.localeCompare(a.date))[0];
+  const consumed = done.length
+    ? sumNutrition(done, w.foods)
+    : noRecordedNutrition();
+  const last = [...w.checkIns]
+    .reverse()
+    .filter((c) => c.date <= today)
+    .sort((a, b) => b.date.localeCompare(a.date))[0];
   async function toggle(key: string) {
     if (pendingMeal || plan?.profileVersion !== w.profile.version) return;
     setPendingMeal(true);
     const completed = !w.completedMeals.includes(key);
     try {
-      let plans: typeof w.plans | undefined;
-      if (API_MODE === "api") {
-        await mealPlanService.completeMeal(key, completed);
-        plans = await mealPlanService.list();
-      }
+      const next =
+        API_MODE === "api"
+          ? await mealPlanService.completeMeal(key, completed)
+          : undefined;
       update((s) => ({
         ...s,
-        plans: plans ?? s.plans,
+        plans: next
+          ? s.plans.map((p) => (p.id === next.id ? next : p))
+          : s.plans,
         completedMeals: completed
-          ? [...s.completedMeals, key]
+          ? [...new Set([...s.completedMeals, key])]
           : s.completedMeals.filter((x) => x !== key),
       }));
     } catch (e) {
@@ -91,6 +100,12 @@ export function DashboardPage() {
           Lên thực đơn
         </Link>
       </div>
+      {plan && planUsesHistoricalData(plan, w.foods) && (
+        <Alert>
+          <strong>Thực đơn dùng dữ liệu cũ</strong>. Dữ liệu này được giữ để xem
+          lại; thực đơn mới chỉ dùng nguồn mới.
+        </Alert>
+      )}
       <div className="overview-grid">
         <section
           className="panel daily-nutrition"
@@ -105,9 +120,10 @@ export function DashboardPage() {
                 className={`energy-ring${calorieGoal === null ? " no-goal" : ""}`}
                 style={
                   {
-                    "--progress": calorieGoal
-                      ? `${Math.min(100, (consumed.energyKcal / calorieGoal) * 100)}%`
-                      : "0%",
+                    "--progress":
+                      calorieGoal && consumed.energyKcal !== null
+                        ? `${Math.min(100, (consumed.energyKcal / calorieGoal) * 100)}%`
+                        : "0%",
                   } as React.CSSProperties
                 }
               >
@@ -118,11 +134,7 @@ export function DashboardPage() {
               </div>
               <div className="daily-details">
                 <div className="energy-target">
-                  <span>
-                    {plan?.dataMode === "demo"
-                      ? "Mục tiêu minh họa"
-                      : "Mục tiêu năng lượng"}
-                  </span>
+                  <span>Mục tiêu năng lượng</span>
                   <strong>
                     {calorieGoal === null ? (
                       "Chưa có"
@@ -137,9 +149,9 @@ export function DashboardPage() {
                 <div className="macro-bars">
                   {(
                     [
-                      ["Carb thuần", consumed.netCarbG, totals.netCarbG, "carb"],
-                      ["Chất đạm", consumed.proteinG, totals.proteinG, "proteinG"],
-                      ["Chất béo", consumed.fatG, totals.fatG, "fatG"],
+                      [planCarbohydrateLabel(plan?.items || [], w.foods), consumed.netCarbG, totals.netCarbG, "carb"],
+                      ["Chất đạm", consumed.proteinG, totals.proteinG, "protein"],
+                      ["Chất béo", consumed.fatG, totals.fatG, "fat"],
                     ] as const
                   ).map(([label, value, target, tone]) => (
                     <div key={label}>
@@ -150,7 +162,7 @@ export function DashboardPage() {
                           <small>/ {number(target, 1)} g</small>
                         </strong>
                       </div>
-                      {target > 0 && (
+                      {target !== null && value !== null && target > 0 && (
                         <div className="track" aria-hidden="true">
                           <span
                             className={tone}
@@ -175,7 +187,7 @@ export function DashboardPage() {
             <div className="panel-bottom">
               <span>
                 <Check size={14} />
-                {done.length}/{plan?.items.length || 0} bữa đã ghi nhận
+                {done.length}/{plan?.items.length || 0} món đã ghi nhận
               </span>
               <Link to="/thuc-don">
                 Chi tiết dinh dưỡng <ArrowRight size={15} />
@@ -183,15 +195,9 @@ export function DashboardPage() {
             </div>
           )}
         </section>
-        <section className="daily-note">
-          <Leaf size={22} aria-hidden="true" />
-          <h2>Chuẩn bị nguyên liệu</h2>
-          <p>Xem lượng cần mua cho từng nguyên liệu trong thực đơn.</p>
-          <Link to="/mua-sam">
-            Xem danh sách nguyên liệu <ArrowUpRight size={17} />
-          </Link>
-        </section>
+        <InsightPanel workspace={w} today={today} />
       </div>
+      <IntakeTrends workspace={w} today={today} />
       <div className="stat-strip">
         <Link to="/ho-so">
           <span className="stat-icon">
@@ -218,7 +224,8 @@ export function DashboardPage() {
           <div>
             <small>CÂN NẶNG GẦN NHẤT</small>
             <strong>
-              {number(last?.weight || w.profile.weight, 1)} <small>kg</small>
+              {number(last?.weight ?? (w.profile.weight || null), 1)}{" "}
+              <small>kg</small>
             </strong>
             <span>
               {last
@@ -267,7 +274,7 @@ export function DashboardPage() {
                       </small>
                       <Link to={`/thuc-don?date=${today}`}>{food.name}</Link>
                       <p>
-                        {number(food.grams * item.servingMultiplier)} g <span>·</span>
+                        {servingLabel(food, item.servingMultiplier)} <span>·</span>
                         {food.minutes === null
                           ? "Chưa có thời gian chuẩn bị"
                           : `${food.minutes} phút chuẩn bị`}
@@ -275,7 +282,10 @@ export function DashboardPage() {
                     </div>
                     <div className="meal-energy">
                       <strong>
-                        {number(food.nutrition.energyKcal * item.servingMultiplier)}
+                        {number(
+                          item.nutrition?.energyKcal ??
+                            scaleAmount(food.nutrition.energyKcal, item.servingMultiplier),
+                        )}
                       </strong>
                       <span>kcal</span>
                     </div>
@@ -286,8 +296,8 @@ export function DashboardPage() {
                       }
                       label={
                         checked
-                          ? `Bỏ ghi nhận ${MEALS[item.meal].name}`
-                          : `Ghi nhận ${MEALS[item.meal].name}`
+                          ? `Bỏ ghi nhận ${food.name}`
+                          : `Ghi nhận đã ăn ${food.name}`
                       }
                       className={`meal-check ${checked ? "checked" : ""}`}
                       onClick={() => void toggle(`${plan.id}:${item.id}`)}
@@ -310,10 +320,10 @@ export function DashboardPage() {
               Lên kế hoạch để chủ động cho bữa ăn hôm nay.
             </Empty>
           )}
-          {plan?.dataMode === "demo" && (
+          {plan && (
             <p className="fineprint">
-              Dữ liệu minh họa giao diện · Chưa chạy CP-SAT hoặc xác nhận phù
-              hợp cá nhân.
+              Dinh dưỡng ước tính theo khẩu phần trong thực đơn đã đánh dấu ăn.
+              Chưa bao gồm món ăn thêm bên ngoài.
             </p>
           )}
         </section>

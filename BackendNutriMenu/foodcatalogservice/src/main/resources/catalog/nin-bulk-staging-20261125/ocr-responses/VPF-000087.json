@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "11kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Rau mùng tơi",
+      "amountSourceText": "80g",
+      "numericQuantity": 80,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000087",
+  "imageSha256": "659e382b1a956019b0fd69ca74f5821dc2fa930469ca280e95e9dc397aa93296",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

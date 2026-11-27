@@ -1,0 +1,29 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "83.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Tào phớ",
+      "amountSourceText": "137.0",
+      "numericQuantity": 137.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước đường",
+      "amountSourceText": "53.0",
+      "numericQuantity": 53.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Table Năng lượng (Kcal) rows sum to 83.7 Kcal (51.2 + 32.5) vs imageEnergyText 83.8 Kcal"
+  ],
+  "code": "HAN-113039",
+  "imageSha256": "a249a78f44c385918a1f89c2e677f06215c42f84e38ddfaed5b148078ddefd94",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

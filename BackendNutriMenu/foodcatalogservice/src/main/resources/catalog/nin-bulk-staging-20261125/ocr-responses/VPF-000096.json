@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "92kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt lợn nạc vai",
+      "amountSourceText": "40g",
+      "numericQuantity": 40,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000096",
+  "imageSha256": "2edf6884493e8fb4da4a38048221eceda91355a30d894a8518046117ce26dba6",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

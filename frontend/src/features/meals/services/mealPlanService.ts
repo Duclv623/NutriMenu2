@@ -9,6 +9,11 @@ export const mealPlanService = {
       method: "POST",
       body: json({ ...input, profileVersion }),
     }),
+  generateWeekly: (input: GenerateInput, profileVersion: number) =>
+    request<Plan[]>("/meal-plans/generate-weekly", {
+      method: "POST",
+      body: json({ ...input, profileVersion, replacementConfirmed: false }),
+    }),
   previewSwap: (plan: Plan, itemId: string, dishId: string, servingMultiplier: number) =>
     request<Plan>(`/meal-plans/${encodeURIComponent(plan.id)}/swap-preview`, {
       method: "POST",
@@ -51,7 +56,7 @@ export const mealPlanService = {
       method: "DELETE",
     }),
   completeMeal: (key: string, completed: boolean) =>
-    request<void>("/me/meal-logs", {
+    request<Plan>("/me/meal-logs", {
       method: "PUT",
       body: json({ key, completed }),
     }),

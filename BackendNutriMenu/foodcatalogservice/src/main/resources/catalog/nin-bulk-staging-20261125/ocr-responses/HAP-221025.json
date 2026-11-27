@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "274.3 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cháo đậu đỏ",
+      "amountSourceText": "258.0",
+      "numericQuantity": 258.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường đỏ",
+      "amountSourceText": "31.0",
+      "numericQuantity": 31.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường trắng",
+      "amountSourceText": "8.0",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAP-221025",
+  "imageSha256": "c53e76493e91201e31734984960f104fada575c6b535497965da79f6740249dd",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

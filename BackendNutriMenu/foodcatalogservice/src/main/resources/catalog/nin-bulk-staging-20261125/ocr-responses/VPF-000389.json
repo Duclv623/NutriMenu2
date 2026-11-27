@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000389",
+  "imageSha256": "6d402d88f53c37ea8454e62a84dcc15427f9a02ab18ffc9f472d822fd60cd298",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "138kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa dê tươi",
+      "amountSourceText": "200ml",
+      "numericQuantity": 200.0,
+      "unitSourceText": "ml",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

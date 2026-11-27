@@ -1,0 +1,27 @@
+{
+  "code": "SFF-121078",
+  "imageSha256": "14c69f6dd5bc52e2d7aa9231887f0b3fe4164192e9e5ea58a9c4e33e7fc25bf6",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "195.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bỏng ngô/Popcorn",
+      "amountSourceText": "33.3",
+      "numericQuantity": 33.3,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Mật mía/Molasses",
+      "amountSourceText": "16.7",
+      "numericQuantity": 16.7,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

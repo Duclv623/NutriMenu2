@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "227.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bò viên chiên (cổng trường)",
+      "amountSourceText": "86.0",
+      "numericQuantity": 86.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAP-223003",
+  "imageSha256": "a0197f1f3364adb3bc6276037c0f9fa20e648c7f255a0e18ecac9b71488cba16",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

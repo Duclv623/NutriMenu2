@@ -1,0 +1,69 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "272.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cháo trắng",
+      "amountSourceText": "330.0",
+      "numericQuantity": 330.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Trai xào",
+      "amountSourceText": "22.3",
+      "numericQuantity": 22.3,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bánh quẩy",
+      "amountSourceText": "25.0",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau răm",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt khô bột",
+      "amountSourceText": "0.1",
+      "numericQuantity": 0.1,
+      "unitSourceText": "g",
+      "preparationSourceText": "khô bột",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hạt tiêu",
+      "amountSourceText": "0.1",
+      "numericQuantity": 0.1,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dấm tỏi ớt",
+      "amountSourceText": "4.0",
+      "numericQuantity": 4.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "'Dấm tỏi ớt' (4.0 g, 4.0 Kcal) is listed in the table but not labeled in the ingredient diagram."
+  ],
+  "code": "HAN-121016",
+  "imageSha256": "ae65f8dc3b02cecf8e2a79043a1ae623e7f4f3ef8cfe406bd3227e42d51b63a0",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

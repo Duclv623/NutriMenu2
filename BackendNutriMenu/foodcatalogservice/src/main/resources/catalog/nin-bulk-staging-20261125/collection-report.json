@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "auditedAt": "2026-11-25T08:41:43.375422+00:00",
+  "sourcePath": "C:\\testda\\foodcatalogservice\\src\\main\\resources\\catalog\\nin-bulk-staging-20261125\\api-runs\\bulk-20261125\\dishes-source.json",
+  "sourceSha256": "b02e2c01adba566feaca8fe6c1d637d00c75d4c0974666ac3a00868105a74c9c",
+  "sourceCacheManifest": null,
+  "completedApiCrawlEvidence": {
+    "runId": "bulk-20261125",
+    "apiUrl": "https://viendinhduong.vn/api/fe/tool/getPageFoodData",
+    "startedAt": "2026-11-25T08:15:40.481076+00:00",
+    "pageSizeRequested": 100,
+    "pages": [
+      {
+        "page": 1,
+        "url": "https://viendinhduong.vn/api/fe/tool/getPageFoodData?page=1&pageSize=100",
+        "file": "page_0001.json",
+        "sha256": "99681897a47574a89b22dc283f04f5cae3b1d8644c08d6679ba4a8d42fcff464",
+        "rows": 100,
+        "retrievedAt": "2026-11-25T08:15:40.955678+00:00"
+      },
+      {
+        "page": 2,
+        "url": "https://viendinhduong.vn/api/fe/tool/getPageFoodData?page=2&pageSize=100",
+        "file": "page_0002.json",
+        "sha256": "e263024ee7f9a16fcfb3db5f95c544d8749667ddbed8b7fe46c628a35b2c117f",
+        "rows": 100,
+        "retrievedAt": "2026-11-25T08:15:41.837597+00:00"
+      },
+      {
+        "page": 3,
+        "url": "https://viendinhduong.vn/api/fe/tool/getPageFoodData?page=3&pageSize=100",
+        "file": "page_0003.json",
+        "sha256": "36a9db78394e222b7c9fe6116f7703e0288b312814b94422fbac106041a5221b",
+        "rows": 100,
+        "retrievedAt": "2026-11-25T08:15:42.788621+00:00"
+      },
+      {
+        "page": 4,
+        "url": "https://viendinhduong.vn/api/fe/tool/getPageFoodData?page=4&pageSize=100",
+        "file": "page_0004.json",
+        "sha256": "db9faa25db125604d98336fa1968191cb1ff6ba5a38689947647738bd24871fb",
+        "rows": 100,
+        "retrievedAt": "2026-11-25T08:15:43.794169+00:00"
+      },
+      {
+        "page": 5,
+        "url": "https://viendinhduong.vn/api/fe/tool/getPageFoodData?page=5&pageSize=100",
+        "file": "page_0005.json",
+        "sha256": "613c8ae517702d932574f2979b40d05ef6caf9ff668f94e1f22c2772a34482e8",
+        "rows": 100,
+        "retrievedAt": "2026-11-25T08:15:44.766290+00:00"
+      },
+      {
+        "page": 6,
+        "url": "https://viendinhduong.vn/api/fe/tool/getPageFoodData?page=6&pageSize=100",
+        "file": "page_0006.json",
+        "sha256": "f6d31926de3868ea842025d330bfe2ca100e3bd677f807fc77ecc3b01b963d30",
+        "rows": 100,
+        "retrievedAt": "2026-11-25T08:15:45.793965+00:00"
+      },
+      {
+        "page": 7,
+        "url": "https://viendinhduong.vn/api/fe/tool/getPageFoodData?page=7&pageSize=100",
+        "file": "page_0007.json",
+        "sha256": "efa7e974f7456c30c911fe15c59f0d6c5e4df1c903a7aadd5bd9f6067fc87680",
+        "rows": 100,
+        "retrievedAt": "2026-11-25T08:15:46.814345+00:00"
+      },
+      {
+        "page": 8,
+        "url": "https://viendinhduong.vn/api/fe/tool/getPageFoodData?page=8&pageSize=100",
+        "file": "page_0008.json",
+        "sha256": "d879fab5aacf9944e103d34f3b495802896434ea8cc899e6b0d431a863ee6325",
+        "rows": 100,
+        "retrievedAt": "2026-11-25T08:15:47.804247+00:00"
+      },
+      {
+        "page": 9,
+        "url": "https://viendinhduong.vn/api/fe/tool/getPageFoodData?page=9&pageSize=100",
+        "file": "page_0009.json",
+        "sha256": "36c0811830490ace8d2aeba77fbd75b015d1cf11058a394db6347a0eb1129f87",
+        "rows": 100,
+        "retrievedAt": "2026-11-25T08:15:48.803854+00:00"
+      },
+      {
+        "page": 10,
+        "url": "https://viendinhduong.vn/api/fe/tool/getPageFoodData?page=10&pageSize=100",
+        "file": "page_0010.json",
+        "sha256": "769891e2c6bb2e55b0a435080d93306c61a11dd6f9b9d4b6783b95fb2c698e81",
+        "rows": 100,
+        "retrievedAt": "2026-11-25T08:15:49.799395+00:00"
+      },
+      {
+        "page": 11,
+        "url": "https://viendinhduong.vn/api/fe/tool/getPageFoodData?page=11&pageSize=100",
+        "file": "page_0011.json",
+        "sha256": "568337b62980cbd0d6aeb23dc189adc76beb7d86f3b4aa96298cf0670218be79",
+        "rows": 24,
+        "retrievedAt": "2026-11-25T08:15:50.690695+00:00"
+      }
+    ],
+    "complete": true,
+    "total": 1024,
+    "perPage": 100,
+    "error": null,
+    "httpStatus": null,
+    "stoppedAt": "2026-11-25T08:15:50.697275+00:00",
+    "resumeCommand": "refresh --run-id bulk-20261125 --page-size 100",
+    "paginationComplete": true,
+    "completedAt": "2026-11-25T08:25:27.923618+00:00",
+    "publicationStatus": "COMPLETE_WITH_AUDITED_EXACT_DUPLICATES",
+    "apiReportedTotal": 1024,
+    "rawRowCount": 1024,
+    "acceptedUniqueRowCount": 1023,
+    "extraIdenticalRowCount": 1,
+    "sourceEnumerationComplete": false,
+    "sourceCompletenessWarning": "All reported API pages were received, but API total and accepted unique identities differ. Pagination drift or source duplicate storage may have omitted an identity; complete enumeration is not established. No missing recipe is invented.",
+    "quarantinedRawRowCount": 0,
+    "conflictGroupCount": 0,
+    "rawSourceSnapshotSha256": "05614434e1415e543a5482a30354ce1b009ca82813bd80b9cea2b695f20cc68a",
+    "reconciliationSha256": "e7dd44790cc046d46522bf5b84eee15aafbb1a9e0d5f8d9ef1731086b850626b",
+    "sourceSha256": "b02e2c01adba566feaca8fe6c1d637d00c75d4c0974666ac3a00868105a74c9c"
+  },
+  "freshMetadataCrawlClaimed": true,
+  "sourceEnumerationComplete": false,
+  "apiReportedTotal": 1024,
+  "apiRawRowCount": 1024,
+  "acceptedUniqueApiRowCount": 1023,
+  "extraIdenticalApiRowCount": 1,
+  "quarantinedApiRowCount": 0,
+  "sourceCompletenessWarning": "All reported API pages were received, but API total and accepted unique identities differ. Pagination drift or source duplicate storage may have omitted an identity; complete enumeration is not established. No missing recipe is invented.",
+  "freshImageDownloadsClaimed": true,
+  "rows": 1023,
+  "imageUrlCount": 1023,
+  "validImageUrlCount": 1023,
+  "coreNumericAndImageUrlCount": 875,
+  "sourceFieldPresentCounts": {
+    "caloriesKcal": 1020,
+    "proteinG": 1020,
+    "fatG": 979,
+    "totalCarbG": 991,
+    "fiberG": 292,
+    "sodiumMg": 938,
+    "cholesterolMg": 669,
+    "potassiumMg": 580,
+    "estimatedGi": 0,
+    "purineMg": 0,
+    "saturatedFatG": 0
+  },
+  "rawNumericObservationsRegardlessOfUnit": {
+    "caloriesKcal": 1020,
+    "proteinG": 1020,
+    "fatG": 979,
+    "totalCarbG": 993,
+    "fiberG": 310,
+    "sodiumMg": 938,
+    "cholesterolMg": 669,
+    "potassiumMg": 589,
+    "estimatedGi": 0,
+    "purineMg": 0,
+    "saturatedFatG": 0
+  },
+  "countDefinition": "sourceFieldPresentCounts requires one nonnegative finite value, expected unit and no duplicate aliases. Raw numeric counts include wrong units and are not admissible grams/mg.",
+  "verifiedLocalImageCount": 1023,
+  "previouslyExtractedRecipeCount": 41,
+  "imagesWithNoRecipeListPreviouslyObserved": 8,
+  "existingApprovedRuntimeCount": 40,
+  "newBulkSolverEligibleCount": 0,
+  "runtimeCatalogModified": false,
+  "reviewReasonCounts": {
+    "NO_VERIFIED_INGREDIENT_RECIPE": 982,
+    "PORTION_BASIS_UNVERIFIED": 982,
+    "ROLE_REQUIRES_REVIEW": 983,
+    "NO_APPROVED_SOURCE_NUTRITION_MODEL": 983,
+    "SOURCE_GI_UNKNOWN_NOT_ZERO": 1023,
+    "SOURCE_NUMERIC_QUALITY_REVIEW": 30,
+    "MISSING_OR_INVALID_CORE_NUMERIC_FIELDS": 148
+  },
+  "roleCoverage": [
+    {
+      "role": "MAIN_STARCH",
+      "tentativeTotal": 7,
+      "coreNumericAndUrl": 6,
+      "localImages": 7,
+      "previousRecipes": 1,
+      "alreadyApproved": 1
+    },
+    {
+      "role": "COMPOSITE_DISH",
+      "tentativeTotal": 271,
+      "coreNumericAndUrl": 268,
+      "localImages": 271,
+      "previousRecipes": 9,
+      "alreadyApproved": 9
+    },
+    {
+      "role": "VEGGIE_DISH",
+      "tentativeTotal": 19,
+      "coreNumericAndUrl": 13,
+      "localImages": 19,
+      "previousRecipes": 9,
+      "alreadyApproved": 9
+    },
+    {
+      "role": "SOUP",
+      "tentativeTotal": 25,
+      "coreNumericAndUrl": 24,
+      "localImages": 25,
+      "previousRecipes": 7,
+      "alreadyApproved": 7
+    },
+    {
+      "role": "PROTEIN_DISH",
+      "tentativeTotal": 114,
+      "coreNumericAndUrl": 90,
+      "localImages": 114,
+      "previousRecipes": 13,
+      "alreadyApproved": 12
+    },
+    {
+      "role": "SNACK",
+      "tentativeTotal": 41,
+      "coreNumericAndUrl": 20,
+      "localImages": 41,
+      "previousRecipes": 2,
+      "alreadyApproved": 2
+    },
+    {
+      "role": "REVIEW_REQUIRED",
+      "tentativeTotal": 546,
+      "coreNumericAndUrl": 454,
+      "localImages": 546,
+      "previousRecipes": 0,
+      "alreadyApproved": 0
+    }
+  ],
+  "latestImageCollection": {
+    "startedAt": "2026-11-25T08:25:28.107260+00:00",
+    "offline": false,
+    "stopReason": null,
+    "networkRequests": 974,
+    "freshDownloadsThisRun": 974,
+    "reusedThisRun": 0,
+    "verifiedExistingThisRun": 49,
+    "finishedAt": "2026-11-25T08:41:42.612115+00:00"
+  },
+  "warning": "URLs are not downloads. Numeric completeness is not recipe, portion, role, GI or clinical completeness. No pending bulk recipe activated. Most staple GI is unknown; expansion alone does not solve the GI50 medical template."
+}

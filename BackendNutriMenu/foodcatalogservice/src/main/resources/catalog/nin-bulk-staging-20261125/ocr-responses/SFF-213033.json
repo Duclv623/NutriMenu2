@@ -1,0 +1,27 @@
+{
+  "code": "SFF-213033",
+  "imageSha256": "e00586a3879f5cf1d7df73c86e7baf5c007d74cfc816eb0eb830771745c998be",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "175.5 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thạch găng/Jelly găng",
+      "amountSourceText": "200.0",
+      "numericQuantity": 200.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước đường hoa nhài/Jasmine sugar syrup",
+      "amountSourceText": "100.0",
+      "numericQuantity": 100.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

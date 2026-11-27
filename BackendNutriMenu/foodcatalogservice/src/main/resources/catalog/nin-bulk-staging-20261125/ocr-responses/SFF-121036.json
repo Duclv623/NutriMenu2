@@ -1,0 +1,35 @@
+{
+  "code": "SFF-121036",
+  "imageSha256": "bb5dba2611d044a0233997a831e8d119d468e13e142856a4b1826b54c00562d8",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "389.9 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Xôi ngô/ Sticky rice with maize seeds",
+      "amountSourceText": "160.0",
+      "numericQuantity": 160.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đỗ xanh đỗ/Mung bean, steamed",
+      "amountSourceText": "26.0",
+      "numericQuantity": 26.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "steamed",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành phi/Fried shallot",
+      "amountSourceText": "11.0",
+      "numericQuantity": 11.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "phi",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

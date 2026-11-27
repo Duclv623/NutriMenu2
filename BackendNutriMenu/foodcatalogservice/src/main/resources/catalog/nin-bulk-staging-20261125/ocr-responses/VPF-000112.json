@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "156kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cá nục",
+      "amountSourceText": "75g",
+      "numericQuantity": 75,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "7g",
+      "numericQuantity": 7,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000112",
+  "imageSha256": "8257297a732235c00c80344a5944d862cd79e37837d5fffd62fb525363df4703",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

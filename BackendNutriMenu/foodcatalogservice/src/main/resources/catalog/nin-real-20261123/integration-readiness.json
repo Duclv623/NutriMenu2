@@ -1,0 +1,632 @@
+{
+  "importedSourceDishCount": 40,
+  "publicVisibleSourceCount": 40,
+  "coreCompleteSourceCount": 40,
+  "coreIncompleteSourceCount": 0,
+  "solverEligibleSourceCount": 40,
+  "solverPendingSourceCount": 0,
+  "solverEligibleSourceCodes": [
+    "NIN_REAL_VPF_000007",
+    "NIN_REAL_VPF_000008",
+    "NIN_REAL_VPF_000009",
+    "NIN_REAL_VPF_000010",
+    "NIN_REAL_VPF_000011",
+    "NIN_REAL_VPF_000012",
+    "NIN_REAL_VPF_000013",
+    "NIN_REAL_VPF_000014",
+    "NIN_REAL_VPF_000015",
+    "NIN_REAL_VPF_000016",
+    "NIN_REAL_VPF_000018",
+    "NIN_REAL_VPF_000020",
+    "NIN_REAL_VPF_000021",
+    "NIN_REAL_VPF_000025",
+    "NIN_REAL_VPF_000027",
+    "NIN_REAL_VPF_000033",
+    "NIN_REAL_VPF_000037",
+    "NIN_REAL_VPF_000039",
+    "NIN_REAL_VPF_000049",
+    "NIN_REAL_VPF_000056",
+    "NIN_REAL_VPF_000057",
+    "NIN_REAL_VPF_000058",
+    "NIN_REAL_VPF_000071",
+    "NIN_REAL_VPF_000077",
+    "NIN_REAL_VPF_000084",
+    "NIN_REAL_VPF_000086",
+    "NIN_REAL_VPF_000088",
+    "NIN_REAL_VPF_000089",
+    "NIN_REAL_VPF_000092",
+    "NIN_REAL_VPF_000094",
+    "NIN_REAL_VPF_000100",
+    "NIN_REAL_VPF_000105",
+    "NIN_REAL_VPF_000117",
+    "NIN_REAL_VPF_000144",
+    "NIN_REAL_VPF_000146",
+    "NIN_REAL_VPF_000155",
+    "NIN_REAL_VPF_000174",
+    "NIN_REAL_VPF_000175",
+    "NIN_REAL_VPF_000398",
+    "NIN_REAL_VPF_000423"
+  ],
+  "qaBackfillRetained": false,
+  "databaseAppliedInThisSession": false,
+  "estimatedGiMeasuredDishCount": 0,
+  "gi50CandidateCount": 19,
+  "gi50RoleCounts": {
+    "SOUP": 3,
+    "PROTEIN_DISH": 6,
+    "VEGGIE_DISH": 8,
+    "SNACK": 2
+  },
+  "allSourceRoleCounts": {
+    "MAIN_STARCH": 1,
+    "COMPOSITE_DISH": 9,
+    "SOUP": 7,
+    "PROTEIN_DISH": 12,
+    "VEGGIE_DISH": 9,
+    "SNACK": 2
+  },
+  "note": "Source totals retained; only missing core/fibre/cholesterol estimated from explicit ingredient observations. GI values are proxies/imputations or disclosed conservative bounds; N/A sentinels have separate GL bounds. All-source eligibility does not imply a feasible clinical menu. Purines/saturated fat remain unknown, disease/allergy exclusions remain enforced. No legacy QA dishes or fallback.",
+  "dishes": [
+    {
+      "code": "NIN_REAL_VPF_000007",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "MAIN_STARCH",
+      "estimatedGi": 72.27,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000008",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "COMPOSITE_DISH",
+      "estimatedGi": 100,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000009",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "COMPOSITE_DISH",
+      "estimatedGi": 72.39,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000010",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "COMPOSITE_DISH",
+      "estimatedGi": 71.76,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000011",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "COMPOSITE_DISH",
+      "estimatedGi": 69.66,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000012",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "COMPOSITE_DISH",
+      "estimatedGi": 71.14,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000013",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "COMPOSITE_DISH",
+      "estimatedGi": 100,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000014",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "COMPOSITE_DISH",
+      "estimatedGi": 72.39,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000015",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "COMPOSITE_DISH",
+      "estimatedGi": 72.68,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000016",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "COMPOSITE_DISH",
+      "estimatedGi": 72.16,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "potassiumMg",
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000018",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "SOUP",
+      "estimatedGi": 41.97,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000020",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "SOUP",
+      "estimatedGi": 64.0,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000021",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "SOUP",
+      "estimatedGi": 58.57,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000025",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "SOUP",
+      "estimatedGi": 50.03,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000027",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "SOUP",
+      "estimatedGi": 35.86,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000033",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "SOUP",
+      "estimatedGi": 40.0,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000037",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "SOUP",
+      "estimatedGi": 58.95,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000039",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "PROTEIN_DISH",
+      "estimatedGi": 62.13,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000049",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "PROTEIN_DISH",
+      "estimatedGi": 42.78,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000056",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "PROTEIN_DISH",
+      "estimatedGi": 68.23,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000057",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "PROTEIN_DISH",
+      "estimatedGi": 70.39,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000058",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "PROTEIN_DISH",
+      "estimatedGi": 47.94,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000071",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "VEGGIE_DISH",
+      "estimatedGi": 40.0,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000077",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "VEGGIE_DISH",
+      "estimatedGi": 40.0,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000084",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "VEGGIE_DISH",
+      "estimatedGi": 40.0,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000086",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "VEGGIE_DISH",
+      "estimatedGi": 40.0,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000088",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "VEGGIE_DISH",
+      "estimatedGi": 40.0,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000089",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "VEGGIE_DISH",
+      "estimatedGi": 39.68,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000092",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "PROTEIN_DISH",
+      "estimatedGi": 0,
+      "giStatus": "NOT_APPLICABLE",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000094",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "PROTEIN_DISH",
+      "estimatedGi": 0,
+      "giStatus": "NOT_APPLICABLE",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000100",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "PROTEIN_DISH",
+      "estimatedGi": 0,
+      "giStatus": "NOT_APPLICABLE",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000105",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "PROTEIN_DISH",
+      "estimatedGi": 100,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000117",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "PROTEIN_DISH",
+      "estimatedGi": 40.0,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000144",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "PROTEIN_DISH",
+      "estimatedGi": 56.01,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000146",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "PROTEIN_DISH",
+      "estimatedGi": 100.0,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000155",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "VEGGIE_DISH",
+      "estimatedGi": 67.58,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000174",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "VEGGIE_DISH",
+      "estimatedGi": 40.0,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000175",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "VEGGIE_DISH",
+      "estimatedGi": 43.88,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000398",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "SNACK",
+      "estimatedGi": 43.0,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    },
+    {
+      "code": "NIN_REAL_VPF_000423",
+      "publicVisible": true,
+      "coreComplete": true,
+      "solverEligible": true,
+      "dishRole": "SNACK",
+      "estimatedGi": 36.0,
+      "giStatus": "ESTIMATED_NOT_MEASURED",
+      "unknownFields": [
+        "saturatedFatG",
+        "purineMg"
+      ],
+      "missingSolverFields": []
+    }
+  ]
+}

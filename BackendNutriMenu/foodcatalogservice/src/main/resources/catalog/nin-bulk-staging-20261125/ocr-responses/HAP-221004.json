@@ -1,0 +1,19 @@
+{
+  "code": "HAP-221004",
+  "imageSha256": "f4307a8e1d916345c038651eef43f84ac87dd105cd1ee2d082f9fe9f7e471182",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh nếp nhân ngọt",
+      "amountSourceText": "124.0",
+      "numericQuantity": 124.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "292.4 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,27 @@
+{
+  "code": "VPF-000065",
+  "imageSha256": "95cd49048c939a37eead840f8b8526923912484f646521fba4add24ad87f3c4f",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "186kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cua biển",
+      "amountSourceText": "300g",
+      "numericQuantity": 300.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thì là",
+      "amountSourceText": "15g",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

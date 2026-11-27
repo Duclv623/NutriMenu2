@@ -51,6 +51,12 @@ public class MealPlanController {
         return meals.generate(token, request);
     }
 
+    @PostMapping("/meal-plans/generate-weekly")
+    public List<PersonalMealPlanResponseDTO> generateWeekly(@RequestHeader("Authorization") String token,
+            @Valid @RequestBody GenerateMealPlanRequestDTO request) {
+        return meals.generateWeekly(token, request);
+    }
+
     @PostMapping("/meal-plans/{id}/swap-preview")
     public PersonalMealPlanResponseDTO preview(@RequestHeader("Authorization") String token, @PathVariable long id,
                                          @Valid @RequestBody SwapMealRequestDTO request) {
@@ -82,13 +88,12 @@ public class MealPlanController {
 
     @GetMapping("/meal-plans/capabilities")
     public Map<String, Boolean> capabilities() {
-        return Map.of("generate", true, "swap", true, "favoriteRemoval", true, "atomicVersions", true, "cookingTime", false);
+        return Map.of("generate", true, "weeklyGeneration", true, "regenerate", true, "swap", true, "favoriteRemoval", true, "atomicVersions", true, "cookingTime", false);
     }
 
     @PutMapping("/me/meal-logs")
-    @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void complete(@RequestHeader("Authorization") String token, @Valid @RequestBody MealLogRequestDTO request) {
-        meals.complete(token, request);
+    public PersonalMealPlanResponseDTO complete(@RequestHeader("Authorization") String token, @Valid @RequestBody MealLogRequestDTO request) {
+        return meals.complete(token, request);
     }
 
     @GetMapping("/internal/me/meal-context")

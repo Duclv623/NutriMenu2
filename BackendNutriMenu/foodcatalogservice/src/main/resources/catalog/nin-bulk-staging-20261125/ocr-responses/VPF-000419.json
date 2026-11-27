@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "63kcal/đĩa",
+  "ingredients": [
+    {
+      "nameSourceText": "Kiwi",
+      "amountSourceText": "130g",
+      "numericQuantity": 130.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000419",
+  "imageSha256": "0bd53c2952c9a25b2bb549f61d64c658b8b14dad71b428cffc43d4189177569e",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

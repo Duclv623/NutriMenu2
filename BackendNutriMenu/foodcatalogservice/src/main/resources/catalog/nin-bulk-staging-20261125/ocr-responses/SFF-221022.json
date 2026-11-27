@@ -1,0 +1,35 @@
+{
+  "code": "SFF-221022",
+  "imageSha256": "d6bcbff60b5b02ad72c5a25a4593de02101186a6954424033663480af5744e50",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "758.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Ngô ngọt chiên bơ/Buttered maize seeds",
+      "amountSourceText": "180.0",
+      "numericQuantity": 180.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành phi/Fried shallot",
+      "amountSourceText": "18.0",
+      "numericQuantity": 18.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "phi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tép khô rang/Fried shrimp",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rang",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

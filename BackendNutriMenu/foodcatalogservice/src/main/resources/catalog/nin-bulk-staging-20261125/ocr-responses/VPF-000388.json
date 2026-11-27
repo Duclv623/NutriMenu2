@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000388",
+  "imageSha256": "63705e94c4797581ea5560b4f15dacf078b85263343cf85951c5273178c3f659",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "53.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa chua uống Yakult",
+      "amountSourceText": "65ml",
+      "numericQuantity": 65.0,
+      "unitSourceText": "ml",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

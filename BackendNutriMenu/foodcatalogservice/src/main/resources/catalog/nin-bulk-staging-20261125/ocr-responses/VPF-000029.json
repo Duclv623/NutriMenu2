@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "155kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Đu đủ xanh (bỏ vỏ)",
+      "amountSourceText": "190g",
+      "numericQuantity": 190,
+      "unitSourceText": "g",
+      "preparationSourceText": "bỏ vỏ",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt nạc băm",
+      "amountSourceText": "80g",
+      "numericQuantity": 80,
+      "unitSourceText": "g",
+      "preparationSourceText": "băm",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột nêm",
+      "amountSourceText": "3g",
+      "numericQuantity": 3,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000029",
+  "imageSha256": "ae5a923b680a09595c53f03b05db087aa739e92c9226234f40b66f8c52fae3fa",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

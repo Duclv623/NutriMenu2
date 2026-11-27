@@ -1,0 +1,21 @@
+{
+  "code": "SFF-221011",
+  "imageSha256": "45545e50019cb33db9834df7dcb4087fb9ca2b9e166ebb02b9e40db931464bf5",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Nước ép lựu/Pomegranate juice (ép từ Hạt lựu/Pomegranate)",
+      "amountSourceText": "380.0",
+      "numericQuantity": 380.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "ép",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Dual quantities on image: extracted juice 380.0g vs raw seed 563.0g"
+  ],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

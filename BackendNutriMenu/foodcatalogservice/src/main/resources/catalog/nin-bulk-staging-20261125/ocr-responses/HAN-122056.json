@@ -1,0 +1,19 @@
+{
+  "code": "HAN-122056",
+  "imageSha256": "52aa23681db8b07e498082fb816cae1240b44aa582f4957fba31fd71cb03c35a",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "150.4 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh quẩy",
+      "amountSourceText": "51.0",
+      "numericQuantity": 51.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

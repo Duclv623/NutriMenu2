@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "138kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bơ vỏ xanh",
+      "amountSourceText": "137g",
+      "numericQuantity": 137.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000418",
+  "imageSha256": "d0503c9653bd70846e6580e25eee7197006ec8a2df1ce4fac47ac2edf89055b6",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

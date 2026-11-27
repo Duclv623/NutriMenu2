@@ -33,6 +33,7 @@ spring:
       charset: UTF-8
 
 server:
+  address: ${SERVICE_HOST:127.0.0.1}
   port: ${PORT:8082}
   tomcat:
     threads:

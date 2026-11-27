@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "38kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Hồng xiêm",
+      "amountSourceText": "80g",
+      "numericQuantity": 80,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000409",
+  "imageSha256": "f8c593a1b291df955b9f7a4f61a1385388834e4994c81ff3b98da2f41dd84bef",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -385,17 +385,18 @@ class ChatService:
             response.intent = 'knowledge'
             response.status = 'answered'
             response.response_strategy = 'structured_lookup'
-            response.answer = (f"Hồ sơ backend đang dùng: phiên bản {p.profile_version}; tuổi: {p.age if p.age is not None else 'chưa khai'}; "
+            response.answer = (f"Hồ sơ bạn đã lưu: tuổi: {p.age if p.age is not None else 'chưa khai'}; "
                                f"giới tính: {gender}; chiều cao: {p.height if p.height is not None else 'chưa khai'} cm; cân nặng: {p.weight if p.weight is not None else 'chưa khai'} kg; "
                                f"vận động: {activity}; mục tiêu: {goal}; "
                                f"dị ứng: {', '.join(p.allergies) if p.allergies else 'chưa khai' if p.allergies is None else 'đã khai không có'}; "
                                f"ưu tiên: {', '.join(p.preferences) or 'chưa khai'}. "
                                + ('Đây là dữ liệu giả lập, không phải hồ sơ tài khoản thật.' if self.meals.mode == 'mock' else 'Đây là dữ kiện hồ sơ, không phải bằng chứng y khoa.'))
             if weight_fact and 'ho so' not in fact_query:
-                response.answer = (f"Hồ sơ backend phiên bản {p.profile_version} ghi cân nặng của bạn là {p.weight:g} kg." if p.weight is not None else f"Hồ sơ backend phiên bản {p.profile_version} chưa khai cân nặng.") + (' Đây là dữ liệu giả lập.' if self.meals.mode == 'mock' else '')
+                response.answer = (f"Cân nặng bạn đã lưu là {p.weight:g} kg." if p.weight is not None else f"Hồ sơ của bạn chưa có cân nặng.") + (' Đây là dữ liệu giả lập.' if self.meals.mode == 'mock' else '')
             if re.search(r'\b(?:toi|minh) di ung gi\b', fact_query) and 'ho so' not in fact_query:
                 allergy_fact = 'chưa khai thông tin dị ứng' if p.allergies is None else ('đã khai không có dị ứng đã biết' if not p.allergies else 'ghi nhận dị ứng: ' + ', '.join(p.allergies))
-                response.answer = f"Hồ sơ {'giả lập ' if self.meals.mode == 'mock' else 'backend '}phiên bản {p.profile_version} {allergy_fact}."
+                response.answer = (f"Hồ sơ giả lập phiên bản {p.profile_version} {allergy_fact}."
+                                   if self.meals.mode == 'mock' else f"Hồ sơ của bạn {allergy_fact}.")
             return self.finish_response(response, request, owner, history, query, started)
         personal_advice = bool(re.search(r'\b(?:toi|minh|cua toi|cho toi|cho minh)\b', fact_query)) or is_intake_advice(raw_query)
         if contextual and history:
@@ -510,9 +511,20 @@ class ChatService:
             response.status = meal_reply.status
             response.clarification_question = meal_reply.question
             response.meal_result = meal_reply.payload
-            if meal_reply.payload and (meal_reply.payload.get('plan') or {}).get('catalogVersion') == 'java-catalog-unversioned':
+            if (meal_reply.payload
+                    and (meal_reply.payload.get('plan') or {}).get('catalogVersion') == 'java-catalog-unversioned'
+                    and meal_reply.payload.get('view') in {'nutrition', 'compare', 'targets', 'explain', 'source', 'basis', 'rank'}):
                 response.warnings.extend((meal_reply.payload.get('plan') or {}).get('limitations', []))
-                response.warnings.append('Carb của thực đơn này là carbohydrate khả dụng (net carb), không phải đường tổng.')
+                payload = meal_reply.payload
+                selected = set(payload.get("selectedItemIds") or [])
+                if "carbohydrate_g" in payload.get("nutrientKeys", []) and any(
+                    (item.get("carbohydrateDefinition") or "").startswith("UNSPECIFIED_SOURCE_GLUCID")
+                    or (not item.get("carbohydrateDefinition") and any(
+                        source.startswith("Food Catalog: NIN_") for source in item.get("sourceRefs", [])
+                    ))
+                    for item in payload["plan"]["items"] if not selected or item["id"] in selected
+                ):
+                    response.warnings.append("Glucid theo nguồn NIN được giữ theo số liệu nguồn, chưa xác định là carb tổng hay carb thuần.")
             if meal_reply.cancel_pending:
                 response.meal_edit_cancelled = True
             response.timings_ms['meal_service'] = int((time.perf_counter() - started) * 1000)
@@ -562,7 +574,7 @@ class ChatService:
             local_food_plan = selected_plan or self.foods.simple_lookup(query)
         outside_scope = intent == 'knowledge' and outside_nutrition_scope(query)
         if self.provider is None and local_food_plan is None and not outside_scope:
-            raise ProviderFailure("Chưa cấu hình key API ở backend. Câu trả lời kiến thức cần API thật.")
+            raise ProviderFailure("Trợ lý tạm thời chưa thể trả lời câu hỏi kiến thức. Vui lòng thử lại sau.")
         requested_version = re.search(r'\bada\s+(?:standards\s+)?(20\d{2})\b', fold(query))
         if intent == 'knowledge' and requested_version:
             response.answer = ('Tài liệu ADA Standards ' + requested_version[1]

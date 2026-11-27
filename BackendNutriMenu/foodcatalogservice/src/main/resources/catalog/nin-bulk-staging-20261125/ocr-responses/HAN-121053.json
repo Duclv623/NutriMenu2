@@ -1,0 +1,29 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "322.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cháo đỗ đen",
+      "amountSourceText": "318.0",
+      "numericQuantity": 318.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường kính",
+      "amountSourceText": "38.0",
+      "numericQuantity": 38.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Sum of printed row energies (321.9 Kcal) differs from image total (322.0 Kcal) by 0.1 Kcal due to rounding."
+  ],
+  "code": "HAN-121053",
+  "imageSha256": "9ec92de5d9bad657fd835a0bcb6af0a2fd10ae18303b8754049a1dc5c07c22f3",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

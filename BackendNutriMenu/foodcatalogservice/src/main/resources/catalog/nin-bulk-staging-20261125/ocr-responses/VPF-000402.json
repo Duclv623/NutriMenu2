@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "16kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Dưa hấu",
+      "amountSourceText": "120g",
+      "numericQuantity": 120,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000402",
+  "imageSha256": "dd3cd4a7da3bfed1a1e8b11f3fe5be3e47355f1c1cfa0ee3572f91e683c4c3f1",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

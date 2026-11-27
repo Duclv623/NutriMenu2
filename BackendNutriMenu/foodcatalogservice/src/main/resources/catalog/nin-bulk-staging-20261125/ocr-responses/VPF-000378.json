@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "81kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Trứng gà ta 1 quả",
+      "amountSourceText": "45g",
+      "numericQuantity": 45,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "3g",
+      "numericQuantity": 3,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Muối",
+      "amountSourceText": "0,2g",
+      "numericQuantity": 0.2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000378",
+  "imageSha256": "0939f8c870fea51bd186865e491cf4fb9efe2aa69bb7ad6ae84616a052f261a4",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -15,13 +15,16 @@ import com.example.mealoptimizerservice.dto.MathematicalBreakdownDto;
 @AllArgsConstructor
 @Builder
 public class MealPlanResponse {
+    private PlanningMode planningMode;
+    private boolean evaluateFiber;
+    private boolean evaluateCholesterol;
     private Long planId;
     private Long userId;
     private Long version;
-    private Long sourceProfileVersion;
-    private java.time.LocalDateTime createdAt;
     private String changeSignature;
     private boolean validationPassed;
+    private Long sourceProfileVersion;
+    private java.time.LocalDateTime createdAt;
     private LocalDate planDate;
     private SolverRunStatus solverStatus;
     private Long solveTimeMs;
@@ -49,11 +52,20 @@ public class MealPlanResponse {
             grouped.computeIfAbsent(item.getMealSlot(), k -> new ArrayList<>())
                     .add(MealPlanItemResponse.fromEntity(item));
         }
+        List<String> notices = new ArrayList<>(warnings != null ? warnings : Collections.emptyList());
+        if (plan.getPlanningMode() == PlanningMode.GENERAL_REFERENCE
+                && !notices.contains(com.example.mealoptimizerservice.service.GeneralReferencePolicy.NOTICE))
+            notices.add(com.example.mealoptimizerservice.service.GeneralReferencePolicy.NOTICE);
+        if (plan.getPlanningMode()==PlanningMode.GENERAL_REFERENCE && (!plan.isEvaluateFiber() || !plan.isEvaluateCholesterol()))
+            notices.add("Phổ thông: chưa đánh giá " + (!plan.isEvaluateFiber()?"chất xơ ":"") + (!plan.isEvaluateCholesterol()?"cholesterol ":"") + "vì danh mục ứng viên thiếu số liệu; GI/GL không được đánh giá ở chế độ này. Số liệu thiếu giữ chưa biết, không thay bằng 0.");
         return MealPlanResponse.builder()
+                .evaluateFiber(plan.isEvaluateFiber()).evaluateCholesterol(plan.isEvaluateCholesterol())
+                .planningMode(plan.getPlanningMode() == null ? PlanningMode.MEDICAL : plan.getPlanningMode())
                 .planId(plan.getId())
                 .userId(plan.getUserId())
                 .version(plan.getVersion())
-                .sourceProfileVersion(plan.getSourceProfileVersion()).createdAt(plan.getCreatedAt())
+                .sourceProfileVersion(plan.getSourceProfileVersion())
+                .createdAt(plan.getCreatedAt())
                 .planDate(plan.getPlanDate())
                 .solverStatus(plan.getSolverStatus())
                 .solveTimeMs(plan.getSolveTimeMs())
@@ -72,7 +84,7 @@ public class MealPlanResponse {
                 .userRating(plan.getUserRating())
                 .userFeedback(plan.getUserFeedback())
                 .mealsBySlot(grouped)
-                .medicalWarnings(warnings != null ? warnings : Collections.emptyList())
+                .medicalWarnings(notices)
                 .mathBreakdown(math)
                 .build();
     }

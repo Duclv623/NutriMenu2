@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "33kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Mực tươi",
+      "amountSourceText": "20g",
+      "numericQuantity": 20,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau nhút",
+      "amountSourceText": "85g",
+      "numericQuantity": 85,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột canh",
+      "amountSourceText": "1g",
+      "numericQuantity": 1,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000038",
+  "imageSha256": "bd48d9281aa4f57bf433f4b73b8ba7b91e47418baf2e86c20f3544ae4be51837",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

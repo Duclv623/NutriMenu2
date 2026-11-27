@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "473kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt lợn ba chỉ",
+      "amountSourceText": "180g",
+      "numericQuantity": 180,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa chuột",
+      "amountSourceText": "25g",
+      "numericQuantity": 25,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà chua",
+      "amountSourceText": "9g",
+      "numericQuantity": 9,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000107",
+  "imageSha256": "848cba35ac8a59040715ec36a615704bc33dc10bc9643c412581e6eb75154b53",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000090",
+  "imageSha256": "08e3d92e9ccd7b4b608444e5f6110ba30d8dbd2913c7982ad98b066c31849728",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "126kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Tai lợn",
+      "amountSourceText": "100g",
+      "numericQuantity": 100.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

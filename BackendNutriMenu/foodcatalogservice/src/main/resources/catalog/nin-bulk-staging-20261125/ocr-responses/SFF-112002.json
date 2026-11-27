@@ -1,0 +1,51 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "873.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh phở/Pho (rice noodle)",
+      "amountSourceText": "190.0",
+      "numericQuantity": 190.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành lá/Welsh onion",
+      "amountSourceText": "62.0",
+      "numericQuantity": 62.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt bò thăn áp chảo/Sausteing beef filet",
+      "amountSourceText": "120.0",
+      "numericQuantity": 120.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "áp chảo",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/bone broth",
+      "amountSourceText": "600.0",
+      "numericQuantity": 600.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bánh quẩy/Fried breadstick, Youtiao",
+      "amountSourceText": "45.0",
+      "numericQuantity": 45.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-112002",
+  "imageSha256": "06eef36fa94b0fc01349d312a263cdf29ce88a951863f13394de2e125fa3db01",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

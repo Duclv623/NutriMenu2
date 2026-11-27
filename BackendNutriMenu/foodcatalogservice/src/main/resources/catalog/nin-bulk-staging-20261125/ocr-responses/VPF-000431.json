@@ -1,0 +1,29 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "177kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cá nục hộp",
+      "amountSourceText": "85g",
+      "numericQuantity": 85,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà chua",
+      "amountSourceText": null,
+      "numericQuantity": null,
+      "unitSourceText": null,
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Quantity omitted on image for 'Cà chua'"
+  ],
+  "code": "VPF-000431",
+  "imageSha256": "42c3f28e35937d02923e654459ac5b7837fc831d8631e9ddfbd6fb7214c0dc1f",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

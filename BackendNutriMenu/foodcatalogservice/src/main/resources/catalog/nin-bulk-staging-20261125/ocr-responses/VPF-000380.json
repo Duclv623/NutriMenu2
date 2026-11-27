@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "105kcal/đĩa",
+  "ingredients": [
+    {
+      "nameSourceText": "Trứng vịt",
+      "amountSourceText": "65g",
+      "numericQuantity": 65,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000380",
+  "imageSha256": "e16ab920d40bb3461ac2fa1af9b242781daff3829c13e2ce0406262adca34bd8",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

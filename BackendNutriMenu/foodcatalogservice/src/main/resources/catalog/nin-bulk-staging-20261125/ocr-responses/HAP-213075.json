@@ -1,0 +1,51 @@
+{
+  "code": "HAP-213075",
+  "imageSha256": "42cab4e912e9959d70efbdc8b9cac0a40b2c1005c906a4f2b56916c653df9ed0",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Xôi trắng",
+      "amountSourceText": "243.0",
+      "numericQuantity": 243.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt ba chỉ kho tàu",
+      "amountSourceText": "93.0",
+      "numericQuantity": 93.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "kho tàu",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước thịt",
+      "amountSourceText": "65.0",
+      "numericQuantity": 65.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà rốt",
+      "amountSourceText": "27.0",
+      "numericQuantity": 27.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đu đủ",
+      "amountSourceText": "77.0",
+      "numericQuantity": 77.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "785.0 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

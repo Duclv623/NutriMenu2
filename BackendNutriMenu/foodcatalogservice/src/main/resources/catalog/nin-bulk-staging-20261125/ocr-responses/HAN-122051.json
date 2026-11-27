@@ -1,0 +1,19 @@
+{
+  "code": "HAN-122051",
+  "imageSha256": "66637df2d4cea467cb517c021cad4d0de1c9423bc4e00f6f217c546640e19ef1",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh chuối",
+      "amountSourceText": "89.0",
+      "numericQuantity": 89.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "177.1 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

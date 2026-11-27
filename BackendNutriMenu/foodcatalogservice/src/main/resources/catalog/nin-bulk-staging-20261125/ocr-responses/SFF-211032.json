@@ -1,0 +1,83 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "978.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ/Rice",
+      "amountSourceText": "292.0",
+      "numericQuantity": 292.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sườn lợn xào chua ngọt/Sweet and sour pork ribs",
+      "amountSourceText": "58.0",
+      "numericQuantity": 58.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào chua ngọt/Sweet and sour",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Thịt ba chỉ luộc/Boiled pork belly",
+      "amountSourceText": "43.0",
+      "numericQuantity": 43.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "luộc/Boiled",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cá thu kho/Braised mackerel fish",
+      "amountSourceText": "67.0",
+      "numericQuantity": 67.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "kho/Braised",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chuối xanh nấu/Cooked green banana",
+      "amountSourceText": "82.0",
+      "numericQuantity": 82.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nấu/Cooked",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu phụ rán/Fried tofu",
+      "amountSourceText": "6.0",
+      "numericQuantity": 6.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán/Fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ốc bươu xào/Stir-fried apple snails",
+      "amountSourceText": "6.0",
+      "numericQuantity": 6.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào/Stir-fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải xanh trong canh/Cooked mustard greens",
+      "amountSourceText": "25.0",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "Cooked",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước canh rau/Soup",
+      "amountSourceText": "171.0",
+      "numericQuantity": 171.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "SFF-211032",
+  "imageSha256": "6b794f7636464e47492bb4e99bb7909c683984411a70f1571086b1e36516c197",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

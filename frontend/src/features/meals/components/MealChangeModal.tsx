@@ -1,13 +1,39 @@
-import { API_MODE } from "../../../lib/config";
-import { mealPlanService } from "../services/mealPlanService";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { useApp } from "../../../store/UserDataProvider";
-import type { Plan, PlanItem, MealResult } from "../../../types";
-
+import type { Food, Plan, PlanItem, MealResult } from "../../../types";
+import { API_MODE } from "../../../lib/config";
+import { mealPlanService } from "../../../features/meals/services/mealPlanService";
 import { MEALS } from "../../../data/seed";
-import { allowedFood, assertEligible, number, sumNutrition } from "../../../utils";
+import {
+  allowedFood,
+  assertEligible,
+  assertNewSourceSelection,
+  number,
+  planningReady,
+  planCarbohydrateLabel,
+  planUsesHistoricalData,
+  scaleAmount,
+  servingLabel,
+  sumNutrition,
+} from "../../../utils";
 import { Alert, Button, FoodMark, Modal, Nutrition } from "../../../components/common/ui";
+function swapPortions(food?: Food): number[] {
+  const rules = food?.servingRules || { min: 0.5, max: 3, step: 0.5 };
+  if (API_MODE === "api") {
+    // The checked swap API validates half-servings against the dish's solver rules.
+    const step = rules.step * 2;
+    if (!Number.isInteger(step) || step < 1) return [];
+    const first = Math.ceil(Math.max(1, rules.min * 2) / step) * step;
+    const last = Math.min(24, Math.floor(rules.max * 2));
+    return Array.from({ length: Math.max(0, Math.floor((last - first) / step) + 1) },
+      (_, index) => (first + index * step) / 2);
+  }
+  const first = Math.ceil(rules.min / rules.step) * rules.step;
+  return Array.from({ length: Math.max(0, Math.floor((rules.max - first) / rules.step) + 1) },
+    (_, index) => first + index * rules.step);
+}
+
 function phrase(value: string, unaccented = false) {
   let text = value.normalize("NFC").toLocaleLowerCase("vi");
   if (unaccented)
@@ -34,8 +60,8 @@ export function MealChangeModal({
   editor?: NonNullable<MealResult["editor"]>;
 }) {
   const { userData: w, update, toast } = useApp();
-  const [dishId, setFoodId] = useState(item.dishId);
-  const [servingMultiplier, setServings] = useState(
+  const [dishId, setDishId] = useState(item.dishId);
+  const [servingMultiplier, setServingMultiplier] = useState(
     editor?.requestedServings ?? item.servingMultiplier,
   );
   const [busy, setBusy] = useState(false);
@@ -43,9 +69,12 @@ export function MealChangeModal({
   const [preview, setPreview] = useState(false);
   const [checkedPreview, setCheckedPreview] = useState<Plan | null>(null);
   const currentFood = w.foods.find((f) => f.id === item.dishId);
+  const historical = planUsesHistoricalData(plan, w.foods);
   const options = w.foods.filter(
     (f) =>
+      !historical &&
       f.meals.includes(item.meal) &&
+      planningReady(f, API_MODE === "demo", plan.planningMode) &&
       allowedFood(f, w.profile) &&
       (!currentFood?.role || f.role === currentFood.role) &&
       (!editor?.preferredTerms?.length ||
@@ -67,20 +96,10 @@ export function MealChangeModal({
       ),
   );
   const food = options.find((f) => f.id === dishId);
-  const rules = food?.servingRules || { min: 0.5, max: 3, step: 0.5 };
-  const firstPortion = Math.ceil(rules.min / rules.step) * rules.step;
-  const portions = Array.from(
-    {
-      length: Math.max(
-        0,
-        Math.floor((rules.max - firstPortion) / rules.step) + 1,
-      ),
-    },
-    (_, i) => firstPortion + i * rules.step,
-  ).filter((s) => API_MODE !== "api" || Number.isInteger(s * 2));
+  const portions = swapPortions(food);
   const changed = dishId !== item.dishId || servingMultiplier !== item.servingMultiplier;
   const items = plan.items.map((i) =>
-    i.id === item.id ? { ...i, dishId, servingMultiplier, nutrition: undefined } : i,
+    i.id === item.id ? { ...i, dishId, servingMultiplier, nutrition: undefined, carbohydrateDefinition: food?.carbohydrateDefinition } : i,
   );
   async function checkPreview() {
     setBusy(true);
@@ -102,7 +121,10 @@ export function MealChangeModal({
           !result.changeSignature ||
           !["OPTIMAL", "FEASIBLE"].includes(result.solverStatus)
         )
-          throw new Error("Máy chủ chưa xác nhận phương án thay đổi.");
+          throw new Error(
+            "Chưa thể xác nhận phương án thay đổi. Vui lòng thử lại.",
+          );
+        assertNewSourceSelection(result, w.foods);
         setCheckedPreview(result);
       }
       setPreview(true);
@@ -142,6 +164,7 @@ export function MealChangeModal({
           throw new Error(
             "Phiên bản hồ sơ đã thay đổi. Hãy tải lại hồ sơ trước khi đổi món.",
           );
+        assertNewSourceSelection(next, w.foods);
         sumNutrition(next.items, w.foods);
       } else
         next = {
@@ -156,6 +179,9 @@ export function MealChangeModal({
       update((s) => ({
         ...s,
         plans: s.plans.map((p) => (p.id === plan.id ? next : p)),
+        checkedShopping: s.checkedShopping.filter(
+          (key) => !key.startsWith(`${plan.id}:`),
+        ),
       }));
       toast("Đã lưu thay đổi thực đơn.");
       onSaved?.(next);
@@ -169,6 +195,12 @@ export function MealChangeModal({
   return (
     <Modal title={`Đổi món · ${MEALS[item.meal].name}`} onClose={onClose} wide>
       <div className="stack">
+        {historical && (
+          <Alert>
+            Thực đơn dùng dữ liệu cũ chỉ được xem lại. Hãy chọn ngày khác hoặc
+            xóa thực đơn cũ trước khi tạo thực đơn bằng dữ liệu mới.
+          </Alert>
+        )}
         {!options.length && (
           <Alert>
             Chưa có món cùng nhóm phù hợp với yêu cầu và hồ sơ để thay thế. Bạn
@@ -188,16 +220,10 @@ export function MealChangeModal({
             value={dishId}
             disabled={busy}
             onChange={(e) => {
-              setFoodId(e.target.value);
+              setDishId(e.target.value);
               const nextFood = options.find((f) => f.id === e.target.value);
-              const nextRules = nextFood?.servingRules || {
-                min: 0.5,
-                max: 3,
-                step: 0.5,
-              };
-              setServings(
-                Math.ceil(nextRules.min / nextRules.step) * nextRules.step,
-              );
+              const [firstPortion] = swapPortions(nextFood);
+              if (firstPortion !== undefined) setServingMultiplier(firstPortion);
               setPreview(false);
               setCheckedPreview(null);
             }}
@@ -220,7 +246,7 @@ export function MealChangeModal({
             value={servingMultiplier}
             disabled={busy}
             onChange={(e) => {
-              setServings(Number(e.target.value));
+              setServingMultiplier(Number(e.target.value));
               setPreview(false);
               setCheckedPreview(null);
             }}
@@ -243,8 +269,8 @@ export function MealChangeModal({
             <div>
               <strong>{food.name}</strong>
               <span>
-                {number(food.grams * servingMultiplier)} g ·{" "}
-                {number(food.nutrition.energyKcal * servingMultiplier)} kcal
+                {servingLabel(food, servingMultiplier)} ·{" "}
+                {number(scaleAmount(food.nutrition.energyKcal, servingMultiplier))} kcal
               </span>
             </div>
           </div>
@@ -254,11 +280,12 @@ export function MealChangeModal({
             <h3>Tổng dinh dưỡng sau thay đổi</h3>
             <Nutrition
               value={sumNutrition(checkedPreview?.items || items, w.foods)}
+              carbLabel={planCarbohydrateLabel(checkedPreview?.items || items, w.foods)}
             />
             <Alert>
               {API_MODE === "demo"
                 ? "Đây là xem trước phép cộng dữ liệu mẫu; chưa xác nhận ràng buộc của thực đơn."
-                : "Backend sẽ giải lại và kiểm tra ràng buộc khi áp dụng. Nếu không hợp lệ, thực đơn cũ được giữ nguyên."}
+                : "Thay đổi được kiểm tra lại trước khi lưu. Nếu chưa phù hợp, thực đơn hiện tại được giữ nguyên."}
             </Alert>
           </>
         )}

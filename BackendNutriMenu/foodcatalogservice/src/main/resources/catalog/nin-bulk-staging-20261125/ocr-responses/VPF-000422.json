@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "127kcal/đĩa",
+  "ingredients": [
+    {
+      "nameSourceText": "Táo ta",
+      "amountSourceText": "388g",
+      "numericQuantity": 388.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000422",
+  "imageSha256": "58e9b6a6ca32bea731685a07b902765bd5dac1188f7d9800fbc0f9ec2afd0b2a",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

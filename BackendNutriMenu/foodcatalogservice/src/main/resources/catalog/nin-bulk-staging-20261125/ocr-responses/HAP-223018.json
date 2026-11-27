@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "247.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt lợn ba chỉ xiên nướng",
+      "amountSourceText": "72.0",
+      "numericQuantity": 72.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nướng",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAP-223018",
+  "imageSha256": "0e4e9729a3e8f9f3e92fe33991335400050871d4e9a0a406ef1e3c2f3bc49abf",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

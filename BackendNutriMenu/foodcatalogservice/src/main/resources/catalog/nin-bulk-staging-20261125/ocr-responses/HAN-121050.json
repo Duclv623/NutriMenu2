@@ -1,0 +1,27 @@
+{
+  "code": "HAN-121050",
+  "imageSha256": "1d0f0ea52fef2daa9eaed54eff4ab9246200f2e74691b37c77d633278b315655",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "100.4 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh quẩy",
+      "amountSourceText": "30.0",
+      "numericQuantity": 30.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường kính",
+      "amountSourceText": "3.0",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

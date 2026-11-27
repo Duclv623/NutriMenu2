@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "216.1 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Khoai tây chiên",
+      "amountSourceText": "73.0",
+      "numericQuantity": 73.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-113074",
+  "imageSha256": "47cc334bc01faaea558414944f82d37a067dc96cee0408dd742d3b67464d1074",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,19 @@
+{
+  "code": "SFF-121020",
+  "imageSha256": "a56c8fcecf29dd2a67ad30302e71f7c0ae8f5396d0df9eb19f013bfe2650ae55",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh ngô/Sweet corn fritters",
+      "amountSourceText": "131.0",
+      "numericQuantity": 131.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -60,20 +60,64 @@ public class PersonalMealPlanService {
         eligible(profile, request.profileVersion());
         if (!request.snacks() || request.maxMinutes() != 0 || request.excludeRepeat())
             throw new OptimizerBusinessException(UNPROCESSABLE_CONTENT, "Hiện chỉ hỗ trợ bốn bữa và bộ lọc mặc định");
-        if (plans.findByUserIdAndPlanDate(account.serviceUserId(), request.date()).isPresent())
-            throw new OptimizerBusinessException(CONFLICT, "Đã có thực đơn ngày này");
-        double target = request.target();
-        var input = GenerateDailyMealRequest.builder().planDate(request.date()).sourceProfileVersion(profile.version())
-                .targetCaloriesKcal(BigDecimal.valueOf(target)).targetNetCarbG(round(target * .55 / 4))
-                .targetProteinG(round(target * .175 / 4)).targetFatG(round(target * .275 / 9))
-                .patientContraindications(allergyTags(profile)).excludedDishIds(exclusions(token, profile)).build();
-        var errors = validator.validate(input);
-        if (!errors.isEmpty()) throw new OptimizerBusinessException(BAD_REQUEST, errors.iterator().next().getMessage());
+        boolean replacing = request.replacePlanId() != null;
+        if (replacing && (!request.replacementConfirmed() || request.baseVersion() == null))
+            throw new OptimizerBusinessException(BAD_REQUEST, "Tạo lại cần xác nhận và phiên bản thực đơn.");
+        if (!replacing && (request.replacementConfirmed() || request.baseVersion() != null))
+            throw new OptimizerBusinessException(BAD_REQUEST, "Thiếu thực đơn cần tạo lại.");
+        Long previousProfileVersion = null;
+        if (replacing) {
+            var previous = mapper.toResponse(account, optimizer.getMealPlanDetail(account.serviceUserId(), request.replacePlanId()));
+            version(previous, request.baseVersion());
+            if (!previous.date().equals(request.date().toString()))
+                throw new OptimizerBusinessException(CONFLICT, "Thực đơn cần tạo lại không cùng ngày.");
+            previousProfileVersion = previous.profileVersion();
+        } else if (plans.findByUserIdAndPlanDate(account.serviceUserId(), request.date()).isPresent()) {
+            throw new OptimizerBusinessException(CONFLICT, "Đã có thực đơn ngày này. Chọn Tạo lại và xác nhận thay thế.");
+        }
+        var input = generationInput(token, profile, request, previousProfileVersion);
         var result = optimizer.generateOptimalDailyMealPlan(account.serviceUserId(), input);
         if (result.getSolverStatus() != SolverRunStatus.OPTIMAL && result.getSolverStatus() != SolverRunStatus.FEASIBLE)
             throw new OptimizerBusinessException(UNPROCESSABLE_CONTENT, "Solver chưa tìm được thực đơn sử dụng được");
         eligible(accounts.account(token).profile(), request.profileVersion());
         return mapper.toResponse(account, result);
+    }
+
+    /** One optimizer transaction: either all seven plans are saved, or none are. */
+    public List<PersonalMealPlanResponseDTO> generateWeekly(String token, GenerateMealPlanRequestDTO request) {
+        var account = accountForUpdate(token);
+        eligible(account.profile(), request.profileVersion());
+        if (!request.snacks() || request.maxMinutes() != 0 || request.excludeRepeat())
+            throw new OptimizerBusinessException(UNPROCESSABLE_CONTENT, "Hiện chỉ hỗ trợ bốn bữa và bộ lọc mặc định");
+        if (request.replacePlanId() != null || request.baseVersion() != null || request.replacementConfirmed())
+            throw new OptimizerBusinessException(BAD_REQUEST, "Sinh 7 ngày chỉ tạo ngày trống; tạo lại từng ngày nếu cần thay thế.");
+        var occupied = plans.findByUserIdAndPlanDateBetweenOrderByPlanDateAsc(account.serviceUserId(),request.date(),request.date().plusDays(6));
+        if (!occupied.isEmpty()) {
+            String dates = occupied.stream().map(p -> p.getPlanDate().toString()).collect(Collectors.joining(", "));
+            throw new OptimizerBusinessException(CONFLICT, "Khoảng 7 ngày đã có thực đơn vào: " + dates + ". Chọn khoảng trống hoặc tạo lại từng ngày.");
+        }
+        var input = generationInput(token, account.profile(), request, null);
+        var results = optimizer.generateWeeklyMealPlans(account.serviceUserId(), GenerateWeeklyMealRequest.builder()
+                .startDate(request.date()).dailyTargetTemplate(input).build());
+        if (results.size() != 7 || results.stream().anyMatch(p -> p.getSolverStatus() != SolverRunStatus.OPTIMAL && p.getSolverStatus() != SolverRunStatus.FEASIBLE))
+            throw new OptimizerBusinessException(UNPROCESSABLE_CONTENT, "Chưa tạo được đủ 7 ngày phù hợp. Không lưu một phần thực đơn.");
+        eligible(accounts.account(token).profile(), request.profileVersion());
+        return results.stream().map(p -> mapper.toResponse(account,p)).toList();
+    }
+
+    private GenerateDailyMealRequest generationInput(String token, Profile profile, GenerateMealPlanRequestDTO request, Long previousProfileVersion) {
+        boolean replacing = request.replacePlanId() != null;
+        double target = request.target();
+        var input = GenerateDailyMealRequest.builder().planDate(request.date()).sourceProfileVersion(profile.version())
+                .planningMode(request.planningMode()).replacePlanId(request.replacePlanId())
+                .expectedVersion(replacing ? request.baseVersion() - 1 : null)
+                .replacementConfirmed(request.replacementConfirmed()).previousProfileVersion(previousProfileVersion)
+                .targetCaloriesKcal(BigDecimal.valueOf(target)).targetNetCarbG(round(target * .55 / 4))
+                .targetProteinG(round(target * .175 / 4)).targetFatG(round(target * .275 / 9))
+                .patientContraindications(allergyTags(profile)).excludedDishIds(exclusions(token, profile)).build();
+        var errors = validator.validate(input);
+        if (!errors.isEmpty()) throw new OptimizerBusinessException(BAD_REQUEST, errors.iterator().next().getMessage());
+        return input;
     }
 
     public PersonalMealPlanResponseDTO change(String token, long id, SwapMealRequestDTO request, boolean preview) {
@@ -108,11 +152,13 @@ public class PersonalMealPlanService {
         optimizer.deleteMealPlan(accountForUpdate(token).serviceUserId(), id);
     }
 
-    public void complete(String token, MealLogRequestDTO request) {
+    public PersonalMealPlanResponseDTO complete(String token, MealLogRequestDTO request) {
         String[] ids = request.key().split(":", -1);
         if (ids.length != 2) throw new OptimizerBusinessException(BAD_REQUEST, "Mã thực đơn/món không hợp lệ");
-        optimizer.updateMealItemStatus(accountForUpdate(token).serviceUserId(), numericId(ids[0]), numericId(ids[1]),
+        var account = accountForUpdate(token);
+        optimizer.updateMealItemStatus(account.serviceUserId(), numericId(ids[0]), numericId(ids[1]),
                 request.completed() ? MealItemStatus.COMPLETED : MealItemStatus.PLANNED);
+        return mapper.toResponse(account, optimizer.getMealPlanDetail(account.serviceUserId(), numericId(ids[0])));
     }
 
     @Transactional(readOnly = true)

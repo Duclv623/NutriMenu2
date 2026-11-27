@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000067",
+  "imageSha256": "1094d95208803050ed9ddd295265c9ff71b71a698ba882700b9dc5d7f944017b",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "159.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Dạ dày",
+      "amountSourceText": "190g",
+      "numericQuantity": 190.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

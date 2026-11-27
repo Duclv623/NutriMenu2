@@ -1,0 +1,19 @@
+{
+  "code": "HAP-221036",
+  "imageSha256": "0a0961959d82d23ed3b5a12cf50397d02d13ce59823c5f0a92cac35e4226bd60",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Hạt dẻ to nướng",
+      "amountSourceText": "183.0",
+      "numericQuantity": 183.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nướng",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "196.7 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

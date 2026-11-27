@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "117kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt lợn ba chỉ",
+      "amountSourceText": "45g",
+      "numericQuantity": 45,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000095",
+  "imageSha256": "3654ac73bdc8c1f2f0279bc4a157da44f265bb1aa5093f70c00a8861c143bbe5",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

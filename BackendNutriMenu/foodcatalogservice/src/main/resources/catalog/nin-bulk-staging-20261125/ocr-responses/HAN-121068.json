@@ -1,0 +1,69 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "596.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cơm tẻ",
+      "amountSourceText": "215.0",
+      "numericQuantity": 215.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả lá lốt",
+      "amountSourceText": "16.0",
+      "numericQuantity": 16.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sườn xào chua ngọt",
+      "amountSourceText": "13.3",
+      "numericQuantity": 13.3,
+      "unitSourceText": "g",
+      "preparationSourceText": "xào chua ngọt",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cá trắm sốt cà chua",
+      "amountSourceText": "66.4",
+      "numericQuantity": 66.4,
+      "unitSourceText": "g",
+      "preparationSourceText": "sốt cà chua",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Củ cải muối",
+      "amountSourceText": "68.9",
+      "numericQuantity": 68.9,
+      "unitSourceText": "g",
+      "preparationSourceText": "muối",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước canh bí xanh",
+      "amountSourceText": "198.0",
+      "numericQuantity": 198.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bí xanh nấu canh",
+      "amountSourceText": "35.0",
+      "numericQuantity": 35.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nấu canh",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Sum of printed row energies (596.8 Kcal) differs from image total (596.7 Kcal) by 0.1 Kcal due to rounding."
+  ],
+  "code": "HAN-121068",
+  "imageSha256": "b2015e9341828080888df9ea1734e6d14ce241c07becf2afe1ced4bcf0c4b587",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

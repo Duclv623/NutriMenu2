@@ -1,0 +1,37 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "147kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cá chày",
+      "amountSourceText": "130g",
+      "numericQuantity": 130,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt",
+      "amountSourceText": null,
+      "numericQuantity": null,
+      "unitSourceText": null,
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước mắm",
+      "amountSourceText": "5g",
+      "numericQuantity": 5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Quantity omitted for ingredient: Ớt"
+  ],
+  "code": "VPF-000040",
+  "imageSha256": "85b6c992956a2a61c808e9b3e499792209573a994be48437b5730ada071a17f6",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

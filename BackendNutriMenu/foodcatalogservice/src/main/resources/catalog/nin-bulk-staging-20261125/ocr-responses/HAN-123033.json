@@ -1,0 +1,19 @@
+{
+  "code": "HAN-123033",
+  "imageSha256": "78e4b1de37e46f189ce665a7f7ad0990d6a1b6a23f9d8e6a539e03d7b59fb22c",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "228.9 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Nước mía",
+      "amountSourceText": "374.0",
+      "numericQuantity": 374.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

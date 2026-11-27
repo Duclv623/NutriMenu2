@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "100kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sầu riêng",
+      "amountSourceText": "98g",
+      "numericQuantity": 98.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000421",
+  "imageSha256": "f03f5205ef6d16207cbb1e5d737a1270c33e5861860cb85de4217e6b9f27fcb4",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

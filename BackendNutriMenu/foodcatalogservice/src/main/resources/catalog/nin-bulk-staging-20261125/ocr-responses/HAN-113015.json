@@ -1,0 +1,37 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "358.6 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh quẩy",
+      "amountSourceText": "42.0",
+      "numericQuantity": 42.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ruốc thịt lợn",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cháo sườn",
+      "amountSourceText": "280.0",
+      "numericQuantity": 280.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Sum of ingredient row energies is 358.5 Kcal vs imageEnergyText '358.6 Kcal' (0.1 Kcal rounding difference)."
+  ],
+  "code": "HAN-113015",
+  "imageSha256": "d02c6e86f80c8d1bd3cea980c6998576601b3c5dde4fc36c5e71d7cb33770401",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

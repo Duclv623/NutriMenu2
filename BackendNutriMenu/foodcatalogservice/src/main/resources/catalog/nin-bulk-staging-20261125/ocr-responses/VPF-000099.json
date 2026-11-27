@@ -1,0 +1,27 @@
+{
+  "code": "VPF-000099",
+  "imageSha256": "36b195383e141bfcf1c347afde234f74044e7dc4d019f5571e238b261362d3af",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "125kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Tim lợn",
+      "amountSourceText": "107g",
+      "numericQuantity": 107.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau sà lách",
+      "amountSourceText": "20g",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

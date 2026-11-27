@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000385",
+  "imageSha256": "32c1ec6894dc6198b5fd98a254d65fb54b1d055e1675f3e502243d760f90eea1",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/cốc",
+  "imageEnergyText": "171kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa bột nguyên kem Ducth Lady",
+      "amountSourceText": "36g",
+      "numericQuantity": 36.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

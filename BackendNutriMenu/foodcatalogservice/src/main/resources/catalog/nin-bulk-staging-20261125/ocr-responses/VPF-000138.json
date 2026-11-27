@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "319kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt lợn nạc vai",
+      "amountSourceText": "100g",
+      "numericQuantity": 100,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "10g",
+      "numericQuantity": 10,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000138",
+  "imageSha256": "ea46471ee9145ba75019732bd33f0dba8861510fc35d85829ce14f122c6e6441",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

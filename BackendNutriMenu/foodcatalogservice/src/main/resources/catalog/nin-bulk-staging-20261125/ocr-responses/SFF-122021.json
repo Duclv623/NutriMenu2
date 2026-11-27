@@ -1,0 +1,27 @@
+{
+  "code": "SFF-122021",
+  "imageSha256": "c6c64e300d09472f08bd2f2740f3995d24231b5be6bcbb6fd3924265158f76c5",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Nước mía/Sugarcane juice",
+      "amountSourceText": "398.6",
+      "numericQuantity": 398.6,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Quả chanh leo/Passion fruit",
+      "amountSourceText": "11.4",
+      "numericQuantity": 11.4,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

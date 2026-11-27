@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "67kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Vải thiều",
+      "amountSourceText": "300g",
+      "numericQuantity": 300.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000425",
+  "imageSha256": "f1621f2e56f25be5e5d2c67020043ec7e1be4bcb49e12f2b6e2dc751ac206245",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

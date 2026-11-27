@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000066",
+  "imageSha256": "6920c8da36a11a67e5d9bb989a58d4badb14704e7229f502adece21d4c9a8235",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "63kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Củ cải",
+      "amountSourceText": "290g",
+      "numericQuantity": 290.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

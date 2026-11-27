@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "332.9 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cháo sườn",
+      "amountSourceText": "369.0",
+      "numericQuantity": 369.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bánh quẩy",
+      "amountSourceText": "41.0",
+      "numericQuantity": 41.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-112050",
+  "imageSha256": "a72649c2e8921acaa41fc8b4d84aa22e1571a540721821ca3b507194766a90ef",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

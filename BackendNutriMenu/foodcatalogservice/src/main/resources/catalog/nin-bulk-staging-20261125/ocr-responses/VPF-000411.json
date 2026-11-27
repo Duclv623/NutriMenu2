@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "19kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Măng cụt",
+      "amountSourceText": "86g",
+      "numericQuantity": 86.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000411",
+  "imageSha256": "36b81daa8bdebf032a17dc583f055f81550d39d43f002bd666794a8b4f98518f",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

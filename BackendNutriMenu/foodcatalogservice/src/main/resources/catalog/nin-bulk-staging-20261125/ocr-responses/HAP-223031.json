@@ -1,0 +1,19 @@
+{
+  "code": "HAP-223031",
+  "imageSha256": "db2107ec713a3ab0ba99bfbc91918b7e9cb3c4c022b2bc30999495300ddfa421",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "469.5 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh tiêu",
+      "amountSourceText": "120.0",
+      "numericQuantity": 120.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

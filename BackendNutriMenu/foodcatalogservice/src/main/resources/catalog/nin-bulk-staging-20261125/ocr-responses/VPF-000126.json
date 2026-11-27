@@ -1,0 +1,35 @@
+{
+  "code": "VPF-000126",
+  "imageSha256": "958172715336b2b49be71a2c1edd869db6be570021b1176abd0b31d411b1e0cc",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "251kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt đùi gà",
+      "amountSourceText": "110g",
+      "numericQuantity": 110.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "3g",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ngũ vị hương",
+      "amountSourceText": "2g",
+      "numericQuantity": 2.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

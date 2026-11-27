@@ -2,6 +2,8 @@ package com.example.foodcatalogservice.dto.request;
 import com.example.foodcatalogservice.entity.enums.MealSlot;
 import com.example.foodcatalogservice.entity.enums.MedicalTag;
 import lombok.*;
+import com.example.foodcatalogservice.entity.enums.PlanningMode;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import jakarta.validation.constraints.*;
 
 import java.math.BigDecimal;
@@ -9,10 +11,11 @@ import java.util.Collections;
 import java.util.EnumSet;
 import java.util.Set;
 @Data
-@NoArgsConstructor
+@NoArgsConstructor(onConstructor_ = @JsonCreator)
 @AllArgsConstructor
 @Builder
 public class CandidateFilterRequest {
+    @NotNull @Builder.Default private PlanningMode planningMode = PlanningMode.MEDICAL;
     private Long userId;
     @Builder.Default
     @DecimalMax("100.0")

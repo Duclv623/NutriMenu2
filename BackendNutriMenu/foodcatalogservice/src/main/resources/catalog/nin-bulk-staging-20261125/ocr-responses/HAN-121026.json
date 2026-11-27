@@ -1,0 +1,19 @@
+{
+  "code": "HAN-121026",
+  "imageSha256": "46398d6e40a80238340391f400c73773540a2857c7848de2ee8691b8f4b06c65",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Sắn luộc",
+      "amountSourceText": "178.5",
+      "numericQuantity": 178.5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "281.7 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

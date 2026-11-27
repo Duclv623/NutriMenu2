@@ -10,6 +10,7 @@ import java.math.BigDecimal;
 public class RecipeIngredientBreakdownDto {
     private Long ingredientId;
     private String ingredientNameVi;
+    private String sourceAmountText;
     private BigDecimal rawWeightG;
     private BigDecimal appliedYieldFactor;
     private BigDecimal cookedWeightG;

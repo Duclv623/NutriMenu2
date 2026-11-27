@@ -1,0 +1,19 @@
+{
+  "code": "SFF-223019",
+  "imageSha256": "7d8109628617f7d824281e3a30f805991327b0eae9a09515d94c9588cc78e579",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Chả lợn/Fatty pork rolls",
+      "amountSourceText": "71.0",
+      "numericQuantity": 71.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

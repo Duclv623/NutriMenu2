@@ -1,5 +1,5 @@
 import type { GenerateInput, Plan, UserData } from "../../../types";
-import { allowedFood, assertEligible, uid } from "../../../utils";
+import { allowedFood, assertEligible, planningReady, uid } from "../../../utils";
 export function generateDemo(input: GenerateInput, state: UserData): Plan {
   assertEligible(state.profile);
   if (
@@ -16,8 +16,17 @@ export function generateDemo(input: GenerateInput, state: UserData): Plan {
   const items = meals.map((meal) => {
     const locked = current?.items.find((i) => i.meal === meal && i.locked);
     if (locked) {
+      if (
+        (current?.planningMode || "MEDICAL") !==
+        (input.planningMode || "MEDICAL")
+      )
+        throw new Error("Bỏ giữ món trước khi tạo thực đơn bằng chế độ khác.");
       const food = state.foods.find((f) => f.id === locked.dishId);
-      if (!food || !allowedFood(food, state.profile))
+      if (
+        !food ||
+        !planningReady(food, true) ||
+        !allowedFood(food, state.profile)
+      )
         throw new Error(
           "Món đang giữ không còn phù hợp hồ sơ. Hãy bỏ giữ món rồi thử lại.",
         );
@@ -27,6 +36,7 @@ export function generateDemo(input: GenerateInput, state: UserData): Plan {
     const candidates = state.foods.filter(
       (f) =>
         f.meals.includes(meal) &&
+        planningReady(f, true) &&
         allowedFood(f, state.profile) &&
         f.minutes !== null &&
         f.minutes <= input.maxMinutes &&
@@ -52,7 +62,9 @@ export function generateDemo(input: GenerateInput, state: UserData): Plan {
           ? input.target * 0.32
           : input.target * 0.28;
     const rawServings =
-      Number.isFinite(food.nutrition.energyKcal) && food.nutrition.energyKcal > 0
+      food.nutrition.energyKcal !== null &&
+      Number.isFinite(food.nutrition.energyKcal) &&
+      food.nutrition.energyKcal > 0
         ? mealTarget / food.nutrition.energyKcal
         : 1;
     const servingMultiplier = Math.max(
@@ -64,6 +76,7 @@ export function generateDemo(input: GenerateInput, state: UserData): Plan {
   return {
     id: uid(),
     date: input.date,
+    planningMode: input.planningMode || "MEDICAL",
     profileVersion: state.profile.version,
     version: 1,
     items,
@@ -76,3 +89,4 @@ export function generateDemo(input: GenerateInput, state: UserData): Plan {
     ],
   };
 }
+

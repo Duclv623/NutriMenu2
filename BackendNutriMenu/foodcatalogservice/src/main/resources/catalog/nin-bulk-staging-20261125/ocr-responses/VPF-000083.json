@@ -1,0 +1,35 @@
+{
+  "code": "VPF-000083",
+  "imageSha256": "4726593a5eb81fd74804ab0c5a631295ff1077ad2f340b572a8ddcd319d0864c",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "91.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Ốc vặn",
+      "amountSourceText": "420g",
+      "numericQuantity": 420.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Lá chanh",
+      "amountSourceText": "1g",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Ớt",
+      "amountSourceText": "1g",
+      "numericQuantity": 1.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

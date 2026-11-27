@@ -11,6 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/internal/dishes")
@@ -18,6 +19,11 @@ import java.util.List;
 public class InternalSolverCatalogController {
 
     private final FoodCatalogService catalogService;
+
+    @GetMapping("/readiness")
+    public ResponseEntity<Map<String,Object>> sourceReadiness() {
+        return ResponseEntity.ok(catalogService.getSourceReadiness());
+    }
 
     @PostMapping("/candidates")
     public ResponseEntity<List<DishSolverDto>> getCandidatesForSolver(

@@ -1,0 +1,19 @@
+{
+  "code": "HAP-223021",
+  "imageSha256": "2b23e71a70d70511b27fadf30f9e395d3c944be94e12b4c583cd267d134a2885",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "791.6 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Ngô chiên",
+      "amountSourceText": "200.0",
+      "numericQuantity": 200.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

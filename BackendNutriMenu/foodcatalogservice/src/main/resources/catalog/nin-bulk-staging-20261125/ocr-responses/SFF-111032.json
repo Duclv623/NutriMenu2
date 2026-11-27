@@ -1,0 +1,19 @@
+{
+  "code": "SFF-111032",
+  "imageSha256": "099fa5b6f5b3099e852cb17cd9d29672d82f94f95b64db2945c9fcf3f5c72dca",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "2992.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cốm",
+      "amountSourceText": "Cốm/Green sticky rice",
+      "numericQuantity": 1000.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

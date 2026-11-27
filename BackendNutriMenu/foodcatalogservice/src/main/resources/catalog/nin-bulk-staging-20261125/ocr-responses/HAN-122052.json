@@ -1,0 +1,19 @@
+{
+  "code": "HAN-122052",
+  "imageSha256": "4b7ae386386dd6c5c6876f2ea139f48cde16e9bfb134cbb185e00c3ddf8a8d2b",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh tẻ",
+      "amountSourceText": "180.0",
+      "numericQuantity": 180.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "336.4 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

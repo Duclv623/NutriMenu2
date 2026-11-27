@@ -1,0 +1,27 @@
+{
+  "code": "SFF-213070",
+  "imageSha256": "e6d56ab680271306ca9d99dc590251d907c1d751cf9e6873d22580b96a91c98a",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "232.4 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Ốc vặn hấp/Steamed river snails",
+      "amountSourceText": "74.0",
+      "numericQuantity": 74.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "hấp",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước chấm pha/Dipping sauce (Fish sauce)",
+      "amountSourceText": "50.0",
+      "numericQuantity": 50.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

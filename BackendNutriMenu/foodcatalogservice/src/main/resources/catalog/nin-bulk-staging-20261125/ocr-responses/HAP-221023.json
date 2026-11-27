@@ -1,0 +1,29 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "80.7 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Tào phớ",
+      "amountSourceText": "175.0",
+      "numericQuantity": 175.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước đường",
+      "amountSourceText": "42.0",
+      "numericQuantity": 42.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Sum of ingredient energies (80.8 Kcal) differs slightly from badge (80.7 Kcal) due to rounding."
+  ],
+  "code": "HAP-221023",
+  "imageSha256": "b3bdf3e5fc3122e669eb1807f54f728d3691cdd9544231a7390d921beb10eba8",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

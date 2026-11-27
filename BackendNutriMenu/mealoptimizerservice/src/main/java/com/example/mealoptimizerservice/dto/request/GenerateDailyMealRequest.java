@@ -1,20 +1,39 @@
 package com.example.mealoptimizerservice.dto.request;
 
+import com.example.mealoptimizerservice.entity.MealPlan;
+import com.example.mealoptimizerservice.entity.MealPlanItem;
 import com.example.mealoptimizerservice.entity.enums.*;
 import jakarta.validation.constraints.*;
 import lombok.*;
+import com.fasterxml.jackson.annotation.JsonCreator;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.*;
 
 // --- DTO Yêu cầu Tạo Thực đơn (User & Dry-Run) ---
 @Data
-@NoArgsConstructor
-@AllArgsConstructor(onConstructor_ = @com.fasterxml.jackson.annotation.JsonCreator(mode = com.fasterxml.jackson.annotation.JsonCreator.Mode.DISABLED))
+@NoArgsConstructor(onConstructor_ = @JsonCreator)
+@AllArgsConstructor
 @Builder
 public class GenerateDailyMealRequest {
     @NotNull
+    @Builder.Default
+    private PlanningMode planningMode = PlanningMode.MEDICAL;
+
+    private Long sourceProfileVersion;
+    @NotNull
     private LocalDate planDate;
+
+    /** Explicit, versioned replacement intent; ordinary creation never overwrites. */
+    @Positive
+    private Long replacePlanId;
+    @PositiveOrZero
+    private Long expectedVersion;
+    @Builder.Default
+    private boolean replacementConfirmed = false;
+    @PositiveOrZero
+    private Long previousProfileVersion;
+
 
     @NotNull @DecimalMin("1000.0") @DecimalMax("3500.0")
     @Builder.Default
@@ -58,9 +77,6 @@ public class GenerateDailyMealRequest {
 
     @Builder.Default
     private String templateCode = "STANDARD_4_MEALS";
-
-    @com.fasterxml.jackson.annotation.JsonIgnore
-    private Long sourceProfileVersion;
 
     private Long weightProfileId;
 

@@ -1,0 +1,27 @@
+{
+  "code": "HAP-221014",
+  "imageSha256": "9ac71471367e5047dd18d2ffaa0b78ba91f310d2e5107205be5a617b5aee9948",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "269.4 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Nước mía",
+      "amountSourceText": "Nước mía",
+      "numericQuantity": 436.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Quất",
+      "amountSourceText": "Quất",
+      "numericQuantity": 6.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

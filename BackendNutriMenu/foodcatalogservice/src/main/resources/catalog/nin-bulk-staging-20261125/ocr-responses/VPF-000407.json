@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "28kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Đu đủ",
+      "amountSourceText": "80g",
+      "numericQuantity": 80.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000407",
+  "imageSha256": "cfdd6d69db250d3fc2aa3b747a6a39df3e2d13bf32b5ac84bfe70dc1163ed303",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

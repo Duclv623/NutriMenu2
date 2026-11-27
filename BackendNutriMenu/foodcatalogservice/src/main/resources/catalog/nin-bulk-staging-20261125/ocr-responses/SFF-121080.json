@@ -1,0 +1,27 @@
+{
+  "code": "SFF-121080",
+  "imageSha256": "e51eb47af2705fa1458edf2f603f58ad2f0adb58b789520d76d4f1e4eb36e99e",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "267.5 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh quẩy",
+      "amountSourceText": "Bánh quẩy/Wheat fritters twisted fried",
+      "numericQuantity": 84.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường kính",
+      "amountSourceText": "Đường kính/Sugar",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

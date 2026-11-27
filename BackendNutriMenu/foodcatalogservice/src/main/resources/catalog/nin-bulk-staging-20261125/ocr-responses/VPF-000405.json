@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "23kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Dứa ta",
+      "amountSourceText": "80g",
+      "numericQuantity": 80.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000405",
+  "imageSha256": "3c17404f91d321b2d0a178eeb465790e8532cb703871f71fa55ee4bd3dbc87e4",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

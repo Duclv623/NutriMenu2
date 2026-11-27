@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "141.2 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Kem khoai môn",
+      "amountSourceText": "71.0",
+      "numericQuantity": 71.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAN-113082",
+  "imageSha256": "9d3c37ff3635d8feebb4afd808848a5d9020d8c1e85ecf6e22059d16f78f20ef",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "246kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cá rô phi",
+      "amountSourceText": "90g",
+      "numericQuantity": 90,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "15g",
+      "numericQuantity": 15,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột",
+      "amountSourceText": "6g",
+      "numericQuantity": 6,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000115",
+  "imageSha256": "7adccfd1cf2928a9199c40c03757b74550893123685768269e131120fbb4a21b",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

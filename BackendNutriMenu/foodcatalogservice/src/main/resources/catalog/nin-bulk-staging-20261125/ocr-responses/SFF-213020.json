@@ -1,0 +1,117 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn / Ingredients",
+  "imageEnergyText": "670.4 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bún tươi/Rice noodle",
+      "amountSourceText": "286.0",
+      "numericQuantity": 286.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "tươi",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cải ngọt chần/Blanched leaf mustard",
+      "amountSourceText": "49.0",
+      "numericQuantity": 49.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chần/Blanched",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cá rô phi chiên/Fried tilapia fish",
+      "amountSourceText": "54.0",
+      "numericQuantity": 54.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên/Fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Chả cá rán/Fried fish ball",
+      "amountSourceText": "54.0",
+      "numericQuantity": 54.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán/Fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sủi cảo cá rô phi/Tilapia dumplings",
+      "amountSourceText": "12.0",
+      "numericQuantity": 12.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nem cá rô phi/Tilapia spring rolls",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đậu phụ rán/Fried tofu",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán/Fried",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau thơm, xà lách/Herb, lettuce",
+      "amountSourceText": "39.0",
+      "numericQuantity": 39.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước dùng/Bone broth",
+      "amountSourceText": "336.0",
+      "numericQuantity": 336.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà chua nấu/Cooked tomato",
+      "amountSourceText": "20.0",
+      "numericQuantity": 20.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nấu/Cooked",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dứa ta/Pineapple",
+      "amountSourceText": "25.0",
+      "numericQuantity": 25.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành, Thìa là/Welsh onion, dill",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước chấm pha/Dipping sauces",
+      "amountSourceText": "30.0",
+      "numericQuantity": 30.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "pha",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Diagram labels 'Chả cá măng rán' whereas table prints 'Chả cá rán/Fried fish ball'; 'Cà chua nấu' and 'Dứa ta' are listed in the table without separate diagram labels."
+  ],
+  "code": "SFF-213020",
+  "imageSha256": "44d5e37bcb16d5810aa0b8f72fac33895f7b2e09ce11f94f08000d7d57bdea31",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

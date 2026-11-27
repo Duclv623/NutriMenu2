@@ -1,0 +1,19 @@
+{
+  "code": "SFF-122050",
+  "imageSha256": "455d44c688c7011bb1cd52849a1ac748776ad0da15b97e2aa5c9a06a5095b3d0",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "162.6 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh khoai",
+      "amountSourceText": "Bánh khoai/Sweet potato fritters",
+      "numericQuantity": 115.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

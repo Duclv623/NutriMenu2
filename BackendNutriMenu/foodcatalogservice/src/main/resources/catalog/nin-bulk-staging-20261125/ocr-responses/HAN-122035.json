@@ -1,0 +1,19 @@
+{
+  "code": "HAN-122035",
+  "imageSha256": "4073bd59ed9c2ea60d0d0b034ccbdc9981e8cac8b6e60bc69e5d9c4effbed56d",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Xôi vò đậu xanh, chè",
+      "amountSourceText": "413.0",
+      "numericQuantity": 413.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "803.8 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

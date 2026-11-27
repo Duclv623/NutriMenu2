@@ -1,0 +1,19 @@
+{
+  "code": "HAN-122032",
+  "imageSha256": "ce7c68a5c45acd1311d5a9ce3b3eb7d125ba9681978aa7fd1279226841c7d5d3",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh rán bọc đường (60g/cái)",
+      "amountSourceText": "240.0",
+      "numericQuantity": 240.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "bọc đường",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "680.0 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

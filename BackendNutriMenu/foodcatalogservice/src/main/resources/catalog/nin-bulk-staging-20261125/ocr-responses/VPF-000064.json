@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000064",
+  "imageSha256": "d34a9439ef5a194f6c4e283445b0549daaba242dd09c37ca7c84c502aa7cad06",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "10.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bí xanh",
+      "amountSourceText": "80g",
+      "numericQuantity": 80.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

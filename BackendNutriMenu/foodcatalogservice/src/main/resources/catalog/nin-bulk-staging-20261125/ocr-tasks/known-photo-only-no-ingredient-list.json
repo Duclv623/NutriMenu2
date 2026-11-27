@@ -1,0 +1,98 @@
+[
+  {
+    "code": "VPF-000001",
+    "imageSha256": "1ea62de7f77076ebaec17b6bf92c17f2522f3634bb71f69263b2a9f66bd63414",
+    "imagePath": "images/VPF-000001.png",
+    "sourceRecordId": "68786a982d5dba29110cda63",
+    "ingredientListStatus": "ABSENT",
+    "evidence": "PRIOR_VISUAL_REVIEW_SAME_SOURCE_IMAGE_HASH",
+    "sourceEvidencePath": "nin-real-20261123/extracted-recipes.json",
+    "priorReason": "Image shows plain rice in a bowl but has no ingredient list or mass.",
+    "newOcrExecutionRequired": false,
+    "disposition": "DISH_PHOTO_RETAINED_NO_INGREDIENT_RECIPE_DO_NOT_INVENT"
+  },
+  {
+    "code": "VPF-000004",
+    "imageSha256": "edcc21f440c8a063462f02e3c047c264a61b5c05ff347b75413c5f54dccd4c11",
+    "imagePath": "images/VPF-000004.png",
+    "sourceRecordId": "6878719db85eb164f2069ff2",
+    "ingredientListStatus": "ABSENT",
+    "evidence": "PRIOR_VISUAL_REVIEW_SAME_SOURCE_IMAGE_HASH",
+    "sourceEvidencePath": "nin-real-20261123/extracted-recipes.json",
+    "priorReason": "Image shows fried rice and 623 kcal, but has no ingredient list or quantities.",
+    "newOcrExecutionRequired": false,
+    "disposition": "DISH_PHOTO_RETAINED_NO_INGREDIENT_RECIPE_DO_NOT_INVENT"
+  },
+  {
+    "code": "VPF-000243",
+    "imageSha256": "0f62286fbdcffae65655abdf2b8d30a52228cb672c49f46d6d74b2e55f94e614",
+    "imagePath": "images/VPF-000243.webp",
+    "sourceRecordId": "694800f1511f8f0de60d7167",
+    "ingredientListStatus": "ABSENT",
+    "evidence": "PRIOR_VISUAL_REVIEW_SAME_SOURCE_IMAGE_HASH",
+    "sourceEvidencePath": "nin-real-20261123/extracted-recipes.json",
+    "priorReason": "Image shows prepared porridge and kcal only; no ingredient quantities visible.",
+    "newOcrExecutionRequired": false,
+    "disposition": "DISH_PHOTO_RETAINED_NO_INGREDIENT_RECIPE_DO_NOT_INVENT"
+  },
+  {
+    "code": "VPF-000278",
+    "imageSha256": "bec54f690a929133512f9be3219cec90aeffa4f62fad5312fe74b06812e2b3b3",
+    "imagePath": "images/VPF-000278.webp",
+    "sourceRecordId": "6948c6994640209d730ea6b3",
+    "ingredientListStatus": "ABSENT",
+    "evidence": "PRIOR_VISUAL_REVIEW_SAME_SOURCE_IMAGE_HASH",
+    "sourceEvidencePath": "nin-real-20261123/extracted-recipes.json",
+    "priorReason": "Image shows prepared pho and kcal only; no ingredient quantities visible.",
+    "newOcrExecutionRequired": false,
+    "disposition": "DISH_PHOTO_RETAINED_NO_INGREDIENT_RECIPE_DO_NOT_INVENT"
+  },
+  {
+    "code": "VPF-000179",
+    "imageSha256": "8524993c578108a9900b669262c4d9bc66bdff62ba11a6a6fbeed07ae0e3abf3",
+    "imagePath": "images/VPF-000179.webp",
+    "sourceRecordId": "694225325dc1df46230e86a2",
+    "ingredientListStatus": "ABSENT",
+    "evidence": "PRIOR_VISUAL_REVIEW_SAME_SOURCE_IMAGE_HASH",
+    "sourceEvidencePath": "nin-real-20261123/extracted-recipes.json",
+    "priorReason": "Image shows the prepared dish and 177 kcal, but no ingredient list or quantities.",
+    "newOcrExecutionRequired": false,
+    "disposition": "DISH_PHOTO_RETAINED_NO_INGREDIENT_RECIPE_DO_NOT_INVENT"
+  },
+  {
+    "code": "VPF-000309",
+    "imageSha256": "5cc90912d8619b979ae7b10c2b0456ed16de9d04dd5b2043a94386c1a10ec0d9",
+    "imagePath": "images/VPF-000309.webp",
+    "sourceRecordId": "694bbee9b84c6207ed06c153",
+    "ingredientListStatus": "ABSENT",
+    "evidence": "PRIOR_VISUAL_REVIEW_SAME_SOURCE_IMAGE_HASH",
+    "sourceEvidencePath": "nin-real-20261123/extracted-recipes.json",
+    "priorReason": "Image shows prepared baguette with egg and kcal only; no ingredient quantities visible.",
+    "newOcrExecutionRequired": false,
+    "disposition": "DISH_PHOTO_RETAINED_NO_INGREDIENT_RECIPE_DO_NOT_INVENT"
+  },
+  {
+    "code": "VPF-000310",
+    "imageSha256": "e37ea14882fd78371e36a818a13939385c47c4338f3c9b38534ce1c75efe6d04",
+    "imagePath": "images/VPF-000310.webp",
+    "sourceRecordId": "694bbfd847cf7703d00ad2b4",
+    "ingredientListStatus": "ABSENT",
+    "evidence": "PRIOR_VISUAL_REVIEW_SAME_SOURCE_IMAGE_HASH",
+    "sourceEvidencePath": "nin-real-20261123/extracted-recipes.json",
+    "priorReason": "Image shows prepared baguette with pâté and kcal only; no ingredient quantities visible.",
+    "newOcrExecutionRequired": false,
+    "disposition": "DISH_PHOTO_RETAINED_NO_INGREDIENT_RECIPE_DO_NOT_INVENT"
+  },
+  {
+    "code": "VPF-000298",
+    "imageSha256": "4a88338b44fe940723e8c7546b156b46771e43a526cc1877b4480a8605fb1e10",
+    "imagePath": "images/VPF-000298.webp",
+    "sourceRecordId": "694baac3b8ecede5b703a113",
+    "ingredientListStatus": "ABSENT",
+    "evidence": "PRIOR_VISUAL_REVIEW_SAME_SOURCE_IMAGE_HASH",
+    "sourceEvidencePath": "nin-real-20261123/extracted-recipes.json",
+    "priorReason": "Image shows prepared bánh giò and kcal only; no ingredient quantities visible.",
+    "newOcrExecutionRequired": false,
+    "disposition": "DISH_PHOTO_RETAINED_NO_INGREDIENT_RECIPE_DO_NOT_INVENT"
+  }
+]

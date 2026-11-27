@@ -1,0 +1,19 @@
+{
+  "code": "HAN-122026",
+  "imageSha256": "3d6b9961c2d788d3404ad8eaff1e68109201861330d30b727765f958c7651c47",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "818.1 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh đa",
+      "amountSourceText": "205.0",
+      "numericQuantity": 205.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

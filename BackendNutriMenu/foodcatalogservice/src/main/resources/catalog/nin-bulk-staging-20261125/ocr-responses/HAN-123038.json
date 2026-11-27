@@ -1,0 +1,19 @@
+{
+  "code": "HAN-123038",
+  "imageSha256": "2fca6eb54c88b3ae892cc1819444ec6616476fa60f4b50afac733183693768a3",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Nem chua rán",
+      "amountSourceText": "115.0",
+      "numericQuantity": 115.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "rán",
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "157.9 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

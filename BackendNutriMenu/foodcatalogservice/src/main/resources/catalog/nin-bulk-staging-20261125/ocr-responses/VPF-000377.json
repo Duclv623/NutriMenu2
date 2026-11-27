@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/ đĩa 1 quả",
+  "imageEnergyText": "57kcal/quả",
+  "ingredients": [
+    {
+      "nameSourceText": "Trứng gà ta",
+      "amountSourceText": "40g",
+      "numericQuantity": 40,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000377",
+  "imageSha256": "1253209f32cb916bd29b332dec17e1610fc10ca28d3cdba94e2d790c94b3d2c0",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

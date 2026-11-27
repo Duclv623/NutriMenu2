@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000076",
+  "imageSha256": "c71ed6608ae70572a45b8bd79daa55aa75002b3f742a3c5aa4eb0dc29bfbbb1d",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "81.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Ghẹ sống nguyên con",
+      "amountSourceText": "350g",
+      "numericQuantity": 350.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

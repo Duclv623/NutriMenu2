@@ -11,9 +11,13 @@ public final class PreparationGuide {
         if (dish.getIngredients()==null || dish.getIngredients().isEmpty() || dish.getCookingMethod()==null) return List.of();
         List<String> steps = new ArrayList<>();
         String quantities = dish.getIngredients().stream()
-                .map(i -> i.getIngredient().getNameVi()+": "+i.getRawWeightG().stripTrailingZeros().toPlainString()+" g")
+                .map(i -> i.getSourceAmountText() != null ? i.getSourceAmountText()
+                        : i.getIngredient().getNameVi()+": "+(i.getRawWeightG() == null ? "chưa rõ lượng"
+                        : i.getRawWeightG().stripTrailingZeros().toPlainString()+" g"))
                 .collect(java.util.stream.Collectors.joining("; "));
-        steps.add("Cân nguyên liệu sống cho một khẩu phần: "+quantities+". Nhân theo số khẩu phần bạn chọn.");
+        steps.add(dish.getSourceRecordId() != null
+                ? "Nguyên liệu theo ảnh nguồn: "+quantities+". Cơ sở khẩu phần/trạng thái xem thông tin nguồn."
+                : "Cân nguyên liệu sống cho một khẩu phần: "+quantities+". Nhân theo số khẩu phần bạn chọn.");
         steps.add("Sơ chế từng loại nguyên liệu riêng; rửa rau củ và cắt thành miếng vừa ăn. Dùng dụng cụ riêng cho nguyên liệu sống và thức ăn đã chín.");
         steps.add(switch(dish.getCookingMethod()) {
             case RAW -> "Dùng nguyên liệu có thể ăn ngay theo hướng dẫn của sản phẩm; không dùng thịt, cá hoặc trứng sống chỉ vì món có nhãn RAW.";

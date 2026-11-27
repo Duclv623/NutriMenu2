@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "16kcal/đĩa",
+  "ingredients": [
+    {
+      "nameSourceText": "Mận cơm",
+      "amountSourceText": "94g",
+      "numericQuantity": 94.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000413",
+  "imageSha256": "f9a96860dc7ff84f0e94bb5e1f3f2b13db6d532175ad07c26545d4c44ed379ea",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

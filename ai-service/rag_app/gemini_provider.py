@@ -122,7 +122,7 @@ class GeminiProvider(OpenAIProvider):
 
     def __init__(self, settings: Settings, transport=None):
         if not settings.gemini_api_key.get_secret_value().strip():
-            raise ProviderFailure('Chưa cấu hình GEMINI_API_KEY ở backend.')
+            raise ProviderFailure('Trợ lý tạm thời chưa sẵn sàng. Vui lòng thử lại sau.')
         self.settings = settings.model_copy(update={'openai_model':settings.gemini_model,
             'grounding_model':settings.gemini_grounding_model})
         self.client = GeminiClient(settings,transport)

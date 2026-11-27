@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "227kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cá trắm cỏ",
+      "amountSourceText": "150g",
+      "numericQuantity": 150,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "10g",
+      "numericQuantity": 10,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000118",
+  "imageSha256": "59decabbf2d779d5ecae797994b45e744f680f88c77f1727d6697c13543b7a02",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

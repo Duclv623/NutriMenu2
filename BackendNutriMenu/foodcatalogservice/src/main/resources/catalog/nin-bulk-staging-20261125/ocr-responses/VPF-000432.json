@@ -1,0 +1,21 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "198kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Các trích hộp sốt cà chua",
+      "amountSourceText": "155g",
+      "numericQuantity": 155,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Image ingredient text prints 'Các trích hộp sốt cà chua' (typo for 'Cá trích hộp sốt cà chua')."
+  ],
+  "code": "VPF-000432",
+  "imageSha256": "6a201c0e023ec7b09fff0daced9b570b00ee15ee531b823153463110980af291",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

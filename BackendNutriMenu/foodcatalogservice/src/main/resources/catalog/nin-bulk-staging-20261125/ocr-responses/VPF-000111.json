@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000111",
+  "imageSha256": "5cc22b6610cdbe77fecb37809852037e758b3a68f4a05b9c5477eb50f52cd337",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "1220kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt vịt (cả xương)",
+      "amountSourceText": "600g",
+      "numericQuantity": 600.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "cả xương",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

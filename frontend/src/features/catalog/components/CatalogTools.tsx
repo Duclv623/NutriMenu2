@@ -4,25 +4,24 @@ import type { Food } from "../../../types";
 import { API_MODE } from "../../../lib/config";
 import { callService } from "../../../lib/serviceActions";
 import { useApp } from "../../../store/UserDataProvider";
-import { number } from "../../../utils";
+import { carbohydrateLabel, number } from "../../../utils";
 import { Alert, Button, Empty } from "../../../components/common/ui";
 import { asObject, serviceLabel } from "../../../components/common/ServiceAction";
 
 export function useFoodPreference() {
-  const { update, toast } = useApp();
+  const { userData, update, toast } = useApp();
   const [pending, setPending] = useState<string[]>([]);
   async function save(food: Food, preference: "favorite" | "dislike" | null) {
     if (pending.includes(food.id)) return;
     setPending((list) => [...list, food.id]);
     try {
-      if (API_MODE === "api" && preference)
-        await callService(
-          "catalog",
-          "POST",
-          "users/me/dishes/{id}/" + preference,
-          { ids: { id: food.id } },
-        );
-      if (API_MODE === "api" && !preference) await foodService.favorite(food.id, false);
+      if (API_MODE === "api") {
+        if (preference === "dislike")
+          await callService("catalog", "POST", "users/me/dishes/{id}/dislike", { ids: { id: food.id } });
+        else if (!preference && userData.disliked?.includes(food.id))
+          await foodService.removeDislike(food.id);
+        else await foodService.favorite(food.id, preference === "favorite");
+      }
       update((state) => {
         const favorites = state.favorites.filter((id) => id !== food.id);
         const disliked = (state.disliked || []).filter((id) => id !== food.id);
@@ -46,8 +45,8 @@ export function useFoodPreference() {
 const formatted = (value: unknown, unit = "") =>
   typeof value === "number" ? number(value, 1) + (unit ? " " + unit : "") : "—";
 const nutritionFields = [
-  ["caloriesKcal", "Năng lượng", "kcal"],
-  ["netCarbG", "Carb thuần", "g"],
+  ["energyKcal", "Năng lượng", "kcal"],
+  ["netCarbG", "Carbohydrate", "g"],
   ["proteinG", "Đạm", "g"],
   ["fatG", "Chất béo", "g"],
   ["fiberG", "Chất xơ", "g"],
@@ -55,7 +54,7 @@ const nutritionFields = [
   ["estimatedGi", "GI", ""],
 ] as const;
 
-export function ServingResult({ value }: { value: unknown }) {
+export function ServingResult({ value, carbLabel }: { value: unknown; carbLabel: string }) {
   if (!asObject(value)) return <Alert error>Chưa có dữ liệu khẩu phần.</Alert>;
   const ingredients = Array.isArray(value.adjustedIngredients)
     ? value.adjustedIngredients.filter(asObject)
@@ -72,8 +71,8 @@ export function ServingResult({ value }: { value: unknown }) {
           ["adjustedGlycemicLoad", "Tải lượng đường huyết", ""] as const,
         ].map(([key, label, unit]) => (
           <div key={key}>
-            <dt>{label}</dt>
-            <dd>{formatted(value[key], unit)}</dd>
+            <dt>{key === "netCarbG" ? carbLabel : label}</dt>
+            <dd>{formatted(key === "energyKcal" ? value.energyKcal ?? value.caloriesKcal : value[key], unit)}</dd>
           </div>
         ))}
       </dl>
@@ -166,7 +165,9 @@ export function ComparisonResult({ value }: { value: unknown }) {
                 ["glycemicLoad", "Tải lượng đường huyết", ""] as const,
               ].map(([key, label, unit]) => (
                 <div key={key}>
-                  <dt>{label}</dt>
+                  <dt>{key === "netCarbG" && String(dish.code).startsWith("NIN_")
+                    ? carbohydrateLabel(["UNSPECIFIED_SOURCE_GLUCID"])
+                    : label}</dt>
                   <dd>{formatted(dish[key], unit)}</dd>
                 </div>
               ))}

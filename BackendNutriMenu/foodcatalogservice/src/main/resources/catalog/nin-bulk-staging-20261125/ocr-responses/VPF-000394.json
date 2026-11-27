@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000394",
+  "imageSha256": "2da5a08d8d693b5d87d01480ed691583085b0a9d94d34cd55ce1ce0e23ff167d",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "110.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Sữa tươi tiệt trùng không đường TH True milk",
+      "amountSourceText": "180ml",
+      "numericQuantity": 180.0,
+      "unitSourceText": "ml",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

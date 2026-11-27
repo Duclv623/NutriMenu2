@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000356",
+  "imageSha256": "2a0b82fde828da1068c79399b3ede6da0876f23e7be5fcef6cb10984f859ef90",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "490.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Xôi lạc",
+      "amountSourceText": "200g",
+      "numericQuantity": 200.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

@@ -5,8 +5,13 @@ import com.example.mealoptimizerservice.entity.*;
 import com.example.mealoptimizerservice.service.MealOptimizerService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import java.time.LocalDate;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import com.example.mealoptimizerservice.dto.request.*;
@@ -22,7 +27,7 @@ public class InternalOptimizerController {
 
     @GetMapping("/capabilities")
     public Map<String, Object> capabilities() {
-        return Map.of("excludedDishIds", true, "contractVersion", 2, "validatedSwap", true, "planVersions", true);
+        return Map.of("excludedDishIds", true, "contractVersion", 3, "validatedSwap", true, "planVersions", true, "newSourceOnly", true, "planningModes", List.of("MEDICAL", "GENERAL_REFERENCE"), "atomicRegeneration", true, "generalOptionalNutrition", true);
     }
 
     @GetMapping("/users/{userId}/recent-dishes")

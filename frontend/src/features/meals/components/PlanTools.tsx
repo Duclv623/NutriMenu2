@@ -61,7 +61,7 @@ export function OptimizerGenerateDialog({
         .map((field) => field.name)
         .filter(
           (name) =>
-            !["planDate", "startDate", prefix + "targetCaloriesKcal"].includes(
+            !["planDate", "startDate", prefix + "planningMode", prefix + "targetCaloriesKcal"].includes(
               name,
             ),
         );
@@ -201,7 +201,7 @@ export function PlanToolDialog({
         initial={{ planDate: date }}
         advanced={action.fields
           .map((field) => field.name)
-          .filter((name) => !["planDate", "targetCaloriesKcal"].includes(name))}
+          .filter((name) => !["planDate", "planningMode", "targetCaloriesKcal"].includes(name))}
         renderResult={(value) => {
           if (!asObject(value))
             return <Alert error>Chưa có kết quả kiểm tra.</Alert>;
@@ -322,10 +322,10 @@ export function PlanToolDialog({
         onClose={onClose}
         initial={{
           alreadyEatenSlots: eaten.map((slot) => slots[slot]),
-          consumedCaloriesKcal: totals.energyKcal.toFixed(1),
-          consumedNetCarbG: totals.netCarbG.toFixed(1),
-          consumedProteinG: totals.proteinG.toFixed(1),
-          consumedFatG: totals.fatG.toFixed(1),
+          consumedCaloriesKcal: totals.energyKcal?.toFixed(1) ?? "",
+          consumedNetCarbG: totals.netCarbG?.toFixed(1) ?? "",
+          consumedProteinG: totals.proteinG?.toFixed(1) ?? "",
+          consumedFatG: totals.fatG?.toFixed(1) ?? "",
         }}
         description={
           <p>

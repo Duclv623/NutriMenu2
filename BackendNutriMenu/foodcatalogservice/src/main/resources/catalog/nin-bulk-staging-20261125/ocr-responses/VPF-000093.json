@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "216kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt lợn chân giò",
+      "amountSourceText": "90g",
+      "numericQuantity": 90,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000093",
+  "imageSha256": "fb032a07e97bac3f2fa3a564f9eddb67e96c1f07bfa8057929d4bf2675ebdc16",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

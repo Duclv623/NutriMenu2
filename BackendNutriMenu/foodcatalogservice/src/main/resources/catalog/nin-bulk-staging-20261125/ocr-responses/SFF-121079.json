@@ -1,0 +1,27 @@
+{
+  "code": "SFF-121079",
+  "imageSha256": "38e1c1fcfc67e6ef42134a56ee0b8a40a07480fd0098123744d5d7e91ceb5f09",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": "398.9 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Bỏng gạo/Poprice",
+      "amountSourceText": "74.0",
+      "numericQuantity": 74.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Đường kính/Sugar",
+      "amountSourceText": "36.0",
+      "numericQuantity": 36.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

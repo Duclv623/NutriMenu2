@@ -1,0 +1,70 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "739.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cánh gà (ss)",
+      "amountSourceText": "330.0",
+      "numericQuantity": 330.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu hỗn hợp",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Sốt ướp",
+      "amountSourceText": null,
+      "numericQuantity": null,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau húng",
+      "amountSourceText": "13.0",
+      "numericQuantity": 13.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Rau mùi tàu",
+      "amountSourceText": "10.0",
+      "numericQuantity": 10.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Su hào",
+      "amountSourceText": "15.0",
+      "numericQuantity": 15.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước sốt chấm",
+      "amountSourceText": "39.0",
+      "numericQuantity": 39.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Sốt ướp has omitted weight (Trọng lượng (g)) and omitted energy (Năng lượng (Kcal)).",
+    "Table ingredient energy sum is 738.8 Kcal (621.0 + 90.0 + 4.1 + 2.8 + 6.5 + 14.4) vs imageEnergyText '739.0 Kcal' (difference 0.2 Kcal)."
+  ],
+  "code": "HAN-113108",
+  "imageSha256": "d0210b1205da702976f4b5785b07576dd0a1c459a49f859ee47a4d696d50f3b3",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

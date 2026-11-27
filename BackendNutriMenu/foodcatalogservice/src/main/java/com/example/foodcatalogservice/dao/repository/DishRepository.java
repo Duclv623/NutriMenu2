@@ -23,37 +23,48 @@ public interface DishRepository extends JpaRepository<Dish, Long> {
         SELECT DISTINCT d FROM Dish d
         JOIN d.mealSlots ms
         WHERE d.isActive = true
+          AND CONCAT(CONCAT(d.code, ':'), d.sourceRecordId) IN :sourceIdentities
+          AND d.sourceRecordId IS NOT NULL
+          AND d.sourceUrl = 'https://viendinhduong.vn/vi/cong-cu-va-tien-ich/gia-tri-dinh-duong-mon-an'
+          AND d.nutritionQualityJson IS NOT NULL
           AND (d.createdByUserId IS NULL OR d.createdByUserId = :userId)
-          AND d.estimatedGi <= :maxGi
+          AND (:applyGiFilter = false OR d.estimatedGi <= :maxGi)
           AND ms IN :slots
           AND (:hasExcludedIds = false OR d.id NOT IN :excludedDishIds)
           AND NOT EXISTS (
               SELECT 1 FROM Dish d2 JOIN d2.medicalTags mt
               WHERE d2 = d AND mt IN :excludedTags
           )
-        ORDER BY d.popularityScore DESC, d.glycemicLoad ASC
+        ORDER BY d.popularityScore DESC, d.glycemicLoad ASC, d.code ASC
     """)
     List<Dish> findCandidatesForSolver(
+            @Param("sourceIdentities") Set<String> sourceIdentities,
             @Param("userId") Long userId,
             @Param("maxGi") BigDecimal maxGi,
             @Param("slots") Set<MealSlot> slots,
             @Param("hasExcludedIds") boolean hasExcludedIds,
             @Param("excludedDishIds") Set<Long> excludedDishIds,
-            @Param("excludedTags") Set<MedicalTag> excludedTags
+            @Param("excludedTags") Set<MedicalTag> excludedTags,
+            @Param("applyGiFilter") boolean applyGiFilter
     );
 
     @Query("""
         SELECT DISTINCT d FROM Dish d
         LEFT JOIN d.mealSlots ms
         WHERE d.isActive = true
+          AND CONCAT(CONCAT(d.code, ':'), d.sourceRecordId) IN :sourceIdentities
+          AND d.sourceRecordId IS NOT NULL
+          AND d.sourceUrl = 'https://viendinhduong.vn/vi/cong-cu-va-tien-ich/gia-tri-dinh-duong-mon-an'
+          AND d.nutritionQualityJson IS NOT NULL
           AND (d.createdByUserId IS NULL OR d.createdByUserId = :userId)
           AND (:role IS NULL OR d.dishRole = :role)
           AND (:slot IS NULL OR ms = :slot)
           AND (:giLevel IS NULL OR d.giLevel = :giLevel)
           AND (:kw IS NULL OR :kw = '' OR d.nameNormalized LIKE CONCAT('%', :kw, '%'))
-        ORDER BY d.glycemicLoad ASC, d.popularityScore DESC
+        ORDER BY d.glycemicLoad ASC, d.popularityScore DESC, d.code ASC
     """)
     Page<Dish> searchDishesForUser(
+            @Param("sourceIdentities") Set<String> sourceIdentities,
             @Param("userId") Long userId,
             @Param("role") DishRole role,
             @Param("slot") MealSlot slot,
@@ -65,6 +76,10 @@ public interface DishRepository extends JpaRepository<Dish, Long> {
     @Query("""
         SELECT d FROM Dish d
         WHERE d.isActive = true
+          AND CONCAT(CONCAT(d.code, ':'), d.sourceRecordId) IN :sourceIdentities
+          AND d.sourceRecordId IS NOT NULL
+          AND d.sourceUrl = 'https://viendinhduong.vn/vi/cong-cu-va-tien-ich/gia-tri-dinh-duong-mon-an'
+          AND d.nutritionQualityJson IS NOT NULL
           AND d.createdByUserId IS NULL
           AND d.id <> :currentDishId
           AND d.dishRole = :role
@@ -75,6 +90,7 @@ public interface DishRepository extends JpaRepository<Dish, Long> {
         ORDER BY ABS(d.glycemicLoad - :targetGl) ASC
     """)
     List<Dish> findSimilarAlternatives(
+            @Param("sourceIdentities") Set<String> sourceIdentities,
             @Param("currentDishId") Long currentDishId,
             @Param("role") DishRole role,
             @Param("slot") MealSlot slot,

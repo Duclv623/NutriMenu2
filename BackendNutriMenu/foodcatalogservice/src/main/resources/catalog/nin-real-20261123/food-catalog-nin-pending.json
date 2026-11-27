@@ -1,0 +1,3233 @@
+{
+  "metadata": {
+    "datasetId": "nin-real-20261123-pending-review",
+    "schemaVersion": 1,
+    "sources": [
+      {
+        "key": "NIN",
+        "description": "Original NIN recipe images and unmodified source records; pending validation, inactive",
+        "url": "https://viendinhduong.vn/vi/cong-cu-va-tien-ich/gia-tri-dinh-duong-mon-an"
+      },
+      {
+        "key": "FDC",
+        "description": "USDA FoodData Central, SR Legacy 04/2018. Thành phần dinh dưỡng trên 100 g phần ăn được.",
+        "url": "https://fdc.nal.usda.gov/download-datasets/"
+      },
+      {
+        "key": "GI_DB",
+        "description": "Đại học Sydney. Các giá trị GI là đại diện từ thực phẩm/cách nấu liên quan, được gắn vào dữ liệu QA.",
+        "url": "https://glycemicindex.com/gi-search/"
+      },
+      {
+        "key": "GI_2021",
+        "description": "Atkinson và cộng sự, bảng GI quốc tế năm 2021. Dùng giá trị trung bình nhóm gạo.",
+        "url": "https://doi.org/10.1093/ajcn/nqab233"
+      },
+      {
+        "key": "PURINE",
+        "description": "Kaneko và cộng sự, hàm lượng purine ở ức gà và gan gà, mg/100 g.",
+        "url": "https://doi.org/10.1248/bpb.b13-00967"
+      },
+      {
+        "key": "YIELD",
+        "description": "USDA Cooking Yields for Meat and Poultry, nguồn tham chiếu cho hướng và phạm vi hao hụt. Các hệ số trong bộ dữ liệu là ước số QA.",
+        "url": "https://www.ars.usda.gov/ARSUserFiles/80400525/Data/retn/USDA_CookingYields_MeatPoultry02.pdf"
+      }
+    ]
+  },
+  "ingredients": [
+    {
+      "vfcCode": "NIN_REAL_I_13C9B73AF8BF",
+      "nameVi": "Gạo tẻ",
+      "ingredientGroup": "RICE_GRAIN",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 346,
+      "totalCarbG": 76.3,
+      "fiberG": 0.4,
+      "proteinG": 7.9,
+      "fatG": 1,
+      "saturatedFatG": 0.16,
+      "cholesterolMg": 0.0,
+      "sodiumMg": 5,
+      "potassiumMg": 241,
+      "giValue": 73,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_BD550C1FB694",
+      "nameVi": "Muối vừng",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": 1,
+      "totalCarbG": 13.77,
+      "fiberG": 2.05,
+      "proteinG": 18.11,
+      "fatG": 32.65,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": 13785.2,
+      "potassiumMg": 326.77,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_88FB3BDAEEE9",
+      "nameVi": "Thịt hến",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_69C94D414764",
+      "nameVi": "Bì lợn rán",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_7AEA77C042F6",
+      "nameVi": "Lạc rang dầu",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": 1,
+      "totalCarbG": 18,
+      "fiberG": 2.5,
+      "proteinG": null,
+      "fatG": 44.5,
+      "saturatedFatG": 6.83,
+      "cholesterolMg": null,
+      "sodiumMg": 4,
+      "potassiumMg": 421,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_E1DFC08258C8",
+      "nameVi": "Khế",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_9FE04074BBB0",
+      "nameVi": "Hoa chuối",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_1F3A2BE9FFFC",
+      "nameVi": "Dọc mùng",
+      "ingredientGroup": "ROOT_FRUIT_VEG",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 13,
+      "totalCarbG": 2.8,
+      "fiberG": 2,
+      "proteinG": 0.4,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_43A0D821D018",
+      "nameVi": "Giá đỗ",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_75CD87F96941",
+      "nameVi": "Nước luộc hến",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_BBAE3E3C1D29",
+      "nameVi": "Bột canh",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": 62.2,
+      "totalCarbG": 14.5,
+      "fiberG": null,
+      "proteinG": 1.05,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_E57BC133921C",
+      "nameVi": "Giò lụa",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_DADA40446A57",
+      "nameVi": "Trứng vịt",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": 172,
+      "totalCarbG": 2.94,
+      "fiberG": null,
+      "proteinG": 13.02,
+      "fatG": 12.02,
+      "saturatedFatG": 3.68,
+      "cholesterolMg": null,
+      "sodiumMg": 191,
+      "potassiumMg": 258,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_B5DB21FCB110",
+      "nameVi": "Cà rốt",
+      "ingredientGroup": "ROOT_FRUIT_VEG",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 44,
+      "totalCarbG": 9.03,
+      "fiberG": 1.2,
+      "proteinG": 1.5,
+      "fatG": 0.17,
+      "saturatedFatG": 0.03,
+      "cholesterolMg": 0.0,
+      "sodiumMg": 52,
+      "potassiumMg": 265.5,
+      "giValue": 0,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_68447A501AE2",
+      "nameVi": "Dưa cải bẹ",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": 25,
+      "totalCarbG": 4.5,
+      "fiberG": 2.1,
+      "proteinG": 1.8,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_F4A4CE5FA634",
+      "nameVi": "Mỡ",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_DECD0563A7EA",
+      "nameVi": "Nước mắm",
+      "ingredientGroup": "CONDIMENT",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 35.0,
+      "totalCarbG": 3.64,
+      "fiberG": 0.0,
+      "proteinG": 5.06,
+      "fatG": 0.01,
+      "saturatedFatG": 0.0,
+      "cholesterolMg": 0.0,
+      "sodiumMg": 7851.0,
+      "potassiumMg": 288.0,
+      "giValue": 0,
+      "purineMg": null,
+      "allergenTags": [
+        "ALLERGEN_SEAFOOD"
+      ]
+    },
+    {
+      "vfcCode": "NIN_REAL_I_E065E2168B85",
+      "nameVi": "Muối trong dưa cải bẹ*",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_FAFDFE1624AF",
+      "nameVi": "Thịt nạc vai",
+      "ingredientGroup": "PORK",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 149,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": 20.83,
+      "fatG": 7.29,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_CC36A58D152E",
+      "nameVi": "Cải xanh",
+      "ingredientGroup": "LEAFY_VEG",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 23,
+      "totalCarbG": 3.76,
+      "fiberG": 1.8,
+      "proteinG": 1.7,
+      "fatG": 0.14,
+      "saturatedFatG": 0.01,
+      "cholesterolMg": null,
+      "sodiumMg": 28.6,
+      "potassiumMg": 220.8,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_38D68DE2319C",
+      "nameVi": "Đậu phụ",
+      "ingredientGroup": "SOY_TOFU",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 97,
+      "totalCarbG": 1.1,
+      "fiberG": 0.4,
+      "proteinG": 10.9,
+      "fatG": 5.4,
+      "saturatedFatG": 0.69,
+      "cholesterolMg": null,
+      "sodiumMg": 7,
+      "potassiumMg": 121,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_D23B737B6CB3",
+      "nameVi": "Cà chua",
+      "ingredientGroup": "ROOT_FRUIT_VEG",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 24,
+      "totalCarbG": 4.77,
+      "fiberG": 0.8,
+      "proteinG": 0.6,
+      "fatG": 0.23,
+      "saturatedFatG": 0.05,
+      "cholesterolMg": 0.0,
+      "sodiumMg": 12.2,
+      "potassiumMg": 275.2,
+      "giValue": 0,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_B8EE7C4EC1DC",
+      "nameVi": "Dầu TV",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_2BC42A0C1134",
+      "nameVi": "Muối",
+      "ingredientGroup": "CONDIMENT",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 1,
+      "totalCarbG": 0.0,
+      "fiberG": 0.0,
+      "proteinG": 0.0,
+      "fatG": 0.0,
+      "saturatedFatG": 0.0,
+      "cholesterolMg": 0.0,
+      "sodiumMg": 38758,
+      "potassiumMg": 4,
+      "giValue": 0,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_1FC8463F54C3",
+      "nameVi": "Nước canh",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_78D2D718C110",
+      "nameVi": "Thịt lợn nạc vai",
+      "ingredientGroup": "PORK",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 149,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": 20.83,
+      "fatG": 7.29,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_A51301131D07",
+      "nameVi": "Cải cúc",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_D9596B9C1616",
+      "nameVi": "Su hào",
+      "ingredientGroup": "ROOT_FRUIT_VEG",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 44,
+      "totalCarbG": 7.93,
+      "fiberG": 1.7,
+      "proteinG": 2.8,
+      "fatG": 0.07,
+      "saturatedFatG": 0.01,
+      "cholesterolMg": null,
+      "sodiumMg": 52.8,
+      "potassiumMg": 320.5,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_7B7435669FDF",
+      "nameVi": "Thịt ba chỉ",
+      "ingredientGroup": "PORK",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 518.0,
+      "totalCarbG": 0.0,
+      "fiberG": 0.0,
+      "proteinG": 9.34,
+      "fatG": 53.01,
+      "saturatedFatG": 19.33,
+      "cholesterolMg": 72.0,
+      "sodiumMg": 32.0,
+      "potassiumMg": 185.0,
+      "giValue": 0,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_679B7EC86C09",
+      "nameVi": "Gia vị*",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_18E90FEC60A6",
+      "nameVi": "Sườn lợn (cả xương)",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_F3E794A921EA",
+      "nameVi": "Dưa chuột",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_29F382D5596B",
+      "nameVi": "Gạo tẻ máy",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_ED82C9965126",
+      "nameVi": "Phomai",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_AE39891F6036",
+      "nameVi": "Rong biển",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": 700,
+      "totalCarbG": 20,
+      "fiberG": null,
+      "proteinG": 20,
+      "fatG": 60,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": 1600,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_8E371B6BF1B5",
+      "nameVi": "Thịt cua",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": 103,
+      "totalCarbG": 7,
+      "fiberG": null,
+      "proteinG": 17.5,
+      "fatG": 0.6,
+      "saturatedFatG": 0.22,
+      "cholesterolMg": 78,
+      "sodiumMg": 316,
+      "potassiumMg": 322,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_592372BB39BC",
+      "nameVi": "Nấm",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_19FBCD04F287",
+      "nameVi": "Rau cải",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_3636BEC66339",
+      "nameVi": "Cá ngừ",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_5D9B47CEED2D",
+      "nameVi": "Xúc xích",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": 535,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": 27.2,
+      "fatG": 47.4,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": 287,
+      "potassiumMg": 219,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_24D3C6234B4C",
+      "nameVi": "Tôm biển (đã bỏ vỏ)",
+      "ingredientGroup": "FISH_SEAFOOD",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 82,
+      "totalCarbG": 0.9,
+      "fiberG": 0.0,
+      "proteinG": 17.6,
+      "fatG": 0.9,
+      "saturatedFatG": 0.12,
+      "cholesterolMg": 161.0,
+      "sodiumMg": 148,
+      "potassiumMg": 185,
+      "giValue": 0,
+      "purineMg": null,
+      "allergenTags": [
+        "ALLERGEN_SEAFOOD"
+      ]
+    },
+    {
+      "vfcCode": "NIN_REAL_I_6C51ED231F6E",
+      "nameVi": "Bầu",
+      "ingredientGroup": "ROOT_FRUIT_VEG",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 18,
+      "totalCarbG": 3.88,
+      "fiberG": 1,
+      "proteinG": 0.6,
+      "fatG": 0.02,
+      "saturatedFatG": 0,
+      "cholesterolMg": null,
+      "sodiumMg": 2,
+      "potassiumMg": 150,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_A1A85993105C",
+      "nameVi": "Bí ngô",
+      "ingredientGroup": "ROOT_FRUIT_VEG",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 29,
+      "totalCarbG": 6.83,
+      "fiberG": 0.7,
+      "proteinG": 0.3,
+      "fatG": 0.07,
+      "saturatedFatG": 0.05,
+      "cholesterolMg": null,
+      "sodiumMg": 8.4,
+      "potassiumMg": 348.5,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_83D49A6E73CE",
+      "nameVi": "Thịt lợn nạc",
+      "ingredientGroup": "PORK",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 139,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": 19,
+      "fatG": 7,
+      "saturatedFatG": 2.47,
+      "cholesterolMg": null,
+      "sodiumMg": 76,
+      "potassiumMg": 341,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_6BF13171B2B9",
+      "nameVi": "Cá lóc (cả xương)",
+      "ingredientGroup": "FISH_SEAFOOD",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 97,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": 18.2,
+      "fatG": 2.7,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_BAEA6A5E3738",
+      "nameVi": "Giá",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_AF35BD90273F",
+      "nameVi": "Dứa",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_6AFB4D2EFE00",
+      "nameVi": "Rau mùi tàu",
+      "ingredientGroup": "CONDIMENT",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 30,
+      "totalCarbG": 4.25,
+      "fiberG": 1.6,
+      "proteinG": 2.1,
+      "fatG": 0.55,
+      "saturatedFatG": 0.13,
+      "cholesterolMg": null,
+      "sodiumMg": 38.6,
+      "potassiumMg": 236.7,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_F0D4B870631D",
+      "nameVi": "Hành củ",
+      "ingredientGroup": "CONDIMENT",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 29,
+      "totalCarbG": 5.22,
+      "fiberG": 0.7,
+      "proteinG": 1.3,
+      "fatG": 0.28,
+      "saturatedFatG": 0.07,
+      "cholesterolMg": null,
+      "sodiumMg": 17,
+      "potassiumMg": 212,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_DFB3C9AAC79B",
+      "nameVi": "Sấu",
+      "ingredientGroup": "CONDIMENT",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 19,
+      "totalCarbG": 3,
+      "fiberG": null,
+      "proteinG": 1.8,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_BC394AE98EFA",
+      "nameVi": "Ngò",
+      "ingredientGroup": "CONDIMENT",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 22,
+      "totalCarbG": 2.17,
+      "fiberG": 1.8,
+      "proteinG": 2.6,
+      "fatG": 0.33,
+      "saturatedFatG": 0.01,
+      "cholesterolMg": 0.0,
+      "sodiumMg": 46,
+      "potassiumMg": 521,
+      "giValue": 0,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_763ADE4730BE",
+      "nameVi": "Hạt nêm",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_E6D9E7F7B9BD",
+      "nameVi": "Thịt nạc băm",
+      "ingredientGroup": "PORK",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 139,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": 19,
+      "fatG": 7,
+      "saturatedFatG": 2.47,
+      "cholesterolMg": null,
+      "sodiumMg": 76,
+      "potassiumMg": 341,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_E09ED219A6D0",
+      "nameVi": "Hành lá",
+      "ingredientGroup": "CONDIMENT",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 26,
+      "totalCarbG": 5.2,
+      "fiberG": 0.9,
+      "proteinG": 1.3,
+      "fatG": 0.19,
+      "saturatedFatG": 0.03,
+      "cholesterolMg": 0.0,
+      "sodiumMg": 16,
+      "potassiumMg": 122.6,
+      "giValue": 0,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_A83CFDAF6AFF",
+      "nameVi": "Rau ngót",
+      "ingredientGroup": "LEAFY_VEG",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 45,
+      "totalCarbG": 5.9,
+      "fiberG": 2.5,
+      "proteinG": 5.3,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": 24.5,
+      "potassiumMg": 457.3,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_B34CCB43BCA2",
+      "nameVi": "Trai (cả vỏ)",
+      "ingredientGroup": "FISH_SEAFOOD",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 38,
+      "totalCarbG": 2.5,
+      "fiberG": null,
+      "proteinG": 4.6,
+      "fatG": 1.1,
+      "saturatedFatG": 0.09,
+      "cholesterolMg": null,
+      "sodiumMg": 56,
+      "potassiumMg": 314,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_0FBB73F5D564",
+      "nameVi": "Hành khô",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": 326,
+      "totalCarbG": 66,
+      "fiberG": 8.4,
+      "proteinG": 15.6,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": 204,
+      "potassiumMg": 2544,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_B15E0BCA8AFD",
+      "nameVi": "Rau răm",
+      "ingredientGroup": "CONDIMENT",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 45,
+      "totalCarbG": 6.6,
+      "fiberG": 3.8,
+      "proteinG": 4.7,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": 5,
+      "potassiumMg": 216,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_8B482F0C570C",
+      "nameVi": "Thì là",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_CEAACDE80189",
+      "nameVi": "Bột nêm",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": 188,
+      "totalCarbG": 30.18,
+      "fiberG": 0.36,
+      "proteinG": 12.73,
+      "fatG": 1.82,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": 21818.18,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_6CF3562F911A",
+      "nameVi": "Cá bống (nguyên con)",
+      "ingredientGroup": "FISH_SEAFOOD",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 70,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": 15.8,
+      "fatG": 0.8,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_B98E5E19A22D",
+      "nameVi": "Tương",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_4980707C57E1",
+      "nameVi": "Nước hàng",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": 1,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_5F50EAD80247",
+      "nameVi": "Đường",
+      "ingredientGroup": "CONDIMENT",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 397,
+      "totalCarbG": 99.3,
+      "fiberG": 0.0,
+      "proteinG": 0.0,
+      "fatG": 0.0,
+      "saturatedFatG": 0.0,
+      "cholesterolMg": 0.0,
+      "sodiumMg": 1.0,
+      "potassiumMg": 2,
+      "giValue": 65,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_EF850CA051A5",
+      "nameVi": "Tiêu",
+      "ingredientGroup": "CONDIMENT",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 365,
+      "totalCarbG": 67.6,
+      "fiberG": 33.5,
+      "proteinG": 7,
+      "fatG": 7.4,
+      "saturatedFatG": 0.98,
+      "cholesterolMg": null,
+      "sodiumMg": 44,
+      "potassiumMg": 1259,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_0A19B4727D1F",
+      "nameVi": "Ớt",
+      "ingredientGroup": "CONDIMENT",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 18,
+      "totalCarbG": 2.6,
+      "fiberG": null,
+      "proteinG": 1.4,
+      "fatG": 0.2,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": 9,
+      "potassiumMg": 183,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_CD170477D1FD",
+      "nameVi": "Giềng",
+      "ingredientGroup": "CONDIMENT",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 26,
+      "totalCarbG": 6.2,
+      "fiberG": 3.7,
+      "proteinG": 0.3,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_CCDF398B2D1C",
+      "nameVi": "Gia vị",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": 62.2,
+      "totalCarbG": 14.5,
+      "fiberG": null,
+      "proteinG": 1.05,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_CB12FC387DD1",
+      "nameVi": "Trứng cút",
+      "ingredientGroup": "EGG",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 157,
+      "totalCarbG": 2.89,
+      "fiberG": null,
+      "proteinG": 12.78,
+      "fatG": 10.47,
+      "saturatedFatG": 3.56,
+      "cholesterolMg": null,
+      "sodiumMg": 141,
+      "potassiumMg": 132,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_10315A7C916C",
+      "nameVi": "Đường kính",
+      "ingredientGroup": "CONDIMENT",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 397,
+      "totalCarbG": 99.3,
+      "fiberG": 0.0,
+      "proteinG": 0.0,
+      "fatG": 0.0,
+      "saturatedFatG": 0.0,
+      "cholesterolMg": 0.0,
+      "sodiumMg": 1.0,
+      "potassiumMg": 2,
+      "giValue": 65,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_24B6B27909D0",
+      "nameVi": "Mắm",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_E2376E667A16",
+      "nameVi": "Đậu cove",
+      "ingredientGroup": "ROOT_FRUIT_VEG",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 77,
+      "totalCarbG": 14.3,
+      "fiberG": 1,
+      "proteinG": 5,
+      "fatG": 0.22,
+      "saturatedFatG": 0.05,
+      "cholesterolMg": 0.0,
+      "sodiumMg": 95.7,
+      "potassiumMg": 253.5,
+      "giValue": 0,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_C1BDC0662F78",
+      "nameVi": "Bắp cải",
+      "ingredientGroup": "LEAFY_VEG",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 36,
+      "totalCarbG": 6.91,
+      "fiberG": 1.6,
+      "proteinG": 1.8,
+      "fatG": 0.09,
+      "saturatedFatG": 0.02,
+      "cholesterolMg": 0.0,
+      "sodiumMg": 28.3,
+      "potassiumMg": 189.5,
+      "giValue": 0,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_E8F9F283057E",
+      "nameVi": "Rau muống",
+      "ingredientGroup": "LEAFY_VEG",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 28,
+      "totalCarbG": 3.26,
+      "fiberG": 1,
+      "proteinG": 3.2,
+      "fatG": 0.24,
+      "saturatedFatG": 0.06,
+      "cholesterolMg": 0.0,
+      "sodiumMg": 37.4,
+      "potassiumMg": 330.5,
+      "giValue": 0,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_B3240497788D",
+      "nameVi": "Thịt bò bắp",
+      "ingredientGroup": "BEEF",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 122,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": 21.75,
+      "fatG": 3.85,
+      "saturatedFatG": 1.28,
+      "cholesterolMg": 39,
+      "sodiumMg": 63,
+      "potassiumMg": 387,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_EDCA446365AF",
+      "nameVi": "Thịt gà (cả xương)",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_887674013F8B",
+      "nameVi": "Tôm biển (phần ăn được)",
+      "ingredientGroup": "FISH_SEAFOOD",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 82,
+      "totalCarbG": 0.9,
+      "fiberG": 0.0,
+      "proteinG": 17.6,
+      "fatG": 0.9,
+      "saturatedFatG": 0.12,
+      "cholesterolMg": 161.0,
+      "sodiumMg": 148,
+      "potassiumMg": 185,
+      "giValue": 0,
+      "purineMg": null,
+      "allergenTags": [
+        "ALLERGEN_SEAFOOD"
+      ]
+    },
+    {
+      "vfcCode": "NIN_REAL_I_4CF6829AA937",
+      "nameVi": "Sả",
+      "ingredientGroup": "CONDIMENT",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 1,
+      "totalCarbG": 16.5,
+      "fiberG": 0.0,
+      "proteinG": 0.8,
+      "fatG": 1,
+      "saturatedFatG": 0.12,
+      "cholesterolMg": 0.0,
+      "sodiumMg": 7,
+      "potassiumMg": 242,
+      "giValue": 0,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_7A8F8C015E9B",
+      "nameVi": "Ngũ vị hương",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": 1,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_673D986E6954",
+      "nameVi": "Dầu hào",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": 73,
+      "totalCarbG": 14.7,
+      "fiberG": null,
+      "proteinG": 2.9,
+      "fatG": 0.3,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": 3379,
+      "potassiumMg": 74,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_216FC1DB7C1A",
+      "nameVi": "Cá thu",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_D9053B583A19",
+      "nameVi": "Thịt tôm",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_6DDF8C8DA7B1",
+      "nameVi": "Bí đỏ",
+      "ingredientGroup": "ROOT_FRUIT_VEG",
+      "ediblePortionPct": null,
+      "caloriesPer100g": 26.0,
+      "totalCarbG": 6.5,
+      "fiberG": 0.5,
+      "proteinG": 1.0,
+      "fatG": 0.1,
+      "saturatedFatG": 0.05,
+      "cholesterolMg": 0.0,
+      "sodiumMg": 1.0,
+      "potassiumMg": 340.0,
+      "giValue": 0,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_44258DF87054",
+      "nameVi": "Cải chíp",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_C9DDE7AA074E",
+      "nameVi": "Rau cải ngọt",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_E00219E6DA99",
+      "nameVi": "Mì chính",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_707A3C64C7C0",
+      "nameVi": "Cam",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    },
+    {
+      "vfcCode": "NIN_REAL_I_83D8F9F7E8A8",
+      "nameVi": "Táo tây",
+      "ingredientGroup": null,
+      "ediblePortionPct": null,
+      "caloriesPer100g": null,
+      "totalCarbG": null,
+      "fiberG": null,
+      "proteinG": null,
+      "fatG": null,
+      "saturatedFatG": null,
+      "cholesterolMg": null,
+      "sodiumMg": null,
+      "potassiumMg": null,
+      "giValue": null,
+      "purineMg": null,
+      "allergenTags": []
+    }
+  ],
+  "yieldRetentionFactors": [],
+  "dishes": [
+    {
+      "code": "NIN_REAL_VPF_000007",
+      "nameVi": "Cơm nắm",
+      "cookingMethod": null,
+      "dishRole": "MAIN_STARCH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_13C9B73AF8BF",
+          "rawWeightG": 80,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_BD550C1FB694",
+          "rawWeightG": 10,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000008",
+      "nameVi": "Cơm hến",
+      "cookingMethod": null,
+      "dishRole": "MAIN_STARCH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_13C9B73AF8BF",
+          "rawWeightG": 45,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_88FB3BDAEEE9",
+          "rawWeightG": 50,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_69C94D414764",
+          "rawWeightG": 20,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_7AEA77C042F6",
+          "rawWeightG": 10,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_E1DFC08258C8",
+          "rawWeightG": 20,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_9FE04074BBB0",
+          "rawWeightG": 15,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_1F3A2BE9FFFC",
+          "rawWeightG": 15,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_43A0D821D018",
+          "rawWeightG": 25,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_75CD87F96941",
+          "rawWeightG": 70,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_BBAE3E3C1D29",
+          "rawWeightG": 2,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000009",
+      "nameVi": "Cơm rang thập cẩm",
+      "cookingMethod": null,
+      "dishRole": "COMPOSITE_DISH",
+      "mealSlots": [
+        "BREAKFAST"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_13C9B73AF8BF",
+          "rawWeightG": 110,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_E57BC133921C",
+          "rawWeightG": 30,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_DADA40446A57",
+          "rawWeightG": 30,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B5DB21FCB110",
+          "rawWeightG": 15,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_68447A501AE2",
+          "rawWeightG": 40,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_F4A4CE5FA634",
+          "rawWeightG": 15,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_BBAE3E3C1D29",
+          "rawWeightG": 2,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_DECD0563A7EA",
+          "rawWeightG": 5,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_E065E2168B85",
+          "rawWeightG": null,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000010",
+      "nameVi": "Cơm suất văn phòng (Thịt nạc vai, đậu phụ)",
+      "cookingMethod": null,
+      "dishRole": "MAIN_STARCH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần/suất",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_13C9B73AF8BF",
+          "rawWeightG": 125,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_FAFDFE1624AF",
+          "rawWeightG": 65,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_CC36A58D152E",
+          "rawWeightG": 30,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_38D68DE2319C",
+          "rawWeightG": 60,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_D23B737B6CB3",
+          "rawWeightG": 30,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B8EE7C4EC1DC",
+          "rawWeightG": 10,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_2BC42A0C1134",
+          "rawWeightG": 2.7,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_1FC8463F54C3",
+          "rawWeightG": null,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000011",
+      "nameVi": "Cơm suất văn phòng (Thịt nạc vai, su hào)",
+      "cookingMethod": null,
+      "dishRole": "MAIN_STARCH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần/đĩa",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_13C9B73AF8BF",
+          "rawWeightG": 115,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_78D2D718C110",
+          "rawWeightG": 72,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_A51301131D07",
+          "rawWeightG": 50,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_D9596B9C1616",
+          "rawWeightG": 100,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B8EE7C4EC1DC",
+          "rawWeightG": 5,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_2BC42A0C1134",
+          "rawWeightG": 2.2,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_1FC8463F54C3",
+          "rawWeightG": null,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000012",
+      "nameVi": "Cơm suất văn phòng (Thịt ba chỉ, đậu phụ)",
+      "cookingMethod": null,
+      "dishRole": "MAIN_STARCH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần/suất",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_13C9B73AF8BF",
+          "rawWeightG": 115,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_7B7435669FDF",
+          "rawWeightG": 72,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_68447A501AE2",
+          "rawWeightG": 60,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_38D68DE2319C",
+          "rawWeightG": 30,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_A51301131D07",
+          "rawWeightG": 50,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_1FC8463F54C3",
+          "rawWeightG": null,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B8EE7C4EC1DC",
+          "rawWeightG": 6,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_679B7EC86C09",
+          "rawWeightG": null,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000013",
+      "nameVi": "Cơm sườn",
+      "cookingMethod": null,
+      "dishRole": "MAIN_STARCH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_18E90FEC60A6",
+          "rawWeightG": 85,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_13C9B73AF8BF",
+          "rawWeightG": 120,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_F3E794A921EA",
+          "rawWeightG": 40,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_D23B737B6CB3",
+          "rawWeightG": 8,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000014",
+      "nameVi": "Sushi phô mai",
+      "cookingMethod": "SOUP_SIMMERED",
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_29F382D5596B",
+          "rawWeightG": 7,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_ED82C9965126",
+          "rawWeightG": 4.5,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_AE39891F6036",
+          "rawWeightG": 0.5,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000015",
+      "nameVi": "Sushi thập cẩm",
+      "cookingMethod": null,
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_13C9B73AF8BF",
+          "rawWeightG": 10,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_ED82C9965126",
+          "rawWeightG": 3,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_8E371B6BF1B5",
+          "rawWeightG": 5,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_F3E794A921EA",
+          "rawWeightG": 1,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_592372BB39BC",
+          "rawWeightG": 1,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_19FBCD04F287",
+          "rawWeightG": 2,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_3636BEC66339",
+          "rawWeightG": 2,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_AE39891F6036",
+          "rawWeightG": 1,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000016",
+      "nameVi": "Sushi xúc xích",
+      "cookingMethod": null,
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_13C9B73AF8BF",
+          "rawWeightG": 5,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_5D9B47CEED2D",
+          "rawWeightG": 5,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_AE39891F6036",
+          "rawWeightG": 0.5,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000018",
+      "nameVi": "Canh bầu nấu tôm",
+      "cookingMethod": "SOUP_SIMMERED",
+      "dishRole": "SOUP",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_24D3C6234B4C",
+          "rawWeightG": 22,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_6C51ED231F6E",
+          "rawWeightG": 150,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B8EE7C4EC1DC",
+          "rawWeightG": 5,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_2BC42A0C1134",
+          "rawWeightG": 1,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000020",
+      "nameVi": "Canh bí đỏ thịt nạt",
+      "cookingMethod": "SOUP_SIMMERED",
+      "dishRole": "SOUP",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_A1A85993105C",
+          "rawWeightG": 250,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_83D49A6E73CE",
+          "rawWeightG": 50,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B8EE7C4EC1DC",
+          "rawWeightG": 5,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_2BC42A0C1134",
+          "rawWeightG": 1.5,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000021",
+      "nameVi": "Canh cá lóc (Các quả) nấu chua",
+      "cookingMethod": "SOUP_SIMMERED",
+      "dishRole": "SOUP",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_6BF13171B2B9",
+          "rawWeightG": 300,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_BAEA6A5E3738",
+          "rawWeightG": 20,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_1F3A2BE9FFFC",
+          "rawWeightG": 23,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_AF35BD90273F",
+          "rawWeightG": 23,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_D23B737B6CB3",
+          "rawWeightG": 20,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_6AFB4D2EFE00",
+          "rawWeightG": 2,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B8EE7C4EC1DC",
+          "rawWeightG": 10,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_F0D4B870631D",
+          "rawWeightG": 5,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_DFB3C9AAC79B",
+          "rawWeightG": 7,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_BC394AE98EFA",
+          "rawWeightG": 4,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_763ADE4730BE",
+          "rawWeightG": 3,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_BBAE3E3C1D29",
+          "rawWeightG": 5,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000025",
+      "nameVi": "Canh cải xanh thịt nạc",
+      "cookingMethod": "SOUP_SIMMERED",
+      "dishRole": "SOUP",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_CC36A58D152E",
+          "rawWeightG": 120,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_E6D9E7F7B9BD",
+          "rawWeightG": 20,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_763ADE4730BE",
+          "rawWeightG": 3,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000027",
+      "nameVi": "Canh đậu, thịt, cà chua",
+      "cookingMethod": "SOUP_SIMMERED",
+      "dishRole": "SOUP",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_38D68DE2319C",
+          "rawWeightG": 150,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_E6D9E7F7B9BD",
+          "rawWeightG": 50,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_D23B737B6CB3",
+          "rawWeightG": 50,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_E09ED219A6D0",
+          "rawWeightG": 20,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_BBAE3E3C1D29",
+          "rawWeightG": 2,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000033",
+      "nameVi": "Canh rau ngót nấu thịt",
+      "cookingMethod": "SOUP_SIMMERED",
+      "dishRole": "SOUP",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_A83CFDAF6AFF",
+          "rawWeightG": 50,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_78D2D718C110",
+          "rawWeightG": 20,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B8EE7C4EC1DC",
+          "rawWeightG": 5,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_2BC42A0C1134",
+          "rawWeightG": 1,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000037",
+      "nameVi": "Canh trai nấu chua",
+      "cookingMethod": "SOUP_SIMMERED",
+      "dishRole": "SOUP",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_B34CCB43BCA2",
+          "rawWeightG": 500,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_D23B737B6CB3",
+          "rawWeightG": 90,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_0FBB73F5D564",
+          "rawWeightG": 10,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B15E0BCA8AFD",
+          "rawWeightG": 7,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_8B482F0C570C",
+          "rawWeightG": 7,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_6AFB4D2EFE00",
+          "rawWeightG": 7,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_CEAACDE80189",
+          "rawWeightG": 2,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000039",
+      "nameVi": "Cá bống kho",
+      "cookingMethod": "BRAISED",
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần/đĩa",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_6CF3562F911A",
+          "rawWeightG": 61,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B98E5E19A22D",
+          "rawWeightG": 3,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_4980707C57E1",
+          "rawWeightG": 7,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_DECD0563A7EA",
+          "rawWeightG": 2,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_5F50EAD80247",
+          "rawWeightG": 2,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_BBAE3E3C1D29",
+          "rawWeightG": 1,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_EF850CA051A5",
+          "rawWeightG": 0.5,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_0A19B4727D1F",
+          "rawWeightG": 1,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_CD170477D1FD",
+          "rawWeightG": 3,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B8EE7C4EC1DC",
+          "rawWeightG": 5,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000049",
+      "nameVi": "Đậu phụ kho thịt",
+      "cookingMethod": "BRAISED",
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_38D68DE2319C",
+          "rawWeightG": 160,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_FAFDFE1624AF",
+          "rawWeightG": 80,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_D23B737B6CB3",
+          "rawWeightG": 20,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B8EE7C4EC1DC",
+          "rawWeightG": 10,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_CCDF398B2D1C",
+          "rawWeightG": 6,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000056",
+      "nameVi": "Thịt lợn ba chỉ kho tàu",
+      "cookingMethod": "BRAISED",
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_7B7435669FDF",
+          "rawWeightG": 100,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_5F50EAD80247",
+          "rawWeightG": 1.8,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_DECD0563A7EA",
+          "rawWeightG": 5,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_2BC42A0C1134",
+          "rawWeightG": 1,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000057",
+      "nameVi": "Thịt lợn ba chỉ kho trứng cút",
+      "cookingMethod": "BRAISED",
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_7B7435669FDF",
+          "rawWeightG": 120,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_CB12FC387DD1",
+          "rawWeightG": 50,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_10315A7C916C",
+          "rawWeightG": 10,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B8EE7C4EC1DC",
+          "rawWeightG": 5,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_BBAE3E3C1D29",
+          "rawWeightG": 2.5,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000058",
+      "nameVi": "Thịt lợn sốt cà chua",
+      "cookingMethod": null,
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_78D2D718C110",
+          "rawWeightG": 40,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_D23B737B6CB3",
+          "rawWeightG": 25,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_24B6B27909D0",
+          "rawWeightG": 5,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000071",
+      "nameVi": "Đậu cove luộc",
+      "cookingMethod": "BOILED",
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_E2376E667A16",
+          "rawWeightG": 80,
+          "mainIngredient": true
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000077",
+      "nameVi": "Giá đỗ luộc",
+      "cookingMethod": "BOILED",
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_43A0D821D018",
+          "rawWeightG": 150,
+          "mainIngredient": true
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000084",
+      "nameVi": "Rau bắp cải luộc",
+      "cookingMethod": "BOILED",
+      "dishRole": "VEGGIE_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_C1BDC0662F78",
+          "rawWeightG": 200,
+          "mainIngredient": true
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000086",
+      "nameVi": "Rau muống luộc",
+      "cookingMethod": "BOILED",
+      "dishRole": "VEGGIE_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_E8F9F283057E",
+          "rawWeightG": 312,
+          "mainIngredient": true
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000088",
+      "nameVi": "Rau ngót luộc",
+      "cookingMethod": "BOILED",
+      "dishRole": "VEGGIE_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_A83CFDAF6AFF",
+          "rawWeightG": 80,
+          "mainIngredient": true
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000089",
+      "nameVi": "Su hào, cà rốt luộc",
+      "cookingMethod": "BOILED",
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_D9596B9C1616",
+          "rawWeightG": 210,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B5DB21FCB110",
+          "rawWeightG": 85,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000092",
+      "nameVi": "Thịt bò bắp luộc",
+      "cookingMethod": "BOILED",
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_B3240497788D",
+          "rawWeightG": 50,
+          "mainIngredient": true
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000094",
+      "nameVi": "Thịt gà luộc",
+      "cookingMethod": "BOILED",
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_EDCA446365AF",
+          "rawWeightG": 605,
+          "mainIngredient": true
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000100",
+      "nameVi": "Tôm biển hấp",
+      "cookingMethod": "STEAMED",
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_887674013F8B",
+          "rawWeightG": 230,
+          "mainIngredient": true
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000105",
+      "nameVi": "Gà nướng",
+      "cookingMethod": "GRILLED",
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_EDCA446365AF",
+          "rawWeightG": 150,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_4CF6829AA937",
+          "rawWeightG": 10,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_7A8F8C015E9B",
+          "rawWeightG": 2,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_0A19B4727D1F",
+          "rawWeightG": 1,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_673D986E6954",
+          "rawWeightG": 10,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000117",
+      "nameVi": "Cá thu rán sốt cà chua",
+      "cookingMethod": "PAN_FRIED",
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_216FC1DB7C1A",
+          "rawWeightG": 250,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_D23B737B6CB3",
+          "rawWeightG": 30,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B8EE7C4EC1DC",
+          "rawWeightG": 10,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_8B482F0C570C",
+          "rawWeightG": 2,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_2BC42A0C1134",
+          "rawWeightG": 2,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000144",
+      "nameVi": "Tôm sốt cà chua",
+      "cookingMethod": null,
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_D9053B583A19",
+          "rawWeightG": 92,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_D23B737B6CB3",
+          "rawWeightG": 54,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_24B6B27909D0",
+          "rawWeightG": 3,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B8EE7C4EC1DC",
+          "rawWeightG": 2,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000146",
+      "nameVi": "Trứng đúc thịt rán",
+      "cookingMethod": "PAN_FRIED",
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_DADA40446A57",
+          "rawWeightG": 56,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_78D2D718C110",
+          "rawWeightG": 20,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B8EE7C4EC1DC",
+          "rawWeightG": 15,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000155",
+      "nameVi": "Bí đỏ xào",
+      "cookingMethod": "STIR_FRIED",
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_6DDF8C8DA7B1",
+          "rawWeightG": 80,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B8EE7C4EC1DC",
+          "rawWeightG": 5,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_763ADE4730BE",
+          "rawWeightG": 2,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000174",
+      "nameVi": "Rau cải chíp xào nấm",
+      "cookingMethod": "STIR_FRIED",
+      "dishRole": "VEGGIE_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_44258DF87054",
+          "rawWeightG": 250,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_592372BB39BC",
+          "rawWeightG": 30,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B8EE7C4EC1DC",
+          "rawWeightG": 10,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_2BC42A0C1134",
+          "rawWeightG": 1,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000175",
+      "nameVi": "Rau cải ngọt xào",
+      "cookingMethod": "STIR_FRIED",
+      "dishRole": "VEGGIE_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_C9DDE7AA074E",
+          "rawWeightG": 80,
+          "mainIngredient": true
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_B8EE7C4EC1DC",
+          "rawWeightG": 5,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_BBAE3E3C1D29",
+          "rawWeightG": 1,
+          "mainIngredient": false
+        },
+        {
+          "ingredientCode": "NIN_REAL_I_E00219E6DA99",
+          "rawWeightG": 2,
+          "mainIngredient": false
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000398",
+      "nameVi": "Cam",
+      "cookingMethod": null,
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_707A3C64C7C0",
+          "rawWeightG": 130,
+          "mainIngredient": true
+        }
+      ]
+    },
+    {
+      "code": "NIN_REAL_VPF_000423",
+      "nameVi": "Táo tây",
+      "cookingMethod": null,
+      "dishRole": "PROTEIN_DISH",
+      "mealSlots": [
+        "LUNCH",
+        "DINNER"
+      ],
+      "householdUnitLabel": "Thành phần",
+      "minServingScaledX2": 2,
+      "maxServingScaledX2": 2,
+      "stepServingScaledX2": 2,
+      "isActive": false,
+      "createdByUserId": null,
+      "popularityScore": 100,
+      "recipeItems": [
+        {
+          "ingredientCode": "NIN_REAL_I_83D8F9F7E8A8",
+          "rawWeightG": 80,
+          "mainIngredient": true
+        }
+      ]
+    }
+  ],
+  "userFoodPreferences": []
+}

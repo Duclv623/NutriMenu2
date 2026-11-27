@@ -1,0 +1,21 @@
+{
+  "code": "HAN-123041",
+  "imageSha256": "0e50bebaa916e8d9528f367bda8a7ed64f551225572537b0398916c5a6a19a07",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bánh tiêu to",
+      "amountSourceText": "51.0",
+      "numericQuantity": 51.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "199.6 Kcal",
+  "uncertainties": [
+    "Image energy badge shows '199.6 Kcal' while table row lists 199.5 Kcal."
+  ],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

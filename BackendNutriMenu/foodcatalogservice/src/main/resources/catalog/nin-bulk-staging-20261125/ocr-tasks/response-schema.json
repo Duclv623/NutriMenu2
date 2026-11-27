@@ -1,0 +1,102 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "code",
+    "imageSha256",
+    "ingredientListStatus",
+    "servingHeadingText",
+    "ingredients",
+    "imageEnergyText",
+    "uncertainties",
+    "reviewStatus"
+  ],
+  "properties": {
+    "code": {
+      "type": "string"
+    },
+    "imageSha256": {
+      "type": "string"
+    },
+    "ingredientListStatus": {
+      "enum": [
+        "PRESENT",
+        "ABSENT",
+        "ILLEGIBLE"
+      ]
+    },
+    "servingHeadingText": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "imageEnergyText": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "ingredients": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "nameSourceText",
+          "amountSourceText",
+          "numericQuantity",
+          "unitSourceText",
+          "preparationSourceText",
+          "certainty"
+        ],
+        "properties": {
+          "nameSourceText": {
+            "type": "string"
+          },
+          "amountSourceText": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "numericQuantity": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "unitSourceText": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "preparationSourceText": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "certainty": {
+            "enum": [
+              "CLEAR",
+              "UNCERTAIN",
+              "ILLEGIBLE"
+            ]
+          }
+        }
+      }
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reviewStatus": {
+      "const": "PENDING_INDEPENDENT_REVIEW"
+    }
+  }
+}

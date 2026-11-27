@@ -1,0 +1,34 @@
+{
+  "entitySchemas": {
+    "Dish": {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/entity/Dish.java",
+      "sha256": "45399532167c9669844830d6b008a49f4f5a9ed6abbd88619e47642e7f84ec03"
+    },
+    "Ingredient": {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/entity/Ingredient.java",
+      "sha256": "420028691c2cb5a606a7277fa9ad6738b5acaae99c470fe11c651b1da4124157"
+    },
+    "DishIngredient": {
+      "path": "foodcatalogservice/src/main/java/com/example/foodcatalogservice/entity/DishIngredient.java",
+      "sha256": "d92f7c08c5fbe4fffafc1a36388bab1283b5e5c2a7b8a21c86bc6e2f7204a332"
+    }
+  },
+  "maximumExportedStringLengths": {
+    "Ingredient.vfcCode": 27,
+    "Ingredient.nameVi": 45,
+    "Ingredient.nameNormalized": 45,
+    "Ingredient.ingredientGroup": 14,
+    "Dish.code": 19,
+    "Dish.nameVi": 48,
+    "Dish.imageUrl": 91,
+    "Dish.sourceRecordId": 24,
+    "Dish.sourceUrl": 73,
+    "Dish.nutritionBasis": 27,
+    "Dish.cookingMethod": 13,
+    "Dish.dishRole": 14,
+    "Dish.householdUnitLabel": 46,
+    "Dish.nameNormalized": 48,
+    "DishIngredient.sourceAmountText": 101
+  },
+  "sourceValuesExceedingDatabaseScale": []
+}

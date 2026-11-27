@@ -1,0 +1,35 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "251.5 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cháo trai",
+      "amountSourceText": "294.0",
+      "numericQuantity": 294.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bánh quẩy",
+      "amountSourceText": "30.0",
+      "numericQuantity": 30.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành, mùi tàu",
+      "amountSourceText": "3.0",
+      "numericQuantity": 3.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "HAP-221010",
+  "imageSha256": "ade17d8aa3ebdbfbca9dfc4591d3cf2177800ca18289bf87086ddc3c14b3f6ad",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

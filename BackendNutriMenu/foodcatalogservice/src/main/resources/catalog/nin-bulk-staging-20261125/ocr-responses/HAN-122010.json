@@ -1,0 +1,27 @@
+{
+  "code": "HAN-122010",
+  "imageSha256": "07d7bb158e7cb8c521e7eb3f59cce4419beae9424dbe30ef304ed1f168137d8e",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Xoài xanh",
+      "amountSourceText": "480.0",
+      "numericQuantity": 480.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Muối ớt",
+      "amountSourceText": "8.0",
+      "numericQuantity": 8.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "360.7 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

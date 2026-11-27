@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "58kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Chôm chôm",
+      "amountSourceText": "160g",
+      "numericQuantity": 160.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000399",
+  "imageSha256": "36cd394b963b01fce3c500add0bc07c0394e69d18bae305ae64c4182bcf59731",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

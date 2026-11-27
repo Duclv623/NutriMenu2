@@ -2,9 +2,12 @@ package com.example.foodcatalogservice.controller;
 
 import com.example.foodcatalogservice.dto.request.*;
 import com.example.foodcatalogservice.dto.response.*;
+import com.example.foodcatalogservice.entity.Ingredient;
+import com.example.foodcatalogservice.entity.YieldRetentionFactor;
 import com.example.foodcatalogservice.entity.enums.*;
 import com.example.foodcatalogservice.service.FoodCatalogService;
 import jakarta.validation.Valid;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -55,7 +58,9 @@ public class UserCatalogController {
     }
 
     @DeleteMapping("/users/me/dishes/{dishId}/favorite")
-    public ResponseEntity<Void> removeFavorite(@RequestHeader("X-User-Id") Long userId, @PathVariable Long dishId) {
+    public ResponseEntity<Void> removeFavorite(
+            @RequestHeader(value = "X-User-Id") Long userId,
+            @PathVariable Long dishId) {
         catalogService.removeFavorite(userId, dishId);
         return ResponseEntity.noContent().build();
     }

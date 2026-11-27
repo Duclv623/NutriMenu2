@@ -1,0 +1,61 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "320kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Đậu phụ",
+      "amountSourceText": "180g",
+      "numericQuantity": 180,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà chua",
+      "amountSourceText": "70g",
+      "numericQuantity": 70,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "15g",
+      "numericQuantity": 15,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước mắm",
+      "amountSourceText": "5ml",
+      "numericQuantity": 5,
+      "unitSourceText": "ml",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Bột canh",
+      "amountSourceText": "2,5g",
+      "numericQuantity": 2.5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Gia vị",
+      "amountSourceText": null,
+      "numericQuantity": null,
+      "unitSourceText": null,
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Quantity omitted on image for ingredient 'Gia vị'"
+  ],
+  "code": "VPF-000125",
+  "imageSha256": "0ed3c0f390693058f2dceaa172cea0151a58db0fb0935098450ffca3f9cddb8a",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

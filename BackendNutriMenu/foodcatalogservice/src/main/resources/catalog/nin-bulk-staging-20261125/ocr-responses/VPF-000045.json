@@ -1,0 +1,27 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "116kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cá thu",
+      "amountSourceText": "70g",
+      "numericQuantity": 70,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Nước mắm",
+      "amountSourceText": "7,5g",
+      "numericQuantity": 7.5,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000045",
+  "imageSha256": "657621d2a7fded6fca650dc4928d74c8766455b29b73fbbc4bbbb3df792d56eb",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

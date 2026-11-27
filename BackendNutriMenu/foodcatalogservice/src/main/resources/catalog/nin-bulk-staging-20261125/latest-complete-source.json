@@ -1,0 +1,15 @@
+{
+  "path": "api-runs/bulk-20261125/dishes-source.json",
+  "sha256": "b02e2c01adba566feaca8fe6c1d637d00c75d4c0974666ac3a00868105a74c9c",
+  "retrievedAt": "2026-11-25T08:25:27.923618+00:00",
+  "records": 1023,
+  "apiReportedTotal": 1024,
+  "rawRowCount": 1024,
+  "extraIdenticalRowCount": 1,
+  "quarantinedRawRowCount": 0,
+  "sourceEnumerationComplete": false,
+  "sourceCompletenessWarning": "All reported API pages were received, but API total and accepted unique identities differ. Pagination drift or source duplicate storage may have omitted an identity; complete enumeration is not established. No missing recipe is invented.",
+  "reconciliationPath": "api-runs/bulk-20261125/source-reconciliation.json",
+  "rawSourcePath": "api-runs/bulk-20261125/dishes-source-raw.json",
+  "apiRunId": "bulk-20261125"
+}

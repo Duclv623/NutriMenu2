@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "190kcal/đĩa",
+  "ingredients": [
+    {
+      "nameSourceText": "Đậu phụ",
+      "amountSourceText": "200g",
+      "numericQuantity": 200,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000072",
+  "imageSha256": "be72a6fbe951157bc5830d60d66c56acb223ee108361c3425b647deba4d37cf2",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

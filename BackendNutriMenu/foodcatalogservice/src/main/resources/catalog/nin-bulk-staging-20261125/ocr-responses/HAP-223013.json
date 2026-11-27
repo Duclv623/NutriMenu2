@@ -1,0 +1,19 @@
+{
+  "code": "HAP-223013",
+  "imageSha256": "a1bb5d428f6e1341e77155f0a5d29f3dbdcf70e1d47d8d2a6d15d4caa17a2f5f",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "ingredients": [
+    {
+      "nameSourceText": "Bỏng ngô",
+      "amountSourceText": "96.0",
+      "numericQuantity": 96.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "imageEnergyText": "370.2 Kcal",
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

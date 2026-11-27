@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần/đĩa",
+  "imageEnergyText": "32kcal/đĩa",
+  "ingredients": [
+    {
+      "nameSourceText": "Dưa lê",
+      "amountSourceText": "220g",
+      "numericQuantity": 220.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000403",
+  "imageSha256": "1c0f9fcd3c2ab17a9e9da4a5c15f57313a648af040c57a5baa291959eca9aaf2",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

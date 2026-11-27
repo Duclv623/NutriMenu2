@@ -1,0 +1,59 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "1525kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Cá chép cả con",
+      "amountSourceText": "1000g",
+      "numericQuantity": 1000,
+      "unitSourceText": "g",
+      "preparationSourceText": "cả con",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dưa muối",
+      "amountSourceText": "566g",
+      "numericQuantity": 566,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Cà chua",
+      "amountSourceText": "219g",
+      "numericQuantity": 219,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Hành, thìa là",
+      "amountSourceText": "50g",
+      "numericQuantity": 50,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Dầu TV",
+      "amountSourceText": "20g",
+      "numericQuantity": 20,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Muối",
+      "amountSourceText": "2g",
+      "numericQuantity": 2,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000017",
+  "imageSha256": "c5f083f36c6e60a1a4a8c328582b83d80118f3d3a5c5108b84277d0019e37257",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

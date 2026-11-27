@@ -1,0 +1,29 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "783.9 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Phô mai chiên",
+      "amountSourceText": "195.0",
+      "numericQuantity": 195.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "chiên",
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Tương ớt",
+      "amountSourceText": "23.0",
+      "numericQuantity": 23.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [
+    "Sum of printed row energies (793.3 Kcal) is 9.4 Kcal higher than printed dish energy (783.9 Kcal); Phô mai chiên alone prints 784.0 Kcal. Both rows kept verbatim."
+  ],
+  "code": "HAP-223007",
+  "imageSha256": "2bb35e455ec6de1cbf78a29cfd47bfc7fd037082cddc9f754be3a7ac5f6c9998",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

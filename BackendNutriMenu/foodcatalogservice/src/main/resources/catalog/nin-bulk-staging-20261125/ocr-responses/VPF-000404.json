@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "13kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Dưa vàng",
+      "amountSourceText": "80g",
+      "numericQuantity": 80.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000404",
+  "imageSha256": "3f4ad721d8b2e1f3f7f086c1b4b951a9d085e4c03c5f8fbdaf57f5ed7722cc45",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

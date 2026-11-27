@@ -1,0 +1,19 @@
+{
+  "code": "VPF-000081",
+  "imageSha256": "cd2d661970e4cb2c3a395fd4ec9d6ffc4a3ae0befcb188ea28306ad3ce52cf02",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "14.0 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Ngọn su su",
+      "amountSourceText": "80g",
+      "numericQuantity": 80.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

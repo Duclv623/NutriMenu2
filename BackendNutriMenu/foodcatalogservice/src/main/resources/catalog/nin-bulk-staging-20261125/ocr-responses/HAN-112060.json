@@ -1,0 +1,19 @@
+{
+  "code": "HAN-112060",
+  "imageSha256": "8d0fb4e13d49f2304e83883538edaa3c46c47e84ae1775e85756423a7741355b",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "77.4 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Caramen",
+      "amountSourceText": "71.0",
+      "numericQuantity": 71.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}

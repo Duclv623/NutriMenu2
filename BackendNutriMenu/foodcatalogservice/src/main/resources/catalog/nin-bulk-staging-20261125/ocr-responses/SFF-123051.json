@@ -1,0 +1,19 @@
+{
+  "code": "SFF-123051",
+  "imageSha256": "108f69f7ec99c9651ccd7f6d8a30d7a92ffae5122c6051823b703b87ced52e94",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn\nIngredients",
+  "imageEnergyText": null,
+  "ingredients": [
+    {
+      "nameSourceText": "Ngô tươi nếp nướng/\nGrilled Corn on the Cob",
+      "amountSourceText": "146.0",
+      "numericQuantity": 146.0,
+      "unitSourceText": "g",
+      "preparationSourceText": "nướng",
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

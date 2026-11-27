@@ -48,8 +48,8 @@ def create_app(settings: Settings | None = None, provider=None, meal_gateway=Non
 
     @asynccontextmanager
     async def lifespan(app):
-        await run_in_threadpool(store.initialize_history)
         try:
+            await run_in_threadpool(store.initialize_history)
             await run_in_threadpool(store.purge_history, settings.history_retention_days)
         except HistoryStoreError as error:
             logger.warning('history_purge_failed error_type=%s', type(error).__name__)

@@ -1,0 +1,27 @@
+{
+  "code": "HAP-223034",
+  "imageSha256": "fb35e71a321ddff769f9992031db17c87cbd2025b8614c584dc213f3edac60e2",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần món ăn",
+  "imageEnergyText": "834.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Xôi đỗ xanh",
+      "amountSourceText": "280.0",
+      "numericQuantity": 280.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    },
+    {
+      "nameSourceText": "Muối vừng",
+      "amountSourceText": "5.0",
+      "numericQuantity": 5.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

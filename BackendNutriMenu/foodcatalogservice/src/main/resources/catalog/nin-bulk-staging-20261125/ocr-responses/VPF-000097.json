@@ -1,0 +1,19 @@
+{
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": "Thành phần",
+  "imageEnergyText": "49kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Thịt lợn thăn",
+      "amountSourceText": "36g",
+      "numericQuantity": 36,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": [],
+  "code": "VPF-000097",
+  "imageSha256": "09f9fbc95a5bb73034b5b8239ab91a366ffcdbd3cd33ee5b6b2962f1a3a558b2",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW"
+}

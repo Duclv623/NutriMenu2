@@ -1,0 +1,19 @@
+{
+  "code": "SFF-122016",
+  "imageSha256": "f82d92f95ad04af0322db1500a4939bff602d4fc7c6abb68c3a6c9365dabffbf",
+  "reviewStatus": "PENDING_INDEPENDENT_REVIEW",
+  "ingredientListStatus": "PRESENT",
+  "servingHeadingText": null,
+  "imageEnergyText": "287.8 Kcal",
+  "ingredients": [
+    {
+      "nameSourceText": "Củ dong luộc",
+      "amountSourceText": "Củ dong luộc/Boiled arrowroot",
+      "numericQuantity": 219.0,
+      "unitSourceText": "g",
+      "preparationSourceText": null,
+      "certainty": "CLEAR"
+    }
+  ],
+  "uncertainties": []
+}
