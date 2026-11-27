@@ -18,7 +18,7 @@ type RecipeRow = {
   rawWeightG: string;
   isMainIngredient: boolean;
 };
-type CuratedRow = { mealSlot: string; dishId: string; servings: string };
+type CuratedRow = { mealSlot: string; dishId: string; servingMultiplier: string };
 type FieldValue = string | string[] | RecipeRow[] | CuratedRow[];
 type Values = Record<string, FieldValue>;
 export type ActionData = Record<string, unknown>;
@@ -335,7 +335,7 @@ function RecipeField({
 const newCuratedRow = (): CuratedRow => ({
   mealSlot: "",
   dishId: "",
-  servings: "1",
+  servingMultiplier: "1",
 });
 
 function CuratedField({
@@ -400,9 +400,9 @@ function CuratedField({
               max={4}
               step={0.5}
               required
-              value={row.servings}
+              value={row.servingMultiplier}
               onChange={(event) =>
-                edit(index, { servings: event.target.value })
+                edit(index, { servingMultiplier: event.target.value })
               }
             />
           </label>
@@ -594,8 +594,8 @@ function inputField(
         : field.kind === "item"
           ? (selectPlan?.items || []).map((item) => [
               item.id,
-              workspace.foods.find((food) => food.id === item.foodId)?.name ||
-                item.foodId,
+              workspace.foods.find((food) => food.id === item.dishId)?.name ||
+                item.dishId,
             ])
           : []);
   if (allowRawId && field.kind === "dish" && field.name === "{id}")
@@ -703,7 +703,7 @@ function serializeValue(field: Field, raw: FieldValue) {
     return (raw as CuratedRow[]).map((row) => ({
       mealSlot: row.mealSlot,
       dishId: numberId(row.dishId),
-      servingScaledX2: Number(row.servings) * 2,
+      servingScaledX2: Number(row.servingMultiplier) * 2,
     }));
   if (field.kind === "recipe")
     return (raw as RecipeRow[]).map((row) => ({

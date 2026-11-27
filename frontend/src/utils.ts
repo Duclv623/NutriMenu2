@@ -24,24 +24,24 @@ export const number = (n: number, digits = 0) =>
   new Intl.NumberFormat("vi-VN", { maximumFractionDigits: digits }).format(n);
 export const uid = () => crypto.randomUUID();
 export const emptyNutrition = (): Nutrients => ({
-  energy: 0,
-  carbs: 0,
-  protein: 0,
-  fat: 0,
-  fiber: 0,
-  sodium: 0,
+  energyKcal: 0,
+  netCarbG: 0,
+  proteinG: 0,
+  fatG: 0,
+  fiberG: 0,
+  sodiumMg: 0,
 });
 export function sumNutrition(items: PlanItem[], foods: Food[]): Nutrients {
   return items.reduce((total, item) => {
-    const food = foods.find((f) => f.id === item.foodId);
+    const food = foods.find((f) => f.id === item.dishId);
     if (!food)
       throw new Error(
-        `Thiếu dữ liệu món ${item.foodId}. Không thể tính tổng dinh dưỡng.`,
+        `Thiếu dữ liệu món ${item.dishId}. Không thể tính tổng dinh dưỡng.`,
       );
     for (const key of Object.keys(total) as (keyof Nutrients)[])
       total[key] += item.nutrition
         ? item.nutrition[key]
-        : food.nutrition[key] * item.servings;
+        : food.nutrition[key] * item.servingMultiplier;
     return total;
   }, emptyNutrition());
 }
@@ -101,7 +101,7 @@ export function assertEligible(profile: Profile) {
 export function shoppingList(plan: Plan, foods: Food[]) {
   const map = new Map<string, { id: string; name: string; grams: number }>();
   for (const item of plan.items) {
-    const food = foods.find((f) => f.id === item.foodId);
+    const food = foods.find((f) => f.id === item.dishId);
     if (!food) throw new Error("Thực đơn có món không còn trong danh mục.");
     if (food.ingredientsComplete === false || !food.ingredients.length)
       throw new Error(
@@ -113,7 +113,7 @@ export function shoppingList(plan: Plan, foods: Food[]) {
         name: ingredient.name,
         grams: 0,
       };
-      current.grams += ingredient.grams * item.servings;
+      current.grams += ingredient.grams * item.servingMultiplier;
       map.set(ingredient.id, current);
     }
   }

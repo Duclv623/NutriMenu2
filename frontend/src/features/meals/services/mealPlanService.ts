@@ -9,22 +9,22 @@ export const mealPlanService = {
       method: "POST",
       body: json({ ...input, profileVersion }),
     }),
-  previewSwap: (plan: Plan, itemId: string, foodId: string, servings: number) =>
+  previewSwap: (plan: Plan, itemId: string, dishId: string, servingMultiplier: number) =>
     request<Plan>(`/meal-plans/${encodeURIComponent(plan.id)}/swap-preview`, {
       method: "POST",
       body: json({
         baseVersion: plan.version,
         profileVersion: plan.profileVersion,
         itemId,
-        foodId,
-        servings,
+        dishId,
+        servingMultiplier,
       }),
     }),
   swap: (
     plan: Plan,
     itemId: string,
-    foodId: string,
-    servings: number,
+    dishId: string,
+    servingMultiplier: number,
     previewSignature?: string,
   ) =>
     request<Plan>(`/meal-plans/${encodeURIComponent(plan.id)}/swap`, {
@@ -32,8 +32,8 @@ export const mealPlanService = {
       body: json({
         baseVersion: plan.version,
         itemId,
-        foodId,
-        servings,
+        dishId,
+        servingMultiplier,
         previewSignature,
         profileVersion: plan.profileVersion,
       }),

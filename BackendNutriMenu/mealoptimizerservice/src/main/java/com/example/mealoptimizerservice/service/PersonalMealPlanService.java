@@ -83,12 +83,12 @@ public class PersonalMealPlanService {
         eligible(account.profile(), request.profileVersion());
         if (plan.profileVersion() != request.profileVersion())
             throw new OptimizerBusinessException(CONFLICT, "Hồ sơ đã thay đổi từ lúc tạo thực đơn");
-        double scaled = request.servings() * 2;
+        double scaled = request.servingMultiplier() * 2;
         if (scaled != Math.rint(scaled)) throw new OptimizerBusinessException(BAD_REQUEST, "Khẩu phần phải theo bước nửa suất");
         if (!preview && (request.previewSignature() == null || request.previewSignature().isBlank()))
             throw new OptimizerBusinessException(BAD_REQUEST, "Cần xem trước phương án trước khi xác nhận");
         var input = CheckedMealChangeRequest.builder().expectedVersion(request.baseVersion() - 1)
-                .itemId(numericId(request.itemId())).newDishId(numericId(request.foodId())).newServingScaledX2((int) scaled)
+                .itemId(numericId(request.itemId())).newDishId(numericId(request.dishId())).newServingScaledX2((int) scaled)
                 .contraindications(allergyTags(account.profile())).excludedDishIds(exclusions(token, account.profile()))
                 .previewSignature(request.previewSignature()).build();
         var result = preview ? changes.preview(account.serviceUserId(), id, input) : changes.apply(account.serviceUserId(), id, input);
@@ -126,7 +126,7 @@ public class PersonalMealPlanService {
         if (plan.items().isEmpty() || !Set.of("OPTIMAL", "FEASIBLE").contains(plan.solverStatus()))
             throw new OptimizerBusinessException(UNPROCESSABLE_CONTENT, "Thực đơn chưa có kết quả sử dụng được");
         Map<String, JsonNode> dishes = new HashMap<>();
-        plan.items().forEach(item -> dishes.computeIfAbsent(item.foodId(), key -> catalog.food(token, key)));
+        plan.items().forEach(item -> dishes.computeIfAbsent(item.dishId(), key -> catalog.food(token, key)));
         return mapper.snapshot(account.profile(), plan, dishes);
     }
 

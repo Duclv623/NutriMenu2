@@ -161,20 +161,20 @@ export function MealPlannerPage() {
       `NutriGuide — Thực đơn ${dateLabel(date)}`,
       `Trạng thái: ${solverLabels[plan.solverStatus]}`,
       ...plan.items.map((i) => {
-        const food = w.foods.find((f) => f.id === i.foodId);
-        const heading = `\n${MEALS[i.meal].name}: ${food?.name || i.name || "Món trong thực đơn"}\nKhẩu phần: ${number(i.servings, 2)} phần`;
+        const food = w.foods.find((f) => f.id === i.dishId);
+        const heading = `\n${MEALS[i.meal].name}: ${food?.name || i.name || "Món trong thực đơn"}\nKhẩu phần: ${number(i.servingMultiplier, 2)} phần`;
         return food
           ? heading +
-              ` · ${number(food.grams * i.servings)} g\n` +
+              ` · ${number(food.grams * i.servingMultiplier)} g\n` +
               food.ingredients
                 .map(
                   (ingredient) =>
-                    `${ingredient.name}: ${number(ingredient.grams * i.servings)} g`,
+                    `${ingredient.name}: ${number(ingredient.grams * i.servingMultiplier)} g`,
                 )
                 .join("\n")
           : heading;
       }),
-      `\nTổng: ${number(totals.energy)} kcal; Carb ${number(totals.carbs, 1)} g; Đạm ${number(totals.protein, 1)} g; Béo ${number(totals.fat, 1)} g; Xơ ${number(totals.fiber, 1)} g; Natri ${number(totals.sodium)} mg.`,
+      `\nTổng: ${number(totals.energyKcal)} kcal; Carb ${number(totals.netCarbG, 1)} g; Đạm ${number(totals.proteinG, 1)} g; Béo ${number(totals.fatG, 1)} g; Xơ ${number(totals.fiberG, 1)} g; Natri ${number(totals.sodiumMg)} mg.`,
       ...plan.notes,
     ];
     downloadFile(`thuc-don-${date}.txt`, lines.join("\n"));
@@ -316,12 +316,12 @@ export function MealPlannerPage() {
                           </div>
                         </div>
                         <strong>
-                          {number(sumNutrition(items, w.foods).energy)}{" "}
+                          {number(sumNutrition(items, w.foods).energyKcal)}{" "}
                           <small>kcal</small>
                         </strong>
                       </div>
                       {items.map((item) => {
-                        const food = w.foods.find((f) => f.id === item.foodId);
+                        const food = w.foods.find((f) => f.id === item.dishId);
                         const completed = w.completedMeals.includes(
                           `${plan.id}:${item.id}`,
                         );
@@ -343,11 +343,11 @@ export function MealPlannerPage() {
                                   </strong>
                                 )}
                                 <p>
-                                  {number(item.servings, 2)} khẩu phần
+                                  {number(item.servingMultiplier, 2)} khẩu phần
                                   {food && (
                                     <>
                                       {" "}
-                                      · {number(food.grams * item.servings)} g
+                                      · {number(food.grams * item.servingMultiplier)} g
                                     </>
                                   )}
                                   {food && food.minutes !== null && (
@@ -363,9 +363,9 @@ export function MealPlannerPage() {
                                     Carb{" "}
                                     <strong>
                                       {number(
-                                        item.nutrition?.carbs ??
-                                          (food?.nutrition.carbs ?? 0) *
-                                            item.servings,
+                                        item.nutrition?.netCarbG ??
+                                          (food?.nutrition.netCarbG ?? 0) *
+                                            item.servingMultiplier,
                                         1,
                                       )}{" "}
                                       g
@@ -375,9 +375,9 @@ export function MealPlannerPage() {
                                     Đạm{" "}
                                     <strong>
                                       {number(
-                                        item.nutrition?.protein ??
-                                          (food?.nutrition.protein ?? 0) *
-                                            item.servings,
+                                        item.nutrition?.proteinG ??
+                                          (food?.nutrition.proteinG ?? 0) *
+                                            item.servingMultiplier,
                                         1,
                                       )}{" "}
                                       g
@@ -387,9 +387,9 @@ export function MealPlannerPage() {
                                     Béo{" "}
                                     <strong>
                                       {number(
-                                        item.nutrition?.fat ??
-                                          (food?.nutrition.fat ?? 0) *
-                                            item.servings,
+                                        item.nutrition?.fatG ??
+                                          (food?.nutrition.fatG ?? 0) *
+                                            item.servingMultiplier,
                                         1,
                                       )}{" "}
                                       g
@@ -513,7 +513,7 @@ export function MealPlannerPage() {
                     <div key={item.id} className="workflow-result-row">
                       <span>
                         {item.name ||
-                          w.foods.find((food) => food.id === item.foodId)
+                          w.foods.find((food) => food.id === item.dishId)
                             ?.name ||
                           "Món đã bỏ"}{" "}
                         · {MEALS[item.meal].name}

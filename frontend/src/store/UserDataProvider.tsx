@@ -22,7 +22,7 @@ export const emptyUserData = (): UserData => ({
     height: 0,
     weight: 0,
     targetWeight: 0,
-    activity: "",
+    activityLevel: "",
     goal: "",
     allergies: [],
     excludedFoods: [],
@@ -106,7 +106,23 @@ export function UserDataProvider({ children }: { children: ReactNode }) {
         const saved = localStorage.getItem(
           `nutriguide.workspace.v1.${user.id}`,
         );
-        next = saved ? JSON.parse(saved) : createDemoData(user.name);
+        next = saved ? JSON.parse(saved, (_key, value) => {
+          if (!value || typeof value !== "object" || Array.isArray(value)) return value;
+          const aliases: Record<string, string> = {};
+          if ("energy" in value && "carbs" in value) Object.assign(aliases, {
+            energy: "energyKcal", carbs: "netCarbG", protein: "proteinG",
+            fat: "fatG", fiber: "fiberG", sodium: "sodiumMg",
+          });
+          if ("foodId" in value && "meal" in value) Object.assign(aliases, {
+            foodId: "dishId", servings: "servingMultiplier",
+          });
+          if ("activity" in value && "height" in value) aliases.activity = "activityLevel";
+          for (const [oldKey, newKey] of Object.entries(aliases)) {
+            value[newKey] ??= value[oldKey];
+            delete value[oldKey];
+          }
+          return value;
+        }) : createDemoData(user.name);
         if (
           !next.profile ||
           !Array.isArray(next.foods) ||

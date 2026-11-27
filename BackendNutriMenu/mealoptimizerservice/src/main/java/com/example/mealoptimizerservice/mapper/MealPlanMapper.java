@@ -58,23 +58,23 @@ public class MealPlanMapper {
         ArrayNode items = json.createArrayNode();
         ObjectNode totals = object("energyKcal", 0, "carbohydrateG", 0, "proteinG", 0, "fatG", 0, "fiberG", 0, "sodiumMg", 0);
         for (Item item : plan.items()) {
-            JsonNode dish = dishes.get(item.foodId());
+            JsonNode dish = dishes.get(item.dishId());
             ArrayNode ingredients = json.createArrayNode();
             dish.path("recipeBreakdown").forEach(i -> ingredients.add(object("id", i.path("ingredientId").asText(), "name", i.path("ingredientNameVi"))));
             Nutrition n = item.nutrition();
-            ObjectNode nutrients = object("energyKcal", n.energy(), "carbohydrateG", n.carbs(), "proteinG", n.protein(),
-                    "fatG", n.fat(), "fiberG", n.fiber(), "sodiumMg", n.sodium());
+            ObjectNode nutrients = object("energyKcal", n.energyKcal(), "carbohydrateG", n.netCarbG(), "proteinG", n.proteinG(),
+                    "fatG", n.fatG(), "fiberG", n.fiberG(), "sodiumMg", n.sodiumMg());
             nutrients.properties().forEach(entry -> totals.put(entry.getKey(),
                     totals.path(entry.getKey()).asDouble() + entry.getValue().asDouble()));
             String meal = item.meal().toUpperCase(java.util.Locale.ROOT);
-            items.add(object("id", item.id(), "recipeId", item.foodId(), "recipeVersion", "unversioned", "name", dish.path("nameVi"),
-                    "mealType", meal, "portionId", item.id(), "amount", item.servings(), "unit", "serving", "state", "unknown",
+            items.add(object("id", item.id(), "recipeId", item.dishId(), "recipeVersion", "unversioned", "name", dish.path("nameVi"),
+                    "mealType", meal, "portionId", item.id(), "amount", item.servingMultiplier(), "unit", "serving", "state", "unknown",
                     "nutritionBasis", "raw_ingredients_estimate", "nutrients", nutrients, "ingredients", ingredients, "ingredientsComplete", !ingredients.isEmpty(),
                     "sourceRefs", List.of("Food Catalog: " + dish.path("code").asText(), "Meal Optimizer: " + plan.id())));
         }
         return object("dataMode", "http", "profile", object("profileVersion", profile.version() + 1,
                 "age", profile.age(), "gender", profile.gender(), "height", profile.height(), "weight", profile.weight(),
-                "activityLevel", profile.activity(), "goal", profile.goal(), "allergies", profile.allergies(),
+                "activityLevel", profile.activityLevel(), "goal", profile.goal(), "allergies", profile.allergies(),
                 "restrictedIngredients", profile.excludedFoods(), "scopeStatus", "unknown", "restrictionsResolved", false),
                 "plan", object("id", plan.id(), "version", plan.version(), "profileVersion", plan.profileVersion() + 1,
                         "catalogVersion", "java-catalog-unversioned", "date", plan.date(), "solverStatus", plan.solverStatus(), "validationPassed", false,

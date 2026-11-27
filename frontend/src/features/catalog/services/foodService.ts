@@ -6,7 +6,7 @@ type Dish = {
   id: number; nameVi: string; role: string; householdUnitLabel: string; imageUrl?: string;
   standardServingCookedG: number; mealSlots: string[]; medicalTags: string[];
   recipeBreakdown: { ingredientId: number; ingredientNameVi: string; rawWeightG: number }[];
-  caloriesKcal: number; netCarbG: number; proteinG: number; fatG: number; fiberG: number; sodiumMg: number;
+  energyKcal: number; netCarbG: number; proteinG: number; fatG: number; fiberG: number; sodiumMg: number;
   preparationSteps: string[]; preparationGuideKind?: string;
   minServingScaledX2: number; maxServingScaledX2: number; stepServingScaledX2: number;
 };
@@ -20,8 +20,8 @@ function toFood(dish: Dish): Food {
     id: String(row.ingredientId), name: row.ingredientNameVi, grams: row.rawWeightG,
   }));
   const nutrition = {
-    energy: dish.caloriesKcal, carbs: dish.netCarbG, protein: dish.proteinG, fat: dish.fatG,
-    fiber: dish.fiberG, sodium: dish.sodiumMg,
+    energyKcal: dish.energyKcal, netCarbG: dish.netCarbG, proteinG: dish.proteinG, fatG: dish.fatG,
+    fiberG: dish.fiberG, sodiumMg: dish.sodiumMg,
   };
   if (!Object.values(nutrition).every(Number.isFinite)) throw new Error("Món ăn thiếu dữ liệu dinh dưỡng.");
   return {

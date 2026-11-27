@@ -63,8 +63,8 @@ export function FoodLibraryPage({
           (!compatible || allowedFood(f, w.profile)),
       )
       .sort((a, b) =>
-        sort === "energy"
-          ? a.nutrition.energy - b.nutrition.energy
+        sort === "energyKcal"
+          ? a.nutrition.energyKcal - b.nutrition.energyKcal
           : sort === "time"
             ? (a.minutes ?? Infinity) - (b.minutes ?? Infinity)
             : a.name.localeCompare(b.name, "vi"),
@@ -163,7 +163,7 @@ export function FoodLibraryPage({
           onChange={(e) => setSort(e.target.value)}
         >
           <option value="name">Theo tên A–Z</option>
-          <option value="energy">Năng lượng tăng dần</option>
+          <option value="energyKcal">Năng lượng tăng dần</option>
           {hasCookingTimes && <option value="time">Nấu nhanh nhất</option>}
         </select>
         {API_MODE === "api" && (

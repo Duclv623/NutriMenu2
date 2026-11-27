@@ -106,13 +106,13 @@ export function DashboardPage() {
                 style={
                   {
                     "--progress": calorieGoal
-                      ? `${Math.min(100, (consumed.energy / calorieGoal) * 100)}%`
+                      ? `${Math.min(100, (consumed.energyKcal / calorieGoal) * 100)}%`
                       : "0%",
                   } as React.CSSProperties
                 }
               >
                 <div>
-                  <strong>{number(consumed.energy)}</strong>
+                  <strong>{number(consumed.energyKcal)}</strong>
                   <span>kcal đã ghi nhận</span>
                 </div>
               </div>
@@ -137,9 +137,9 @@ export function DashboardPage() {
                 <div className="macro-bars">
                   {(
                     [
-                      ["Carbohydrate", consumed.carbs, totals.carbs, "carb"],
-                      ["Chất đạm", consumed.protein, totals.protein, "protein"],
-                      ["Chất béo", consumed.fat, totals.fat, "fat"],
+                      ["Carb thuần", consumed.netCarbG, totals.netCarbG, "carb"],
+                      ["Chất đạm", consumed.proteinG, totals.proteinG, "proteinG"],
+                      ["Chất béo", consumed.fatG, totals.fatG, "fatG"],
                     ] as const
                   ).map(([label, value, target, tone]) => (
                     <div key={label}>
@@ -253,7 +253,7 @@ export function DashboardPage() {
           {plan && hasMenu ? (
             <div className="panel meal-list">
               {plan.items.map((item) => {
-                const food = w.foods.find((f) => f.id === item.foodId)!;
+                const food = w.foods.find((f) => f.id === item.dishId)!;
                 const checked = w.completedMeals.includes(
                   `${plan.id}:${item.id}`,
                 );
@@ -267,7 +267,7 @@ export function DashboardPage() {
                       </small>
                       <Link to={`/thuc-don?date=${today}`}>{food.name}</Link>
                       <p>
-                        {number(food.grams * item.servings)} g <span>·</span>
+                        {number(food.grams * item.servingMultiplier)} g <span>·</span>
                         {food.minutes === null
                           ? "Chưa có thời gian chuẩn bị"
                           : `${food.minutes} phút chuẩn bị`}
@@ -275,7 +275,7 @@ export function DashboardPage() {
                     </div>
                     <div className="meal-energy">
                       <strong>
-                        {number(food.nutrition.energy * item.servings)}
+                        {number(food.nutrition.energyKcal * item.servingMultiplier)}
                       </strong>
                       <span>kcal</span>
                     </div>

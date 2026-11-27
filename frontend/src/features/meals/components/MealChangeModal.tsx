@@ -34,15 +34,15 @@ export function MealChangeModal({
   editor?: NonNullable<MealResult["editor"]>;
 }) {
   const { userData: w, update, toast } = useApp();
-  const [foodId, setFoodId] = useState(item.foodId);
-  const [servings, setServings] = useState(
-    editor?.requestedServings ?? item.servings,
+  const [dishId, setFoodId] = useState(item.dishId);
+  const [servingMultiplier, setServings] = useState(
+    editor?.requestedServings ?? item.servingMultiplier,
   );
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [preview, setPreview] = useState(false);
   const [checkedPreview, setCheckedPreview] = useState<Plan | null>(null);
-  const currentFood = w.foods.find((f) => f.id === item.foodId);
+  const currentFood = w.foods.find((f) => f.id === item.dishId);
   const options = w.foods.filter(
     (f) =>
       f.meals.includes(item.meal) &&
@@ -66,7 +66,7 @@ export function MealChangeModal({
         ),
       ),
   );
-  const food = options.find((f) => f.id === foodId);
+  const food = options.find((f) => f.id === dishId);
   const rules = food?.servingRules || { min: 0.5, max: 3, step: 0.5 };
   const firstPortion = Math.ceil(rules.min / rules.step) * rules.step;
   const portions = Array.from(
@@ -78,9 +78,9 @@ export function MealChangeModal({
     },
     (_, i) => firstPortion + i * rules.step,
   ).filter((s) => API_MODE !== "api" || Number.isInteger(s * 2));
-  const changed = foodId !== item.foodId || servings !== item.servings;
+  const changed = dishId !== item.dishId || servingMultiplier !== item.servingMultiplier;
   const items = plan.items.map((i) =>
-    i.id === item.id ? { ...i, foodId, servings, nutrition: undefined } : i,
+    i.id === item.id ? { ...i, dishId, servingMultiplier, nutrition: undefined } : i,
   );
   async function checkPreview() {
     setBusy(true);
@@ -88,14 +88,14 @@ export function MealChangeModal({
     setCheckedPreview(null);
     try {
       assertEligible(w.profile);
-      if (!changed || !food || !portions.includes(servings))
+      if (!changed || !food || !portions.includes(servingMultiplier))
         throw new Error("Hãy chọn món hoặc khẩu phần hợp lệ khác.");
       if (API_MODE === "api") {
         const result = await mealPlanService.previewSwap(
           plan,
           item.id,
-          foodId,
-          servings,
+          dishId,
+          servingMultiplier,
         );
         if (
           !result.validationPassed ||
@@ -117,7 +117,7 @@ export function MealChangeModal({
     setError("");
     try {
       assertEligible(w.profile);
-      if (!food || !changed || !portions.includes(servings))
+      if (!food || !changed || !portions.includes(servingMultiplier))
         throw new Error("Món thay thế hoặc khẩu phần chưa hợp lệ.");
       let next: Plan;
       if (API_MODE === "api") {
@@ -126,8 +126,8 @@ export function MealChangeModal({
         next = await mealPlanService.swap(
           plan,
           item.id,
-          foodId,
-          servings,
+          dishId,
+          servingMultiplier,
           checkedPreview.changeSignature,
         );
         if (
@@ -185,7 +185,7 @@ export function MealChangeModal({
         <label>
           Món thay thế
           <select
-            value={foodId}
+            value={dishId}
             disabled={busy}
             onChange={(e) => {
               setFoodId(e.target.value);
@@ -203,7 +203,7 @@ export function MealChangeModal({
             }}
           >
             {!food && (
-              <option value={item.foodId} disabled>
+              <option value={item.dishId} disabled>
                 Chọn món khác phù hợp yêu cầu
               </option>
             )}
@@ -217,7 +217,7 @@ export function MealChangeModal({
         <label>
           Khẩu phần
           <select
-            value={servings}
+            value={servingMultiplier}
             disabled={busy}
             onChange={(e) => {
               setServings(Number(e.target.value));
@@ -225,9 +225,9 @@ export function MealChangeModal({
               setCheckedPreview(null);
             }}
           >
-            {!portions.includes(servings) && (
-              <option value={servings} disabled>
-                {number(servings, 2)} phần — ngoài mức hỗ trợ của món
+            {!portions.includes(servingMultiplier) && (
+              <option value={servingMultiplier} disabled>
+                {number(servingMultiplier, 2)} phần — ngoài mức hỗ trợ của món
               </option>
             )}
             {portions.map((s) => (
@@ -243,8 +243,8 @@ export function MealChangeModal({
             <div>
               <strong>{food.name}</strong>
               <span>
-                {number(food.grams * servings)} g ·{" "}
-                {number(food.nutrition.energy * servings)} kcal
+                {number(food.grams * servingMultiplier)} g ·{" "}
+                {number(food.nutrition.energyKcal * servingMultiplier)} kcal
               </span>
             </div>
           </div>

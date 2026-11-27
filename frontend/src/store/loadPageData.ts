@@ -18,7 +18,7 @@ export async function loadPageData(path: string): Promise<UserData> {
   ]);
   // Historical plans can reference dishes that have since left the active catalog.
   const available = new Set(foods.map(food => food.id));
-  const missing = new Set(plans.flatMap(plan => plan.items.map(item => item.foodId)).filter(id => !available.has(id)));
+  const missing = new Set(plans.flatMap(plan => plan.items.map(item => item.dishId)).filter(id => !available.has(id)));
   const historical = await Promise.all(Array.from(missing, id => foodService.get(id)));
   const completedMeals = plans.flatMap(plan => plan.items.filter(i => i.completed).map(i => plan.id + ":" + i.id));
   return { profile, plans, foods: [...foods, ...historical.map(food => ({ ...food, listed: false }))], ...preferences, checkIns, checkedShopping,

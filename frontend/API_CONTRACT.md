@@ -5,13 +5,33 @@ frontend adapts fullName and the wrapped login response. Profile, catalog and me
 RAG uses /api/chatbot/* -> chatbot /api/*. See ../BackendNutriMenu/gateway/README.md.
 Favorite removal is supported. Arbitrary savePlan and overwrite-regeneration are not.
 
+## Personal plan, profile and catalog fields
+
+| JSON field | Type | Unit | Nullability and meaning |
+|---|---|---|---|
+| energyKcal | number | kcal | Required in UI nutrition. Energy per catalog serving or per complete plan item. |
+| netCarbG | number | g | Required. Net carbohydrate. |
+| totalCarbG | number | g | Catalog detail only. Total carbohydrate, separate from netCarbG. |
+| proteinG, fatG, fiberG | number | g | Required in UI nutrition. |
+| sodiumMg | number | mg | Required in UI nutrition. |
+| dishId | string | identifier | Required on plan items and swap requests. References the catalog dish. |
+| servingMultiplier | number | standard servings | Required. Swap accepts 0.5 to 3 in steps of 0.5. Item nutrition already includes this factor. |
+| locked | boolean | none | Required. Whether this item is locked. |
+| activityLevel | string | enum | sedentary, light, moderate, active, very_active. Empty string for an unset profile. |
+| excludedFoods | string[] | user terms | Profile response uses an array. Terms may identify dishes or ingredients. |
+| meal | string | enum | breakfast, lunch, dinner, snack in the personal plan. |
+| profileVersion | integer | revision | Required. Profile revision used to generate the plan. |
+| version, baseVersion | integer | revision | Personal plan revision and the revision supplied for edits, respectively. |
+
+The chatbot snapshot uses its existing Python contract. Its carbohydrateG receives netCarbG and its recipeId receives dishId.
+
 ## Quy ước
 
 - API mặc định `/api`, proxy dev tới gateway 8080. Frontend không gọi thẳng RAG 8000 hoặc Java.
 - JSON UTF-8, camelCase; enum theo `src/types.ts`.
 - Xác thực qua cookie HttpOnly hoặc bearer JWT do backend cấp. Không dùng danh tính demo để xác thực server.
-- Đơn vị dinh dưỡng: `energy` kcal, `carbs/protein/fat/fiber` g, `sodium` mg. `Food.nutrition` cho **một khẩu phần công thức**. Không trộn số liệu trên 100g với số liệu mỗi phần.
-- `Food.ingredients[].grams` là gram cho một khẩu phần. `PlanItem.servings` là hệ số phần; gram và dinh dưỡng nhân cùng hệ số này. Phải chuẩn hóa trạng thái sống/chín trên backend. Schema UI hiện chỉ dùng dữ liệu đã đủ, không thay giá trị thiếu bằng 0.
+- Đơn vị dinh dưỡng: `energyKcal` kcal, `netCarbG/proteinG/fatG/fiberG` g, `sodiumMg` mg. `Food.nutrition` cho **một khẩu phần công thức**. Không trộn số liệu trên 100g với số liệu mỗi phần.
+- `Food.ingredients[].grams` là gram cho một khẩu phần. `PlanItem.servingMultiplier` là hệ số phần; gram và dinh dưỡng nhân cùng hệ số này. Phải chuẩn hóa trạng thái sống/chín trên backend. Schema UI hiện chỉ dùng dữ liệu đã đủ, không thay giá trị thiếu bằng 0.
 - Lỗi `{ "message": "..." }`, hoặc `{ "detail": "..." }` / `{ "detail": { "code": "...", "message": "..." } }`.
 - 401 hết phiên; 403 không có quyền; 409 xung đột phiên bản; 422 không hợp lệ; 429 quá hạn mức; 503 dịch vụ chưa sẵn sàng.
 - Frontend timeout thông thường 30 giây, chat 90 giây. Hợp đồng hiện chờ solver đồng bộ. Nếu giải lâu, backend/frontend cần bổ sung job API, polling và hủy job; chưa triển khai luồng này.
@@ -29,11 +49,11 @@ Favorite removal is supported. Arbitrary savePlan and overwrite-regeneration are
 | GET | `/meal-plans`, `/meal-plans/capabilities` | Owned plans with item completion status, or available operations |
 | PUT | `/me/profile` | `Profile` → `Profile` có version mới; kiểm tra version hiện tại |
 | POST | `/meal-plans/generate` | `{date,target,snacks,maxMinutes,excludeRepeat,profileVersion}` → `Plan` |
-| POST | `/meal-plans/:id/swap-preview` | `{baseVersion,itemId,foodId,servings,profileVersion}` → `Plan` có `changeSignature`, `validationPassed`; chưa lưu |
-| POST | `/meal-plans/:id/swap` | `{baseVersion,itemId,foodId,servings,profileVersion,previewSignature}` → `Plan` đã kiểm tra/giải lại |
+| POST | `/meal-plans/:id/swap-preview` | `{baseVersion,itemId,dishId,servingMultiplier,profileVersion}` → `Plan` có `changeSignature`, `validationPassed`; chưa lưu |
+| POST | `/meal-plans/:id/swap` | `{baseVersion,itemId,dishId,servingMultiplier,profileVersion,previewSignature}` → `Plan` đã kiểm tra/giải lại |
 | DELETE | `/meal-plans/:id` | 204 |
 | PATCH | `/meal-plans/:id/items/:itemId/lock` | `{baseVersion,locked}` → Plan từ Optimizer |
-| PUT/DELETE | `/me/favorites/:foodId` | 204 |
+| PUT/DELETE | `/me/favorites/:dishId` | 204 |
 | PUT | `/me/meal-logs` | `{key,completed}`; key UI là `planId:itemId` |
 | PUT | `/me/shopping-list` | `{checkedIds:string[]}`; key là `planId:ingredientId` |
 | POST | `/me/check-ins` | `CheckIn` → `CheckIn` |
@@ -56,11 +76,11 @@ Backend chịu trách nhiệm tính mục tiêu hợp lệ, xử lý mọi dị 
   "target": 1800,
   "createdAt": "2026-11-10T12:00:00Z",
   "notes": [],
-  "items": [{ "id": "item-1", "foodId": "food-1", "meal": "breakfast", "servings": 1, "locked": false }]
+  "items": [{ "id": "item-1", "dishId": "food-1", "meal": "breakfast", "servingMultiplier": 1, "locked": false }]
 }
 ```
 
-Ví dụ chỉ minh họa cấu trúc; target không phải khuyến nghị. `INFEASIBLE`, `UNKNOWN`, `MODEL_INVALID` có thể trả `items: []` và lý do trong `notes`. UI không hiển thị chúng như thực đơn dùng được. `NOT_RUN` dành cho fixture. `OPTIMAL`/`FEASIBLE` chỉ được dùng khi backend thật trả về sau kiểm tra. Mọi foodId trong plan phải có trong danh sách món đã tải; thiếu món phải báo lỗi thay vì coi dinh dưỡng bằng 0.
+Ví dụ chỉ minh họa cấu trúc; target không phải khuyến nghị. `INFEASIBLE`, `UNKNOWN`, `MODEL_INVALID` có thể trả `items: []` và lý do trong `notes`. UI không hiển thị chúng như thực đơn dùng được. `NOT_RUN` dành cho fixture. `OPTIMAL`/`FEASIBLE` chỉ được dùng khi backend thật trả về sau kiểm tra. Mọi dishId trong plan phải có trong danh sách món đã tải; thiếu món phải báo lỗi thay vì coi dinh dưỡng bằng 0.
 
 Schema hiện có của chatbot dùng `MealSnapshot` khác schema UI này: `energyKcal`, `carbohydrateG`, `mealType=BREAKFAST`, `amount`, `unit`, phiên bản catalog và nguồn. Backend/adapter phải ánh xạ rõ đơn vị, trường và ID; **không gán nguyên JSON MealSnapshot vào Plan của UI**. Hợp đồng chatbot gốc: `../ai-service/contracts/meal-service.schema.json`.
 

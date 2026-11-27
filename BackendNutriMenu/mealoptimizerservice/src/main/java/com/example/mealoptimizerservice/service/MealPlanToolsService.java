@@ -82,7 +82,7 @@ public class MealPlanToolsService {
         input.setGender(Gender.valueOf(profile.gender().toUpperCase(Locale.ROOT)));
         input.setHeightMeters(profile.height().movePointLeft(2));
         input.setActualWeightKg(profile.weight());
-        input.setActivityLevel(switch (profile.activity()) {
+        input.setActivityLevel(switch (profile.activityLevel()) {
             case "sedentary", "light" -> PhysicalActivityLevel.LIGHT;
             case "moderate" -> PhysicalActivityLevel.MODERATE;
             case "active", "very_active" -> PhysicalActivityLevel.HEAVY;

@@ -322,10 +322,10 @@ export function PlanToolDialog({
         onClose={onClose}
         initial={{
           alreadyEatenSlots: eaten.map((slot) => slots[slot]),
-          consumedCaloriesKcal: totals.energy.toFixed(1),
-          consumedNetCarbG: totals.carbs.toFixed(1),
-          consumedProteinG: totals.protein.toFixed(1),
-          consumedFatG: totals.fat.toFixed(1),
+          consumedCaloriesKcal: totals.energyKcal.toFixed(1),
+          consumedNetCarbG: totals.netCarbG.toFixed(1),
+          consumedProteinG: totals.proteinG.toFixed(1),
+          consumedFatG: totals.fatG.toFixed(1),
         }}
         description={
           <p>
@@ -338,7 +338,7 @@ export function PlanToolDialog({
     );
   }
   const item = tool.item;
-  const food = foods.find((entry) => entry.id === item.foodId);
+  const food = foods.find((entry) => entry.id === item.dishId);
   const label = food?.name || item.name || "Món đã chọn";
   const direct = tool.kind === "replace";
   const action = direct
@@ -364,12 +364,12 @@ export function PlanToolDialog({
       fixed={fixed}
       choices={{ newDishId: choices }}
       initial={
-        direct ? { newServingScaledX2: String(item.servings) } : undefined
+        direct ? { newServingScaledX2: String(item.servingMultiplier) } : undefined
       }
       advanced={direct ? undefined : ["additionalExcludedDishIds"]}
       description={
         <p>
-          {MEALS[item.meal].name} · {label} · {number(item.servings, 2)} khẩu
+          {MEALS[item.meal].name} · {label} · {number(item.servingMultiplier, 2)} khẩu
           phần
         </p>
       }

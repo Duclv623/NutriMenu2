@@ -16,12 +16,12 @@ export function generateDemo(input: GenerateInput, state: UserData): Plan {
   const items = meals.map((meal) => {
     const locked = current?.items.find((i) => i.meal === meal && i.locked);
     if (locked) {
-      const food = state.foods.find((f) => f.id === locked.foodId);
+      const food = state.foods.find((f) => f.id === locked.dishId);
       if (!food || !allowedFood(food, state.profile))
         throw new Error(
           "Món đang giữ không còn phù hợp hồ sơ. Hãy bỏ giữ món rồi thử lại.",
         );
-      used.add(locked.foodId);
+      used.add(locked.dishId);
       return locked;
     }
     const candidates = state.foods.filter(
@@ -52,14 +52,14 @@ export function generateDemo(input: GenerateInput, state: UserData): Plan {
           ? input.target * 0.32
           : input.target * 0.28;
     const rawServings =
-      Number.isFinite(food.nutrition.energy) && food.nutrition.energy > 0
-        ? mealTarget / food.nutrition.energy
+      Number.isFinite(food.nutrition.energyKcal) && food.nutrition.energyKcal > 0
+        ? mealTarget / food.nutrition.energyKcal
         : 1;
-    const servings = Math.max(
+    const servingMultiplier = Math.max(
       0.5,
       Math.min(3.0, Math.round(rawServings * 2) / 2),
     );
-    return { id: uid(), foodId: food.id, meal, servings, locked: false };
+    return { id: uid(), dishId: food.id, meal, servingMultiplier, locked: false };
   });
   return {
     id: uid(),

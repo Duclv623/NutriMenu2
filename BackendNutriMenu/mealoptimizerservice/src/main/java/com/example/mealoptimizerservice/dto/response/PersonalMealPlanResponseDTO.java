@@ -8,9 +8,9 @@ public record PersonalMealPlanResponseDTO(
         String solverStatus, String dataMode, BigDecimal target, List<String> notes,
         List<Item> skippedItems, Integer rating, String feedback, String createdAt, boolean validationPassed, String changeSignature) {
 
-    public record Item(String name, String id, String foodId, String meal, BigDecimal servings,
+    public record Item(String name, String id, String dishId, String meal, BigDecimal servingMultiplier,
                        boolean locked, boolean completed, Nutrition nutrition) {}
 
-    public record Nutrition(BigDecimal energy, BigDecimal carbs, BigDecimal protein,
-                            BigDecimal fat, BigDecimal fiber, BigDecimal sodium) {}
+    public record Nutrition(BigDecimal energyKcal, BigDecimal netCarbG, BigDecimal proteinG,
+                            BigDecimal fatG, BigDecimal fiberG, BigDecimal sodiumMg) {}
 }

@@ -18,7 +18,7 @@ public class NutritionProfileRequestDTO {
     private BigDecimal height;
     private BigDecimal weight;
     private BigDecimal targetWeight;
-    private String activity;
+    private String activityLevel;
     private String goal;
     private Set<String> allergies = new LinkedHashSet<>();
     private Set<String> excludedFoods;

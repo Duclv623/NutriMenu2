@@ -390,9 +390,9 @@ export function ChatPage() {
     );
     const changed = next.items.find((item) => item.id === editing?.itemId);
     const oldName =
-      w.foods.find((food) => food.id === previous?.foodId)?.name || "Món ăn";
+      w.foods.find((food) => food.id === previous?.dishId)?.name || "Món ăn";
     const newName =
-      w.foods.find((food) => food.id === changed?.foodId)?.name ||
+      w.foods.find((food) => food.id === changed?.dishId)?.name ||
       "món thay thế";
     keep(
       {
@@ -407,7 +407,7 @@ export function ChatPage() {
           {
             id: uid(),
             role: "assistant",
-            text: `Đã lưu thay đổi: ${oldName} → ${newName}, ${number(changed?.servings || 1, 1)} khẩu phần. Thực đơn ${dateLabel(next.date)} đã được cập nhật. Bạn có thể hỏi tiếp về bữa ăn này.`,
+            text: `Đã lưu thay đổi: ${oldName} → ${newName}, ${number(changed?.servingMultiplier || 1, 1)} khẩu phần. Thực đơn ${dateLabel(next.date)} đã được cập nhật. Bạn có thể hỏi tiếp về bữa ăn này.`,
             historySaved: false,
           },
         ],
@@ -648,7 +648,7 @@ export function ChatPage() {
               <strong>NutriGuide</strong>
               <span>
                 {selectedPlan
-                  ? `Cùng xem ${selectedPlan.items.length} món · ${number(sumNutrition(selectedPlan.items, w.foods).energy)} kcal`
+                  ? `Cùng xem ${selectedPlan.items.length} món · ${number(sumNutrition(selectedPlan.items, w.foods).energyKcal)} kcal`
                   : "Cùng bạn hiểu hơn về bữa ăn mỗi ngày"}
               </span>
             </div>
@@ -732,7 +732,7 @@ export function ChatPage() {
                             );
                             if (!item) return null;
                             const food = w.foods.find(
-                              (f) => f.id === item.foodId,
+                              (f) => f.id === item.dishId,
                             );
                             const unavailable =
                               item.locked ||

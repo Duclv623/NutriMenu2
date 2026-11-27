@@ -25,7 +25,7 @@ public class DishDetailResponse {
     private IngredientGroup primaryIngredientGroup;
     private BigDecimal standardServingCookedG;
     private String householdUnitLabel;
-    private BigDecimal caloriesKcal;
+    private BigDecimal energyKcal;
     private BigDecimal totalCarbG;
     private BigDecimal fiberG;
     private BigDecimal netCarbG;
@@ -78,7 +78,7 @@ public class DishDetailResponse {
                 .primaryIngredientGroup(d.getPrimaryIngredientGroup())
                 .standardServingCookedG(d.getStandardServingCookedG())
                 .householdUnitLabel(d.getHouseholdUnitLabel())
-                .caloriesKcal(d.getCaloriesKcal())
+                .energyKcal(d.getCaloriesKcal())
                 .totalCarbG(d.getTotalCarbG())
                 .fiberG(d.getFiberG())
                 .netCarbG(d.getNetCarbG())

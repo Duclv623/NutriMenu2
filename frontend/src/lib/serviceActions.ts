@@ -282,8 +282,8 @@ const coverage = [
 const change = [
   plan,
   item("itemId"),
-  dish("foodId", "Món thay thế"),
-  num("servings", "Số khẩu phần", 1, 0.5, 3, 0.5),
+  dish("dishId", "Món thay thế"),
+  num("servingMultiplier", "Số khẩu phần", 1, 0.5, 3, 0.5),
 ];
 const weights = [
   num("weightCarbDeviation", "Trọng số sai lệch carb", 50),

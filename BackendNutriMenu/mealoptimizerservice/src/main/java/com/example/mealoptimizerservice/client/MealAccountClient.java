@@ -16,7 +16,7 @@ import java.util.Set;
 public class MealAccountClient {
     private final RestClient users;
     public record MealAccount(long serviceUserId, Profile profile, Map<String, PlanMetadata> previousPlans) {}
-    public record Profile(int age, String gender, BigDecimal height, BigDecimal weight, String activity, String goal,
+    public record Profile(int age, String gender, BigDecimal height, BigDecimal weight, String activityLevel, String goal,
                           Set<String> allergies, Set<String> excludedFoods, boolean confirmed, boolean pregnant,
                           boolean specialDiet, long version) {}
     public record PlanMetadata(long profileVersion, String createdAt) {}

@@ -1,10 +1,10 @@
 export type Nutrients = {
-  energy: number;
-  carbs: number;
-  protein: number;
-  fat: number;
-  fiber: number;
-  sodium: number;
+  energyKcal: number;
+  netCarbG: number;
+  proteinG: number;
+  fatG: number;
+  fiberG: number;
+  sodiumMg: number;
 };
 export type MealType = "breakfast" | "lunch" | "dinner" | "snack";
 export type Ingredient = { id: string; name: string; grams: number };
@@ -39,7 +39,7 @@ export type Profile = {
   height: number;
   weight: number;
   targetWeight: number;
-  activity: string;
+  activityLevel: string;
   goal: string;
   allergies: string[];
   excludedFoods: string[];
@@ -52,12 +52,12 @@ export type Profile = {
 export type PlanItem = {
   name?: string;
   id: string;
-  foodId: string;
+  dishId: string;
   meal: MealType;
-  servings: number;
+  servingMultiplier: number;
   locked: boolean;
   completed?: boolean;
-  // Snapshot for this item including servings; supplied by the optimizer.
+  // Snapshot for this item including servingMultiplier; supplied by the optimizer.
   nutrition?: Nutrients;
 };
 export type SolverStatus =

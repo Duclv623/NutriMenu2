@@ -310,12 +310,12 @@ export function Nutrition({
   summary?: boolean;
 }) {
   const entries = [
-    ["Năng lượng", value.energy, "kcal"],
-    ["Carbohydrate", value.carbs, "g"],
-    ["Chất đạm", value.protein, "g"],
-    ["Chất béo", value.fat, "g"],
-    ["Chất xơ", value.fiber, "g"],
-    ["Natri", value.sodium, "mg"],
+    ["Năng lượng", value.energyKcal, "kcal"],
+    ["Carb thuần", value.netCarbG, "g"],
+    ["Chất đạm", value.proteinG, "g"],
+    ["Chất béo", value.fatG, "g"],
+    ["Chất xơ", value.fiberG, "g"],
+    ["Natri", value.sodiumMg, "mg"],
   ] as const;
   return (
     <dl
@@ -327,7 +327,7 @@ export function Nutrition({
             key={label}
             className={unit === "kcal" ? "nutrition-energy" : undefined}
           >
-            <dt>{summary && label === "Carbohydrate" ? "Carb" : label}</dt>
+            <dt>{label}</dt>
             <dd>
               {number(amount, 1)} <small>{unit}</small>
             </dd>

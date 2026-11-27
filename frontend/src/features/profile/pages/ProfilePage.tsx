@@ -206,8 +206,8 @@ export function ProfilePage() {
               <label className="span-2">
                 Mức độ vận động
                 <select
-                  value={draft.activity}
-                  onChange={(e) => field("activity", e.target.value)}
+                  value={draft.activityLevel}
+                  onChange={(e) => field("activityLevel", e.target.value)}
                 >
                   <option value="" disabled>
                     Chọn mức vận động

@@ -901,10 +901,10 @@ code {
 .carb {
   background: var(--brand);
 }
-.protein {
+.proteinG {
   background: var(--accent-energy);
 }
-.fat {
+.fatG {
   background: var(--chart-fat);
 }
 .track {

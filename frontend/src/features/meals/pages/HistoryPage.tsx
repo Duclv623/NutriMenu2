@@ -31,7 +31,7 @@ export function HistoryPage() {
           p.date.includes(query) ||
           p.items.some((i) =>
             w.foods
-              .find((f) => f.id === i.foodId)
+              .find((f) => f.id === i.dishId)
               ?.name.toLowerCase()
               .includes(query.toLowerCase()),
           )) &&
@@ -132,7 +132,7 @@ export function HistoryPage() {
                   <TableCell label="Bữa ăn">{p.items.length} món</TableCell>
                   <TableCell label="Tổng năng lượng">
                     <strong>
-                      {number(sumNutrition(p.items, w.foods).energy)}
+                      {number(sumNutrition(p.items, w.foods).energyKcal)}
                     </strong>{" "}
                     kcal
                   </TableCell>

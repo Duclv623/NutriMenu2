@@ -40,11 +40,11 @@ public class NutritionProfileMapper {
             if (input.getGender() != null) {
                 profile.setGender(Gender.valueOf(input.getGender().toUpperCase(Locale.ROOT)));
             }
-            profile.setActivityLevel(switch (input.getActivity()) {
+            profile.setActivityLevel(switch (input.getActivityLevel()) {
                 case null -> null;
                 case "active" -> ActivityLevel.HIGH;
                 case "very_active" -> ActivityLevel.VERY_HIGH;
-                default -> ActivityLevel.valueOf(input.getActivity().toUpperCase(Locale.ROOT));
+                default -> ActivityLevel.valueOf(input.getActivityLevel().toUpperCase(Locale.ROOT));
             });
         } catch (IllegalArgumentException invalidEnum) {
             throw new ResponseStatusException(BAD_REQUEST, "Hồ sơ không hợp lệ");
